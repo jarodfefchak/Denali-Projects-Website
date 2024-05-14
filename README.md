@@ -10,8 +10,8 @@ The Denali Projects website has been built using the JavaScript-library/Frontend
 |"How-To" description| Link|
 |--------------------|-----|
 |How-To make and deploy a change to the website| [link](make_changes_and_deploy.md) |
-|How-To undo a change made to the website| link| 
-|How-To update the Careers page of the website | link|
-|How-To fix common problems that may arise| link|
-|How-To run the website from local computer| link|
+|How-To undo a change made to the website|[link](Undo_Commits.md)| 
+|How-To update the Careers page of the website |[link](update_careers_page.md)|
+|How-To fix common problems that may arise| [link](common_problems.md)|
+|How-To run the website from local computer|[link](run_website_from_computer.md)|
 
