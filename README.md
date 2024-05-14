@@ -14,5 +14,5 @@ The Denali Projects website has been built using the JavaScript-library/Frontend
 |How-To update the Careers page of the website |[link](update_careers_page.md)|
 |How-To fix common problems that may arise| [link](common_problems.md)|
 |How-To run the website from local computer|[link](run_website_from_computer.md)|
-|How-To update and change website images|link|
+|How-To update and change website images|[link](update_images.md)|
 
