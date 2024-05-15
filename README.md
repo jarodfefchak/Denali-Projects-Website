@@ -5,14 +5,18 @@ This is the code for the Denali Projects website visable under the domain name d
 All changes made to the main branch of the Denali-Projects-Website repository will automatically be deployed since (insert we host provider) has built-in CI/CD.
 The Denali Projects website has been built using the JavaScript-library/Frontend-Framework React. To view the webiste before deployment please visit (insert temporary domain name).
 
-### "How-To" Content Directory
+In order to view and edit the website code on your computer please view the following subsections and complete all the described steps:
+1). Installing Git on Your Desktop.
+2). Setting up VS Code on Your Desktop.
+3). Setting up and Running the React Website Code.
+### README Content Directory
 
-|"How-To" description| Link|
+|Description| Link|
 |--------------------|-----|
-|How-To make and deploy a change to the website| [link](make_changes_and_deploy.md) |
-|How-To undo a change made to the website|[link](Undo_Commits.md)| 
-|How-To update the Careers page of the website |[link](update_careers_page.md)|
-|How-To fix common problems that may arise| [link](common_problems.md)|
-|How-To run the website from local computer|[link](run_website_from_computer.md)|
-|How-To update and change website images|[link](update_images.md)|
+|Installing Git on Your Desktop||
+|Setting up VS Code on Your Desktop|| 
+|Setting up and Running the React Website Code ||
+|| |
+|||
+|||
 
