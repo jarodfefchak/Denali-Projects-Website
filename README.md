@@ -16,7 +16,7 @@ Once the above three tasks are completed please refer to the content directory t
 |[Installing Git on Your Desktop](https://github.com/deankirkby/Denali-Projects-Website/blob/main/README.md#installing-git-on-your-desktop)|
 |[Setting Up VS Code on Your Desktop](https://github.com/deankirkby/Denali-Projects-Website/blob/main/README.md#setting-up-vs-code-on-your-desktop)|
 |[Setting Up and Running the React and Flask Website Code](https://github.com/deankirkby/Denali-Projects-Website/blob/main/README.md#setting-up-and-running-the-react-website-code) |
-|[Committing/Deploying Changes to the Website](https://github.com/deankirkby/Denali-Projects-Website/blob/main/README.md#committing/deploying-changes-to-the-website)|
+|[Committing/Deploying Changes to the Website](https://github.com/deankirkby/Denali-Projects-Website/blob/main/README.md#committingdeploying-changes-to-the-website)|
 |Undoing Changes Made to the Website|
 |Updating Program Saved on Denali's SharePoint Server so That it Matchs the Most Recent Version in Github|
 |Editing/Updating the Careers Page |
