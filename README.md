@@ -17,12 +17,11 @@ Once the above three tasks are completed please refer to the content directory t
 |Installing Git on Your Desktop|
 |Setting Up VS Code on Your Desktop|
 |Setting Up and Running the React and Flask Website Code |
-|Commiting Changes to the Website|
+|Committing/Deploying Changes to the Website|
 |Undoing Changes Made to the Website|
-|Cloning Github Repo into Denali's SharePoint Server|
-|Updating program saved on Denali's SharePoint Server so that it matchs the most recent version in Github|
-|Editing the Careers Page |
-| Understanding Vercel Web Hosting Service|
+|Updating Program Saved on Denali's SharePoint Server so That it Matchs the Most Recent Version in Github|
+|Editing/Updating the Careers Page |
+|Understanding Vercel Web Hosting Service|
 
 
 ### Installing Git on Your Desktop
@@ -37,4 +36,14 @@ Visual Studio Code, or VS Code, is an easy to use, user friednly code editior. T
 1. Visit this [website](https://code.visualstudio.com/download) and download the correct version for your operating system.
 
 ### Setting up and Running the React Website Code. 
-React is a Java Script based front-end framework used to develope the user interface of the Denali Projects website.   
+React is a Java Script based front-end framework used to develope the user interface of the Denali Projects website. 
+
+### Committing/Deploying Changes to the Website
+
+### Undoing Changes Made to the Website
+
+### Updating Program Saved on Denali's SharePoint Server so That it Matches the Most Recent Version in Github
+
+### Editing/Updating the Careers Page
+
+### Understanding Vercel Web Hosting Service
