@@ -22,5 +22,5 @@ In order to view and edit the website code on your computer please view the foll
 
 ### Installing Git on Your Desktop
 1. First check to see if you have github installed bit typing "git version" in your terminal or command prompt. If a version number pops up, git is installed and you do not need to follow that rest of these steps. If an error message stating "git is not recognized as an internal or exterbal command" please refer to the remaining steps.
-2. Visit this [website](https://git-scm.com/downloads) and click on the correct operating system for your computer
+2. Visit this [website](https://git-scm.com/downloads) and click on the correct operating system for your computer. For Denali Windows Desktops, downlaod the 64-bit standalone installer.
 3. 
