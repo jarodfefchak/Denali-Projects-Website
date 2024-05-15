@@ -15,12 +15,18 @@ In order to view and edit the website code on your computer please view the foll
 |--------------------|
 |Installing Git on Your Desktop|
 |Setting up VS Code on Your Desktop|
+|Pulling the Website Code From Github|
 |Setting up and Running the React Website Code |
 |Commiting Changes to the Website|
 |Undoing Changes Made to the Website|
 
 
 ### Installing Git on Your Desktop
+Git is a version control system that tracks all changes made to your code and it allows you to collaberate with others on the creation of your program. Inorder to pull the Denali Projects website code from github into Denalis SharePoint server, Git needs to be installed. 
 1. First check to see if you have github installed bit typing "git version" in your terminal or command prompt. If a version number pops up, git is installed and you do not need to follow that rest of these steps. If an error message stating "git is not recognized as an internal or exterbal command" please refer to the remaining steps.
 2. Visit this [website](https://git-scm.com/downloads) and click on the correct operating system for your computer. For Denali Windows Desktops, downlaod the 64-bit standalone installer.
-3. 
+3. 3
+4. Once the instalation proccess is complete, deouble check that git is installed by typing "git version" into your comand prompt. It should then display the current version of git with no error messages. 
+
+### Setting up VS Code on Your Desktop
+1. 
