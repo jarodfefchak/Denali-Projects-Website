@@ -10,11 +10,10 @@ In order to view and edit the website code on your computer please view the foll
 Once the above three tasks are completed please refer to the content directory to assit you in what-ever website related tasks you are looking to complete.
 
 **IMPORTANT: Whenever you are looking change any aspect of the Denali Projects website code, ALWAYS read the comments throughout the program. If they explicitly state not to edit a specific section of code, DO NOT EDIT it unless you fully understand it. Also, always make sure to run the React website before commiting and deploying any changes made**
-### README Content Directory
 
-|Sections In This README| 
+|README Content Directory| 
 |--------------------|
-|Installing Git on Your Desktop|
+|[Installing Git on Your Desktop](|
 |Setting Up VS Code on Your Desktop|
 |Setting Up and Running the React and Flask Website Code |
 |Committing/Deploying Changes to the Website|
