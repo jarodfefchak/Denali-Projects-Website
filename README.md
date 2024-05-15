@@ -22,6 +22,7 @@ Once the above three tasks are completed please refer to the content directory t
 |Updating Program Saved on Denali's SharePoint Server so That it Matchs the Most Recent Version in Github|
 |Editing/Updating the Careers Page |
 |Understanding Vercel Web Hosting Service|
+|[Resolving Merge Conflicts](|
 
 
 ### Installing Git on Your Desktop
@@ -47,3 +48,5 @@ React is a Java Script based front-end framework used to develope the user inter
 ### Editing/Updating the Careers Page
 
 ### Understanding Vercel Web Hosting Service
+
+### Resolving Merge Conflicts
