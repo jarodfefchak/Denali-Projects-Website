@@ -5,19 +5,23 @@ This is the code for the Denali Projects website visable under the domain name d
 
 In order to view and edit the website code on your computer please view the following subsections and complete all the described steps:
 1. Installing Git on Your Desktop.
-2. Setting up VS Code on Your Desktop.
-3. Setting up and Running the React Website Code.
+2. Setting Up VS Code on Your Desktop.
+3. Setting Up and Running the React and Flask Website Code.
+Once the above three tasks are completed please refer to the content directory to assit you in what-ever website related tasks you are looking to complete.
+**IMPORTANT: Whenever you are looking change any aspect of the Denali Projects website code, ALWAYS read the comments throughout the program. If they explicitly state not to edit a specific section of code, DO NOT EDIT it unless you fully understand it. Also, always make sure to run the React website before commiting and deploying any changes made**
 ### README Content Directory
 
 |Sections In This README| 
 |--------------------|
 |Installing Git on Your Desktop|
-|Setting up VS Code on Your Desktop|
-|Setting up and Running the React Website Code |
+|Setting Up VS Code on Your Desktop|
+|Setting Up and Running the React and Flask Website Code |
 |Commiting Changes to the Website|
 |Undoing Changes Made to the Website|
 |Cloning Github Repo into Denali's SharePoint Server|
 |Updating program saved on Denali's SharePoint Server so that it matchs the most recent version in Github|
+|Editing the Careers Page |
+| Understanding Vercel Web Hosting Service|
 
 
 ### Installing Git on Your Desktop
@@ -28,4 +32,8 @@ Git is a version control system that tracks all changes made to your code and it
 4. Once the instalation proccess is complete, deouble check that git is installed by typing "git --version" into your comand prompt. It should then display the current version of git with no error messages. 
 
 ### Setting up VS Code on Your Desktop
-1. Visit this [website](https://code.visualstudio.com/download) and download the correct version for your operating system. 
+Visual Studio Code, or VS Code, is an easy to use, user friednly code editior. This is the application that you will be using to view and edit the Denali Projects website code if necessary. 
+1. Visit this [website](https://code.visualstudio.com/download) and download the correct version for your operating system.
+
+### Setting up and Running the React Website Code. 
+React is a Java Script based front-end framework used to develope the user interface of the Denali Projects website.   
