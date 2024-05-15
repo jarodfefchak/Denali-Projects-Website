@@ -11,13 +11,16 @@ In order to view and edit the website code on your computer please view the foll
 3. Setting up and Running the React Website Code.
 ### README Content Directory
 
-|Description| Link|
-|--------------------|-----|
-|Installing Git on Your Desktop|[Link](https://github.com/deankirkby/Denali-Projects-Website/edit/main/README.md#installing-git-on-your-desktop)|
-|Setting up VS Code on Your Desktop|| 
-|Setting up and Running the React Website Code ||
-|Commiting Changes to the Website| |
-|Undoing Changes Made to the Website||
-|||
+|Sections In This README| 
+|--------------------|
+|Installing Git on Your Desktop|
+|Setting up VS Code on Your Desktop|
+|Setting up and Running the React Website Code |
+|Commiting Changes to the Website|
+|Undoing Changes Made to the Website|
+
 
 ### Installing Git on Your Desktop
+1. First check to see if you have github installed bit typing "git version" in your terminal or command prompt. If a version number pops up, git is installed and you do not need to follow that rest of these steps. If an error message stating "git is not recognized as an internal or exterbal command" please refer to the remaining steps.
+2. Visit this [website](https://git-scm.com/downloads) and click on the correct operating system for your computer
+3. 
