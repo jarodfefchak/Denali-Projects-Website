@@ -6,9 +6,9 @@ All changes made to the main branch of the Denali-Projects-Website repository wi
 The Denali Projects website has been built using the JavaScript-library/Frontend-Framework React. To view the webiste before deployment please visit (insert temporary domain name).
 
 In order to view and edit the website code on your computer please view the following subsections and complete all the described steps:
-1). Installing Git on Your Desktop.
-2). Setting up VS Code on Your Desktop.
-3). Setting up and Running the React Website Code.
+1. Installing Git on Your Desktop.
+2. Setting up VS Code on Your Desktop.
+3. Setting up and Running the React Website Code.
 ### README Content Directory
 
 |Description| Link|
@@ -16,7 +16,8 @@ In order to view and edit the website code on your computer please view the foll
 |Installing Git on Your Desktop||
 |Setting up VS Code on Your Desktop|| 
 |Setting up and Running the React Website Code ||
-|| |
-|||
+|Commiting Changes to the Website| |
+|Undoing Changes Made to the Website||
 |||
 
+### Installing Git on Your Desktop
