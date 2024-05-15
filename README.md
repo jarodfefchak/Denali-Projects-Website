@@ -22,7 +22,7 @@ Once the above three tasks are completed please refer to the content directory t
 |Updating Program Saved on Denali's SharePoint Server so That it Matchs the Most Recent Version in Github|
 |Editing/Updating the Careers Page |
 |Understanding Vercel Web Hosting Service|
-|[Resolving Merge Conflicts](|
+|[Resolving Merge Conflicts](https://github.com/deankirkby/Denali-Projects-Website/blob/main/README.md#resolving-merge-conflicts)|
 
 
 ### Installing Git on Your Desktop
