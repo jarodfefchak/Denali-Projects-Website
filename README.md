@@ -38,9 +38,12 @@ Visual Studio Code, or VS Code, is an easy to use, user friednly code editior. T
 
 ### Setting up and Running the React Website Code. 
 React is a Java Script based front-end framework used to develope the user interface of the Denali Projects website. Please refer to the following steps on how to set up and run the react website code. 
+
 Firstly, Node.js needs to be installed.
 1. Check to see if node.js is already isntalled by running node --version. If the message "'node' is not recognized as an internal or external command, operable program or batch file.", please continue on with following steps on how to install Node.js. Otherwise you may skip to the nex section on how to ___________.
-2. Visit this [website](https://nodejs.org/en/download/prebuilt-installer) and click on the correct operating system. It should already be preset to display the downlaod package that is compatible with your computer.  
+2. Visit this [website](https://nodejs.org/en/download/prebuilt-installer) and click on the correct operating system. It should already be preset to display the downlaod package that is compatible with your computer.
+
+Secondly, we need to install npm and all other packages required to run the React website.   
 
 ### Committing/Deploying Changes to the Website
 
