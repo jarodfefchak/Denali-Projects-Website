@@ -18,7 +18,7 @@ Once the above three tasks are completed please refer to the content directory t
 |[Setting Up and Running the React and Flask Website Code](https://github.com/deankirkby/Denali-Projects-Website/blob/main/README.md#setting-up-and-running-the-react-website-code) |
 |[Committing/Deploying Changes to the Website](https://github.com/deankirkby/Denali-Projects-Website/blob/main/README.md#committingdeploying-changes-to-the-website)|
 |[Undoing Changes Made to the Website](https://github.com/deankirkby/Denali-Projects-Website/blob/main/README.md#undoing-changes-made-to-the-website)|
-|[Updating Program Saved on Denali's SharePoint Server so That it Matchs the Most Recent Version in Github](https://github.com/deankirkby/Denali-Projects-Website/blob/main/README.md#updating-program-saved-on-denali's-sharepoint-server-so-that-it-matches-the-most-recent-version-in-github)|
+|[Updating Program Saved on Denali's SharePoint Server so That it Matchs the Most Recent Version in Github](https://github.com/deankirkby/Denali-Projects-Website/blob/main/README.md#updating-program-saved-on-denalis-sharepoint-server-so-that-it-matches-the-most-recent-version-in-github)|
 |[Editing/Updating the Careers Page](https://github.com/deankirkby/Denali-Projects-Website/blob/main/README.md#editingupdating-the-careers-page) |
 |[Understanding Vercel Web Hosting Service](https://github.com/deankirkby/Denali-Projects-Website/blob/main/README.md#understanding-vercel-web-hosting-service)|
 |[Resolving Merge Conflicts](https://github.com/deankirkby/Denali-Projects-Website/blob/main/README.md#resolving-merge-conflicts)|
