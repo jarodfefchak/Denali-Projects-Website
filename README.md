@@ -27,7 +27,7 @@ Once the above three tasks are completed please refer to the content directory t
 
 ### Installing Git on Your Desktop
 Git is a version control system that tracks all changes made to your code and it allows you to collaberate with others on the creation of your program. Inorder to pull the Denali Projects website code from github into Denalis SharePoint server, Git needs to be installed. 
-1. First check to see if you have github installed bit typing "git --version" in your terminal or command prompt. If a version number pops up, git is installed and you do not need to follow that rest of these steps. If an error message stating "'git' is not recognized as an internal or external command, operable program or batch file." please refer to the remaining steps.
+1. First check to see if you have github installed bit typing "git --version" in your terminal or command prompt. If a version number pops up, git is installed and you do not need to follow that rest of these steps. If an error message stating "'git' is not recognized as an internal or external command, operable program or batch file." is displayed, please refer to the remaining steps.
 2. Visit this [website](https://git-scm.com/downloads) and click on the correct operating system for your computer. For Denali Windows Desktops, downlaod the 64-bit standalone installer.
 3. 3
 4. Once the instalation proccess is complete, deouble check that git is installed by typing "git --version" into your comand prompt. It should then display the current version of git with no error messages. 
@@ -40,10 +40,12 @@ Visual Studio Code, or VS Code, is an easy to use, user friednly code editior. T
 React is a Java Script based front-end framework used to develope the user interface of the Denali Projects website. Please refer to the following steps on how to set up and run the react website code. 
 
 Firstly, Node.js needs to be installed.
-1. Check to see if node.js is already isntalled by running node --version. If the message "'node' is not recognized as an internal or external command, operable program or batch file.", please continue on with following steps on how to install Node.js. Otherwise you may skip to the nex section on how to ___________.
+1. Check to see if node.js is already isntalled by running node --version. If the message "'node' is not recognized as an internal or external command, operable program or batch file." was displayed, please continue on with following steps on how to install Node.js. Otherwise you may skip to the nex section on how to ___________.
 2. Visit this [website](https://nodejs.org/en/download/prebuilt-installer) and click on the correct operating system. It should already be preset to display the downlaod package that is compatible with your computer.
 
-Secondly, we need to install npm and all other packages required to run the React website.   
+Secondly, we need to install python.   
+1. Check to see if python is already installed by running python --version. If the message "Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Manage App Execution Aliases." was displayed, please refer to the following steps.
+2. Visit this [website](https://www.python.org/downloads/) and downlaod the most recent verison of python that is compatable with your operating system. 
 
 ### Committing/Deploying Changes to the Website
 
@@ -54,5 +56,6 @@ Secondly, we need to install npm and all other packages required to run the Reac
 ### Editing/Updating the Careers Page
 
 ### Understanding Vercel Web Hosting Service
+Vercel is a cloud platform designed for building, deploying, and scaling serverless applications and static websites. It easliy connects to github to allow for automatic deployments of all changes to the website. 
 
 ### Resolving Merge Conflicts
