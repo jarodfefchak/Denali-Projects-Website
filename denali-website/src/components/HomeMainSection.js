@@ -2,15 +2,20 @@ import React from "react";
 
 function HomeMainSection(){
     return(
-        <section styles = {homepageBodyStyles}>
+      
             <div>
-                <h1>Enhancing Performance and Sustainability with EPC Expertise</h1>
+                <p style ={textStyle}>Enhancing Performance and Sustainability with EPC Expertise</p>
             </div>
-        </section>    
+        
         );
 }
 export default HomeMainSection;
 
-const homepageBodyStyles = {
-    margin: "5px"
+
+const textStyle={
+    color:"blue",
+    fontSize:"6em",
+    textAlign:"center",
+    marginLeft: "75px",
+    marginRight: "75px",
 };
