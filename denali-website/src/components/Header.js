@@ -10,7 +10,7 @@ function Header(){
             <div style = {linkContainerStyle}>
                 <Link to = "/" style = {linkStyle}>Home</Link>
                 <Link to = "/Solutions" style = {linkStyle}>Solutions</Link>
-                <Link to = "/CareersPage" style = {linkStyle}>Careers</Link>
+                <Link to = "/Contact" style = {linkStyle}>Contact Us</Link>
                 </div>
             </div>
         </div>

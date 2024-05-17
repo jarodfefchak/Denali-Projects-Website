@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import Header from "./Header";
 
 function Contact(){
+    useEffect(() => {
+        document.title = "Contact Us - Denali Projects";
+    }, []);
+
     return(
         <div>
-            <h1>Contact </h1>
+            <Header/> 
         </div>
     );
 }
+
 export default Contact;
