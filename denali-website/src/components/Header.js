@@ -9,6 +9,7 @@ function Header(){
             <img src = {Logo}  alt = "Logo" width = "150px" />
             <div style = {linkContainerStyle}>
                 <Link to = "/" style = {linkStyle}>Home</Link>
+                <Link to = "/Solutions" style = {linkStyle}>Solutions</Link>
                 <Link to = "/CareersPage" style = {linkStyle}>Careers</Link>
                 </div>
             </div>
