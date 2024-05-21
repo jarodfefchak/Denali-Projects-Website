@@ -1,0 +1,16 @@
+
+.head-image {
+    background-image: url("../images/Home_Page.jpg");
+    background-size: cover;
+    height: 100vh;
+    background-repeat: no-repeat;
+}
+.MainSection{
+    color:"blue";
+    font-size:"6em";
+    text-align:"center";
+    margin-left: "75px";
+    margin-right: "75px";
+    height: 60%;
+}
+

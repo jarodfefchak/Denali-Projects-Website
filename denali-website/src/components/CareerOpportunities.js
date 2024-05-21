@@ -4,12 +4,13 @@ import Footer from "./Footer";
 
 function Contact(){
     useEffect(() => {
-        document.title = "Contact Us - Denali Projects";
+        document.title = "Career Opportunities - Denali Projects";
     }, []);
 
     return(
         <div>
-            <Header/> 
+            <Header/>
+            <h1>Your Future With Denali</h1> 
             <Footer/>
         </div>
     );

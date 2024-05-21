@@ -1,15 +1,17 @@
+import React from "react";
 
-
-function Solutions(){
+function InsideDenali(){
     return(
         <div style = {background}>
-            <h2>Solutions</h2>
+            <h2>Inside Denali</h2>
         </div>
     );
 };
-export default Solutions;
+
+export default InsideDenali;
+
 const background = {
-    backgroundColor: "#ffffff",
+    backgroundColor: "#9db3c1",
     backgroundSize:"cover",
     height: "100vh",
     margin: "0px",
