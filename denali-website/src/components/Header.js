@@ -6,11 +6,11 @@ function Header(){
     return(
         <div>
             <div style = {navbarStyle}>
-            <img src = {Logo}  alt = "Logo" width = "150px" />
+            <img src = {Logo}  alt = "Logo" width = "300px" />
             <div style = {linkContainerStyle}>
                 <Link to = "/" style = {linkStyle}>Home</Link>
                 <Link to = "/Solutions" style = {linkStyle}>Solutions</Link>
-                <Link to = "/Contact" style = {linkStyle}>Contact Us</Link>
+                <Link to = "/AboutUs" style = {linkStyle}>About Us</Link>
                 </div>
             </div>
         </div>
@@ -25,7 +25,6 @@ const navbarStyle = {
     justifyContent: 'space-between', // Align items horizontally
     alignItems: 'center', // Vertically center items
     padding: '20px', // Add some padding for spacing
-    backgroundColor: 'grey', // Set your desired background color
   };
 
   const linkContainerStyle = {
@@ -34,7 +33,8 @@ const navbarStyle = {
   };
 
   const linkStyle = {
-    color: 'white',
+    color: 'red',
     textDecoration: 'none',
-    padding: '0 10px', // Adjust padding as needed
+    padding: '10px', 
+    fontSize: "2em",
   };

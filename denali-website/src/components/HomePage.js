@@ -1,8 +1,11 @@
 import React, { useEffect } from 'react';
 import HomeMainSection from "./HomeMainSection";
-import Header from "./Header";
+import Solutions from './Solutions';
+import ProvenSuccess from './ProvenSuccess';
+import InsideDenali from './InsideDenali';
+import CareersPage from './CareersPage';
 import Footer from "./Footer";
-import './HomePage.css';
+
 
 function HomePage() {
     useEffect(() => {
@@ -10,11 +13,15 @@ function HomePage() {
     }, []);
 
     return (
-        <div className="head-image">
-                <Header />
-        <div className = "MainSection"><HomeMainSection /></div>
-        <div className ="footer" ><Footer /></div>
+        <div>
+        <HomeMainSection />
+        <Solutions />
+        <ProvenSuccess/>
+        <InsideDenali/>
+        <CareersPage/>
+        <Footer />
         </div>
+
     );
 };
 

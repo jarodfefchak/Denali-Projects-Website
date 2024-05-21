@@ -1,18 +1,17 @@
+import React from "react";
 
-
-function Solutions(){
-    
-
+function ProvenSuccess(){
     return(
         <div style = {background}>
-            <h2>Solutions</h2>
+            <h2>Proven Success</h2>
         </div>
     );
 };
-export default Solutions;
+
+export default ProvenSuccess;
 
 const background = {
-    backgroundColor: "#ffffff",
+    backgroundColor: "#6a696b",
     backgroundSize:"cover",
     height: "100vh",
     margin: "0px",
