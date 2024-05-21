@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import Header from "./Header";
-import Footer from "./Footer";
 
 function Contact(){
     useEffect(() => {
@@ -10,7 +9,6 @@ function Contact(){
     return(
         <div>
             <Header/> 
-            <Footer/>
         </div>
     );
 }

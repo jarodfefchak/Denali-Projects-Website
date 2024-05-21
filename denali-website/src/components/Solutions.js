@@ -1,17 +1,15 @@
-
+import React, { useEffect } from 'react';
+import Header from "./Header";
 
 function Solutions(){
+    useEffect(() => {
+        document.title = "Solutions - Denali Projects";
+    }, []);
+
     return(
-        <div style = {background}>
-            <h2>Solutions</h2>
+        <div>
+           <Header/>  
         </div>
     );
 };
 export default Solutions;
-const background = {
-    backgroundColor: "#ffffff",
-    backgroundSize:"cover",
-    height: "100vh",
-    margin: "0px",
-    padding: "0px",
-};
