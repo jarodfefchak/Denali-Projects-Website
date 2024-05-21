@@ -3,7 +3,9 @@ import React from "react";
 function InsideDenali(){
     return(
         <div style = {background}>
+            <div style = {text}>
             <h2>Inside Denali</h2>
+            </div>  
         </div>
     );
 };
@@ -17,3 +19,7 @@ const background = {
     margin: "0px",
     padding: "0px",
 };
+const text ={
+    display: 'flex',
+    flexDirection: 'column',
+}

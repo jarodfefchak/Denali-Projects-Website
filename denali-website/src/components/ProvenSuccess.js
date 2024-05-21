@@ -3,7 +3,9 @@ import React from "react";
 function ProvenSuccess(){
     return(
         <div style = {background}>
+            <div style = {text}>
             <h2>Proven Success</h2>
+            </div>  
         </div>
     );
 };
@@ -17,3 +19,7 @@ const background = {
     margin: "0px",
     padding: "0px",
 };
+const text ={
+    display: 'flex',
+    flexDirection: 'column',
+}
