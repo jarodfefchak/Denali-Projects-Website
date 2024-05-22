@@ -10,7 +10,7 @@ function Contact(){
     return(
         <div>
             <Header/>
-            <h1>Your Future With Denali</h1> 
+            <h1>Postings</h1> 
             <Footer/>
         </div>
     );

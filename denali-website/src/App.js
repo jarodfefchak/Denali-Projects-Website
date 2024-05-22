@@ -8,6 +8,7 @@ import AboutUs from './components/AboutUs';
 import ProvenSuccess from './components/ProvenSuccess';
 import InsideDenali from './components/InsideDenali'
 import HomePage from './components/HomePage'; 
+import CareerOpportunities from './components/CareerOpportunities';
 import{ BrowserRouter, Routes, Route} from 'react-router-dom';
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
     <Route path ="/AboutUs" element = {<AboutUs/>}/>
     <Route path ="/ProvenSuccess" element = {<ProvenSuccess/>}/>  
     <Route path ="/InsideDenali" element = {<InsideDenali/>}/>
+    <Route path ="/CareerOpportunities" element = {<CareerOpportunities/>}/>
 
   </Routes>
   </BrowserRouter>
