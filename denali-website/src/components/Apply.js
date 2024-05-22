@@ -1,21 +1,20 @@
 import React, { useEffect } from 'react';
 import Header from "./Header";
 import Footer from "./Footer";
-import Apply from "./Apply";
 
-function Contact(){
+function Apply(){
     useEffect(() => {
-        document.title = "Career Opportunities - Denali Projects";
+        document.title = "Apply - Denali Projects";
     }, []);
 
     return(
         <div>
             <Header/>
-            <h1>Postings</h1> 
+            <h1>Apply</h1> 
             
             <Footer/>
         </div>
     );
 }
 
-export default Contact;
+export default Apply;

@@ -6,7 +6,7 @@ function Header(){
     return(
         <div>
             <div style = {navbarStyle}>
-            <img src = {Logo}  alt = "Logo" width = "300px" />
+            <img src = {Logo}  alt = "Logo" height = "75vh" style = {{marginLeft:"10vw"}} />
             <div style = {linkContainerStyle}>
                 <Link to = "/" style = {linkStyle}>Home</Link>
                 <Link to = "/Solutions" style = {linkStyle}>Solutions</Link>
@@ -21,20 +21,24 @@ export default Header;
 
 
 const navbarStyle = {
+    position:"fixed",
     display: 'flex',
     justifyContent: 'space-between', // Align items horizontally
     alignItems: 'center', // Vertically center items
-    padding: '20px', // Add some padding for spacing
+    backgroundColor:"white",
+    width:"100vw",
   };
 
   const linkContainerStyle = {
     display: 'flex', // Create a flex container for the links
     alignItems: 'center', // Vertically center the links
+    marginRight:"30px",
+
   };
 
   const linkStyle = {
-    color: 'red',
+    color: 'black',
     textDecoration: 'none',
     padding: '10px', 
-    fontSize: "2em",
+    fontSize: "16pt",
   };

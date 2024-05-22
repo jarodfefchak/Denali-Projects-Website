@@ -5,6 +5,7 @@ import ProvenSuccess from './ProvenSuccess';
 import InsideDenali from './InsideDenali';
 import CareersPage from './CareersPage';
 import Footer from "./Footer";
+import Header from "./Header";
 
 
 function HomePage() {
@@ -14,6 +15,7 @@ function HomePage() {
 
     return (
         <div>
+        <Header />
         <HomeMainSection />
         <Solutions />
         <ProvenSuccess/>

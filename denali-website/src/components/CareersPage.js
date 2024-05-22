@@ -10,6 +10,7 @@ const CareersPage = () => {
     color: "#374f59",
     marginLeft: '5%',
     marginTop:"40px",
+    marginBottom:"40px",
     backgroundColor:"white",
     border: "0px",
     width:"400px",
@@ -53,7 +54,7 @@ export default CareersPage;
 const background = {
   color: 'white',
   backgroundColor: '#374f59',
-  height: '79vh',
+  height: '100%',
   margin: '0px',
   padding: '0px',
 };

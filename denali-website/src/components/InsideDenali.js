@@ -9,6 +9,7 @@ function InsideDenali(){
     const button = {
     color: "white",
     backgroundColor:"#374f59",
+    marginTop: "5vh",
     border: "0px",
     width:"400px",
     height:"90px",
@@ -43,7 +44,6 @@ export default InsideDenali;
 const background = {
     backgroundColor: "#9db3c1",
     backgroundSize:"cover",
-    height: "100vh",
     margin: "0px",
     padding: "0px",
 };
@@ -51,14 +51,14 @@ const content ={
     display: 'flex',
     justifyContent:"center",
     alignItems: "center",
-    padding: "100px",
+    padding: "40px",
 
 };
 const img = {
-    width: "50%",
-    height: "80%",
+    width: "40vw",
+    height: "80vh",
 }
 const text = {
-    padding:"100px",
+    marginLeft:"100px",
     color: "white"
 };

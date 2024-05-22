@@ -1,35 +1,31 @@
 import React from "react";
-import Header from "./Header";
 import Image from "../images/Home_Page.jpg";
 
-function HomeMainSection(){
-    return(
-      
-        <div style = {headImage}>
-            <Header/>
-            <p style = {MainSection}>Enhancing Performance and Sustainability with EPC Expertise</p>
-        </div>
-        
-        );
+function HomeMainSection() {
+  return (
+    <div style={headImage}>
+      <p style={MainSection}>Enhancing Performance and Sustainability with EPC Expertise</p>
+    </div>
+  );
 }
-export default HomeMainSection;
-
 
 const MainSection = {
-    display : "flex",
-    alignItems: "center",
-    color:"blue",
-    fontSize:"6em",
-    textAlign:"center",
-    marginLeft: "75px",
-    marginRight: "75px",
-    height: "40%",
+  display: "flex",
+  justifyContent:"center",
+  alignItems: "center",
+  color: "blue",
+  fontSize: "50pt",
+  textAlign: "center",
 };
+
 const headImage = {
-    backgroundImage: `url(${Image})`,
-    backgroundSize: "cover",
-    height: "100vh",
-    backgroundRepeat: "no-repeat",
-    margin: "0px",
-    padding: "0px",
+    display:"flex",
+  backgroundImage: `url(${Image})`,
+  backgroundSize: "cover",
+  height: "87vh",
+  backgroundRepeat: "no-repeat",
+  margin: "0px",
+  padding: "0px",
 };
+
+export default HomeMainSection;
