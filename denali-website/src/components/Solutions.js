@@ -1,7 +1,6 @@
 
 import React from 'react';
 
-// Import your image files
 import autoImage from '../images/Solutions/automationInstrumentation.jpg';
 import elecImage from '../images/Solutions/electricalEngineering.jpg';
 import mecImage from '../images/Solutions/mechanicalEngineering.jpg';
@@ -11,27 +10,29 @@ import projectImage from '../images/Solutions/projectManagement.jpg';
 
 function Solutions() {
     const imageList = [
-        { src: mecImage, alt: 'Mechanical Engineering' },
-        { src: elecImage, alt: 'Electrical Engineering' },
-        { src: autoImage, alt: 'Automation and Instrumentation' },
-        { src: processImage, alt: 'Process Engineering' },
-        { src: projectImage, alt: 'Project Management' },
-        { src: procureImage, alt: 'Procurement Services' },
+        { src: mecImage, alt: 'Mechanical Engineering' ,description: 'Mechanical Engineering' } ,
+        { src: elecImage, alt: 'Electrical Engineering',description: 'Electrical Engineering' },
+        { src: autoImage, alt: 'Automation and Instrumentation' ,description: 'Automation and Instrumentation'},
+        { src: processImage, alt: 'Process Engineering',description: 'Process Engineering' },
+        { src: projectImage, alt: 'Project Management',description: 'Project Management' },
+        { src: procureImage, alt: 'Procurement Services',description: 'Procurement Services' },
     ];
 
     return (
         <div style={background}>
-            <div style={text}>
-                <p>Solutions We Offer</p>
-            </div>
+             <h1 style={heading}>Solutions We Offer</h1>
+            
             <div style={solutions}>
                 {imageList.map((image, index) => (
+                    <div key ={index}>
                     <img
                         key={index}
                         src={image.src}
                         alt={image.alt}
                         style={img}
                     />
+                    <p style={text}>{image.description}</p>
+                    </div>
                 ))}
             </div>
         </div>
@@ -41,27 +42,37 @@ function Solutions() {
 export default Solutions;
 
 const background = {
-    backgroundColor: '#ffffff',
+    display:"flex",
+    flexDirection:"column",
+    backgroundColor: '#e0e6e9',
     backgroundSize: 'cover',
     margin: '0px',
     padding: '0px',
 };
 
-const text = {
-    display: 'flex',
-    
+const heading = {
+    marginLeft: '20px',
+    fontSize: '25pt',
 };
 
 const solutions = {
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'center',
-    marginLeft:"10vw",
-    marginRight:"10vw",
+    marginLeft:"1vw",
+    marginRight:"1vw",
+    marginBottom:"20px",
+    
 };
 
 const img = {
     height: '400px',
-    width: '350px',
-    padding: '1vw',
+    width: '450px',
+    paddingLeft:"1vw",
+    paddingRight:"1vw",
+};
+const text ={
+   paddingLeft:'1vw',
+   marginBottom:"25px",
+   //backgroundColor:"#6a696b",
 };

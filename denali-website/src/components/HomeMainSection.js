@@ -13,7 +13,7 @@ const MainSection = {
   display: "flex",
   justifyContent:"center",
   alignItems: "center",
-  color: "blue",
+  color: "black",
   fontSize: "50pt",
   textAlign: "center",
 };

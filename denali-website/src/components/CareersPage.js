@@ -23,7 +23,6 @@ const CareersPage = () => {
   };
   return (
     <div style={background}>
-      <div style={gradient} />
       <div style={text}>
         <p style={{ fontSize: '3.5em', marginTop :"100px" }}>
           <b>Your Future With Denali</b>
@@ -57,15 +56,6 @@ const background = {
   height: '100%',
   margin: '0px',
   padding: '0px',
-};
-
-const gradient = {
-  position: 'relative',
-  top: 0,
-  left: 0,
-  width: '100%',
-  height: '4px', 
-  backgroundImage: 'linear-gradient(180deg, #9db3c1, #374f59)',
 };
 
 const text = {

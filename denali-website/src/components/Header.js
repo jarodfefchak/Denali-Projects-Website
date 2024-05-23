@@ -1,23 +1,19 @@
 import React from "react";
 import { useState } from "react";
-import Dropdown from 'react-bootstrap/Dropdown';
-import DropdownButton from 'react-bootstrap/DropdownButton'; 
 import {Link} from 'react-router-dom';
 import Logo from '../images/Logos/Denali_Logo_Black_Transparent_BG.png'
-import Projects from "./Projects";
 import DropdownMenu from "./DropdownMenu";
 
 
 function Header(){
   const [isDropdownVisible, setDropdownVisible] = useState(false);
-
   const handleMouseEnter = () => {
     setDropdownVisible(true);
   };
   const handleMouseLeave = () => {
     setDropdownVisible(false);
   };
-
+  
 
     return(
         <div>
@@ -31,7 +27,7 @@ function Header(){
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          <p style={linkStyle}>Projects</p>
+          <p style={linkStyle}>Projects &#8628;</p>
           <div style ={menu}>
           {isDropdownVisible && <DropdownMenu />}
           </div>
@@ -69,7 +65,6 @@ const navbarStyle = {
     marginRight:"35px",
 
   };
-
   const linkStyle = {
     border:"none",
     color: 'black',
@@ -77,8 +72,9 @@ const navbarStyle = {
     padding: '10px', 
     fontSize: "16pt",
   };
+
   const menu = {
     position: 'absolute',
-    backgroundColor:"white",
-    top: 75, /* Position the dropdown below the button */
+    minWidth: 100,
+    top: 72, /* Position the dropdown below the button */
   }

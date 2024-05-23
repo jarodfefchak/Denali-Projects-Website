@@ -11,7 +11,7 @@ function Apply(){
         <div>
             <Header/>
             <h1>Apply</h1> 
-            
+    
             <Footer/>
         </div>
     );

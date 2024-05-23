@@ -1,25 +1,86 @@
 import React from "react";
+import Project1Img from '../images/ProvenSuccess/Project1.jpg';
+import Project2Img from '../images/ProvenSuccess/Project2.jpg';
+import Project3Img from '../images/ProvenSuccess/Project3.jpg';
 
-function ProvenSuccess(){
-    return(
-        <div style = {background}>
-            <div style = {text}>
-            <h2>Proven Success</h2>
-            </div>  
+function ProvenSuccess() {
+    const imageList = [
+        { src: Project1Img, alt: "Project 1", description: 'Project 1' },
+        { src: Project2Img, alt: "Project 2", description: 'Project 2' },
+        { src: Project3Img, alt: "Project 3", description: 'Project 3' },
+    ];
+
+    return (
+        <div style={background}>
+            <div style={layout}>
+                <p style ={{fontSize:"50pt", margin:"0",}}><b>Proven Success</b></p>
+                <p style ={{fontSize:"30pt", marginTop:"50", marginBottom:"100px"}}>Engineering Energy, Empowering Progress</p>
+            </div>
+            <div style={Success}>
+                {imageList.map((image, index) => (
+                    <div key={index} style={imageContainer}>
+                        <img
+                            key={index}
+                            src={image.src}
+                            alt={image.alt}
+                            style={img}
+                        />
+                        <p style={text}>{image.description}</p>
+                    </div>
+                ))}
+            </div>
         </div>
     );
-};
+}
 
 export default ProvenSuccess;
 
 const background = {
     backgroundColor: "#6a696b",
-    backgroundSize:"cover",
-    height: "100vh",
+    backgroundSize: "cover",
+    
     margin: "0px",
     padding: "0px",
 };
-const text ={
+
+const layout = {
     display: 'flex',
     flexDirection: 'column',
-}
+    alignItems: "center",
+    paddingTop: "100px",
+    color:"white",
+};
+
+const Success = {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginLeft: '1vw',
+    marginRight: '1vw',
+    paddingBottom:"100px",
+};
+
+const imageContainer = {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+};
+
+const img = {
+    height: '400px',
+    width: '450px',
+    paddingLeft: "1vw",
+    paddingRight: "1vw",
+};
+
+const text = {
+    marginLeft: '1vw',
+    backgroundColor: "#374f59",
+    textAlign:"center",
+    color:"white",
+    height: "30px",
+    width:"430px",
+    marginRight: '1vw',
+    marginTop: "0",
+    padding:"10px",
+};
