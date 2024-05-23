@@ -22,7 +22,7 @@ const headImage = {
     display:"flex",
   backgroundImage: `url(${Image})`,
   backgroundSize: "cover",
-  height: "87vh",
+  height: "100vh",
   backgroundRepeat: "no-repeat",
   margin: "0px",
   padding: "0px",
