@@ -11,6 +11,8 @@ import HomePage from './components/HomePage';
 import Apply from './components/Apply'; 
 import Projects from './components/Projects';
 import CareerOpportunities from './components/CareerOpportunities';
+import CareerList from './components/CareerList';
+import Results from './components/Results';
 import{ BrowserRouter, Routes, Route} from 'react-router-dom';
 
 function App() {
@@ -30,6 +32,8 @@ function App() {
     <Route path ="/CareerOpportunities" element = {<CareerOpportunities/>}/>
     <Route path ="/Apply" element = {<Apply/>}/>
     <Route path ="/Projects" element = {<Projects/>}/>
+    <Route path ="/CareerList" element = {<CareerList/>}/>
+    <Route path ="/Results" element = {<Results/>}/>
 
   </Routes>
   </BrowserRouter>

@@ -1,0 +1,38 @@
+[
+   {
+      "id": 1,
+      "title": "Job title",
+      "location": "Calgary",
+      "description": "Text",
+      "minimum_requirements": [
+         "one",
+         "two"
+      ],
+      "additional_assets": [
+         "three",
+         "four"
+      ],
+      "why": [
+         "five",
+         "six"
+      ]
+   },
+   {
+      "id": 2,
+      "title": "Job title2",
+      "location": "Calgary2",
+      "description": "Text",
+      "minimum_requirements": [
+         "one",
+         "two"
+      ],
+      "additional_assets": [
+         "three",
+         "four"
+      ],
+      "why": [
+         "five",
+         "six"
+      ]
+   }
+]

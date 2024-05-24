@@ -1,11 +1,13 @@
 .background{
-    background-color: black;
+    background-image: linear-gradient(0, black, rgb(44, 44, 44));
 }
 
 .items{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding-top: 40px;
+    padding-bottom: 10px;
 }
 #item1{
     text-align: center;

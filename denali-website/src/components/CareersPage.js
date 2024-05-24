@@ -10,7 +10,7 @@ const CareersPage = () => {
     color: "#374f59",
     marginLeft: '5%',
     marginTop:"40px",
-    marginBottom:"40px",
+    marginBottom:"100px",
     backgroundColor:"white",
     border: "0px",
     width:"400px",
@@ -24,7 +24,7 @@ const CareersPage = () => {
   return (
     <div style={background}>
       <div style={text}>
-        <p style={{ fontSize: '3.5em', marginTop :"100px" }}>
+        <p style={{ fontSize: '60pt', marginTop :"100px" }}>
           <b>Your Future With Denali</b>
         </p>
         <p style={{ fontSize: '1.5em' }}>

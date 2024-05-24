@@ -52,7 +52,7 @@ const background = {
 
 const heading = {
     marginLeft: '20px',
-    fontSize: '25pt',
+    fontSize: '60pt',
 };
 
 const solutions = {

@@ -6,6 +6,8 @@ import InsideDenali from './InsideDenali';
 import CareersPage from './CareersPage';
 import Footer from "./Footer";
 import Header from "./Header";
+import Results from "./Results";
+import { useLocation } from 'react-router-dom';
 
 
 function HomePage() {
@@ -16,9 +18,10 @@ function HomePage() {
     return (
         <div>
         <Header />
-        <HomeMainSection />
-        <Solutions />
+        <HomeMainSection /> 
         <ProvenSuccess/>
+        <Results/>
+        <Solutions />
         <InsideDenali/>
         <CareersPage/>
         <Footer />

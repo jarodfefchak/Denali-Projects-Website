@@ -13,7 +13,7 @@ function ProvenSuccess() {
     return (
         <div style={background}>
             <div style={layout}>
-                <p style ={{fontSize:"50pt", margin:"0",}}><b>Proven Success</b></p>
+                <p style ={{fontSize:"60pt", margin:"0",}}><b>Proven Success</b></p>
                 <p style ={{fontSize:"30pt", marginTop:"50", marginBottom:"100px"}}>Engineering Energy, Empowering Progress</p>
             </div>
             <div style={Success}>
@@ -36,7 +36,7 @@ function ProvenSuccess() {
 export default ProvenSuccess;
 
 const background = {
-    backgroundColor: "#6a696b",
+    backgroundColor: "#6e9277",
     backgroundSize: "cover",
     
     margin: "0px",
