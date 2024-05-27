@@ -29,7 +29,7 @@ function InsideDenali(){
                     <p style = {{fontSize: "20pt"}}>Founded in 2016, Denali Projects has been dedicated to delivering top-tier project management and engineering solutions in the energy industry. 
                         We prioritize client satisfaction by fostering strong partnerships and delivering projects that meet the highest standards of quality and safety. 
                         Our mission is to turn complex challenges into successful outcomes, making us a trusted partner in the EPC industry.</p>
-                    <Link to = "/CareerOpportunities" >
+                    <Link to = "/AboutUs" >
                         <button onMouseEnter={() => setHoverID(true)}
                         onMouseLeave={() => setHoverID(false)} style = {button}>Discover Who We Are</button>
                     </Link>

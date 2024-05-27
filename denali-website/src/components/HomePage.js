@@ -7,13 +7,16 @@ import CareersPage from './CareersPage';
 import Footer from "./Footer";
 import Header from "./Header";
 import Results from "./Results";
-import { useLocation } from 'react-router-dom';
+
 
 
 function HomePage() {
     useEffect(() => {
         document.title = "Denali Projects";
     }, []);
+    useEffect(() => {
+        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+      }, []);
 
     return (
         <div>

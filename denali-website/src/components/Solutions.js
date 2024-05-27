@@ -1,21 +1,27 @@
 
 import React from 'react';
 
-import autoImage from '../images/Solutions/automationInstrumentation.jpg';
-import elecImage from '../images/Solutions/electricalEngineering.jpg';
-import mecImage from '../images/Solutions/mechanicalEngineering.jpg';
-import processImage from '../images/Solutions/processEngineering.jpg';
-import procureImage from '../images/Solutions/procurementServices.jpg';
-import projectImage from '../images/Solutions/projectManagement.jpg';
+import FEEDStudies from '../images/Solutions/FEEDStudies.jpg';
+import FieldProjects from '../images/Solutions/brownAndGreenfieldProjects.jpg';
+import OilFacilities from '../images/Solutions/conventionalOilFacilities.jpg';
+import WellPads from '../images/Solutions/wellPads.jpg';
+import sweetSourGas from '../images/Solutions/sweetSourGas.jpg';
+import compressorStations from '../images/Solutions/compressorStations.jpg';
+import waterTreatment from '../images/Solutions/waterTreatment.jpg';
+import WellTieIns from '../images/Solutions/wellTieIns.jpg';
+import LACTUnits from '../images/Solutions/LACTUnits.jpg';
 
 function Solutions() {
     const imageList = [
-        { src: mecImage, alt: 'Mechanical Engineering' ,description: 'Mechanical Engineering' } ,
-        { src: elecImage, alt: 'Electrical Engineering',description: 'Electrical Engineering' },
-        { src: autoImage, alt: 'Automation and Instrumentation' ,description: 'Automation and Instrumentation'},
-        { src: processImage, alt: 'Process Engineering',description: 'Process Engineering' },
-        { src: projectImage, alt: 'Project Management',description: 'Project Management' },
-        { src: procureImage, alt: 'Procurement Services',description: 'Procurement Services' },
+        { src: FEEDStudies, alt: 'FEED Studies' ,description: 'FEED Studies' } ,
+        { src: FieldProjects, alt: 'Field Projects',description: 'Brown and Greenfield Projects' },
+        { src: OilFacilities, alt: 'oil Facilities' ,description: 'Conventional Oil Facilities'},
+        { src: WellPads, alt: 'Well Pads',description: 'Well Pads' },
+        { src: sweetSourGas, alt: 'Sweet Sour Gas',description: 'Sweet/Sour Gas and Liquid Processing Facilities' },
+        { src: compressorStations, alt: 'compressor Stations',description: 'Compressor Stations' },
+        { src: waterTreatment, alt: 'water Treatment',description: 'Produced Water Treatment/Storage/Injection' },
+        { src: WellTieIns, alt: 'Well Tie Ins ',description: 'Well Tie Ins and Gathering Systems' },
+        { src: LACTUnits, alt: 'LACT Units',description: 'LACT Units' },
     ];
 
     return (
@@ -51,7 +57,7 @@ const background = {
 };
 
 const heading = {
-    marginLeft: '20px',
+    margin:"20px",
     fontSize: '60pt',
 };
 
@@ -59,17 +65,14 @@ const solutions = {
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'center',
-    marginLeft:"1vw",
-    marginRight:"1vw",
-    marginBottom:"20px",
+    margin:"20px",
     
 };
 
 const img = {
     height: '400px',
     width: '450px',
-    paddingLeft:"1vw",
-    paddingRight:"1vw",
+    margin:"10px",
 };
 const text ={
    paddingLeft:'1vw',

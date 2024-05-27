@@ -1,5 +1,5 @@
 import React from "react";
-import {Link} from 'react-router-dom';
+import wLogo from '../images/Logos/Denali_Logo_White_Transparent_BG.png';
 import './Footer.css';
 
 function Footer(){
@@ -15,6 +15,10 @@ function Footer(){
             <div id = "item2">
                 <h4>Company</h4> 
                 <p>test</p>
+                <br></br>
+                <img src={wLogo} alt="Logo" height="50px"  />
+
+                <p style = {{fontSize:"14px", marginTop:"10px"}}>Copyright &copy; 2024 Denali Projects Ltd. </p>
             </div>
             <div id = "item3">
                 <h4>Accreditations</h4> 
