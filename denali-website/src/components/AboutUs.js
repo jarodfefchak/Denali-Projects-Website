@@ -1,4 +1,6 @@
 import React, { useEffect } from "react";
+import{ useState } from "react";
+import {Link} from 'react-router-dom';
 import Header from "./Header";
 import Footer from "./Footer";
 import BradImg from "../images/AboutUs/BradMeaney.jpg";
@@ -9,6 +11,20 @@ function AboutUs() {
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "instant" });
   }, []);
+  const [hover,setHover] = useState(false);
+  const button = {
+    color: "white",
+    backgroundColor:"#374f59",
+    border: "0px",
+    borderRadius:"15px",
+    width:"300px",
+    height:"75px",
+    fontSize: "25pt",
+    cursor: "pointer",
+    ...(hover?{
+      boxShadow: "1px 1px 20px #000000",
+    }:null),
+  };
   return (
     <div>
       <Header />
@@ -53,7 +69,15 @@ function AboutUs() {
             Fueling Success Together: EPC Solutions for the Oil & Gas Industry
           </b>
         </p>
-        <br></br>
+        <Link to="/Contact">
+          <button
+            onMouseEnter={() => setHover(true)}
+            onMouseLeave={() => setHover(false)}
+            style={button}
+          >
+            Contact Us
+          </button>
+        </Link>
         <p
           style={{ fontSize: "27px", marginBottom: "0px", marginLeft: "100px" }}
         >
@@ -62,22 +86,37 @@ function AboutUs() {
 
         <div style={images}>
           <div style={img}>
-            <img src={BradImg} alt="Brad Meaney" height="300px" style={{paddingBottom:"15px"}} />
-            <p style = {{margin:"0px"}}>Brad Meaney</p>
-            <p style = {{margin:"0px"}}>Principle</p>
-            <p style = {{margin:"0px"}}>Instumentation Lead</p>
+            <img
+              src={BradImg}
+              alt="Brad Meaney"
+              height="300px"
+              style={{ paddingBottom: "15px" }}
+            />
+            <p style={{ margin: "0px" }}>Brad Meaney</p>
+            <p style={{ margin: "0px" }}>Principle</p>
+            <p style={{ margin: "0px" }}>Instumentation Lead</p>
           </div>
           <div style={img}>
-            <img src={JarodImg} alt="Jarod Fechak" height="300px" style={{paddingBottom:"15px"}} />
-            <p style = {{margin:"0px"}}>Jarod Fefchak</p>
-            <p style = {{margin:"0px"}}>Principle</p>
-            <p style = {{margin:"0px"}}>Electrical Lead</p>
+            <img
+              src={JarodImg}
+              alt="Jarod Fechak"
+              height="300px"
+              style={{ paddingBottom: "15px" }}
+            />
+            <p style={{ margin: "0px" }}>Jarod Fefchak</p>
+            <p style={{ margin: "0px" }}>Principle</p>
+            <p style={{ margin: "0px" }}>Electrical Lead</p>
           </div>
           <div style={img}>
-            <img src={DeanImg} alt="Dean Krikby" height="300px" style={{paddingBottom:"15px"}} />
-            <p style = {{margin:"0px"}}>Dean Kirkby</p>
-            <p style = {{margin:"0px"}}>Principle</p>
-            <p style = {{margin:"0px"}}>Engineering Lead</p>
+            <img
+              src={DeanImg}
+              alt="Dean Krikby"
+              height="300px"
+              style={{ paddingBottom: "15px" }}
+            />
+            <p style={{ margin: "0px" }}>Dean Kirkby</p>
+            <p style={{ margin: "0px" }}>Principle</p>
+            <p style={{ margin: "0px" }}>Engineering Lead</p>
           </div>
         </div>
       </div>
