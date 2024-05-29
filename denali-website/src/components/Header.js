@@ -25,15 +25,15 @@ function Header() {
               Solutions
             </Dropdown.Toggle>
             <Dropdown.Menu style={dropDownMenu}>
-              <Dropdown.Item href="#/action-1">FEED Studies</Dropdown.Item>
-              <Dropdown.Item href="#/action-2">Brown and Greenfield Projects</Dropdown.Item>
-              <Dropdown.Item href="#/action-3">Conventional Oil Facilities</Dropdown.Item>
-              <Dropdown.Item href="#/action-1">Well Pads</Dropdown.Item>
-              <Dropdown.Item href="#/action-2">Sweet/Sour Gas and Liquid Processing Facilities</Dropdown.Item>
-              <Dropdown.Item href="#/action-3">Compressor Stations</Dropdown.Item>
-              <Dropdown.Item href="#/action-1">Produced Water Treatment/Storage/Injection</Dropdown.Item>
-              <Dropdown.Item href="#/action-2">Well Tie Ins and Gathering Systems</Dropdown.Item>
-              <Dropdown.Item href="#/action-3">LACT Units</Dropdown.Item>
+              <Dropdown.Item href="./SolutionsDisplay">FEED Studies</Dropdown.Item>
+              <Dropdown.Item href="./SolutionsDisplay">Brown and Greenfield Projects</Dropdown.Item>
+              <Dropdown.Item href="./SolutionsDisplay">Conventional Oil Facilities</Dropdown.Item>
+              <Dropdown.Item href="./SolutionsDisplay">Well Pads</Dropdown.Item>
+              <Dropdown.Item href="./SolutionsDisplay">Sweet/Sour Gas and Liquid Processing Facilities</Dropdown.Item>
+              <Dropdown.Item href="./SolutionsDisplay">Compressor Stations</Dropdown.Item>
+              <Dropdown.Item href="./SolutionsDisplay">Produced Water Treatment/Storage/Injection</Dropdown.Item>
+              <Dropdown.Item href="./SolutionsDisplay">Well Tie Ins and Gathering Systems</Dropdown.Item>
+              <Dropdown.Item href="./SolutionsDisplay">LACT Units</Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
           <Link to="/AboutUs"  id = "link3"style={linkStyle}>About Us</Link>

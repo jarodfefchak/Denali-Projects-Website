@@ -13,6 +13,9 @@ import Projects from './components/Projects';
 import CareerOpportunities from './components/CareerOpportunities';
 import CareerList from './components/CareerList';
 import Results from './components/Results';
+import SolutionsDisplay from './components/SolutionsDisplay';
+import SolutionsList from './components/SolutionsList';
+
 import{ BrowserRouter, Routes, Route} from 'react-router-dom';
 
 function App() {
@@ -34,6 +37,8 @@ function App() {
     <Route path ="/Projects" element = {<Projects/>}/>
     <Route path ="/CareerList" element = {<CareerList/>}/>
     <Route path ="/Results" element = {<Results/>}/>
+    <Route path ="/SolutionsDisplay" element = {<SolutionsDisplay/>}/>
+    <Route path ="/SolutionsList" element = {<SolutionsList/>}/>
 
   </Routes>
   </BrowserRouter>
