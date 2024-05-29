@@ -7,10 +7,11 @@ function Results() {
 
     return (
         <div style={background}>
-            <p style = {{fontSize:"60pt",margin:"50px",}}><b>Our Results</b></p>
+            <p style = {{fontSize:"60pt",marginLeft:"100px", marginTop:"50px",}}><b>Our Results</b></p>
             <div style={stats}>
                 <div style = {counter}>
-                <CountUp end={hasBeenVisible.first ? 2586 : 0} duration={8}>
+                <div style = {count}>
+                <CountUp end={hasBeenVisible.first ? 2586 : 0} duration={6} >
                     {({ countUpRef, start }) => (
                         <VisibilitySensor
                             onChange={(isVisible) => {
@@ -28,9 +29,11 @@ function Results() {
                     )}
                    
                 </CountUp>
-                <p>Projects to Date</p>
+                </div>
+                <p style ={{fontSize:"45pt"}}>Projects to Date</p>
                 </div>
                 <div style = {counter}>
+                <div style = {count}>
                 <CountUp end={hasBeenVisible.second ? 53 : 0} duration={4} >
                     {({ countUpRef, start }) => (
                         <VisibilitySensor
@@ -49,9 +52,11 @@ function Results() {
                     )}
                      
                 </CountUp>
-                <p>Successful Partnerships</p>
+                </div>
+                <p style ={{fontSize:"45pt"}}>Successful Partnerships</p>
                 </div>
                 <div style = {counter}>
+                    <div style = {count}>
                     <CountUp end={hasBeenVisible.third ? 96 : 0} duration={6} formattingFn={(value) => `${value}%`}>
                     {({ countUpRef, start }) => (
                         <VisibilitySensor
@@ -69,7 +74,8 @@ function Results() {
                         </VisibilitySensor>
                     )}
                 </CountUp>
-                <p>Retention Rate</p>
+                </div>
+                <p style ={{fontSize:"45pt"}}>Retention Rate</p>
                 </div>
             </div>
         </div>
@@ -90,11 +96,17 @@ const stats = {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    margin:"50px",
+    marginLeft:"100px",
+    marginRight:"100px",
+    marginTop:"50px",
+    marginBottom:"100px",
 };
 
 const counter ={
     flexDirection:"column",
     textAlign:"center",
-    fontSize:"30pt"
+};
+const count ={
+    fontSize:"80pt",
+    fontWeight:"600"
 };

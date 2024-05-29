@@ -46,7 +46,7 @@ const background = {
 const layout = {
     display: 'flex',
     flexDirection: 'column',
-    alignItems: "center",
+    paddingLeft: "100px",
     paddingTop: "100px",
     color:"white",
 };
@@ -69,18 +69,15 @@ const imageContainer = {
 const img = {
     height: '400px',
     width: '450px',
-    paddingLeft: "1vw",
-    paddingRight: "1vw",
 };
 
 const text = {
-    marginLeft: '1vw',
     backgroundColor: "#374f59",
     textAlign:"center",
     color:"white",
     height: "30px",
-    width:"430px",
-    marginRight: '1vw',
+    width:"450px",
+    marginLeft: "1vw",
+    marginRight: "1vw",
     marginTop: "0",
-    padding:"10px",
 };

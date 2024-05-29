@@ -9,7 +9,6 @@ import ProvenSuccess from './components/ProvenSuccess';
 import InsideDenali from './components/InsideDenali'
 import HomePage from './components/HomePage'; 
 import Apply from './components/Apply'; 
-import Projects from './components/Projects';
 import CareerOpportunities from './components/CareerOpportunities';
 import CareerList from './components/CareerList';
 import Results from './components/Results';
@@ -34,7 +33,6 @@ function App() {
     <Route path ="/InsideDenali" element = {<InsideDenali/>}/>
     <Route path ="/CareerOpportunities" element = {<CareerOpportunities/>}/>
     <Route path ="/Apply" element = {<Apply/>}/>
-    <Route path ="/Projects" element = {<Projects/>}/>
     <Route path ="/CareerList" element = {<CareerList/>}/>
     <Route path ="/Results" element = {<Results/>}/>
     <Route path ="/SolutionsDisplay" element = {<SolutionsDisplay/>}/>

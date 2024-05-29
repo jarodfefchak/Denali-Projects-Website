@@ -57,7 +57,9 @@ const background = {
 };
 
 const heading = {
-    margin:"20px",
+    marginLeft:"100px",
+    marginTop:"50px",
+    marginBottom:"25px",
     fontSize: '60pt',
 };
 

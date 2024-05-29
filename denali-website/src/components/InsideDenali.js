@@ -51,12 +51,12 @@ const content ={
     display: 'flex',
     justifyContent:"center",
     alignItems: "center",
-    padding: "40px",
+    padding: "100px",
 
 };
 const img = {
     width: "40vw",
-    height: "80vh",
+    height: "75vh",
 }
 const text = {
     marginLeft:"100px",
