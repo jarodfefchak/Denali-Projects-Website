@@ -53,7 +53,7 @@ function Apply() {
           <p style = {{marginBottom:"0px",fontSize:"22px", fontWeight:500}}>Personal Details</p>
           <label style={label}>
             <input
-              style={{ width: "300px" }}
+              style={{ width: "16vw" }}
               type="text"
               name="name"
               placeholder="First and Last Name"
@@ -62,7 +62,7 @@ function Apply() {
           </label>
           <label style={label}>
             <input
-              style={{ width: "300px" }}
+              style={{ width: "16vw" }}
               type="email"
               name="email"
               placeholder="Email"
@@ -72,7 +72,7 @@ function Apply() {
           <p style = {{marginBottom:"0px",fontSize:"22px", fontWeight:500}}>Contact Details</p>
           <label style={label}>
             <input
-              style={{ width: "300px" }}
+              style={{ width: "16vw" }}
               type="text"
               name="address1"
               placeholder="Street Address"
@@ -81,7 +81,7 @@ function Apply() {
           </label>
           <label style={label}>
             <input
-              style={{ width: "300px" }}
+              style={{ width: "16vw" }}
               type="text"
               name="address2"
               placeholder="Address Line 2"
@@ -89,7 +89,7 @@ function Apply() {
           </label>
           <label style={label}>
             <input
-              style={{ width: "300px" }}
+              style={{ width: "16vw" }}
               type="text"
               name="city"
               placeholder="City"
@@ -98,7 +98,7 @@ function Apply() {
           </label>
           <label style={label}>
             <input
-              style={{ width: "300px" }}
+              style={{ width: "16vw" }}
               type="text"
               name="province"
               placeholder="Province"
@@ -107,7 +107,7 @@ function Apply() {
           </label>
           <label style={label}>
             <input
-              style={{ width: "610px" }}
+              style={{ width: "32vw" }}
               type="text"
               name="postalCode"
               placeholder="Postal Code"
@@ -117,7 +117,7 @@ function Apply() {
           <p style = {{marginBottom:"0px",fontSize:"22px", fontWeight:500}}>Phone</p>
           <label style={label}>
             <input
-              style={{ width: "610px" }}
+              style={{ width: "32vw" }}
               type="tel"
               name="phone"
               required
@@ -127,7 +127,7 @@ function Apply() {
           <p style = {{marginBottom:"0px",ffontSize:"22px", fontWeight:500}}>APEGA Membership Number</p>
           <label style={label}>
             <input
-              style={{ width: "610px" }}
+              style={{ width: "32vw" }}
               type="text"
               name="APEGA"
               placeholder="Optional- But please include if you have one"
@@ -135,14 +135,14 @@ function Apply() {
           </label>
           <p style = {{marginBottom:"0px",fontSize:"22px",fontWeight:500}}>Do you currenlty reside in Alberta?</p>
           <label style={label}>
-            <select style={{ width: "610px" }} required>
+            <select style={{ width: "32vw" }} required>
               <option value="ablertaNo">No</option>
               <option value="albertaYes">Yes</option>
             </select>
           </label>
-          <p style = {{marginBottom:"0px",fontSize:"22px", fontWeight:500}}>Are you legally entitled to work in Canada?</p>
+          <p style = {{marginBottom:"0",fontSize:"22px", fontWeight:500}}>Are you legally entitled to work in Canada?</p>
           <label style={label}>
-            <select style={{ width: "610px" }} required>
+            <select style={{ width: "32vw" }} required>
               <option value="legalToWorkNo">No</option>
               <option value="legalToWorkYes">Yes</option>
             </select>
@@ -151,7 +151,7 @@ function Apply() {
           <p style = {{marginBottom:"0px",fontSize:"16px"}}> Only PDF files accepted</p>
           <label style={label}>
             <input
-              style={{ width: "610px" }}
+              style={{ width: "32vw" }}
               type="file"
               name="resume"
               accept=".pdf"
@@ -161,7 +161,7 @@ function Apply() {
           <p style = {{marginBottom:"0px",fontSize:"22px", fontWeight:500}}>LinkedIn Profile Address</p>
           <label style={label}>
             <input
-              style={{ width: "610px" }}
+              style={{ width: "32vw" }}
               type="url"
               name="url"
               placeholder="https://example.com"

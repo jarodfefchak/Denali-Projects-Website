@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import {Link} from 'react-router-dom';
+import "./CareersPage.css"
 
 
 const CareersPage = () => {
@@ -22,8 +23,8 @@ const CareersPage = () => {
     }:null),
   };
   return (
-    <div style={background}>
-      <div style={text}>
+    <div style = {background}>
+      <div className = "text">
         <p style={{ fontSize: '60pt', marginTop :"100px" }}>
           <b>Your Future With Denali</b>
         </p>
@@ -50,18 +51,9 @@ const CareersPage = () => {
 
 export default CareersPage;
 
-const background = {
-  color: 'white',
-  backgroundColor: '#374f59',
-  height: '100%',
+const background={
+  color: "pink",
+  backgroundColor: "#374f59",
   margin: '0px',
   padding: '0px',
-};
-
-const text = {
-  display: 'flex',
-  flexDirection: 'column',
-  marginLeft: '5%',
-  marginRight: '12.5%',
-};
-
+}
