@@ -60,5 +60,5 @@ const img = {
 }
 const text = {
     marginLeft:"100px",
-    color: "white"
+    color: "green"
 };
