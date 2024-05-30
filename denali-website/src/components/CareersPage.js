@@ -1,37 +1,18 @@
-import React from 'react';
-import { useState } from 'react';
-import {Link} from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import "./CareersPage.css"
 
-
 const CareersPage = () => {
-  
-  const [hover,setHover] = useState(false);
-  const button = {
-    color: "#374f59",
-    marginLeft: '5%',
-    marginTop:"40px",
-    marginBottom:"100px",
-    backgroundColor:"white",
-    border: "0px",
-    width:"400px",
-    height:"90px",
-    fontSize: "25pt",
-    cursor: "pointer",
-    ...(hover?{
-      boxShadow: "1px 1px 20px #000000",
-    }:null),
-  };
+  const [hover, setHover] = useState(false);
+
   return (
-    <div style = {background}>
-      <div className = "text">
-        <p style={{ fontSize: '60pt', marginTop :"100px" }}>
+    <div style ={background}>
+      <div className="text">
+        <p className="header">
           <b>Your Future With Denali</b>
         </p>
-        <p style={{ fontSize: '1.5em' }}>
-          Let's build the future of energy together.
-        </p>
-        <p style={{ fontSize: '1.5em' }}>
+        <p>Let's build the future of energy together.</p>
+        <p>
           Are you ready to power up your career with a dynamic and innovative
           company in the energy sector? At Denali, you will work on exciting
           projects that drive sustainable solutions, collaborate with industry
@@ -41,9 +22,14 @@ const CareersPage = () => {
           excellence, Denali is the perfect place for you.
         </p>
       </div>
-      <Link to = "/CareerOpportunities" >
-        <button onMouseEnter={() => setHover(true)}
-      onMouseLeave={() => setHover(false)} style = {button}>Career Opportunities</button>
+      <Link to="/CareerOpportunities">
+        <button 
+          onMouseEnter={() => setHover(true)}
+          onMouseLeave={() => setHover(false)} 
+          className={`buttonCP ${hover ? 'button-hover' : ''}`}
+        >
+          Career Opportunities
+        </button>
       </Link>
     </div>
   );
@@ -52,7 +38,7 @@ const CareersPage = () => {
 export default CareersPage;
 
 const background={
-  color: "pink",
+  color: "white",
   backgroundColor: "#374f59",
   margin: '0px',
   padding: '0px',

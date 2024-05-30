@@ -1,0 +1,32 @@
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px;
+}
+
+.img {
+  width: 900px;
+  height: 700px;
+}
+
+.text {
+  margin-left: 100px;
+  color: white;
+}
+
+.button {
+  color: white;
+  background-color: #374f59;
+  margin-top: 5vh;
+  border: 0px;
+  width: 400px;
+  height: 90px;
+  border-radius: 25px;
+  font-size: 25pt;
+  cursor: pointer;
+}
+
+.button:hover {
+  box-shadow: 1px 1px 20px #000000;
+}

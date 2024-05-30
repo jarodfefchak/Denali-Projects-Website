@@ -36,7 +36,7 @@ function ProvenSuccess() {
 export default ProvenSuccess;
 
 const background = {
-    backgroundColor: "#6e9277",
+    backgroundColor: "#36454F",
     backgroundSize: "cover",
     
     margin: "0px",
