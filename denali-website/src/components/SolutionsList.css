@@ -1,0 +1,23 @@
+.projectSL {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .informationSL {
+    margin-top: 25px;
+    margin-bottom: 20px;
+    margin-right:50px ;
+    font-size:16pt ;
+  }
+  
+  .rectangleSL {
+    display: inline-block;
+    width: 25vw;
+    height: 2px;
+    background: #374f59;
+  }
+  p {
+    margin: 0;
+    padding: 5px 0;
+  }
+  

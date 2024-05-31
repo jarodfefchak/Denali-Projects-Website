@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import "./SolutionsList.css";
 
 function SolutionsList() {
   const [jsonData, setJsonData] = useState(null);
@@ -25,14 +26,14 @@ function SolutionsList() {
     <div>
       <h2>(solution from link clicked on)</h2>
       <br></br>
-      <div style={project}>
-        {jsonData.map((project) => (
-          <div style={information}>
-            <p style={{ marginBottom: "0px" }}>PROJECT: {project.project}</p>
-            <p style={{ marginBottom: "0px" }}>CLIENT: {project.client}</p>
-            <p>Location: {project.location}</p>
+      <div className="projectSL">
+        {jsonData.map((project, index) => (
+          <div key={index} className="informationSL">
+            <p><b>PROJECT:</b> {project.project}</p>
+            <p><b>CLIENT:</b> {project.client}</p>
+            <p><b>Location:</b> {project.location}</p>
             <p>{project.description}</p>
-            <div style={rectangle} />
+            <div className="rectangleSL" />
           </div>
         ))}
       </div>
@@ -41,15 +42,3 @@ function SolutionsList() {
 }
 
 export default SolutionsList;
-const project = {};
-const information = {
-  paddingTop:"25px",
-  paddingBottom:"25px",
-
-};
-const rectangle = {
-  display: "inline-block",
-  width: "30vw",
-  height: "2px",
-  background: "#374f59"
-  }
