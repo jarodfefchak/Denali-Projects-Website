@@ -27,7 +27,7 @@ function InsideDenali() {
             <button
               onMouseEnter={() => setHover(true)}
               onMouseLeave={() => setHover(false)}
-              className={`button ${hover ? "button-hover" : ""}`}
+              className={`buttonID ${hover ? "button-hover" : ""}`}
             >
               Discover Who We Are
             </button>

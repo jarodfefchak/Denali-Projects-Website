@@ -2,23 +2,29 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 100px;
 }
 
 .img {
-  width: 900px;
-  height: 700px;
+  width: 65vh;
+  height: 75vh;
+  margin:50px;
 }
 
 .text {
-  margin-left: 100px;
+  margin-left: 75px;
   color: white;
 }
+.text p {
+  font-size: 25pt;
+}
+.text .header {
+  font-size: 60pt;
+}
 
-.button {
+.buttonID {
   color: white;
   background-color: #374f59;
-  margin-top: 5vh;
+  margin-top: 40px;
   border: 0px;
   width: 400px;
   height: 90px;
@@ -27,6 +33,14 @@
   cursor: pointer;
 }
 
-.button:hover {
+.buttonID:hover {
   box-shadow: 1px 1px 20px #000000;
+}
+@media screen and (max-width: 1200px) and (orientation: portrait) {
+}
+@media screen and (max-width: 900px) and (orientation: portrait) {
+}
+@media screen and (max-width: 700px) and (orientation: portrait) {
+}
+@media screen and (max-width: 500px) and (orientation: portrait) {
 }
