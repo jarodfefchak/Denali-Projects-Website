@@ -1,9 +1,9 @@
-import React, { useEffect } from "react";
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import reCAPTCHA from "react-google-recaptcha";
 import applyImage from "../images/Apply.jpg";
+import "./Apply.css";
 
 function Apply() {
   useEffect(() => {
@@ -12,32 +12,17 @@ function Apply() {
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "instant" });
   }, []);
-  const [hover,setHover] = useState(false);
-  const button = {
-    color: "white",
-    backgroundColor:"#6e9277",
-    paddingBottom:"35px",
-    border: "0px",
-    borderRadius:"7px",
-    width:"100px",
-    height:"20px",
-    fontSize: "16pt",
-    cursor: "pointer",
-    ...(hover?{
-      boxShadow: "1px 1px 10px #000000",
-    }:null),
-  };
+  const [hover, setHover] = useState(false);
 
   return (
     <div>
       <Header />
-      {/* <div style={image}></div> */}
-      <div style={layout}>
-        <div style={content}>
-          <p style={{ fontSize: "40pt" }}>
+      <div className="layoutAP">
+        <div className="contentAP">
+          <p className = "headerAP">
             Apply to (blank position they are choosing)
           </p>
-          <p style={{ fontSize: "14pt", marginTop: "50px" }}>
+          <p className = "textAP" >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut
             perspiciatis unde omnis iste natus error sit voluptatem accusantium
             doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
@@ -49,129 +34,151 @@ function Apply() {
             magni dolores eos qui ratione voluptatem sequi nesciunt.
           </p>
         </div>
-        <form style={form} action="mailto:alisongartnermg@gmail.com" method="get" enctype="multipart/form-data">
-          <p style = {{marginBottom:"0px",fontSize:"22px", fontWeight:500}}>Personal Details</p>
-          <label style={label}>
+        <form className="formAP" action="mailto:alisongartnermg@gmail.com" method="get" enctype="multipart/form-data">
+          <p style={{ marginBottom: "0px", fontSize: "22px", fontWeight: 500 }}>
+            Personal Details
+          </p>
+          <label className="labelAP">
             <input
-              style={{ width: "16vw" }}
+              className="input-fieldAP"
               type="text"
               name="name"
               placeholder="First and Last Name"
               required
             />
           </label>
-          <label style={label}>
+          <label className="labelAP">
             <input
-              style={{ width: "16vw" }}
+              className="input-fieldAP"
               type="email"
               name="email"
               placeholder="Email"
               required
             />
           </label>
-          <p style = {{marginBottom:"0px",fontSize:"22px", fontWeight:500}}>Contact Details</p>
-          <label style={label}>
+          <p style={{ marginBottom: "0px", fontSize: "22px", fontWeight: 500 }}>
+            Contact Details
+          </p>
+          <label className="labelAP">
             <input
-              style={{ width: "16vw" }}
+              className="input-fieldAP"
               type="text"
               name="address1"
               placeholder="Street Address"
               required
             />
           </label>
-          <label style={label}>
+          <label className="labelAP">
             <input
-              style={{ width: "16vw" }}
+              className="input-fieldAP"
               type="text"
               name="address2"
               placeholder="Address Line 2"
             />
           </label>
-          <label style={label}>
+          <label className="labelAP">
             <input
-              style={{ width: "16vw" }}
+              className="input-fieldAP"
               type="text"
               name="city"
               placeholder="City"
               required
             />
           </label>
-          <label style={label}>
+          <label className="labelAP">
             <input
-              style={{ width: "16vw" }}
+              className="input-fieldAP"
               type="text"
               name="province"
               placeholder="Province"
               required
             />
           </label>
-          <label style={label}>
+          <label className="longlabelAP">
             <input
-              style={{ width: "32vw" }}
+              className="input-field-largeAP"
               type="text"
               name="postalCode"
               placeholder="Postal Code"
               required
             />
           </label>
-          <p style = {{marginBottom:"0px",fontSize:"22px", fontWeight:500}}>Phone</p>
-          <label style={label}>
+          <p style={{ marginBottom: "0px", fontSize: "22px", fontWeight: 500 }}>
+            Phone
+          </p>
+          <label className="longlabelAP">
             <input
-              style={{ width: "32vw" }}
+              className="input-field-largeAP"
               type="tel"
               name="phone"
               required
             />
           </label>
 
-          <p style = {{marginBottom:"0px",ffontSize:"22px", fontWeight:500}}>APEGA Membership Number</p>
-          <label style={label}>
+          <p style={{ marginBottom: "0px", fontSize: "22px", fontWeight: 500 }}>
+            APEGA Membership Number
+          </p>
+          <label className="longlabelAP">
             <input
-              style={{ width: "32vw" }}
+              className="input-field-largeAP"
               type="text"
               name="APEGA"
-              placeholder="Optional- But please include if you have one"
+              placeholder="Optional"
             />
           </label>
-          <p style = {{marginBottom:"0px",fontSize:"22px",fontWeight:500}}>Do you currenlty reside in Alberta?</p>
-          <label style={label}>
-            <select style={{ width: "32vw" }} required>
+          <p style={{ marginBottom: "0px", fontSize: "22px", fontWeight: 500 }}>
+            Do you currently reside in Alberta?
+          </p>
+          <label className="longlabelAP">
+            <select className="input-field-largeAP" required>
               <option value="ablertaNo">No</option>
               <option value="albertaYes">Yes</option>
             </select>
           </label>
-          <p style = {{marginBottom:"0",fontSize:"22px", fontWeight:500}}>Are you legally entitled to work in Canada?</p>
-          <label style={label}>
-            <select style={{ width: "32vw" }} required>
+          <p style={{ marginBottom: "0", fontSize: "22px", fontWeight: 500 }}>
+            Are you legally entitled to work in Canada?
+          </p>
+          <label className="longlabelAP">
+            <select className="input-field-largeAP" required>
               <option value="legalToWorkNo">No</option>
               <option value="legalToWorkYes">Yes</option>
             </select>
           </label>
-          <p style = {{marginBottom:"0px",fontSize:"22px", fontWeight:500}}>Resume</p>
-          <p style = {{marginBottom:"0px",fontSize:"16px"}}> Only PDF files accepted</p>
-          <label style={label}>
+          <p style={{ marginBottom: "0px", fontSize: "22px", fontWeight: 500 }}>
+            Resume
+          </p>
+          <p style={{ marginBottom: "0px", fontSize: "16px" }}>
+            Only PDF files accepted
+          </p>
+          <label className="labelAP">
             <input
-              style={{ width: "32vw" }}
+              className="input-field-largeAP"
               type="file"
               name="resume"
               accept=".pdf"
               required
             />
           </label>
-          <p style = {{marginBottom:"0px",fontSize:"22px", fontWeight:500}}>LinkedIn Profile Address</p>
-          <label style={label}>
+          <p style={{ marginBottom: "0px", fontSize: "22px", fontWeight: 500 }}>
+            LinkedIn Profile Address
+          </p>
+          <label className="longlabelAP">
             <input
-              style={{ width: "32vw" }}
+              className="input-field-largeAP"
               type="url"
               name="url"
               placeholder="https://example.com"
               pattern="https://.*"
               size="30"
-              required
             />
           </label>
           <reCAPTCHA />
-          <button style={button} type="submit" onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
+          <button
+            className={`buttonAP ${hover ? "button-hover" : ""}`}
+            type="submit"
+            onMouseEnter={() => setHover(true)}
+            onMouseLeave={() => setHover(false)}
+          >
             Submit
           </button>
         </form>
@@ -182,30 +189,3 @@ function Apply() {
 }
 
 export default Apply;
-const layout = {
-  display: "flex",
-  felxDirection: "column",
-  justifyContent: "space-between",
-};
-const content = {
-  marginTop: "200px",
-  marginLeft: "200px",
-  marginRight: "100px",
-  marginBottom: "200px",
-  textalign: "center",
-  maxWidth: "60vh",
-};
-
-const form = {
-  flexDirection: "row",
-  flexWrap: "wrap",
-  marginTop: "200px",
-  marginRight: "200px",
-  marginLeft: "100px",
-  marginBottom: "200px",
-  fontSize: "14pt",
-};
-const label = {
-  padding: "5px",
-  marginBottom:"15px"
-};

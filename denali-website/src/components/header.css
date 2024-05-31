@@ -60,7 +60,7 @@
   margin-left: 100px;
 }
 
-@media screen and (max-width: 900px) and (orientation: portrait) {
+@media screen and (max-width: 900px){
     .Denali-Logo {
         margin-left: 50px;
         height: 60px;
@@ -73,13 +73,13 @@
         font-size: 14pt;
       }
 }
-@media screen and (max-width: 700px) and (orientation: portrait) {
+@media screen and (max-width: 700px){
     .Denali-Logo {
         margin-left: 30px;
         height: 50px;
       }
 }
-@media screen and (max-width: 500px) and (orientation: portrait) {
+@media screen and (max-width: 500px){
     .link-container {
         flex-wrap: wrap;
       }
