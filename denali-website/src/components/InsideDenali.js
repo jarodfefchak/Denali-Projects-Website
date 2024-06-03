@@ -8,13 +8,13 @@ function InsideDenali() {
 
   return (
     <div style={background}>
-      <div className="content">
-        <img src={InsideImage} alt="inside denali" className="img" />
-        <div className="text">
-          <p style={{ fontSize: "60pt" }}>
+      <div className="contentID">
+        <img src={InsideImage} alt="inside denali" className="imgID" />
+        <div className="textID">
+          <p className="headerID">
             <b>Inside Denali </b>
           </p>
-          <p style={{ fontSize: "20pt" }}>
+          <p>
             Founded in 2016, Denali Projects has been dedicated to delivering
             top-tier project management and engineering solutions in the energy
             industry. We prioritize client satisfaction by fostering strong
@@ -27,7 +27,7 @@ function InsideDenali() {
             <button
               onMouseEnter={() => setHover(true)}
               onMouseLeave={() => setHover(false)}
-              className={`buttonID ${hover ? "button-hover" : ""}`}
+              className={`buttonID ${hover ? "button-hoverID" : ""}`}
             >
               Discover Who We Are
             </button>
@@ -41,8 +41,8 @@ function InsideDenali() {
 export default InsideDenali;
 
 const background = {
-    backgroundColor: "#9db3c1",
-    backgroundSize:"cover",
-    margin: "0px",
-    padding: "0px",
+  backgroundColor: "#9db3c1",
+  backgroundSize: "cover",
+  margin: "0px",
+  padding: "0px",
 };
