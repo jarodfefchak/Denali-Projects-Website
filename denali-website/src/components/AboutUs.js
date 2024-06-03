@@ -9,6 +9,9 @@ import DeanImg from "../images/AboutUs/DeanKirkby.jpg";
 
 function AboutUs() {
   useEffect(() => {
+    document.title = "About - Denali Projects";
+  }, []);
+  useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "instant" });
   }, []);
   const [hover,setHover] = useState(false);
@@ -127,6 +130,8 @@ function AboutUs() {
 export default AboutUs;
 const content = {
   padding: "150px",
+  backgroundColor:"rgba(246,225,211,0.3)",
+
 };
 const images = {
   display: "flex",
