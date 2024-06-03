@@ -6,7 +6,9 @@
   background-color: white;
   width: 100vw;
   z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add this line for shadow */
 }
+
 
 .link-container {
   display: flex;
