@@ -17,7 +17,7 @@
 }
 
 .textID p {
-  font-size: 20pt;
+  font-size: 25pt;
 }
 
 .textID .headerID {
@@ -28,11 +28,12 @@
   color: white;
   background-color: #374f59;
   margin-top: 40px;
+  margin-bottom: 40px;
   border: 0px;
   width: 400px;
   height: 90px;
   border-radius: 25px;
-  font-size: 20pt;
+  font-size: 25pt;
   cursor: pointer;
 }
 

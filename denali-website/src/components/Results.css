@@ -1,0 +1,108 @@
+.titleR {
+  font-size: 60pt;
+  margin-left: 100px;
+  margin-top: 50px;
+}
+
+.statsR {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 25px;
+  margin-bottom: 100px;
+}
+
+.counterR {
+  flex-direction: column;
+  text-align: center;
+  padding: 10px;
+}
+
+.countR {
+  font-size: 80pt;
+  font-weight: 600;
+  text-shadow: 0px 0px 3px #000000;
+ 
+}
+
+.descriptionR {
+  font-size: 40pt;
+
+}
+
+@media screen and (max-width: 1200px) {
+  .titleR {
+    font-size: 50pt;
+    margin-left:75px;
+  }
+  .statsR {
+    margin-left: 75px;
+    margin-right: 75px;
+  
+  }
+  .countR {
+    font-size: 70pt;
+    font-weight: 600;
+  }
+
+  .descriptionR {
+    font-size: 35pt;
+  }
+}
+@media screen and (max-width: 900px){
+    .titleR {
+       text-align: center;
+       margin-left: 100px;
+       margin-right: 100px;
+      }
+    .statsR {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 100px;
+        margin-right: 100px;
+        margin-top: 25px;
+        margin-bottom: 100px;
+      }
+}
+@media screen and (max-width: 600px){
+    .titleR {
+        font-size: 50pt;
+        margin-left: 50px;
+        margin-right: 50px;
+      }
+      .statsR {
+        margin-left: 50px;
+        margin-right: 50px;
+      }
+      .countR {
+        font-size: 60pt;
+      }
+    
+      .descriptionR {
+        font-size: 30pt;
+      }
+}
+
+@media screen and (max-width: 400px){
+    .titleR {
+        font-size: 40pt;
+        margin-left: 25px;
+        margin-right: 25px;
+      }
+      .statsR {
+        margin-left: 25px;
+        margin-right: 55px;
+      }
+      .countR {
+        font-size: 50pt;
+      }
+    
+      .descriptionR {
+        font-size: 25pt;
+      }
+}
+
+
