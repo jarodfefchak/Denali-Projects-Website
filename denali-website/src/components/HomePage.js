@@ -1,36 +1,55 @@
 import React, { useEffect } from 'react';
-import HomeMainSection from "./HomeMainSection";
-import Solutions from './Solutions';
+import Header from './Header';
+import HomeMainSection from './HomeMainSection';
 import ProvenSuccess from './ProvenSuccess';
+import Results from './Results';
+import Solutions from './Solutions';
 import InsideDenali from './InsideDenali';
 import CareersPage from './CareersPage';
-import Footer from "./Footer";
-import Header from "./Header";
-import Results from "./Results";
-
-
+import Footer from './Footer';
 
 function HomePage() {
     useEffect(() => {
         document.title = "Denali Projects";
     }, []);
+
     useEffect(() => {
-        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
-      }, []);
+        const scrollToTop = () => {
+            window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+        };
+
+        const hashChangeListener = () => {
+            if (window.location.hash) {
+                const id = window.location.hash.replace('#', '');
+                const element = document.getElementById(id);
+                if (element) {
+                    element.scrollIntoView();
+                }
+            } else {
+                scrollToTop();
+            }
+        };
+
+        window.addEventListener('hashchange', hashChangeListener);
+        hashChangeListener();
+
+        return () => {
+            window.removeEventListener('hashchange', hashChangeListener);
+        };
+    }, []);
 
     return (
         <div>
-        <Header />
-        <HomeMainSection /> 
-        <ProvenSuccess/>
-        <Results/>
-        <Solutions />
-        <InsideDenali/>
-        <CareersPage/>
-        <Footer />
+            <Header />
+            <HomeMainSection /> 
+            <ProvenSuccess/>
+            <Results/>
+            <div id="Solutions"><Solutions /></div>
+            <InsideDenali/>
+            <CareersPage/>
+            <Footer />
         </div>
-
     );
-};
+}
 
 export default HomePage;

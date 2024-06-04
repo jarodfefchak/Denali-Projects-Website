@@ -12,7 +12,7 @@ function Header() {
         <div className="link-container">
           <Link to="/" id="link1" className="nav-link">Home</Link>
           <Dropdown id="link2">
-            <Dropdown.Toggle className="dropdown-toggle" variant="success" id="dropdown-basic">
+            <Dropdown.Toggle as={Link} to="/#Solutions" className="dropdown-toggle" variant="success" id="dropdown-basic" >
               Solutions
             </Dropdown.Toggle>
             <Dropdown.Menu className="dropdown-menu">
