@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import "./Contact.css";
@@ -10,13 +10,14 @@ function Contact() {
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "instant" });
   }, []);
+  const [hover, setHover] = useState(false);
 
   return (
     <div>
       <Header />
       <div className="contentC">
         <div className="textC">
-          <p className="no-marginC">Contact Us</p>
+          <p className="no-marginHeaderC">Contact Us</p>
           <p className="no-marginC">Denali Projects</p>
           <p className="no-marginC">#1500, 700 - 4th Avenue SW</p>
           <p className="no-marginC">Calgary, AB T2P 3J4</p>
@@ -64,10 +65,19 @@ function Contact() {
                 autoResizeEnabled={true}
               />
             </label>
+            <br></br>
+            <button
+            className={`buttonC ${hover ? "button-hover" : ""}`}
+            type="submit"
+            onMouseEnter={() => setHover(true)}
+            onMouseLeave={() => setHover(false)}
+          >
+            Submit
+          </button>
           </form>
         </div>
         <div className="iframe-containerC">
-          <p>Our Office</p>
+          <p className="no-marginHeaderC">Our Office</p>
           <p className="no-marginC">#1500, 700 - 4th Avenue SW</p>
           <p>Calgary, AB T2P 3J4</p>
           <iframe
@@ -78,6 +88,7 @@ function Contact() {
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
+
       </div>
       <Footer />
     </div>

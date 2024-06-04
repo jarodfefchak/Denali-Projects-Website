@@ -21,15 +21,17 @@
 }
 
 .labelC {
-  padding: 5px;
+  padding: 0.5vw;
 }
 
 .input-shortC {
-  width: 300px;
+  width: 17vw;
+  font-size: 16pt;
 }
 
 .input-longC {
-  width: 610px;
+  width: 35vw;
+  font-size: 16pt;
 }
 
 .no-marginC {
@@ -37,21 +39,31 @@
   margin-top: 0px;
   padding: 0px;
 }
+.no-marginHeaderC {
+  margin-bottom: 0px;
+  margin-top: 0px;
+  padding: 0px;
+  font-size: 40px;
+  font-weight: 600;
+  color: #374f59 ;
+}
+
 
 .large-textC {
   margin-bottom: 0px;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 500;
 }
 
 .textareaC {
-  width: 610px;
+  width: 35vw;
   height: 100px;
-  resize: both;
+  font-size: 16pt;
+  resize: vertical;
 }
 .iframe-containerC {
     position: relative;
-    width: 60%;
+    width: 80%;
     padding-bottom: 46.25%; 
     height: 0;
     overflow: hidden;
@@ -67,31 +79,110 @@
     height: 60%;
     border: 0;
   }
+  .buttonC {
+    color: white;
+    background-color: #6e9277;
+    padding-bottom: 35px;
+    border: 0;
+    border-radius: 7px;
+    width: 100px;
+    height: 20px;
+    font-size: 16pt;
+    cursor: pointer;
+  }
   
-  @media screen and (max-width: 900px) {
+  .buttonC:hover {
+    box-shadow: 1px 1px 10px #000;
+  }
+  
+  @media screen and (max-width: 1200px){
     .textC {
-      margin: 50px;
+      margin: 150px 50px 50px 50px;
       font-size: 20px;
+    }
+    .no-marginHeaderC {
+      font-size: 30px;
+    }
+    .iframe-containerC {
+      padding-bottom: 60%; 
+      margin: 150px 50px 0px 50px;
+      font-size: 20px;
+    }
+    .input-shortC {
+      width: 35vw;
+      font-size: 14pt;
+    }
+    
+    .input-longC {
+      font-size: 14pt;
+    }
+  }
+  @media screen and (max-width: 900px) {
+    .contentC {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .textC {
+      margin-top: 150px;
+      font-size: 22px;
     }
   
     .iframe-containerC {
-      margin: 50px;
+      margin: 10px 50px 50px 50px;
+    }
+    .input-shortC {
+      width: 60vw;
+    }
+    
+    .input-longC {
+      width: 60vw;
+    }
+    .textareaC {
+      width: 60vw;
+    }
+    .iframe-containerC {
+      font-size: 22px;
+    }
+    .no-marginHeaderC {
+      font-size: 40px;
     }
   }
   
   @media screen and (max-width: 600px) {
-    .contentC {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .textC, .iframe-containerC {
-      margin: 20px;
-      width: 90%;
+    .iframe-containerC {
+      width: 100%;
     }
   
     .iframe-containerC {
-      padding-bottom: 75%; /* Adjust aspect ratio for smaller screens if needed */
+      padding-bottom:100%; 
+      margin-bottom: 0px;
+    }
+    .textC {
+      margin-top: 175px;
+      margin-left:25px;
+      margin-right:25px;
+    }
+    .input-shortC {
+      width: 65vw;
+    }
+    
+    .input-longC {
+      width:65vw;
+    }
+    .textareaC {
+      width: 65vw;
+    }
+    
+  }
+  @media screen and (max-width: 450px) {
+    .textC, .iframe-containerC {
+      font-size: 18px;
+    }
+    .no-marginHeaderC {
+      font-size: 30px;
+    }
+    .large-textC {
+      font-size: 18px;
     }
   }
-  
