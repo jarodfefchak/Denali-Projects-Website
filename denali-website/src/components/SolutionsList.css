@@ -20,4 +20,15 @@
     margin: 0;
     padding: 5px 0;
   }
-  
+  @media screen and (max-width: 1200px){
+    .informationSL {
+      margin-right:0px ;
+      font-size:14pt ;
+      margin-top: 20px;
+    }
+  }
+  @media screen and (max-width: 450px){
+    .informationSL{
+      font-size:12pt ;
+    }
+  }

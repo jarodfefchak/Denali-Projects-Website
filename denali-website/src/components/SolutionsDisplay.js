@@ -2,8 +2,7 @@ import React, { useEffect } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import SolutionsList from './SolutionsList';
-
-
+import './SolutionsDisplay.css'; // Import the CSS file
 
 function SolutionsDisplay(){
     useEffect(() => {
@@ -12,20 +11,16 @@ function SolutionsDisplay(){
       useEffect(() => {
         document.title = 'Title From access link';
     }, []);
-return(
-    <div>
-        <Header />
-        <div style ={list}>
-        <h1 style = {{paddingTop:"50px"}}>Projects</h1>
-        <SolutionsList/>
+    return(
+        <div>
+            <Header />
+            <div className="listSD">
+                <h1 className="projects-titleSD">Projects</h1>
+                <SolutionsList/>
+            </div>
+            <Footer/>
         </div>
-        <Footer/>
-    </div>
-);
+    );
 };
 
 export default SolutionsDisplay;
-
-const list ={
-padding:"100px",
-};

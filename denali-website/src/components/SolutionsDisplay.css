@@ -1,0 +1,32 @@
+
+.listSD {
+    padding: 100px;
+}
+
+.projects-titleSD {
+    padding-top: 50px;
+}
+@media screen and (max-width: 1200px){
+    .listSD {
+        padding: 50px;
+    }
+    
+    .projects-titleSD {
+        padding-top: 100px;
+    }
+}
+@media screen and (max-width: 900px){
+    .projects-titleSD {
+        font-size: 27pt;
+    }
+}
+@media screen and (max-width: 450px){
+    .projects-titleSD {
+        font-size: 25pt;
+        padding-top: 175px;
+    }
+    .listSD {
+        padding: 25px;
+    }
+
+}
