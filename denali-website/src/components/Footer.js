@@ -16,7 +16,7 @@ function Footer(){
                 <h4 style={{fontWeight:"600"}}>Company</h4> 
                 <p>test</p>
                 <br></br>
-                <img src={wLogo} alt="Logo" height="50px"  />
+                <img src={wLogo} alt="Logo" height="60px"  />
 
                 <p style = {{fontSize:"14px", marginTop:"10px"}}>Copyright &copy; 2024 Denali Projects Ltd. </p>
             </div>
