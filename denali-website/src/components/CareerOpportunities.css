@@ -4,6 +4,9 @@
     background-size: cover;
     background-repeat: no-repeat;
     height: 700px;
+    background-attachment: fixed;
+    position: relative;
+    z-index: -1;
   }
   
   .mainTextOP {
@@ -43,4 +46,22 @@
   .dropdownMenuOP {
     border: none;
   }
+  @media screen and (max-width: 1600px){
+    .navBarOP {
+      margin-right: 0px;
+    }
+  }
+
+  @media screen and (max-width: 1000px){
+    .navBarOP {
+      margin-left: 0px;
+      flex-direction: column;
+    }
+    .dropdownToggleOP {
+     margin-top: 30px;
+     margin-bottom: 100px;
+     padding: 0px;
+    }
+  }
+
   

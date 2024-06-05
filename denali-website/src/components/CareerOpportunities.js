@@ -47,7 +47,7 @@ function CareerOpportunities() {
                         Vivamus euismod, urna in vestibulum aliquet, sapien odio tincidunt libero, et ultrices justo elit ut nunc.
                     </p>
                     <Dropdown>
-                        <Dropdown.Toggle className="dropdownToggleOP" variant="success" id="dropdown-basic">
+                        <Dropdown.Toggle className="dropdownToggleOP" variant="success" id="dropdown-basicOP">
                             Job Postings
                         </Dropdown.Toggle>
                         <Dropdown.Menu className="dropdownMenuOP">

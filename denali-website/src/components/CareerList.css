@@ -7,6 +7,9 @@
   .postingsCL {
     margin: 50px;
   }
+  .headerCL{
+    font-size: 40pt;
+  }
   
   .careerTitleCL {
     font-size: 30px;
@@ -37,6 +40,9 @@
         margin-left: 100px;
         margin-right: 100px;
       }
+      .headerCL{
+        font-size: 35pt;
+      }
   }
   @media screen and (max-width: 1000px){
     
@@ -44,4 +50,17 @@
         margin-left: 50px;
         margin-right: 50px;
       }
+      .textCL{
+        font-size: 12pt;
+      }
+       
+  .careerTitleCL {
+    font-size:25px;
+  }
+  .applyButtonCL {
+   
+    padding: 5px;
+    width: 70px;
+    font-size: 14pt;
+  }
   }

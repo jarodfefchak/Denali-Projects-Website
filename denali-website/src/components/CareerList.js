@@ -25,7 +25,7 @@ function CareerList() {
 
   return (
     <div className="careersCL">
-      <h1>Current Postings</h1>
+      <h1 className="headerCL">Current Postings</h1>
       <div className="postingsCL">
         {jsonData.map((career) => (
           <div key={career.title}>
