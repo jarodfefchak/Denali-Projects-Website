@@ -29,7 +29,7 @@
 #link2:hover,
 #link3:hover,
 #link4:hover {
-  background-color: #e0e6e9;
+ color: #0088A3 ;
 }
 
 /* Dropdown styles */
@@ -55,8 +55,8 @@
 .dropdown-toggle:focus,
 .dropdown-toggle:active,
 .dropdown-menu.show .dropdown-toggle {
-  background-color: #e0e6e9;
-  color: black;
+  color: #0088A3;
+
   border: none;
 }
 .Denali-Logo {

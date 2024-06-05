@@ -14,15 +14,15 @@ import './Solutions.css';
 
 function Solutions() {
     const imageList = [
-        { src: FEEDStudies, alt: 'FEED Studies', description: 'FEED Studies' },
-        { src: FieldProjects, alt: 'Field Projects', description: 'Brown and Greenfield Projects' },
-        { src: OilFacilities, alt: 'oil Facilities', description: 'Conventional Oil Facilities' },
-        { src: WellPads, alt: 'Well Pads', description: 'Well Pads' },
-        { src: sweetSourGas, alt: 'Sweet Sour Gas', description: 'Sweet/Sour Gas and Liquid Processing Facilities' },
-        { src: compressorStations, alt: 'compressor Stations', description: 'Compressor Stations' },
-        { src: waterTreatment, alt: 'water Treatment', description: 'Produced Water Treatment/Storage/Injection' },
-        { src: WellTieIns, alt: 'Well Tie Ins', description: 'Well Tie Ins and Gathering Systems' },
-        { src: LACTUnits, alt: 'LACT Units', description: 'LACT Units' },
+        { src: FEEDStudies, alt: 'FEED Studies', description: 'FEED Studies' , loading: "lazy"},
+        { src: FieldProjects, alt: 'Field Projects', description: 'Brown and Greenfield Projects', loading: "lazy" },
+        { src: OilFacilities, alt: 'oil Facilities', description: 'Conventional Oil Facilities' , loading: "lazy"},
+        { src: WellPads, alt: 'Well Pads', description: 'Well Pads', loading: "lazy" },
+        { src: sweetSourGas, alt: 'Sweet Sour Gas', description: 'Sweet/Sour Gas and Liquid Processing Facilities', loading: "lazy" },
+        { src: compressorStations, alt: 'compressor Stations', description: 'Compressor Stations', loading: "lazy" },
+        { src: waterTreatment, alt: 'water Treatment', description: 'Produced Water Treatment/Storage/Injection', loading: "lazy" },
+        { src: WellTieIns, alt: 'Well Tie Ins', description: 'Well Tie Ins and Gathering Systems', loading: "lazy" },
+        { src: LACTUnits, alt: 'LACT Units', description: 'LACT Units', loading: "lazy"},
     ];
 
     return (
