@@ -49,7 +49,7 @@ export default Solutions;
 const background = {
     display:"flex",
     flexDirection:"column",
-    backgroundColor: '#e0e6e9',
+    backgroundColor: 'rgba(230, 230, 230, 0.5)',
     backgroundSize: 'cover',
     margin: '0px',
     padding: '0px',

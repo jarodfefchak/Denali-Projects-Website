@@ -36,7 +36,7 @@ function ProvenSuccess() {
 export default ProvenSuccess;
 
 const background = {
-    backgroundColor: "#36454F",
+    backgroundColor: "#e6e6e6",
     backgroundSize: "cover",
     
     margin: "0px",
@@ -48,7 +48,7 @@ const layout = {
     flexDirection: 'column',
     paddingLeft: "100px",
     paddingTop: "100px",
-    color:"white",
+    color:"Black",
 };
 
 const Success = {
