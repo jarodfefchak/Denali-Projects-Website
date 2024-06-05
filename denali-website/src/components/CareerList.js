@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import './CareerList.css';
 
 function CareerList() {
   const [jsonData, setJsonData] = useState(null);
@@ -23,44 +24,35 @@ function CareerList() {
   }
 
   return (
-    <div style={careers}>
+    <div className="careersCL">
       <h1>Current Postings</h1>
-      <div style ={postings}>
-      {jsonData.map((career) => (
-        <div className={career.title}>
-          <p style={{fontSize:"30px"}}><b>{career.title}</b></p>
-          <p><b>Location: </b>{career.location}</p>
-          <p><b>Description: </b> {career.description}</p>
-          <p><b>Responsibilities:</b></p>
-          <ul>
-            {career.Responsibilties.map((resp, index) => (
-              <li key={index}>{resp}</li>
-            ))}
-          </ul>
-          <p><b>Minimum Requirements:</b></p>
-          <ul>
-            {career.minimum_requirements.map((req, index) => (
-              <li key={index}>{req}</li>
-            ))}
-          </ul>
-          <Link to = "/Apply" >
-          <button style = {{border:'none', borderRadius:10, background:"#6e9477",color:"white", padding:"5px",width:"75px"}}>Apply</button>
-          </Link>
-          <hr></hr>
-        </div>
-      ))}
+      <div className="postingsCL">
+        {jsonData.map((career) => (
+          <div key={career.title}>
+            <p className="careerTitleCL">{career.title}</p>
+            <p className="textCL"><b>Location: </b>{career.location}</p>
+            <p className="textCL"><b>Description: </b>{career.description}</p>
+            <p className="textCL"><b>Responsibilities:</b></p>
+            <ul>
+              {career.Responsibilties.map((resp, index) => (
+                <li key={index} className="textCL">{resp}</li>
+              ))}
+            </ul>
+            <p className="textCL"><b>Minimum Requirements:</b></p>
+            <ul>
+              {career.minimum_requirements.map((req, index) => (
+                <li key={index} className="textCL">{req}</li>
+              ))}
+            </ul>
+            <Link to="/Apply">
+              <button className="applyButtonCL">Apply</button>
+            </Link>
+            <hr />
+          </div>
+        ))}
       </div>
     </div>
   );
-};
+}
 
 export default CareerList;
-
-const careers ={
-marginLeft:"200px",
-marginRight:"200px",
-};
-
-const postings ={
-  margin:"50px",
-};

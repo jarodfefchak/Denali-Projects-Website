@@ -19,22 +19,24 @@ function Apply() {
       <Header />
       <div className="layoutAP">
         <div className="contentAP">
-          <p className = "headerAP">
+          <p className="headerAP">
             Apply to (blank position they are choosing)
           </p>
-          <p className = "textAP" >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut
-            perspiciatis unde omnis iste natus error sit voluptatem accusantium
-            doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
-            inventore veritatis et quasi architecto beatae vitae dicta sunt
-            explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur
-            aut odit aut fugit, sed quia consequuntur magni dolores eos qui
-            ratione voluptatem sequi nesciunt. Nemo enim ipsam voluptatem quia
-            voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
-            magni dolores eos qui ratione voluptatem sequi nesciunt.
+          <p className="textAP">
+            Denali Projects offers exciting opportunities for professional
+            growth, allowing individuals to work on elaborate and complex
+            projects that shape the future of the energy industry. With a strong
+            emphasis on collaboration, sustainability, and excellence, employees
+            are empowered to contribute their unique skills and ideas, ensuring
+            a fulfilling and impactful career. Apply at Denali Projects today!
           </p>
         </div>
-        <form className="formAP" action="mailto:alisongartnermg@gmail.com" method="get" enctype="multipart/form-data">
+        <form
+          className="formAP"
+          action="mailto:alisongartnermg@gmail.com"
+          method="get"
+          enctype="multipart/form-data"
+        >
           <p style={{ marginBottom: "0px", fontSize: "22px", fontWeight: 500 }}>
             Personal Details
           </p>

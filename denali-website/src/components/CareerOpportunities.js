@@ -6,6 +6,7 @@ import Header from './Header';
 import Footer from './Footer';
 import CareerList from './CareerList';
 import Dropdown from 'react-bootstrap/Dropdown';
+import './CareerOpportunities.css';
 
 function CareerOpportunities() {
 
@@ -31,37 +32,25 @@ function CareerOpportunities() {
         document.title = 'Career Opportunities - Denali Projects';
     }, []);
 
-    const dropdownToggleStyles = {
-        color: 'black',
-        backgroundColor: 'transparent',
-        border: 'none',
-        fontSize: '16pt',
-        zIndex: '999',
-    };
-
-    const dropDownMenu = {
-        border: 'none',
-    };
-
     return (
         <div>
             <Header />
-            <div style={titleImage}>
-                <p style={mainText}>Will shrink this image, dogs look funny</p>
+            <div className="titleImageOP" style={{ backgroundImage: `url(${CareerOpImage})` }}>
+                <p className="mainTextOP">Will shrink this image, dogs look funny</p>
             </div>
-            <div style={content}>
-                <div style={navBar}>
-                    <p style={{ fontSize: '14pt', marginBottom: '0px', width: '65vw' }}>
+            <div className="contentOP">
+                <div className="navBarOP">
+                    <p className="navBarTextOP">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Nullam euismod, velit eu tincidunt bibendum, justo nunc lacinia libero, nec dignissim odio nisl vel justo.
                         Fusce vel metus nec purus tincidunt rhoncus.
                         Vivamus euismod, urna in vestibulum aliquet, sapien odio tincidunt libero, et ultrices justo elit ut nunc.
                     </p>
                     <Dropdown>
-                        <Dropdown.Toggle style={dropdownToggleStyles} variant="success" id="dropdown-basic">
+                        <Dropdown.Toggle className="dropdownToggleOP" variant="success" id="dropdown-basic">
                             Job Postings
                         </Dropdown.Toggle>
-                        <Dropdown.Menu style={dropDownMenu}>
+                        <Dropdown.Menu className="dropdownMenuOP">
                             {jsonData &&
                                 jsonData.map((career) => (
                                     <Dropdown.Item key={career.id} href={`#/career/${career.title}`}>
@@ -71,7 +60,7 @@ function CareerOpportunities() {
                         </Dropdown.Menu>
                     </Dropdown>
                 </div>
-                <div style={jobListings}>
+                <div className="jobListingsOP">
                     <CareerList />
                 </div>
             </div>
@@ -82,32 +71,3 @@ function CareerOpportunities() {
 
 export default CareerOpportunities;
 
-const titleImage = {
-    display: 'flex',
-    backgroundImage: `url(${CareerOpImage})`,
-    backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat',
-    height: '700px',
-};
-
-const mainText = {
-    display: 'flex',
-    alignItems: 'center',
-    color: 'pink',
-};
-
-const content = {
-    display: 'flex',
-    flexDirection: 'column',
-};
-
-const navBar = {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    padding: '50px',
-    marginLeft: '50px',
-    marginRight: '150px',
-};
-
-const jobListings = {};

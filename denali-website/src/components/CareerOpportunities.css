@@ -1,0 +1,46 @@
+/* CareerOpportunities.css */
+.titleImageOP {
+    display: flex;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 700px;
+  }
+  
+  .mainTextOP {
+    display: flex;
+    align-items: center;
+    color: pink;
+  }
+  
+  .contentOP {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .navBarOP {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 50px;
+    margin-left: 50px;
+    margin-right: 150px;
+  }
+  
+  .navBarTextOP {
+    font-size: 14pt;
+    margin-bottom: 0px;
+    width: 65vw;
+  }
+  
+  .dropdownToggleOP {
+    color: black;
+    background-color: transparent;
+    border: none;
+    font-size: 16pt;
+    z-index: 999;
+  }
+  
+  .dropdownMenuOP {
+    border: none;
+  }
+  

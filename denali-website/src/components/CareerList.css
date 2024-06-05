@@ -1,0 +1,47 @@
+/* CareerList.css */
+.careersCL {
+    margin-left: 200px;
+    margin-right: 200px;
+  }
+  
+  .postingsCL {
+    margin: 50px;
+  }
+  
+  .careerTitleCL {
+    font-size: 30px;
+    font-weight: bold;
+  }
+  .textCL{
+    font-size: 14pt;
+  }
+  .applyButtonCL {
+    border: none;
+    border-radius: 10px;
+    background: #6e9477;
+    color: white;
+    padding: 5px;
+    width: 75px;
+    cursor: pointer;
+    font-size: 16pt;
+  }
+  
+  .applyButtonCL:hover {
+    background: #5b7c61; 
+  }
+  @media screen and (max-width: 1600px){
+    .postingsCL {
+        margin: 50px 0px 50px 0px;
+      }
+      .careersCL {
+        margin-left: 100px;
+        margin-right: 100px;
+      }
+  }
+  @media screen and (max-width: 1000px){
+    
+      .careersCL {
+        margin-left: 50px;
+        margin-right: 50px;
+      }
+  }
