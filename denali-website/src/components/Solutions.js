@@ -95,7 +95,7 @@ export default Solutions;
 const background = {
     display: "flex",
     flexDirection: "column",
-    backgroundColor: '#e6e6e6',
+    backgroundColor: '#f6f6f6',
     backgroundSize: 'cover',
     margin: '0px',
     padding: '0px',

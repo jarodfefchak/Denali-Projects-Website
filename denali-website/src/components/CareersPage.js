@@ -39,7 +39,7 @@ export default CareersPage;
 
 const background={
   color: "black",
-  backgroundColor: "#e6e6e6",
+  backgroundColor: "#f6f6f6",
   margin: '0px',
   padding: '0px',
 }

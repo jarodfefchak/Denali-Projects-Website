@@ -1,6 +1,6 @@
 
 .backgroundPS {
-    background-color: #e6e6e6;
+    background-color: #f6f6f6;
     background-size: cover;
     margin: 0;
     padding: 0;
@@ -46,7 +46,7 @@
 }
 
 .textPS {
-    background-color: #374f59;
+    background-color: #408697;
     text-align: center;
     color: white;
     height: 30px;
