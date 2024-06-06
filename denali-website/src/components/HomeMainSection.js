@@ -4,7 +4,9 @@ import "./HomeMainSection.css";
 function HomeMainSection() {
   return (
     <div className="headImageHM">
-      <p className="mainTextHM">Enhancing Performance and Sustainability with EPC Expertise</p>
+      <p>
+        <span className="mainTextHM">Enhancing Performance and Sustainability with EPC Expertise</span>
+      </p>
     </div>
   );
 }

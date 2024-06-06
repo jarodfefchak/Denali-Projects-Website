@@ -71,7 +71,7 @@ function CareerList() {
             <Link to="/Apply">
               <button className="applyButtonCL">Apply</button>
             </Link>
-            <hr />
+            <hr style={{height:'1px',border:'none',color:'black',backgroundColor:'black'}} />
           </div>
         ))}
       </div>

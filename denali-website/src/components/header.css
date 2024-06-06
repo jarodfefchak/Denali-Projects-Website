@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-between; /* Align items horizontally */
   align-items: center; /* Vertically center items */
-  background-image: linear-gradient(0,  #6a696b,#5c5c5c);
+  background-image: linear-gradient(0,  #222222,#303030);
   width: 100vw;
   z-index: 1000;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add this line for shadow */
