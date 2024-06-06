@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Link } from 'react-router-dom';
-import './CareerList.css';
+import { Link } from "react-router-dom";
+import "./CareerList.css";
 
 function CareerList() {
   const [jsonData, setJsonData] = useState(null);
@@ -30,18 +30,42 @@ function CareerList() {
         {jsonData.map((career) => (
           <div key={career.title}>
             <p className="careerTitleCL">{career.title}</p>
-            <p className="textCL"><b>Location: </b>{career.location}</p>
-            <p className="textCL"><b>Description: </b>{career.description}</p>
-            <p className="textCL"><b>Responsibilities:</b></p>
+            <p className="textCL">
+              <b>Location: </b>
+              {career.location}
+            </p>
+            <p className="textCL">
+              <b>Description: </b>
+              {career.description}
+            </p>
+            <p className="textCL">
+              <b>Responsibilities:</b>
+            </p>
             <ul>
-              {career.Responsibilties.map((resp, index) => (
-                <li key={index} className="textCL">{resp}</li>
+              {career.responsibilities.map((resp, index) => (
+                <li key={index} className="textCL">
+                  {resp}
+                </li>
               ))}
             </ul>
-            <p className="textCL"><b>Minimum Requirements:</b></p>
+            <p className="textCL">
+              <b>Minimum Requirements:</b>
+            </p>
             <ul>
               {career.minimum_requirements.map((req, index) => (
-                <li key={index} className="textCL">{req}</li>
+                <li key={index} className="textCL">
+                  {req}
+                </li>
+              ))}
+            </ul>
+            <p className="textCL">
+              <b>Preferred Assets:</b>
+            </p>
+            <ul>
+              {career.preferred.map((req, index) => (
+                <li key={index} className="textCL">
+                  {req}
+                </li>
               ))}
             </ul>
             <Link to="/Apply">

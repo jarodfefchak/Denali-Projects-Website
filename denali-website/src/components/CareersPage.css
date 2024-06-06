@@ -1,11 +1,7 @@
-.background {
-  color: white;
-  background-color: #374f59;
-  margin: 0;
-  padding: 0;
-}
+
 
 .text {
+  padding-top:25px;
   display: flex;
   flex-direction: column;
   margin-left: 5%;
@@ -18,19 +14,20 @@
 .text .header {
   font-size: 60pt;
   margin-top: 100px;
+  margin-bottom: 30px;
 }
 
 .buttonCP {
   color: #374f59;
   margin-left: 5%;
   margin-top: 40px;
-  margin-bottom: 100px;
+  margin-bottom: 175px;
   background-color: white;
   border: 0;
   width: 400px;
   height: 90px;
   border-radius: 25px;
-  font-size: 25pt;
+  font-size: 20pt;
   cursor: pointer;
 }
 

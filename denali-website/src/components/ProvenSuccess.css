@@ -1,0 +1,57 @@
+
+.backgroundPS {
+    background-color: #e6e6e6;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+.layoutPS {
+    display: flex;
+    flex-direction: column;
+    padding-left: 100px;
+    padding-top: 100px;
+    color: black;
+}
+
+.titlePS {
+    font-size: 60pt;
+    margin: 0;
+}
+
+.subtitlePS {
+    font-size: 30pt;
+    margin-top: 0px;
+    margin-bottom: 100px;
+}
+
+.successPS {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    padding-bottom: 150px;
+}
+
+.imageContainerPS {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imgPS {
+    height: 400px;
+    width: 450px;
+}
+
+.textPS {
+    background-color: #374f59;
+    text-align: center;
+    color: white;
+    height: 30px;
+    width: 450px;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    margin-top: 0;
+}

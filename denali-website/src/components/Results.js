@@ -86,6 +86,6 @@ export default Results;
 const background = {
     display: 'flex',
     flexDirection: 'column',
-    backgroundColor: '#494F55',
-    color: "black",
+    backgroundColor: '#505050',
+    color: "#f5f5f5",
 };

@@ -41,7 +41,7 @@ function InsideDenali() {
 export default InsideDenali;
 
 const background = {
-  backgroundColor: "#9db3c1",
+  backgroundColor: "#e6e6e6",
   backgroundSize: "cover",
   margin: "0px",
   padding: "0px",

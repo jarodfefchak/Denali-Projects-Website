@@ -35,7 +35,7 @@ function AboutUs() {
             facilities. Denali prides itself on being an efficient and valuable
             service provider to our clients.
           </p>
-          <p>
+          {/* <p>
             Many elements of various projects fit well with Denali's areas of
             expertise. Our core team has considerable experience with Brownfield
             projects. Denali has completed multiple FEED, detailed design and
@@ -46,7 +46,7 @@ function AboutUs() {
             construction teams; With this knowledge and experience, Denali can
             provide valuable insight into real, implementable solutions, while
             considering operational concerns for any project.
-          </p>
+          </p> */}
           <p>
             Denali is a great fit to work with your project team and Operations
             staff to provide the quality FEED deliverables required for our

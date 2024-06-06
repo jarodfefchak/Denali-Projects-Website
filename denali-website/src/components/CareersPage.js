@@ -28,7 +28,7 @@ const CareersPage = () => {
           onMouseLeave={() => setHover(false)} 
           className={`buttonCP ${hover ? 'button-hover' : ''}`}
         >
-          Career Opportunities
+          CAREER OPPORTUNITIES
         </button>
       </Link>
     </div>
@@ -38,8 +38,8 @@ const CareersPage = () => {
 export default CareersPage;
 
 const background={
-  color: "white",
-  backgroundColor: "#374f59",
+  color: "black",
+  backgroundColor: "#e6e6e6",
   margin: '0px',
   padding: '0px',
 }

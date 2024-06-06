@@ -1,4 +1,6 @@
 .contentID {
+  padding-top: 100px;
+  padding-bottom: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,7 +15,7 @@
 .textID {
   margin-left: 25px;
   margin-right: 50px;
-  color: white;
+  color: black;
 }
 
 .textID p {

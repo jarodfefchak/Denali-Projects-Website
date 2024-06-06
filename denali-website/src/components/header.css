@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-between; /* Align items horizontally */
   align-items: center; /* Vertically center items */
-  background-color: white;
+  background-color: #374f59;
   width: 100vw;
   z-index: 1000;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add this line for shadow */
@@ -18,7 +18,7 @@
 
 .nav-link {
   border: none;
-  color: black;
+  color: white;
   text-decoration: none;
   padding: 10px;
   font-size: 16pt;
@@ -29,12 +29,12 @@
 #link2:hover,
 #link3:hover,
 #link4:hover {
- color: #0088A3 ;
+ color: #aec4cd ;
 }
 
 /* Dropdown styles */
 .dropdown-toggle {
-  color: black;
+  color: white;
   background-color: transparent;
   border: none;
   font-size: 16pt;
@@ -55,7 +55,7 @@
 .dropdown-toggle:focus,
 .dropdown-toggle:active,
 .dropdown-menu.show .dropdown-toggle {
-  color: #0088A3;
+  color:  #aec4cd ;
 
   border: none;
 }

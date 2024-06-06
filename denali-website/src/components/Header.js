@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from 'react-router-dom';
-import Logo from '../images/Logos/Denali_Logo_Black_Transparent_BG.png';
+import Logo from '../images/Logos/Denali_Logo_White_Transparent_BG.png';
 import Dropdown from 'react-bootstrap/Dropdown';
 import './header.css';
 
