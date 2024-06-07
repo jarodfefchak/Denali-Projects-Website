@@ -9,7 +9,7 @@ function CareerList() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("/data/Careers.json"); // Adjust the path
+        const response = await axios.get("/data/Careers.json");
         setJsonData(response.data);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -28,7 +28,7 @@ function CareerList() {
       <h1 className="headerCL">Current Postings</h1>
       <div className="postingsCL">
         {jsonData.map((career) => (
-          <div key={career.title}>
+          <div key={career.id} className="careerItemCL">
             <p className="careerTitleCL">{career.title}</p>
             <p className="textCL">
               <b>Location: </b>
@@ -68,10 +68,10 @@ function CareerList() {
                 </li>
               ))}
             </ul>
-            <Link to="/Apply">
+            <Link to={`/apply/${encodeURIComponent(career.title)}`}>
               <button className="applyButtonCL">Apply</button>
             </Link>
-            <hr style={{height:'1px',border:'none',color:'black',backgroundColor:'black'}} />
+            <hr style={{ height: "1px", border: "none", color: "black", backgroundColor: "black" }} />
           </div>
         ))}
       </div>
@@ -80,3 +80,4 @@ function CareerList() {
 }
 
 export default CareerList;
+

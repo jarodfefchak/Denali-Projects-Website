@@ -32,7 +32,8 @@ function App() {
     <Route path ="/ProvenSuccess" element = {<ProvenSuccess/>}/>  
     <Route path ="/InsideDenali" element = {<InsideDenali/>}/>
     <Route path ="/CareerOpportunities" element = {<CareerOpportunities/>}/>
-    <Route path ="/Apply" element = {<Apply/>}/>
+    {/* <Route path ="/Apply" element = {<Apply/>}/> */}
+    <Route path="/apply/:jobTitle" element={<Apply />} />
     <Route path ="/CareerList" element = {<CareerList/>}/>
     <Route path ="/Results" element = {<Results/>}/>
     <Route path ="/SolutionsDisplay" element = {<SolutionsDisplay/>}/>

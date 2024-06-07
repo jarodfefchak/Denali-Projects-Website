@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
 import reCAPTCHA from "react-google-recaptcha";
@@ -6,12 +7,16 @@ import applyImage from "../images/Apply.jpg";
 import "./Apply.css";
 
 function Apply() {
+  const { jobTitle } = useParams();
+
   useEffect(() => {
     document.title = "Apply - Denali Projects";
   }, []);
+
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "instant" });
   }, []);
+
   const [hover, setHover] = useState(false);
 
   return (
@@ -19,9 +24,7 @@ function Apply() {
       <Header />
       <div className="layoutAP">
         <div className="contentAP">
-          <p className="headerAP">
-            Apply to (blank position they are choosing)
-          </p>
+          <p className="headerAP">Apply to {decodeURIComponent(jobTitle)}</p>
           <p className="textAP">
             Denali Projects offers exciting opportunities for professional
             growth, allowing individuals to work on elaborate and complex
@@ -35,7 +38,7 @@ function Apply() {
           className="formAP"
           action="mailto:alisongartnermg@gmail.com"
           method="get"
-          enctype="multipart/form-data"
+          encType="multipart/form-data"
         >
           <p style={{ marginBottom: "0px", fontSize: "22px", fontWeight: 500 }}>
             Personal Details
@@ -191,3 +194,4 @@ function Apply() {
 }
 
 export default Apply;
+

@@ -33,6 +33,7 @@ function InsideDenali() {
             </button>
           </Link>
         </div>
+        <hr></hr>
       </div>
     </div>
   );

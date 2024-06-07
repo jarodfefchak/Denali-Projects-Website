@@ -21,6 +21,10 @@
   height: 43vh;
   width: 25vw;
 }
+.imgS:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
 
 .textS {
   position: absolute;
@@ -32,6 +36,29 @@
   padding: 10px;
   text-align: center;
   box-sizing: border-box;
+}
+
+.buttonContainerS {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.buttonS {
+  color: white;
+  background-color: #374f59;
+  border: 0px;
+  border-radius: 15px;
+  width: 290px;
+  height: 70px;
+  font-size: 22pt;
+  cursor: pointer;
+}
+
+.button-hoverS {
+  box-shadow: 1px 1px 20px #000000;
 }
 
 @media screen and (max-width: 1350px) {
