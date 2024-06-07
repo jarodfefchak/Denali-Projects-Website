@@ -23,8 +23,8 @@ function SolutionsList() {
 
   return (
     <div>
-      <h2>(solution from link clicked on)</h2>
-      <br></br>
+      <h2>{jsonData[0].section}</h2>
+      <br />
       <div className="projectSL">
         {jsonData.map((project, index) => (
           <div key={index} className="informationSL">
@@ -41,3 +41,4 @@ function SolutionsList() {
 }
 
 export default SolutionsList;
+
