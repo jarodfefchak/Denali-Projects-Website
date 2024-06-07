@@ -38,18 +38,20 @@ function Solutions() {
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
-            transition: {
-                staggerChildren: 2.5,
-                delay: 1.7,
-                duration:1.3,
-                ease: "easeInOut",
-            }
         }
     };
 
     const itemVariants = {
         hidden: { opacity: 0, y: 40 },
-        visible: { opacity: 1, y: 0 }
+        visible: { opacity: 1, y: 0,
+            transition: {
+                staggerChildren: 2.5,
+                delay: 0.2,
+                duration:1.2,
+                ease: "easeInOut",
+            }
+         }
+        
     };
 
     return (
