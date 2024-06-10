@@ -2,81 +2,107 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import VisibilitySensor from "react-visibility-sensor";
-import FEEDStudies from "../images/Solutions/FEEDStudies.jpg";
-import FieldProjects from "../images/Solutions/brownAndGreenfieldProjects.jpg";
-import OilFacilities from "../images/Solutions/conventionalOilFacilities.jpg";
-import WellPads from "../images/Solutions/wellPads.jpg";
-import sweetSourGas from "../images/Solutions/sweetSourGas.jpg";
-import compressorStations from "../images/Solutions/compressorStations.jpg";
-import waterTreatment from "../images/Solutions/waterTreatment.jpg";
-import WellTieIns from "../images/Solutions/wellTieIns.jpg";
-import LACTUnits from "../images/Solutions/LACTUnits.jpg";
+import Solution1 from "../images/Solutions/Solution1.jpg";
+import Solution2 from "../images/Solutions/Solution2.jpg";
+import Solution3 from "../images/Solutions/Solution3.jpg";
+import Solution4 from "../images/Solutions/Solution4.jpg";
+import Solution5 from "../images/Solutions/Solution5.jpg";
+import Solution6 from "../images/Solutions/Solution6.jpg";
+import Solution7 from "../images/Solutions/Solution7.jpg";
+import Solution8 from "../images/Solutions/Solution8.jpg";
+import Solution9 from "../images/Solutions/Solution9.jpg";
+import axios from "axios";
 
 import "./Solutions.css";
 
 function Solutions() {
   const [visibility, setVisibility] = useState({});
+  const [hover, setHover] = useState(false);
+  const [jsonData, setJsonData] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   const handleVisibilityChange = (index, isVisible) => {
     if (isVisible && !visibility[index]) {
       setVisibility((prev) => ({ ...prev, [index]: true }));
     }
   };
-  const [hover, setHover] = useState(false);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const promises = [];
+        for (let i = 1; i <= 9; i++) {
+          promises.push(axios.get(`/data/Solutions/Solution${i}.json`));
+        }
+        const responses = await Promise.all(promises);
+        const data = responses.map((response) => response.data);
+        setJsonData(data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchData();
+  }, []);
+
+  if (loading) {
+    return <p>Loading data...</p>;
+  }
 
   const imageList = [
     {
-      src: FEEDStudies,
-      alt: "FEED Studies",
-      description: "FEED Studies",
+      src: Solution1,
+      alt: "Solution 1",
+      description: jsonData[0][0].section,
       loading: "lazy",
     },
     {
-      src: FieldProjects,
-      alt: "Field Projects",
-      description: "Brown and Greenfield Projects",
+      src: Solution2,
+      alt: "Solution 2",
+      description: jsonData[1][0].section,
       loading: "lazy",
     },
     {
-      src: OilFacilities,
-      alt: "Oil Facilities",
-      description: "Conventional Oil Facilities",
+      src: Solution3,
+      alt: "Solution 3",
+      description: jsonData[2][0].section,
       loading: "lazy",
     },
     {
-      src: WellPads,
-      alt: "Well Pads",
-      description: "Well Pads",
+      src: Solution4,
+      alt: "Solution 4",
+      description: jsonData[3][0].section,
       loading: "lazy",
     },
     {
-      src: sweetSourGas,
-      alt: "Sweet Sour Gas",
-      description: "Sweet/Sour Gas and Liquid Processing Facilities",
+      src: Solution5,
+      alt: "Solution 5",
+      description: jsonData[4][0].section,
       loading: "lazy",
     },
     {
-      src: compressorStations,
-      alt: "Compressor Stations",
-      description: "Compressor Stations",
+      src: Solution6,
+      alt: "Solution 6",
+      description: jsonData[5][0].section,
       loading: "lazy",
     },
     {
-      src: waterTreatment,
-      alt: "Water Treatment",
-      description: "Produced Water Treatment/Storage/Injection",
+      src: Solution7,
+      alt: "Solution 7",
+      description: jsonData[6][0].section,
       loading: "lazy",
     },
     {
-      src: WellTieIns,
-      alt: "Well Tie Ins",
-      description: "Well Tie Ins and Gathering Systems",
+      src: Solution8,
+      alt: "Solution 8",
+      description: jsonData[7][0].section,
       loading: "lazy",
     },
     {
-      src: LACTUnits,
-      alt: "LACT Units",
-      description: "LACT Units",
+      src: Solution9,
+      alt: "Solution 9",
+      description: jsonData[8][0].section,
       loading: "lazy",
     },
   ];

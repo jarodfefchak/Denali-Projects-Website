@@ -39,26 +39,35 @@
   border: none;
   font-size: 16pt;
   text-decoration: none;
+  padding: 10px;
 }
 
+/* Ensure the dropdown is hidden by default */
 .dropdown-menu {
-    border: none;
-    width: 300px; /* Set the width to 300px */
-  }
-  
-  .dropdown-item {
-    white-space: normal; /* Allow text wrapping */
-  }
+  display: none;
+  border: none;
+  width: 300px; /* Set the width to 300px */
+}
+
+/* Display the dropdown menu when the parent dropdown is hovered */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-item {
+  white-space: normal; /* Allow text wrapping */
+}
 
 /* Additional styles for dropdown toggle when hovered or dropdown menu is open */
 .dropdown-toggle:hover,
 .dropdown-toggle:focus,
-.dropdown-toggle:active,
-.dropdown-menu.show .dropdown-toggle {
-  color: #408697 ;
+.dropdown-toggle:active {
+  color: #408697;
   text-decoration: none;
   border: none;
 }
+
+
 .Denali-Logo {
   margin-left: 100px;
 }
