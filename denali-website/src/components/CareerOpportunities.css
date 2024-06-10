@@ -1,68 +1,77 @@
 /* CareerOpportunities.css */
 .titleImageOP {
-    display: flex;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 700px;
-    background-attachment: fixed;
-    position: relative;
-    z-index: -1;
-  }
-  
-  .mainTextOP {
-    display: flex;
-    align-items: center;
-    color: pink;
-  }
-  
-  .contentOP {
-    display: flex;
-    flex-direction: column;
-    background-color: #f6f6f6;
-  }
-  
+  display: flex;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 700px;
+  background-attachment: fixed;
+  position: relative;
+  z-index: -1;
+}
+
+.mainTextOP {
+  display: flex;
+  align-items: center;
+  color: pink;
+}
+
+.contentOP {
+  display: flex;
+  flex-direction: column;
+  background-color: #f6f6f6;
+}
+
+.navBarOP {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 50px;
+  margin-left: 50px;
+  margin-right: 150px;
+}
+
+.navBarTextOP {
+  font-size: 14pt;
+  margin-bottom: 0px;
+  width: 65vw;
+}
+
+.dropdownToggleOP {
+  color: black;
+  background-color: transparent;
+  border: none;
+  font-size: 16pt;
+  z-index: 999;
+}
+.dropdownToggleOP:hover .dropdownMenuOP {
+  display: block;
+}
+
+.dropdownMenuOP {
+  border: none;
+}
+.dropdownToggleOP:hover,
+.dropdownToggleOP:focus,
+.dropdownToggleOP:active {
+  color: #408697;
+  background-color: transparent;
+  text-decoration: none;
+  border: none;
+}
+@media screen and (max-width: 1600px) {
   .navBarOP {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 50px;
-    margin-left: 50px;
-    margin-right: 150px;
+    margin-right: 0px;
   }
-  
-  .navBarTextOP {
-    font-size: 14pt;
-    margin-bottom: 0px;
-    width: 65vw;
+}
+
+@media screen and (max-width: 1000px) {
+  .navBarOP {
+    margin-left: 0px;
+    flex-direction: column;
   }
-  
   .dropdownToggleOP {
-    color: black;
-    background-color: transparent;
-    border: none;
-    font-size: 16pt;
-    z-index: 999;
+    margin-top: 30px;
+    margin-bottom: 100px;
+    padding: 0px;
   }
-  
-  .dropdownMenuOP {
-    border: none;
-  }
-  @media screen and (max-width: 1600px){
-    .navBarOP {
-      margin-right: 0px;
-    }
-  }
-
-  @media screen and (max-width: 1000px){
-    .navBarOP {
-      margin-left: 0px;
-      flex-direction: column;
-    }
-    .dropdownToggleOP {
-     margin-top: 30px;
-     margin-bottom: 100px;
-     padding: 0px;
-    }
-  }
-
-  
+}
