@@ -19,8 +19,7 @@ function Contact() {
         <div className="textC">
           <p className="no-marginHeaderC">Contact Us</p>
           <p className="no-marginC">Denali Projects</p>
-          <p className="no-marginC">#1500, 700 - 4th Avenue SW</p>
-          <p className="no-marginC">Calgary, AB T2P 3J4</p>
+          <p className="no-marginC">info@denaliprojects.com</p>
           <p className="no-marginC">Phone +1 (403) 984-6610</p>
 
           <form

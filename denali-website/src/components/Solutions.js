@@ -141,8 +141,6 @@ export default Solutions;
 const background = {
   display: "flex",
   flexDirection: "column",
-  alignItems: "center",
-  justifyContent: "center",
   backgroundColor: "#f6f6f6",
   backgroundSize: "cover",
   margin: "0px",
