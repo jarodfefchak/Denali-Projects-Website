@@ -50,61 +50,16 @@ function Solutions() {
     return <p>Loading data...</p>;
   }
 
-  const imageList = [
-    {
-      src: Solution1,
-      alt: "Solution 1",
-      description: jsonData[0][0].section,
-      loading: "lazy",
-    },
-    {
-      src: Solution2,
-      alt: "Solution 2",
-      description: jsonData[1][0].section,
-      loading: "lazy",
-    },
-    {
-      src: Solution3,
-      alt: "Solution 3",
-      description: jsonData[2][0].section,
-      loading: "lazy",
-    },
-    {
-      src: Solution4,
-      alt: "Solution 4",
-      description: jsonData[3][0].section,
-      loading: "lazy",
-    },
-    {
-      src: Solution5,
-      alt: "Solution 5",
-      description: jsonData[4][0].section,
-      loading: "lazy",
-    },
-    {
-      src: Solution6,
-      alt: "Solution 6",
-      description: jsonData[5][0].section,
-      loading: "lazy",
-    },
-    {
-      src: Solution7,
-      alt: "Solution 7",
-      description: jsonData[6][0].section,
-      loading: "lazy",
-    },
-    {
-      src: Solution8,
-      alt: "Solution 8",
-      description: jsonData[7][0].section,
-      loading: "lazy",
-    },
-    {
-      src: Solution9,
-      alt: "Solution 9",
-      description: jsonData[8][0].section,
-      loading: "lazy",
-    },
+  const images = [
+    { src: Solution1, alt: "Solution 1" },
+    { src: Solution2, alt: "Solution 2" },
+    { src: Solution3, alt: "Solution 3" },
+    { src: Solution4, alt: "Solution 4" },
+    { src: Solution5, alt: "Solution 5" },
+    { src: Solution6, alt: "Solution 6" },
+    { src: Solution7, alt: "Solution 7" },
+    { src: Solution8, alt: "Solution 8" },
+    { src: Solution9, alt: "Solution 9" },
   ];
 
   const containerVariants = {
@@ -130,14 +85,16 @@ function Solutions() {
 
   return (
     <div style={background}>
-      <h1 className="headingS"><b>Solutions We Offer</b></h1>
+      <h1 className="headingS">
+        <b>Solutions We Offer</b>
+      </h1>
       <motion.div
         className="solutionsS"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
       >
-        {imageList.map((image, index) => (
+        {images.map((image, index) => (
           <VisibilitySensor
             key={index}
             onChange={(isVisible) => handleVisibilityChange(index, isVisible)}
@@ -150,13 +107,15 @@ function Solutions() {
                 animate={visibility[index] ? "visible" : "hidden"}
                 className="imageContainerS"
               >
-                <img
-                  src={image.src}
-                  alt={image.alt}
-                  className="imgS"
-                  loading="lazy"
-                />
-                <p className="textS">{image.description}</p>
+                <Link to={`/SolutionsDisplay/${index + 1}`}>
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    className="imgS"
+                    loading="lazy"
+                  />
+                  <p className="textS">{jsonData[index][0].section}</p>
+                </Link>
               </motion.div>
             )}
           </VisibilitySensor>

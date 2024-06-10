@@ -9,7 +9,7 @@ import "./AboutUs.css";
 
 function AboutUs() {
   useEffect(() => {
-    document.title = "About - Denali Projects";
+    document.title = "About Us - Denali Projects";
   }, []);
 
   useEffect(() => {

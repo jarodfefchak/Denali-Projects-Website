@@ -17,6 +17,12 @@ function SolutionsList({ solutionId }) {
     fetchData();
   }, [solutionId]);
 
+  useEffect(() => {
+    if (jsonData) {
+      document.title = `${jsonData[0].section} - Denali Projects`;
+    }
+  }, [jsonData]);
+
   if (!jsonData) {
     return <p>Loading data...</p>;
   }
