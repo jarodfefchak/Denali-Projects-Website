@@ -35,8 +35,8 @@ function App() {
     <Route path="/apply/:jobTitle" element={<Apply />} />
     <Route path ="/CareerList" element = {<CareerList/>}/>
     <Route path ="/Results" element = {<Results/>}/>
-    <Route path ="/SolutionsDisplay" element = {<SolutionsDisplay/>}/>
-    <Route path ="/SolutionsList" element = {<SolutionsList/>}/>
+    <Route path="/SolutionsDisplay/:solutionId" element={<SolutionsDisplay/>} />
+    <Route path="/SolutionsList/:solutionId" element={<SolutionsList/>} />
 
   </Routes>
   </BrowserRouter>

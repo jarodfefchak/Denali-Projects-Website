@@ -5,7 +5,6 @@ import './header.css';
 import axios from "axios";
 
 function Header() {
- 
   const [jsonData, setJsonData] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -39,19 +38,17 @@ function Header() {
         <div className="link-container">
           <Link to="/" id="link1" className="nav-link">Home</Link>
           <div className="dropdown" id="link2">
-            <Link to="/#Solutions" className="dropdown-toggle nav-link">
-              Solutions
-            </Link>
+            <Link to="/#Solutions" className="dropdown-toggle nav-link">Solutions</Link>
             <div className="dropdown-menu">
-              <Link to="/SolutionsDisplay" className="dropdown-item">{jsonData[0][0].section}</Link>
-              <Link to="/SolutionsDisplay" className="dropdown-item">{jsonData[1][0].section}</Link>
-              <Link to="/SolutionsDisplay" className="dropdown-item">{jsonData[2][0].section}</Link>
-              <Link to="/SolutionsDisplay" className="dropdown-item">{jsonData[3][0].section}</Link>
-              <Link to="/SolutionsDisplay" className="dropdown-item">{jsonData[4][0].section}</Link>
-              <Link to="/SolutionsDisplay" className="dropdown-item">{jsonData[5][0].section}</Link>
-              <Link to="/SolutionsDisplay" className="dropdown-item">{jsonData[6][0].section}</Link>
-              <Link to="/SolutionsDisplay" className="dropdown-item">{jsonData[7][0].section}</Link>
-              <Link to="/SolutionsDisplay" className="dropdown-item">{jsonData[8][0].section}</Link>
+              {jsonData.map((data, index) => (
+                <Link
+                  key={index}
+                  to={`/SolutionsDisplay/${index + 1}`}
+                  className="dropdown-item"
+                >
+                  {data[0].section}
+                </Link>
+              ))}
             </div>
           </div>
           <Link to="/AboutUs" id="link3" className="nav-link">About Us</Link>
@@ -63,5 +60,7 @@ function Header() {
 }
 
 export default Header;
+
+
 
 

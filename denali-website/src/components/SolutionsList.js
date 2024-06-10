@@ -2,20 +2,20 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./SolutionsList.css";
 
-function SolutionsList() {
+function SolutionsList({ solutionId }) {
   const [jsonData, setJsonData] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("/data/Solutions/Solution1.json"); // Adjust the path
+        const response = await axios.get(`/data/Solutions/Solution${solutionId}.json`);
         setJsonData(response.data);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
     };
     fetchData();
-  }, []);
+  }, [solutionId]);
 
   if (!jsonData) {
     return <p>Loading data...</p>;
@@ -41,4 +41,6 @@ function SolutionsList() {
 }
 
 export default SolutionsList;
+
+
 
