@@ -57,7 +57,8 @@
 
 .textareaC {
   width: 35vw;
-  height: 100px;
+  min-height: 175px;
+  height: 20vh;
   font-size: 16pt;
   resize: vertical;
 }
@@ -94,7 +95,40 @@
   .buttonC:hover {
     box-shadow: 1px 1px 10px #000;
   }
+  .custom-alert-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
   
+  .custom-alert {
+    background-color: #f6f6f6;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .custom-alert button {
+    background-color:#408697;
+    border-radius:10px ;
+    border: 1px solid #346370 ;
+    font-size: 16pt;
+    color: #fff;
+    margin-top: 10px;
+    padding: 5px 10px;
+  }
+  .custom-alert button:hover {
+    background-color:#346370;
+  }
+
   @media screen and (max-width: 1200px){
     .textC {
       margin: 150px 50px 50px 50px;

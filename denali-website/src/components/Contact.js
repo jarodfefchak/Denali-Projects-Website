@@ -17,6 +17,7 @@ function Contact() {
   const [lastName, setLastName] = useState("");
   const [message, setMessage] = useState("");
   const [email, setEmail] = useState("");
+  const [show, setShow] = useState(false);
 
   const handleFirstNameChange = (event) => {
     setFirstName(event.target.value);
@@ -46,12 +47,17 @@ function Contact() {
       setIsFormValid(false);
     }
   };
-  const handleEmailMessage = () => {
+  const handleEmailMessage = (event) => {
+    event.preventDefault();
     if (!isFormValid) {
-       alert('All fields are required.');
-        return;
+      setShow(true);
     }
   };
+
+  const closeAlert = () => {
+    setShow(false);
+  };
+
   return (
     <div>
       <Header />
@@ -62,9 +68,7 @@ function Contact() {
           <p className="no-marginC">info@denaliprojects.com</p>
           <p className="no-marginC">Phone +1 (403) 984-6610</p>
 
-          <form
-            className="formC"
-          >
+          <form className="formC">
             <p className="large-textC">Personal Information</p>
             <label className="labelC">
               <input
@@ -116,6 +120,14 @@ function Contact() {
               Submit
             </button>
           </form>
+          {show && (
+            <div className="custom-alert-overlay">
+              <div className="custom-alert">
+                <p>Please fill in all fields before submitting.</p>
+                <button onClick={closeAlert}>Close</button>
+              </div>
+            </div>
+          )}
         </div>
         <div className="iframe-containerC">
           <p className="no-marginHeaderC">Our Office</p>
@@ -136,3 +148,4 @@ function Contact() {
 }
 
 export default Contact;
+
