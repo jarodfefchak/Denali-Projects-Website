@@ -12,6 +12,46 @@ function Contact() {
   }, []);
   const [hover, setHover] = useState(false);
 
+  const [isFormValid, setIsFormValid] = useState(false);
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [message, setMessage] = useState("");
+  const [email, setEmail] = useState("");
+
+  const handleFirstNameChange = (event) => {
+    setFirstName(event.target.value);
+    checkFormValidity();
+  };
+  const handleLastNameChange = (event) => {
+    setLastName(event.target.value);
+    checkFormValidity();
+  };
+  const handleMessageChange = (event) => {
+    setMessage(event.target.value);
+    checkFormValidity();
+  };
+  const handleEmailChange = (event) => {
+    setEmail(event.target.value);
+    checkFormValidity();
+  };
+  const checkFormValidity = () => {
+    if (
+      firstName.trim() !== "" &&
+      lastName.trim() !== "" &&
+      message.trim() !== "" &&
+      email.trim() !== ""
+    ) {
+      setIsFormValid(true);
+    } else {
+      setIsFormValid(false);
+    }
+  };
+  const handleEmailMessage = () => {
+    if (!isFormValid) {
+       alert('All fields are required.');
+        return;
+    }
+  };
   return (
     <div>
       <Header />
@@ -24,16 +64,14 @@ function Contact() {
 
           <form
             className="formC"
-            action="mailto:alisongartnermg@gmail.com"
-            method="get"
-            encType="multipart/form-data"
           >
             <p className="large-textC">Personal Information</p>
             <label className="labelC">
               <input
                 className="input-shortC"
                 type="text"
-                name="name"
+                value={firstName}
+                onChange={handleFirstNameChange}
                 placeholder="First Name"
                 required
               />
@@ -42,7 +80,8 @@ function Contact() {
               <input
                 className="input-shortC"
                 type="text"
-                name="Last Name"
+                value={lastName}
+                onChange={handleLastNameChange}
                 placeholder="Last Name"
                 required
               />
@@ -51,7 +90,8 @@ function Contact() {
               <input
                 className="input-longC"
                 type="email"
-                name="email"
+                value={email}
+                onChange={handleEmailChange}
                 placeholder="Email"
                 required
               />
@@ -60,19 +100,21 @@ function Contact() {
             <label className="labelC">
               <textarea
                 className="textareaC"
-                name="message"
+                value={message}
+                onChange={handleMessageChange}
                 autoResizeEnabled={true}
               />
             </label>
             <br></br>
             <button
-            className={`buttonC ${hover ? "button-hover" : ""}`}
-            type="submit"
-            onMouseEnter={() => setHover(true)}
-            onMouseLeave={() => setHover(false)}
-          >
-            Submit
-          </button>
+              className={`buttonC ${hover ? "button-hover" : ""}`}
+              type="submit"
+              onClick={handleEmailMessage}
+              onMouseEnter={() => setHover(true)}
+              onMouseLeave={() => setHover(false)}
+            >
+              Submit
+            </button>
           </form>
         </div>
         <div className="iframe-containerC">
@@ -87,7 +129,6 @@ function Contact() {
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
-
       </div>
       <Footer />
     </div>
