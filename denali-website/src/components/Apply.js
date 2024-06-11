@@ -31,22 +31,8 @@ function Apply() {
   const [url, setUrl] = useState("");
   const [resume, setResume] = useState(null);
 
-  useEffect(() => {
-    checkFormValidity();
-  }, [
-    FLname,
-    email,
-    address1,
-    city,
-    province,
-    postalCode,
-    phone,
-    resume,
-    isValidPhoneNumber,
-  ]);
-
   const checkFormValidity = () => {
-    const isValid =
+    if (
       FLname.trim() !== "" &&
       email.trim() !== "" &&
       address1.trim() !== "" &&
@@ -54,22 +40,28 @@ function Apply() {
       province.trim() !== "" &&
       postalCode.trim() !== "" &&
       phone.trim() !== "" &&
-      resume !== null &&
-      isValidPhoneNumber;
-
-    setIsFormValid(isValid);
+      isValidPhoneNumber &&
+      resume !== null
+    ) {
+      setIsFormValid(true);
+    } else {
+      setIsFormValid(false);
+    }
   };
 
   const handleNameChange = (event) => {
     setFLname(event.target.value);
+    checkFormValidity();
   };
 
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
+    checkFormValidity();
   };
 
   const handleAddress1Change = (event) => {
     setAddress1(event.target.value);
+    checkFormValidity();
   };
 
   const handleAddress2Change = (event) => {
@@ -78,19 +70,23 @@ function Apply() {
 
   const handleCityChange = (event) => {
     setCity(event.target.value);
+    checkFormValidity();
   };
 
   const handleProvinceChange = (event) => {
     setProvince(event.target.value);
+    checkFormValidity();
   };
 
   const handlePostalChange = (event) => {
     setPostalCode(event.target.value);
+    checkFormValidity();
   };
 
   const handlePhoneChange = (event) => {
     setPhone(event.target.value);
     validPhoneNumber(event.target.value);
+    checkFormValidity();
   };
 
   const handleAPEGAChange = (event) => {
@@ -100,7 +96,6 @@ function Apply() {
   const handleUrlChange = (event) => {
     setUrl(event.target.value);
   };
-
   const handleAlbertaChange = (event) => {
     setAlberta(event.target.value);
   };
@@ -111,6 +106,7 @@ function Apply() {
 
   const handleResumeChange = (event) => {
     setResume(event.target.files[0]);
+    checkFormValidity();
   };
 
   const validPhoneNumber = (phone) => {
@@ -121,7 +117,6 @@ function Apply() {
 
   const handleSignup = (event) => {
     event.preventDefault();
-
     if (!isValidPhoneNumber) {
       alert(
         "Please enter a valid phone number. Here are some possible valid formats:\n\n" +
@@ -146,7 +141,6 @@ function Apply() {
           "- Resume Attachment\n"
       );
     }
-
     // Handle form submission logic here
   };
 
@@ -319,7 +313,7 @@ function Apply() {
               required
             />
           </label>
-          <button className="buttonAP" type="submit">
+          <button className="buttonAP" type="submit" onClick={handleSignup}>
             Submit
           </button>
         </form>
