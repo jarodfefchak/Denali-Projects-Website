@@ -7,14 +7,15 @@ body {
 .layoutAP {
   display: flex;
   flex-direction: row;
+  
 }
 
 .contentAP {
   flex-direction: column;
   margin-top: 200px;
-  margin-left: 50px;
+  margin-left: 75px;
   margin-right: 50px;
-  max-width: 65vh;
+
 }
 .headerAP{
     font-size: 50px;
@@ -26,7 +27,7 @@ body {
     margin-top: 50px;
 }
 .formAP {
-  margin: 200px 50px 200px 50px;
+  margin: 200px 75px 200px 50px;
   font-size: 16pt;
 }
 

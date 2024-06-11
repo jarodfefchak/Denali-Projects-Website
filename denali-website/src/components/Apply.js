@@ -2,8 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
-import reCAPTCHA from "react-google-recaptcha";
-import applyImage from "../images/Apply.jpg";
 import "./Apply.css";
 
 function Apply() {
@@ -17,7 +15,140 @@ function Apply() {
     window.scrollTo({ top: 0, left: 0, behavior: "instant" });
   }, []);
 
-  const [hover, setHover] = useState(false);
+  const [isFormValid, setIsFormValid] = useState(false);
+  const [FLname, setFLname] = useState("");
+  const [email, setEmail] = useState("");
+  const [address1, setAddress1] = useState("");
+  const [address2, setAddress2] = useState("");
+  const [city, setCity] = useState("");
+  const [province, setProvince] = useState("");
+  const [postalCode, setPostalCode] = useState("");
+  const [phone, setPhone] = useState("");
+  const [isValidPhoneNumber, setValidPhoneNumber] = useState(false);
+  const [APEGA, setAPEGA] = useState("");
+  const [alberta, setAlberta] = useState("No");
+  const [legalToWork, setLegalToWork] = useState("No");
+  const [url, setUrl] = useState("");
+  const [resume, setResume] = useState(null);
+
+  useEffect(() => {
+    checkFormValidity();
+  }, [
+    FLname,
+    email,
+    address1,
+    city,
+    province,
+    postalCode,
+    phone,
+    resume,
+    isValidPhoneNumber,
+  ]);
+
+  const checkFormValidity = () => {
+    const isValid =
+      FLname.trim() !== "" &&
+      email.trim() !== "" &&
+      address1.trim() !== "" &&
+      city.trim() !== "" &&
+      province.trim() !== "" &&
+      postalCode.trim() !== "" &&
+      phone.trim() !== "" &&
+      resume !== null &&
+      isValidPhoneNumber;
+
+    setIsFormValid(isValid);
+  };
+
+  const handleNameChange = (event) => {
+    setFLname(event.target.value);
+  };
+
+  const handleEmailChange = (event) => {
+    setEmail(event.target.value);
+  };
+
+  const handleAddress1Change = (event) => {
+    setAddress1(event.target.value);
+  };
+
+  const handleAddress2Change = (event) => {
+    setAddress2(event.target.value);
+  };
+
+  const handleCityChange = (event) => {
+    setCity(event.target.value);
+  };
+
+  const handleProvinceChange = (event) => {
+    setProvince(event.target.value);
+  };
+
+  const handlePostalChange = (event) => {
+    setPostalCode(event.target.value);
+  };
+
+  const handlePhoneChange = (event) => {
+    setPhone(event.target.value);
+    validPhoneNumber(event.target.value);
+  };
+
+  const handleAPEGAChange = (event) => {
+    setAPEGA(event.target.value);
+  };
+
+  const handleUrlChange = (event) => {
+    setUrl(event.target.value);
+  };
+
+  const handleAlbertaChange = (event) => {
+    setAlberta(event.target.value);
+  };
+
+  const handleLegalToWorkChange = (event) => {
+    setLegalToWork(event.target.value);
+  };
+
+  const handleResumeChange = (event) => {
+    setResume(event.target.files[0]);
+  };
+
+  const validPhoneNumber = (phone) => {
+    const regex =
+      /^(\+\d{1,3}[- ]?)?\(?\d{1,4}\)?[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/;
+    setValidPhoneNumber(regex.test(phone));
+  };
+
+  const handleSignup = (event) => {
+    event.preventDefault();
+
+    if (!isValidPhoneNumber) {
+      alert(
+        "Please enter a valid phone number. Here are some possible valid formats:\n\n" +
+          "- 123-456-7890\n" +
+          "- (123) 456-7890\n" +
+          "- 123 456 7890\n" +
+          "- 123.456.7890\n" +
+          "- +1 (123) 456-7890"
+      );
+    }
+
+    if (!isFormValid) {
+      alert(
+        "Please ensure all of the following fields are filled out before submitting: \n\n" +
+          "- First and Last Name\n" +
+          "- Email\n" +
+          "- Street Address\n" +
+          "- City\n" +
+          "- Province\n" +
+          "- Postal Code\n" +
+          "- Phone\n" +
+          "- Resume Attachment\n"
+      );
+    }
+
+    // Handle form submission logic here
+  };
 
   return (
     <div>
@@ -34,12 +165,7 @@ function Apply() {
             a fulfilling and impactful career. Apply at Denali Projects today!
           </p>
         </div>
-        <form
-          className="formAP"
-          action="mailto:alisongartnermg@gmail.com"
-          method="get"
-          encType="multipart/form-data"
-        >
+        <form className="formAP" onSubmit={handleSignup}>
           <p style={{ marginBottom: "0px", fontSize: "22px", fontWeight: 500 }}>
             Personal Details
           </p>
@@ -47,7 +173,8 @@ function Apply() {
             <input
               className="input-fieldAP"
               type="text"
-              name="name"
+              value={FLname}
+              onChange={handleNameChange}
               placeholder="First and Last Name"
               required
             />
@@ -56,7 +183,8 @@ function Apply() {
             <input
               className="input-fieldAP"
               type="email"
-              name="email"
+              value={email}
+              onChange={handleEmailChange}
               placeholder="Email"
               required
             />
@@ -68,7 +196,8 @@ function Apply() {
             <input
               className="input-fieldAP"
               type="text"
-              name="address1"
+              value={address1}
+              onChange={handleAddress1Change}
               placeholder="Street Address"
               required
             />
@@ -77,7 +206,8 @@ function Apply() {
             <input
               className="input-fieldAP"
               type="text"
-              name="address2"
+              value={address2}
+              onChange={handleAddress2Change}
               placeholder="Address Line 2"
             />
           </label>
@@ -85,7 +215,8 @@ function Apply() {
             <input
               className="input-fieldAP"
               type="text"
-              name="city"
+              value={city}
+              onChange={handleCityChange}
               placeholder="City"
               required
             />
@@ -94,7 +225,8 @@ function Apply() {
             <input
               className="input-fieldAP"
               type="text"
-              name="province"
+              value={province}
+              onChange={handleProvinceChange}
               placeholder="Province"
               required
             />
@@ -103,7 +235,8 @@ function Apply() {
             <input
               className="input-field-largeAP"
               type="text"
-              name="postalCode"
+              value={postalCode}
+              onChange={handlePostalChange}
               placeholder="Postal Code"
               required
             />
@@ -115,7 +248,9 @@ function Apply() {
             <input
               className="input-field-largeAP"
               type="tel"
-              name="phone"
+              value={phone}
+              onChange={handlePhoneChange}
+              placeholder="Phone"
               required
             />
           </label>
@@ -127,7 +262,8 @@ function Apply() {
             <input
               className="input-field-largeAP"
               type="text"
-              name="APEGA"
+              value={APEGA}
+              onChange={handleAPEGAChange}
               placeholder="Optional"
             />
           </label>
@@ -135,55 +271,55 @@ function Apply() {
             Do you currently reside in Alberta?
           </p>
           <label className="longlabelAP">
-            <select className="input-field-largeAP" required>
-              <option value="ablertaNo">No</option>
-              <option value="albertaYes">Yes</option>
+            <select
+              className="input-field-largeAP"
+              value={alberta}
+              onChange={handleAlbertaChange}
+              required
+            >
+              <option value="No">No</option>
+              <option value="Yes">Yes</option>
             </select>
           </label>
           <p style={{ marginBottom: "0", fontSize: "22px", fontWeight: 500 }}>
             Are you legally entitled to work in Canada?
           </p>
           <label className="longlabelAP">
-            <select className="input-field-largeAP" required>
-              <option value="legalToWorkNo">No</option>
-              <option value="legalToWorkYes">Yes</option>
+            <select
+              className="input-field-largeAP"
+              value={legalToWork}
+              onChange={handleLegalToWorkChange}
+              required
+            >
+              <option value="No">No</option>
+              <option value="Yes">Yes</option>
             </select>
           </label>
           <p style={{ marginBottom: "0px", fontSize: "22px", fontWeight: 500 }}>
-            Resume
-          </p>
-          <p style={{ marginBottom: "0px", fontSize: "16px" }}>
-            Only PDF files accepted
-          </p>
-          <label className="labelAP">
-            <input
-              className="input-field-largeAP"
-              type="file"
-              name="resume"
-              accept=".pdf"
-              required
-            />
-          </label>
-          <p style={{ marginBottom: "0px", fontSize: "22px", fontWeight: 500 }}>
-            LinkedIn Profile Address
+            LinkedIn Profile URL
           </p>
           <label className="longlabelAP">
             <input
               className="input-field-largeAP"
               type="url"
-              name="url"
-              placeholder="https://example.com"
-              pattern="https://.*"
-              size="30"
+              value={url}
+              onChange={handleUrlChange}
+              placeholder="Optional"
             />
           </label>
-          <reCAPTCHA />
-          <button
-            className={`buttonAP ${hover ? "button-hover" : ""}`}
-            type="submit"
-            onMouseEnter={() => setHover(true)}
-            onMouseLeave={() => setHover(false)}
-          >
+          <p style={{ marginBottom: "0px", fontSize: "22px", fontWeight: 500 }}>
+            Resume
+          </p>
+          <label className="longlabelAP">
+            <input
+              className="input-field-largeAP"
+              type="file"
+              onChange={handleResumeChange}
+              accept=".pdf"
+              required
+            />
+          </label>
+          <button className="buttonAP" type="submit">
             Submit
           </button>
         </form>
@@ -194,4 +330,3 @@ function Apply() {
 }
 
 export default Apply;
-
