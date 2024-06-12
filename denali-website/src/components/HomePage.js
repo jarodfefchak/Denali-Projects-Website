@@ -15,7 +15,7 @@ function HomePage() {
 
     useEffect(() => {
         const scrollToTop = () => {
-            window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+            window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
         };
 
         const hashChangeListener = () => {
@@ -23,7 +23,7 @@ function HomePage() {
                 const id = window.location.hash.replace('#', '');
                 const element = document.getElementById(id);
                 if (element) {
-                    element.scrollIntoView();
+                    element.scrollIntoView({behavior: 'instant'});
                 }
             } else {
                 scrollToTop();
@@ -44,7 +44,7 @@ function HomePage() {
             <HomeMainSection /> 
             <ProvenSuccess/>
             <Results/>
-            <div id="Solutions"><Solutions /></div>
+            <div id="Solutions" style={{minHeight:"85vh"}}><Solutions /></div>
             <InsideDenali/>
             <CareersPage/>
             <Footer />
