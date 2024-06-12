@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import Header from "./Header";
 import Footer from "./Footer";
 import "./Contact.css";
@@ -50,7 +51,7 @@ function Contact() {
   };
   const handleEmailMessage = (event) => {
     event.preventDefault();
-    
+
     if (!isFormValid) {
       setShow(true);
     } else {
@@ -61,14 +62,13 @@ function Contact() {
       setShow2(true);
     }
   };
-  
 
   const closeAlert = () => {
     setShow(false);
   };
   const closeAlert2 = () => {
     setShow2(false);
-    window.location.href = '/';
+    window.location.href = "/";
   };
 
   return (
@@ -134,20 +134,30 @@ function Contact() {
             </button>
           </form>
           {show && (
-            <div className="custom-alert-overlay">
+            <motion.div
+              className="custom-alert-overlay"
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ opacity: { duration: 0.4 }, y: { duration: 0.5, ease: "easeOut" } }}
+            >
               <div className="custom-alert">
                 <p>Please fill in all fields before submitting.</p>
                 <button onClick={closeAlert}>Close</button>
               </div>
-            </div>
+            </motion.div>
           )}
-           {show2 && (
-            <div className="custom-alert-overlay">
+          {show2 && (
+            <motion.div
+              className="custom-alert-overlay"
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ opacity: { duration: 0.4 }, y: { duration: 0.5, ease: "easeOut" } }}
+            >
               <div className="custom-alert">
                 <p>Thank you for contacting Denali Projects.</p>
                 <button onClick={closeAlert2}>Close</button>
               </div>
-            </div>
+            </motion.div>
           )}
         </div>
         <div className="iframe-containerC">
@@ -169,4 +179,5 @@ function Contact() {
 }
 
 export default Contact;
+
 

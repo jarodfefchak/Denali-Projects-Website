@@ -36,7 +36,17 @@ function Apply() {
 
   useEffect(() => {
     checkFormValidity();
-  }, [FLname, email, address1, city, province, postalCode, phone, resume, isValidPhoneNumber]);
+  }, [
+    FLname,
+    email,
+    address1,
+    city,
+    province,
+    postalCode,
+    phone,
+    resume,
+    isValidPhoneNumber,
+  ]);
 
   const handleNameChange = (event) => {
     setFLname(event.target.value);
@@ -93,7 +103,8 @@ function Apply() {
   };
 
   const validPhoneNumber = (phone) => {
-    const regex = /^(\+\d{1,3}[- ]?)?\(?\d{1,4}\)?[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/;
+    const regex =
+      /^(\+\d{1,3}[- ]?)?\(?\d{1,4}\)?[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/;
     setValidPhoneNumber(regex.test(phone));
   };
 
@@ -119,11 +130,9 @@ function Apply() {
     event.preventDefault();
     if (!isValidPhoneNumber) {
       setShow(true);
-      return;
     }
     if (!isFormValid) {
       setShow2(true);
-      return;
     }
     if (isFormValid && isValidPhoneNumber) {
       setShow3(true);
@@ -140,7 +149,7 @@ function Apply() {
 
   const closeAlert3 = () => {
     setShow3(false);
-    window.location.href = '/';
+    window.location.href = "/";
   };
 
   return (
