@@ -31,24 +31,6 @@ function Apply() {
   const [url, setUrl] = useState("");
   const [resume, setResume] = useState(null);
 
-  const checkFormValidity = () => {
-    if (
-      FLname.trim() !== "" &&
-      email.trim() !== "" &&
-      address1.trim() !== "" &&
-      city.trim() !== "" &&
-      province.trim() !== "" &&
-      postalCode.trim() !== "" &&
-      phone.trim() !== "" &&
-      isValidPhoneNumber &&
-      resume !== null
-    ) {
-      setIsFormValid(true);
-    } else {
-      setIsFormValid(false);
-    }
-  };
-
   const handleNameChange = (event) => {
     setFLname(event.target.value);
     checkFormValidity();
@@ -84,9 +66,11 @@ function Apply() {
   };
 
   const handlePhoneChange = (event) => {
-    setPhone(event.target.value);
     validPhoneNumber(event.target.value);
+    if(isValidPhoneNumber){
+    setPhone(event.target.value);
     checkFormValidity();
+    }
   };
 
   const handleAPEGAChange = (event) => {
@@ -115,6 +99,23 @@ function Apply() {
     setValidPhoneNumber(regex.test(phone));
   };
 
+  const checkFormValidity = () => {
+    if (
+      FLname.trim() !== "" &&
+      email.trim() !== "" &&
+      address1.trim() !== "" &&
+      city.trim() !== "" &&
+      province.trim() !== "" &&
+      postalCode.trim() !== "" &&
+      phone.trim() !== "" &&
+      isValidPhoneNumber &&
+      resume !== null
+    ) {
+      setIsFormValid(true);
+    } else {
+      setIsFormValid(false);
+    }
+  };
   const handleSignup = (event) => {
     event.preventDefault();
     if (!isValidPhoneNumber) {
@@ -127,23 +128,24 @@ function Apply() {
           "- +1 (123) 456-7890"
       );
     }
-
     if (!isFormValid) {
       alert(
         "Please ensure all of the following fields are filled out before submitting: \n\n" +
-          "- First and Last Name\n" +
-          "- Email\n" +
-          "- Street Address\n" +
-          "- City\n" +
-          "- Province\n" +
-          "- Postal Code\n" +
-          "- Phone\n" +
-          "- Resume Attachment\n"
+          "- First and Last Name \n" +
+          "- Email\n " +
+          "- Street Address\n " +
+          "- City\n " +
+          "- Province\n " +
+          "- Postal Code\n " +
+          "- Phone\n " +
+          "- Resume Attachment\n "
       );
     }
-    // Handle form submission logic here
+    if(isFormValid && isValidPhoneNumber){
+      alert("SUBMIT");
+    }
   };
-
+ 
   return (
     <div>
       <Header />
