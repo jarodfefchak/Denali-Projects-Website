@@ -38,7 +38,9 @@ function ProvenSuccess() {
   ];
 
   const renderDotsItem = ({ isActive }) => {
-    return isActive ? "x" : "o";
+    return (
+      <div className={`dot ${isActive ? "active-dot" : "inactive-dot"}`} style={{cursor:"pointer"}}></div>
+    );
   };
 
   const renderPrevButton = ({ isDisabled }) => {
@@ -64,15 +66,18 @@ function ProvenSuccess() {
   };
 
   const Carousel = () => (
-    <AliceCarousel
-      mouseTracking
-      renderPrevButton={renderPrevButton}
-      items={items}
-      renderNextButton={renderNextButton}
-      renderDotsItem={renderDotsItem}
-      infinite
-    />
+    <div className="carousel-container">
+      <AliceCarousel
+        mouseTracking
+        renderPrevButton={renderPrevButton}
+        items={items}
+        renderNextButton={renderNextButton}
+        renderDotsItem={renderDotsItem}
+        infinite
+      />
+    </div>
   );
+  
 
   return (
     <div className="backgroundPS">
@@ -88,5 +93,4 @@ function ProvenSuccess() {
 }
 
 export default ProvenSuccess;
-
 
