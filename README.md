@@ -2,7 +2,7 @@
 ***
 ### General Information
 This is the code for the Denali Projects website visable under the domain name denaliprojects.com. The website is hosted by Vercel. All changes made to the main branch of the Denali-Projects-Website repository will automatically be deployed since Vercel has built-in CI/CD. The Denali Projects website has been built using the JavaScript-library/Frontend-Framework React. To view the webiste before deployment please visit (insert temporary domain name).
-installs needed npm, react router dom, bootstrap, npm install --save @fortawesome/react-fontawesome @fortawesome/free-solid-svg-icons @fortawesome/fontawesome-svg-core npm instal framer-motion
+installs needed npm, react router dom, bootstrap, npm install --save @fortawesome/react-fontawesome @fortawesome/free-solid-svg-icons @fortawesome/fontawesome-svg-core npm install framer-motion, npm i react-alice-carousel
 
 In order to view and edit the website code on your computer please view the following subsections and complete all the described steps:
 1. Installing Git on Your Desktop.
