@@ -1,49 +1,92 @@
 import React, { useEffect } from "react";
-import Project1Img from '../images/ProvenSuccess/Project1.jpg';
-import Project2Img from '../images/ProvenSuccess/Project2.jpg';
-import Project3Img from '../images/ProvenSuccess/Project3.jpg';
-import './ProvenSuccess.css';
+import AliceCarousel from "react-alice-carousel";
+import "react-alice-carousel/lib/alice-carousel.css";
+import Project1Img from "../images/ProvenSuccess/Project1.jpg";
+import Project2Img from "../images/ProvenSuccess/Project2.jpg";
+import Project3Img from "../images/ProvenSuccess/Project3.jpg";
+import "./ProvenSuccess.css";
 
 function ProvenSuccess() {
-    useEffect(() => {
-        window.$('#carouselExampleIndicators').carousel();
-    }, []);
+  useEffect(() => {
+    window.$("#carouselExampleIndicators").carousel();
+  }, []);
+  
+  const handleDragStart = (e) => e.preventDefault();
+  
+  const items = [
+    <img
+      src={Project1Img}
+      alt="Project 1"
+      onDragStart={handleDragStart}
+      data-value="1"
+      className="carousel-image"
+    />,
+    <img
+      src={Project2Img}
+      alt="Project 2"
+      onDragStart={handleDragStart}
+      data-value="2"
+      className="carousel-image"
+    />,
+    <img
+      src={Project3Img}
+      alt="Project 3"
+      onDragStart={handleDragStart}
+      data-value="3"
+      className="carousel-image"
+    />,
+  ];
 
+  const renderDotsItem = ({ isActive }) => {
+    return isActive ? "x" : "o";
+  };
+
+  const renderPrevButton = ({ isDisabled }) => {
     return (
-        <div className="backgroundPS">
-            <div className="layoutPS">
-                <p className="titlePS"><b>Proven Success</b></p>
-                <p className="subtitlePS">Engineering Energy, Empowering Progress</p>
-            </div>
-            <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
-                <ol className="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                </ol>
-                <div className="carousel-inner">
-                    <div className="carousel-item active">
-                        <img className="d-block w-80" src={Project1Img} alt="First slide"/>
-                    </div>
-                    <div className="carousel-item">
-                        <img className="d-block w-80" src={Project2Img} alt="Second slide"/>
-                    </div>
-                    <div className="carousel-item">
-                        <img className="d-block w-80" src={Project3Img} alt="Third slide"/>
-                    </div>
-                </div>
-                <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span className="sr-only">Previous</span>
-                </a>
-                <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span className="sr-only">Next</span>
-                </a>
-            </div>
-        </div>
+      <span
+        className="carousel-arrow carousel-arrow-prev"
+        style={{ opacity: isDisabled ? "0.5" : 1 }}
+      >
+        &lang;
+      </span>
     );
+  };
+
+  const renderNextButton = ({ isDisabled }) => {
+    return (
+      <span
+        className="carousel-arrow carousel-arrow-next"
+        style={{ opacity: isDisabled ? "0.5" : 1 }}
+      >
+        &rang;
+      </span>
+    );
+  };
+
+  const Carousel = () => (
+    <AliceCarousel
+      mouseTracking
+      renderPrevButton={renderPrevButton}
+      items={items}
+      renderNextButton={renderNextButton}
+      renderDotsItem={renderDotsItem}
+      infinite
+    />
+  );
+
+  return (
+    <div className="backgroundPS">
+      <div className="layoutPS">
+        <p className="titlePS">
+          <b>Proven Success</b>
+        </p>
+        <p className="subtitlePS">Engineering Energy, Empowering Progress</p>
+        <Carousel />
+      </div>
+    </div>
+  );
 }
 
 export default ProvenSuccess;
+
 

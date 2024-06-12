@@ -1,3 +1,5 @@
+@import "react-alice-carousel/lib/alice-carousel.css";
+
 .backgroundPS {
     background-color: #f6f6f6;
     background-size: cover;
@@ -8,17 +10,17 @@
 .layoutPS {
     display: flex;
     flex-direction: column;
-    padding-left: 100px;
     padding-top: 100px;
     color: black;
 }
 
 .titlePS {
+    margin-left: 100px;
     font-size: 60pt;
-    margin: 0;
 }
 
 .subtitlePS {
+    margin-left: 100px;
     font-size: 30pt;
     margin-top: 0px;
     margin-bottom: 100px;
@@ -54,31 +56,25 @@
     margin-top: 0;
 }
 
-.carousel-item img {
-    max-width: 100%;
-    max-height: 600px; /* Adjust the height as needed */
-    margin: 0px auto;
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background for better visibility */
-    padding: 20px; /* Add padding for larger click area */
-    border-radius: 50%; /* Make them circular */
-}
-
-.carousel-control-prev,
-.carousel-control-next {
+.carousel-image {
+    width: 75%; 
+    margin: 0 auto; 
+    display: block;
+  }
+  
+  .carousel-arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 5%; /* Adjust width to ensure large click area */
-}
-
-.carousel-control-prev {
-    left: 10px; /* Position the previous button */
-}
-
-.carousel-control-next {
-    right: 10px; /* Position the next button */
-}
+    font-size: 20pt;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  .carousel-arrow-prev {
+    left: 5%; /* Adjust as needed */
+  }
+  
+  .carousel-arrow-next {
+    right: 5%; /* Adjust as needed */
+  }
