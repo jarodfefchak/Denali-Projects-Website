@@ -18,6 +18,7 @@ function Contact() {
   const [message, setMessage] = useState("");
   const [email, setEmail] = useState("");
   const [show, setShow] = useState(false);
+  const [show2, setShow2] = useState(false);
 
   const handleFirstNameChange = (event) => {
     setFirstName(event.target.value);
@@ -49,13 +50,25 @@ function Contact() {
   };
   const handleEmailMessage = (event) => {
     event.preventDefault();
+    
     if (!isFormValid) {
       setShow(true);
+    } else {
+      setFirstName("");
+      setLastName("");
+      setEmail("");
+      setMessage("");
+      setShow2(true);
     }
   };
+  
 
   const closeAlert = () => {
     setShow(false);
+  };
+  const closeAlert2 = () => {
+    setShow2(false);
+    window.location.href = '/';
   };
 
   return (
@@ -125,6 +138,14 @@ function Contact() {
               <div className="custom-alert">
                 <p>Please fill in all fields before submitting.</p>
                 <button onClick={closeAlert}>Close</button>
+              </div>
+            </div>
+          )}
+           {show2 && (
+            <div className="custom-alert-overlay">
+              <div className="custom-alert">
+                <p>Thank you for contacting Denali Projects.</p>
+                <button onClick={closeAlert2}>Close</button>
               </div>
             </div>
           )}

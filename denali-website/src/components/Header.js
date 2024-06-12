@@ -34,7 +34,9 @@ function Header() {
   return (
     <div>
       <div className="navbar">
+      <Link to="/">
         <img src={Logo} alt="Logo" height="75px" className="Denali-Logo" />
+        </Link>
         <div className="link-container">
           <Link to="/" id="link1" className="nav-link">Home</Link>
           <div className="dropdown" id="link2">
