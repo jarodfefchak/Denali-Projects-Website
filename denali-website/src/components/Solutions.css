@@ -61,6 +61,7 @@
   box-shadow: 1px 1px 20px #000000;
 }
 
+
 @media screen and (max-width: 1350px) {
   .imgS {
     height: 37vh;

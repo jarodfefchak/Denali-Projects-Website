@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { motion } from "framer-motion";
 import Header from "./Header";
 import Footer from "./Footer";
 import "./Apply.css";
@@ -321,33 +322,54 @@ function Apply() {
               required
             />
           </label>
-          <button className="buttonAP" type="submit">
+          <button className="buttonAP" type="submit" onClick={handleSignup}>
             Submit
           </button>
         </form>
         {show && (
-          <div className="custom-alert-overlayOP">
-            <div className="custom-alertOP">
-              <p>Please input a valid phone number.</p>
-              <button onClick={closeAlert}>Close</button>
+          <motion.div
+            className="custom-alert-overlay"
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ opacity: { duration: 0.4 }, y: { duration: 0.5, ease: "easeOut" } }}
+          >
+            <div className="custom-alert-overlayOP">
+              <div className="custom-alertOP">
+                <p>Please input a valid phone number.</p>
+                <button onClick={closeAlert}>Close</button>
+              </div>
             </div>
-          </div>
+          </motion.div>
         )}
-        {show2 && (
-          <div className="custom-alert-overlayOP">
-            <div className="custom-alertOP">
-              <p>Please fill in all fields.</p>
-              <button onClick={closeAlert2}>Close</button>
+        {show2 && !show && (
+          <motion.div
+            className="custom-alert-overlay"
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ opacity: { duration: 0.4 }, y: { duration: 0.5, ease: "easeOut" } }}
+          >
+            <div className="custom-alert-overlayOP">
+              <div className="custom-alertOP">
+                <p>Please fill in all fields.</p>
+                <button onClick={closeAlert2}>Close</button>
+              </div>
             </div>
-          </div>
+          </motion.div>
         )}
         {show3 && (
-          <div className="custom-alert-overlayOP">
-            <div className="custom-alertOP">
-              <p>Thank you for applying to work at Denali Projects.</p>
-              <button onClick={closeAlert3}>Close</button>
+          <motion.div
+            className="custom-alert-overlay"
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ opacity: { duration: 0.4 }, y: { duration: 0.5, ease: "easeOut" } }}
+          >
+            <div className="custom-alert-overlayOP">
+              <div className="custom-alertOP">
+                <p>Thank you for applying to work at Denali Projects.</p>
+                <button onClick={closeAlert3}>Close</button>
+              </div>
             </div>
-          </div>
+          </motion.div>
         )}
       </div>
       <Footer />
