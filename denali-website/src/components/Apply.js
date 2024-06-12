@@ -30,20 +30,24 @@ function Apply() {
   const [legalToWork, setLegalToWork] = useState("No");
   const [url, setUrl] = useState("");
   const [resume, setResume] = useState(null);
+  const [show, setShow] = useState(false);
+  const [show2, setShow2] = useState(false);
+  const [show3, setShow3] = useState(false);
+
+  useEffect(() => {
+    checkFormValidity();
+  }, [FLname, email, address1, city, province, postalCode, phone, resume, isValidPhoneNumber]);
 
   const handleNameChange = (event) => {
     setFLname(event.target.value);
-    checkFormValidity();
   };
 
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
-    checkFormValidity();
   };
 
   const handleAddress1Change = (event) => {
     setAddress1(event.target.value);
-    checkFormValidity();
   };
 
   const handleAddress2Change = (event) => {
@@ -52,25 +56,20 @@ function Apply() {
 
   const handleCityChange = (event) => {
     setCity(event.target.value);
-    checkFormValidity();
   };
 
   const handleProvinceChange = (event) => {
     setProvince(event.target.value);
-    checkFormValidity();
   };
 
   const handlePostalChange = (event) => {
     setPostalCode(event.target.value);
-    checkFormValidity();
   };
 
   const handlePhoneChange = (event) => {
-    validPhoneNumber(event.target.value);
-    if(isValidPhoneNumber){
-    setPhone(event.target.value);
-    checkFormValidity();
-    }
+    const phoneNumber = event.target.value;
+    validPhoneNumber(phoneNumber);
+    setPhone(phoneNumber);
   };
 
   const handleAPEGAChange = (event) => {
@@ -80,6 +79,7 @@ function Apply() {
   const handleUrlChange = (event) => {
     setUrl(event.target.value);
   };
+
   const handleAlbertaChange = (event) => {
     setAlberta(event.target.value);
   };
@@ -90,12 +90,10 @@ function Apply() {
 
   const handleResumeChange = (event) => {
     setResume(event.target.files[0]);
-    checkFormValidity();
   };
 
   const validPhoneNumber = (phone) => {
-    const regex =
-      /^(\+\d{1,3}[- ]?)?\(?\d{1,4}\)?[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/;
+    const regex = /^(\+\d{1,3}[- ]?)?\(?\d{1,4}\)?[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/;
     setValidPhoneNumber(regex.test(phone));
   };
 
@@ -116,36 +114,35 @@ function Apply() {
       setIsFormValid(false);
     }
   };
+
   const handleSignup = (event) => {
     event.preventDefault();
     if (!isValidPhoneNumber) {
-      alert(
-        "Please enter a valid phone number. Here are some possible valid formats:\n\n" +
-          "- 123-456-7890\n" +
-          "- (123) 456-7890\n" +
-          "- 123 456 7890\n" +
-          "- 123.456.7890\n" +
-          "- +1 (123) 456-7890"
-      );
+      setShow(true);
+      return;
     }
     if (!isFormValid) {
-      alert(
-        "Please ensure all of the following fields are filled out before submitting: \n\n" +
-          "- First and Last Name \n" +
-          "- Email\n " +
-          "- Street Address\n " +
-          "- City\n " +
-          "- Province\n " +
-          "- Postal Code\n " +
-          "- Phone\n " +
-          "- Resume Attachment\n "
-      );
+      setShow2(true);
+      return;
     }
-    if(isFormValid && isValidPhoneNumber){
-      alert("SUBMIT");
+    if (isFormValid && isValidPhoneNumber) {
+      setShow3(true);
     }
   };
- 
+
+  const closeAlert = () => {
+    setShow(false);
+  };
+
+  const closeAlert2 = () => {
+    setShow2(false);
+  };
+
+  const closeAlert3 = () => {
+    setShow3(false);
+    window.location.href = '/';
+  };
+
   return (
     <div>
       <Header />
@@ -315,10 +312,34 @@ function Apply() {
               required
             />
           </label>
-          <button className="buttonAP" type="submit" onClick={handleSignup}>
+          <button className="buttonAP" type="submit">
             Submit
           </button>
         </form>
+        {show && (
+          <div className="custom-alert-overlayOP">
+            <div className="custom-alertOP">
+              <p>Please input a valid phone number.</p>
+              <button onClick={closeAlert}>Close</button>
+            </div>
+          </div>
+        )}
+        {show2 && (
+          <div className="custom-alert-overlayOP">
+            <div className="custom-alertOP">
+              <p>Please fill in all fields.</p>
+              <button onClick={closeAlert2}>Close</button>
+            </div>
+          </div>
+        )}
+        {show3 && (
+          <div className="custom-alert-overlayOP">
+            <div className="custom-alertOP">
+              <p>Thank you for applying to work at Denali Projects.</p>
+              <button onClick={closeAlert3}>Close</button>
+            </div>
+          </div>
+        )}
       </div>
       <Footer />
     </div>
