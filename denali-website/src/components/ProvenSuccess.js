@@ -71,15 +71,16 @@ function ProvenSuccess() {
         <p className="subtitlePS">Engineering Energy, Empowering Progress</p>
         <div className="carousel-container">
           <AliceCarousel
+            renderPrevButton={renderPrevButton}
             items={items}
+            renderNextButton={renderNextButton}
             activeIndex={activeIndex}
             onSlideChanged={handleSlideChanged}
-            renderPrevButton={renderPrevButton}
-            renderNextButton={renderNextButton}
             renderDotsItem={renderDotsItem}
             mouseTracking
             infinite
             animationType="fadeout"
+            // disableButtonsControls // Disable default controls to apply custom styles
           />
         </div>
       </div>
@@ -88,4 +89,3 @@ function ProvenSuccess() {
 }
 
 export default ProvenSuccess;
-

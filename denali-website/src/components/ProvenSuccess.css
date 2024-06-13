@@ -3,65 +3,75 @@
     background-size: cover;
     margin: 0;
     padding-bottom: 100px;
-}
-
-.layoutPS {
+  }
+  
+  .layoutPS {
     display: flex;
     flex-direction: column;
     padding-top: 100px;
     color: black;
-}
-
-.titlePS {
+  }
+  
+  .titlePS {
     font-size: 60pt;
     margin-left: 100px;
-}
-
-.subtitlePS {
+  }
+  
+  .subtitlePS {
     font-size: 30pt;
     margin-top: 0px;
     margin-bottom: 100px;
     margin-left: 100px;
-}
-
-.carousel-container {
+  }
+  
+  .carousel-container {
     position: relative;
-    width: 100%;
-    height: auto;
-}
-
-.alice-carousel__stage-item {
-    transition: opacity 1s ease-in-out;
-}
-
-.alice-carousel__stage-item.__active {
-    opacity: 1 !important;
-}
-
-.alice-carousel__stage-item.__inactive {
-    opacity: 0 !important;
-}
-
-.dot {
+    width: 80vw; /* Set the width of the carousel */
+    margin: 0 auto; /* Center the carousel */
+  }
+  
+  .carousel-image {
+    width: 100%; /* Ensure images fill their container */
+    max-height: 72vh; /* Maintain aspect ratio */
+    object-fit: cover;
+  }
+  
+  .dot {
     display: inline-block;
-    width: 10px;
-    height: 10px;
+    width: 12px;
+    height: 12px;
     background-color: #ccc;
     border-radius: 50%;
     margin: 0 5px;
     cursor: pointer;
-}
-
-.dot.active-dot {
+  }
+  
+  .dot.active-dot {
     background-color: #000;
-}
-
-.dot.inactive-dot {
-    background-color: #ccc;
-}
-
-.carousel-arrow {
+    width: 30px; 
+    border-radius: 10px;
+    transition: width 0.4s ease-out; /* Transition width and height */
+  }
+  
+  .dot.inactive-dot {
+    background-color: #afafaf;
+  }
+  
+  .carousel-arrow {
+    position: absolute;
+    top: 42%;
+    transform: translateY(-50%);
+    font-size: 30pt;
     cursor: pointer;
-    font-size: 2rem;
-    user-select: none;
+    z-index: 1;
+    margin: 0; 
+    padding: 0;
+    font-weight: 1000;
+  }
+  .carousel-arrow-prev {
+    left: -5%; 
+}
+
+.carousel-arrow-next {
+    right: -5%; 
 }
