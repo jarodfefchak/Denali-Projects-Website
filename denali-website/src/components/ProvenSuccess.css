@@ -25,53 +25,43 @@
 }
 
 .carousel-container {
-    width: 75vw;
-    margin: 0 auto; 
     position: relative;
-}
-
-.carousel-image {
     width: 100%;
-    max-height: 75vh;
-    object-fit: cover; /* Ensures the image covers the container without stretching or squishing */
-    display: block;
-    margin: 0; 
-    padding: 0; 
+    height: auto;
 }
 
-.carousel-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-weight: 900;
-    font-size: 20pt;
-    cursor: pointer;
-    z-index: 1;
+.alice-carousel__stage-item {
+    transition: opacity 1s ease-in-out;
 }
 
-.carousel-arrow-prev {
-    left: -5%; 
+.alice-carousel__stage-item.__active {
+    opacity: 1 !important;
 }
 
-.carousel-arrow-next {
-    right: -5%; 
+.alice-carousel__stage-item.__inactive {
+    opacity: 0 !important;
 }
 
 .dot {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
     display: inline-block;
-    margin: 5px;
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
 }
 
-.active-dot {
-    background-color: white;
-    border: 2px solid black;
-    width: 40px; 
-    border-radius: 10px; 
+.dot.active-dot {
+    background-color: #000;
 }
 
-.inactive-dot {
-    background-color: black;
+.dot.inactive-dot {
+    background-color: #ccc;
+}
+
+.carousel-arrow {
+    cursor: pointer;
+    font-size: 2rem;
+    user-select: none;
 }
