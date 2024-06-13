@@ -1,21 +1,22 @@
+/* header.css */
+
 .navbar {
-  position: fixed;
   display: flex;
-  justify-content: space-between; /* Align items horizontally */
-  align-items: center; /* Vertically center items */
-  background-image: linear-gradient(0,  #222222,#303030);
+  position: fixed;
+  justify-content: space-between;
+  align-items: center;
+  background-image: linear-gradient(0, #222222, #303030);
   width: 100vw;
   z-index: 1000;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add this line for shadow */
+  box-shadow: 0 4px 8px rgba(0,0,0, 0.5);
+  padding: 0 20px;
 }
-
 
 .link-container {
   display: flex;
-  align-items: center;
+  color:white;
   margin-right: 50px;
 }
-
 .nav-link {
   border: none;
   color: white;
@@ -23,17 +24,14 @@
   padding: 10px;
   font-size: 16pt;
 }
-
 /* Hover effect for links */
 #link1:hover,
 #link2:hover,
 #link3:hover,
 #link4:hover {
- color: #408697 ;
+  color: #408697;
 }
-
-/* Dropdown styles */
-.dropdown-toggle {
+dropdown-toggle {
   color: white;
   background-color: transparent;
   border: none;
@@ -67,32 +65,41 @@
   border: none;
 }
 
-
 .Denali-Logo {
-  margin-left: 100px;
+  margin: 15px 0px 15px 75px;
 }
 
-@media screen and (max-width: 900px){
-    .Denali-Logo {
-        margin-left: 50px;
-        height: 60px;
-      }
-      .nav-link {
-        padding: 10px;
-        font-size: 14pt;
-      }
-      .dropdown-toggle {
-        font-size: 14pt;
-      }
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  color: white;
+  font-size: 30pt;
+  margin-right: 50px;
 }
-@media screen and (max-width: 700px){
-    .Denali-Logo {
-        margin-left: 30px;
-        height: 50px;
-      }
+
+.mobile-dropdown-menu {
+  position: fixed;
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  top: 100px;
+  left: 0;
+  right: 0;
+  background-image: linear-gradient(0, #222222, #303030);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  padding: 20px;
 }
-@media screen and (max-width: 500px){
-    .link-container {
-        flex-wrap: wrap;
-      }
+
+@media (max-width: 750px) {
+  .link-container {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .mobile-dropdown-menu {
+    display: flex;
+  }
 }

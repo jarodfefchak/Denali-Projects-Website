@@ -20,6 +20,7 @@
 .imgS {
   height: 41vh;
   width: 24vw;
+  object-fit: cover;
 }
 .imgS:hover {
   opacity: 0.5;

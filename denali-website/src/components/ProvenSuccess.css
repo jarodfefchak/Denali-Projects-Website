@@ -13,12 +13,12 @@
   }
   
   .titlePS {
-    font-size: 60pt;
+    font-size: 4.5vw;
     margin-left: 100px;
   }
   
   .subtitlePS {
-    font-size: 30pt;
+    font-size: 2.7vw;
     margin-top: 0px;
     margin-bottom: 100px;
     margin-left: 100px;
@@ -74,4 +74,73 @@
 
 .carousel-arrow-next {
     right: -5%; 
+}
+@media screen and (max-width: 1600px){
+  .titlePS {
+    font-size: 50pt;
+  }
+  .subtitlePS {
+    font-size: 35pt;
+    margin-right: 50pt;
+  } 
+}
+
+@media screen and (max-width: 1000px){
+  .titlePS {
+    font-size: 45pt;
+  }
+  .subtitlePS {
+    font-size: 25pt;
+  } 
+}
+@media screen and (max-width: 900px){
+  .titlePS {
+    font-size: 40pt;
+    margin-left: 50px;
+  }
+  .subtitlePS {
+    font-size: 20pt;
+    margin-left: 50px;
+    
+  } 
+
+}
+@media screen and (max-width: 750px){
+  .titlePS {
+    font-size: 35pt;
+    margin-right: 50px;
+  }
+  .subtitlePS {
+    font-size: 18pt;
+  } 
+  .carousel-container {
+    width: 100vw; /* Set the width of the carousel */
+    margin: 0 auto; /* Center the carousel */
+  }
+  .carousel-image {
+    min-height: 50vh;
+  }
+  .carousel-arrow-prev {
+    margin-left: 20px;
+    left: 0%; 
+    color: #52d6f4;
+}
+
+.carousel-arrow-next {
+  margin-right: 37px;
+    right: 0%;
+    color:  #52d6f4; 
+}
+
+}
+@media screen and (max-width: 500px){
+  .titlePS {
+    font-size: 30pt;
+  }
+  .subtitlePS {
+    margin-bottom: 50px;
+  } 
+  .carousel-image {
+    min-height: 40vh;
+  }
 }

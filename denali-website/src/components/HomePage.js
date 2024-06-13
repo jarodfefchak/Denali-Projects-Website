@@ -18,20 +18,24 @@ function HomePage() {
             window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
         };
 
-        const hashChangeListener = () => {
+        const scrollToHashElement = () => {
             if (window.location.hash) {
                 const id = window.location.hash.replace('#', '');
                 const element = document.getElementById(id);
                 if (element) {
-                    element.scrollIntoView({behavior: 'instant'});
+                    element.scrollIntoView({ behavior: 'instant' });
                 }
             } else {
                 scrollToTop();
             }
         };
 
+        const hashChangeListener = () => {
+            scrollToHashElement();
+        };
+
         window.addEventListener('hashchange', hashChangeListener);
-        hashChangeListener();
+        scrollToHashElement(); // initial call to handle direct links
 
         return () => {
             window.removeEventListener('hashchange', hashChangeListener);
@@ -41,15 +45,16 @@ function HomePage() {
     return (
         <div>
             <Header />
-            <HomeMainSection /> 
-            <ProvenSuccess/>
-            <Results/>
-            <div id="Solutions" style={{minHeight:"85vh"}}><Solutions /></div>
-            <InsideDenali/>
-            <CareersPage/>
+            <div id="HomeMainSection"><HomeMainSection /></div>
+            <ProvenSuccess />
+            <Results />
+            <div id="Solutions" style={{ minHeight: "85vh" }}><Solutions /></div>
+            <InsideDenali />
+            <CareersPage />
             <Footer />
         </div>
     );
 }
 
 export default HomePage;
+

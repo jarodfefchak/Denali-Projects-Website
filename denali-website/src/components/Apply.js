@@ -117,8 +117,6 @@ function Apply() {
       city.trim() !== "" &&
       province.trim() !== "" &&
       postalCode.trim() !== "" &&
-      phone.trim() !== "" &&
-      isValidPhoneNumber &&
       resume !== null
     ) {
       setIsFormValid(true);
