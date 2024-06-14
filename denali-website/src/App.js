@@ -14,6 +14,7 @@ import CareerList from './components/CareerList';
 import Results from './components/Results';
 import SolutionsDisplay from './components/SolutionsDisplay';
 import SolutionsList from './components/SolutionsList';
+import NoCareers from './components/NoCareers';
 
 import{ BrowserRouter, Routes, Route} from 'react-router-dom';
 
@@ -37,6 +38,7 @@ function App() {
     <Route path ="/Results" element = {<Results/>}/>
     <Route path="/SolutionsDisplay/:solutionId" element={<SolutionsDisplay/>} />
     <Route path="/SolutionsList/:solutionId" element={<SolutionsList/>} />
+    <Route path ="/NoCareers" element = {<NoCareers/>}/>
 
   </Routes>
   </BrowserRouter>

@@ -82,8 +82,8 @@ function Header() {
           <Link to="/Contact" id="link4" className="nav-link">Contact</Link>
         </div>
         <div className="menu-icon" onClick={toggleMainDropdown}>
-          ☰
-        </div>
+        {isDropdownOpen ? '✖' : '☰'}
+      </div>
       </div>
       <div className={`mobile-dropdown-menu ${isDropdownOpen ? 'open' : ''}`}>
         <Link to="/#HomeMainSection" className="nav-link" onClick={toggleMainDropdown}>Home</Link>
@@ -110,5 +110,4 @@ function Header() {
 }
 
 export default Header;
-
 

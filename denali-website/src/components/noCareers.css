@@ -1,0 +1,26 @@
+.contentNC{
+    padding: 100px;
+    background-color: #f6f6f6;
+    min-height: 40vw;
+}
+.textNC{
+    font-size: 27pt;
+}
+
+
+.buttonNC {
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #408697;
+    border: 0px;
+    width: 300px;
+    height: 75px;
+    border-radius: 25px;
+    font-size: 25pt;
+    cursor: pointer;
+  }
+  
+  .button-hoverNC {
+    box-shadow: 1px 1px 20px #000000;
+  }

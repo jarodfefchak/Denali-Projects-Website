@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import "./CareerList.css";
+import NoCareers from './NoCareers'; // Import NoCareers component
 
 function CareerList() {
   const [jsonData, setJsonData] = useState(null);
@@ -21,6 +22,10 @@ function CareerList() {
 
   if (!jsonData) {
     return <p>Loading data...</p>;
+  }
+
+  if (Object.keys(jsonData).length === 0) {
+    return <NoCareers />;
   }
 
   return (
@@ -80,4 +85,5 @@ function CareerList() {
 }
 
 export default CareerList;
+
 

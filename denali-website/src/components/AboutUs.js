@@ -27,7 +27,7 @@ function AboutUs() {
         </p>
         <p className="sub-header-textAU">About Us</p>
         <div className="paragraphAU">
-          <p>
+          <p style = {{marginTop:"15px"}}>
             Since our inception, Denali has had the pleasure and experience to
             work with numerous midstreamers and producers in the Western
             Canadian oil and gas sector. The range of these projects has varied
@@ -47,13 +47,13 @@ function AboutUs() {
             provide valuable insight into real, implementable solutions, while
             considering operational concerns for any project.
           </p> */}
-          <p>
+          <p style = {{marginTop:"10px"}}>
             Denali is a great fit to work with your project team and Operations
             staff to provide the quality FEED deliverables required for our
             clients to evaluate the economics of the project while using a lean,
             fit-for-purpose project team.
           </p>
-          <p>
+          <p style = {{marginTop:"10px"}}>
             Contact us to learn more about how we can provide our services to
             your next project.
           </p>

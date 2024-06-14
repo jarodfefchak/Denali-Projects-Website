@@ -5,20 +5,21 @@ import CareerOpImage from '../images/CareerOpportunities.jpg';
 import Header from './Header';
 import Footer from './Footer';
 import CareerList from './CareerList';
+import NoCareers from './NoCareers'; // Import NoCareers component
 import Dropdown from 'react-bootstrap/Dropdown';
 import './CareerOpportunities.css';
 
 function CareerOpportunities() {
-
     useEffect(() => {
         window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
     }, []);
+
     const [jsonData, setJsonData] = useState(null);
 
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get('/data/Careers.json'); // Adjust the path
+                const response = await axios.get('/data/Careers.json'); // Adjust the path if necessary
                 setJsonData(response.data);
             } catch (error) {
                 console.error('Error fetching data:', error);
@@ -31,6 +32,19 @@ function CareerOpportunities() {
     useEffect(() => {
         document.title = 'Career Opportunities - Denali Projects';
     }, []);
+
+    if (!jsonData || jsonData.length === 0) {
+        return (
+            <div>
+                <Header />
+                <div className="titleImageOP" style={{ backgroundImage: `url(${CareerOpImage})` }}>
+                    <p className="mainTextOP">Will shrink this image, dogs look funny</p>
+                </div>
+                <NoCareers />
+                <Footer />
+            </div>
+        );
+    }
 
     return (
         <div>
@@ -70,4 +84,5 @@ function CareerOpportunities() {
 }
 
 export default CareerOpportunities;
+
 

@@ -49,12 +49,12 @@
 
 .buttonS {
   color: white;
-  background-color: #374f59;
+  background-color: #408697;
   border: 0px;
-  border-radius: 15px;
-  width: 290px;
-  height: 70px;
-  font-size: 22pt;
+  width: 400px;
+  height: 90px;
+  border-radius: 25px;
+  font-size: 25pt;
   cursor: pointer;
 }
 

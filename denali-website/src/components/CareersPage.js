@@ -28,7 +28,7 @@ const CareersPage = () => {
           onMouseLeave={() => setHover(false)} 
           className={`buttonCP ${hover ? 'button-hover' : ''}`}
         >
-          CAREER OPPORTUNITIES
+         Career Opportunities
         </button>
       </Link>
     </div>
