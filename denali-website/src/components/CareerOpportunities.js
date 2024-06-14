@@ -37,7 +37,7 @@ function CareerOpportunities() {
         return (
             <div>
                 <Header />
-                <div className="titleImageOP" style={{ backgroundImage: `url(${CareerOpImage})` }}>
+                <div>
                     <p className="mainTextOP">Will shrink this image, dogs look funny</p>
                 </div>
                 <NoCareers />
