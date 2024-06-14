@@ -1,5 +1,5 @@
 .titleR {
-  font-size: 60pt;
+  font-size: 4.5vw;
   margin-left: 100px;
   margin-top: 50px;
 }
@@ -7,7 +7,7 @@
 .statsR {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   margin-left: 100px;
   margin-right: 100px;
@@ -23,21 +23,34 @@
 }
 
 .countR {
-  font-size: 80pt;
+  font-size: 6vw;
   font-weight: 600;
-  color: whitesmoke;
+  color: white;
   
  
 }
 
 .descriptionR {
-  font-size: 40pt;
+  font-size: 3vw;
+  padding-left: 25px;
+  padding-right: 25px;
 
+}
+@media screen and (max-width: 1600px){
+  .countR { 
+    font-size: 70pt;
+  }
+  .titleR {
+    font-size: 50pt;
+  }
+  .descriptionR {
+    font-size: 35pt;
+  }
 }
 
 @media screen and (max-width: 1200px) {
   .titleR {
-    font-size: 50pt;
+  
     margin-left:75px;
   }
   .statsR {
@@ -45,40 +58,36 @@
     margin-right: 75px;
   
   }
-  .countR {
-    font-size: 70pt;
-    font-weight: 600;
+}
+@media screen and (max-width: 1000px){
+  .countR { 
+    font-size: 65pt;
   }
-
+  .titleR {
+    font-size: 45pt;
+  }
   .descriptionR {
-    font-size: 35pt;
+    font-size: 30pt;
   }
 }
+
+
 @media screen and (max-width: 900px){
     .titleR {
        text-align: center;
-       margin-left: 100px;
-       margin-right: 100px;
+       margin-left: 0px;
+        margin-right: 0px;
       }
     .statsR {
         flex-direction: column;
         align-items: center;
-        margin-left: 100px;
-        margin-right: 100px;
+        margin-left: 0px;
+        margin-right: 0px;
         margin-top: 25px;
         margin-bottom: 100px;
       }
 }
 @media screen and (max-width: 600px){
-    .titleR {
-        font-size: 50pt;
-        margin-left: 50px;
-        margin-right: 50px;
-      }
-      .statsR {
-        margin-left: 50px;
-        margin-right: 50px;
-      }
       .countR {
         font-size: 60pt;
       }
@@ -91,12 +100,6 @@
 @media screen and (max-width: 400px){
     .titleR {
         font-size: 40pt;
-        margin-left: 25px;
-        margin-right: 25px;
-      }
-      .statsR {
-        margin-left: 25px;
-        margin-right: 55px;
       }
       .countR {
         font-size: 50pt;

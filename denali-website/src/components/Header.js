@@ -8,6 +8,7 @@ function Header() {
   const [jsonData, setJsonData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isSolutionsDropdownOpen, setIsSolutionsDropdownOpen] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -28,9 +29,28 @@ function Header() {
     fetchData();
   }, []);
 
-  const toggleDropdown = () => {
+  const toggleMainDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
+
+  const toggleSolutionsDropdown = () => {
+    setIsSolutionsDropdownOpen(!isSolutionsDropdownOpen);
+  };
+
+  // Use effect to handle window resize
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 750) {
+        setIsDropdownOpen(false);
+        setIsSolutionsDropdownOpen(false);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   if (loading) {
     return <p>Loading data...</p>;
@@ -61,35 +81,34 @@ function Header() {
           <Link to="/AboutUs" id="link3" className="nav-link">About Us</Link>
           <Link to="/Contact" id="link4" className="nav-link">Contact</Link>
         </div>
-        <div className="menu-icon" onClick={toggleDropdown}>
+        <div className="menu-icon" onClick={toggleMainDropdown}>
           ☰
         </div>
       </div>
       <div className={`mobile-dropdown-menu ${isDropdownOpen ? 'open' : ''}`}>
-        <Link to="/#HomeMainSection" className="nav-link" onClick={toggleDropdown}>Home</Link>
-        <div className="dropdown">
-          <Link to="/#Solutions" className="dropdown-toggle nav-link" onClick={toggleDropdown}>Solutions</Link>
+        <Link to="/#HomeMainSection" className="nav-link" onClick={toggleMainDropdown}>Home</Link>
+        <div className={`dropdown ${isSolutionsDropdownOpen ? 'open' : ''}`}>
+          <div className="dropdown-toggle nav-link" onClick={toggleSolutionsDropdown}>Solutions</div>
           <div className="dropdown-menu">
             {jsonData.map((data, index) => (
               <Link
                 key={index}
                 to={`/SolutionsDisplay/${index + 1}`}
                 className="dropdown-item"
-                onClick={toggleDropdown}
+                onClick={toggleMainDropdown}
               >
                 {data[0].section}
               </Link>
             ))}
           </div>
         </div>
-        <Link to="/AboutUs" className="nav-link" onClick={toggleDropdown}>About Us</Link>
-        <Link to="/Contact" className="nav-link" onClick={toggleDropdown}>Contact</Link>
+        <Link to="/AboutUs" className="nav-link" onClick={toggleMainDropdown}>About Us</Link>
+        <Link to="/Contact" className="nav-link" onClick={toggleMainDropdown}>Contact</Link>
       </div>
     </div>
   );
 }
 
 export default Header;
-
 
 

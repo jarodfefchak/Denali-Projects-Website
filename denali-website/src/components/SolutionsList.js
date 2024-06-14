@@ -36,7 +36,7 @@ function SolutionsList({ solutionId }) {
           <div key={index} className="informationSL">
             <p><b>PROJECT:</b> {project.project}</p>
             <p><b>CLIENT:</b> {project.client}</p>
-            <p><b>Location:</b> {project.location}</p>
+            <p><b>LOCATION:</b> {project.location}</p>
             <p>{project.description}</p>
             <div className="rectangleSL" />
           </div>

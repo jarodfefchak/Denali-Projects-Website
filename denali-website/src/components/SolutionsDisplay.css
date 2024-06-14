@@ -31,3 +31,8 @@
     }
 
 }
+@media (max-height: 700px) { 
+    .projects-titleSD {
+        padding-top: 75px;
+    }
+}
