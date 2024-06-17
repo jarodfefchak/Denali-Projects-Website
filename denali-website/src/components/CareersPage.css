@@ -4,22 +4,22 @@
   padding-top:25px;
   display: flex;
   flex-direction: column;
-  margin-left: 5%;
-  margin-right: 12.5%;
+  margin-left:100px;
+  margin-right: 250px;
 }
 
 .text p {
-  font-size: 25pt;
+  font-size: 1.7vw;
 }
 .text .header {
-  font-size: 60pt;
+  font-size: 4.5vw;
   margin-top: 100px;
   margin-bottom: 30px;
 }
 
 .buttonCP {
   color: white;
-  margin-left: 5%;
+  margin-left:100px;
   margin-top: 40px;
   margin-bottom: 175px;
   background-color: #408697;
@@ -34,42 +34,33 @@
 .button-hover {
   box-shadow: 1px 1px 20px #000000;
 }
-
-@media screen and (max-width: 1200px) and (orientation: portrait) {
-  .text {
-    margin-right: 5%;
-  }
+@media screen and (max-width: 1600px) {
   .text p {
     font-size: 20pt;
   }
   .text .header {
     font-size: 50pt;
   }
-  .buttonCP {
-    margin-right: 5%;
-    font-size: 20pt;
-
+}
+@media screen and (max-width: 1300px){
+  .text {
+    margin-right: 100px;
   }
 }
-@media screen and (max-width: 900px) and (orientation: portrait) {
-  .text {
-    margin-right: 25px;
-    margin-left: 25px;
-  }
+@media screen and (max-width: 1000px) {
   .text p {
     font-size: 18pt;
   }
   .text .header {
     font-size: 45pt;
   }
-  .buttonCP {
-    margin-right: 25px;
-    margin-left: 25px;
-    font-size: 18pt;
-    width: 335px;
-    height: 70px;
-    border-radius: 21px;
+  .text {
+    margin-right: 50px;
+    margin-left: 50px;
   }
+}
+@media screen and (max-width: 900px) and (orientation: portrait) {
+  
 }
 @media screen and (max-width: 700px) and (orientation: portrait) {
   .text p {
@@ -86,16 +77,5 @@
   }
 }
 @media screen and (max-width: 500px) and (orientation: portrait) {
-  .text p {
-    font-size: 14pt;
-  }
-  .text .header {
-    font-size: 30pt;
-  }
-  .buttonCP {
-    font-size: 14pt;
-    width: 250px;
-    height: 55px;
-    border-radius: 15px;
-  }
+ 
 }

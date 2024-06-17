@@ -73,14 +73,24 @@ body {
   font-weight: 900;
   cursor: pointer;
 }
+.alice-carousel__stage-item {
+  transition: opacity 4s ease-out;
+}
 
 .carousel-arrow-prev {
   left: -5%; /* Adjust as needed */
+}
+.alice-carousel__stage-item.__active {
+  opacity: 1 !important;
 }
 
 .carousel-arrow-next {
   right: -5%; /* Adjust as needed */
 }
+.alice-carousel__stage-item.__inactive {
+  opacity: 0 !important;
+}
+
 @media screen and (max-width: 1600px) {
   .titlePS {
     font-size: 50pt;

@@ -43,22 +43,19 @@ function ProvenSuccess() {
       onClick={() => setActiveIndex(itemIndex)}
     ></div>
   );
-
+ 
   const renderPrevButton = ({ isDisabled }) => (
     <span
       className="carousel-arrow carousel-arrow-prev"
       style={{ opacity: isDisabled ? "0.5" : 1 }}
-      onClick={() => !isDisabled && setActiveIndex(activeIndex - 1)}
     >
       &lang;
     </span>
   );
-
   const renderNextButton = ({ isDisabled }) => (
     <span
       className="carousel-arrow carousel-arrow-next"
       style={{ opacity: isDisabled ? "0.5" : 1 }}
-      onClick={() => !isDisabled && setActiveIndex(activeIndex + 1)}
     >
       &rang;
     </span>
@@ -82,6 +79,8 @@ function ProvenSuccess() {
             mouseTracking
             infinite
             animationType="fadeout"
+            animationEasingFunction="ease-in-out"
+            animationDuration={800}
           />
         </div>
       </div>

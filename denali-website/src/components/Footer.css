@@ -8,54 +8,170 @@
     justify-content: space-between;
     padding-top: 40px;
     padding-bottom: 30px;
+    
 }
 #item1{
     text-align: center;
     margin-left: 10%;
     color: white;
     padding-right : 5px;
-    width:250px
-
+    width: 350px;
+}
+#item1 h4{
+    margin-bottom: 40px;
+    font-size: 20pt;
+    font-weight: 600;
+    
+} 
+#item1 p{
+    margin-top: 15px ;
+    margin-bottom: 15px;
 }
 #item2{
     text-align: center;
     color: white; 
-    width:250px
+    width: 350px;
+}
+#item2 h4{
+    margin-bottom: 40px;
+    font-size: 20pt;
+    font-weight: 600;
+    
+} 
+#item2 img{
+    margin-top: 20px;
+    height: 70px;
 }
 #item3{
     text-align: center;
     margin-right: 10%;
     color: white;
     padding-left : 5px;
-    width:250px
+    width: 350px;
+}
+#item3 h4{
+    font-size: 20pt;
+    font-weight: 600;
+    
+} 
+
+#Accred1{
+    height: 50px;
+    margin:15px 0 15px 0;
+}
+#Accred2{
+    height: 60px;
+    margin:15px 0 15px 0;
+}
+#Accred3{
+    height: 70px;
+    margin:15px 0 15px 0;
+}
+#Accred4{
+    height: 50px;
+    margin:15px 0 15px 0;
+}
+@media screen and (max-width:1300px){
+    #item1{
+        width: 300px;
+    }    
+    #item1 p{
+        font-size: 14pt;
+    }
+    #item1 h4{
+        font-size: 18pt;    
+    } 
+    #item2{
+        width: 300px;
+    }
+    #item2 h4{
+        font-size: 18pt;    
+    } 
+    #item2 img{
+        margin-top: 25px;
+        height: 60px;
+    }
+    #item2 p{
+        font-size: 14pt;
+    }
+    #item3{
+        width: 300px;
+    }
+    #item3 h4{
+        font-size: 18pt;    
+    } 
+    #Accred1{
+        height: 45px;
+    }
+    #Accred2{
+        height: 55px;
+    }
+    #Accred3{
+        height: 65px;
+    }
+    #Accred4{
+        height: 45px;
+    }
 }
 @media screen and (max-width:900px){
     #item1{
-        width: 200px;
+        width: 250px;
         font-size: 12pt;
         margin-left: 5%;
     }
     #item2{
-        width: 200px;
+        width: 250px;
         font-size: 12pt;
     }
     #item3{
-        width: 200px;
+        width: 250px;
         font-size: 12pt;
         margin-right: 5%;
+    }
+    #Accred1{
+        height: 45px;
+        margin:20px 0 10px 0;
+    }
+    #Accred2{
+        height: 55px;
+        margin:10px 0 10px 0;
+    }
+    #Accred3{
+        height: 65px;
+        margin:10px 0 10px 0;
+    }
+    #Accred4{
+        height: 45px;
+        margin:10px 0 10px 0;
+    }
+    #item2 img{
+        margin-top: 20px;
+        height: 60px;
     }
 }
-@media screen and (max-width:700px){
+@media screen and (max-width:750px){
+    .items{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 11pt;
+    }
     #item1{
-        font-size: 10pt;
-        margin-left: 5%;
+        margin-left: 0%;
+        margin-bottom: 40px;
+    }
+    #item1 p{
+        margin-top: 0px ;
+    margin-bottom: 0px;
     }
     #item2{
-        font-size: 10pt;
+        margin-bottom: 40px;
     }
     #item3{
-        font-size: 10pt;
-        margin-right: 5%;
+        margin-right: 0%;
+    }
+    h4{
+        text-decoration: underline;
     }
 }
 @media screen and (max-width:500px){
@@ -64,9 +180,6 @@
     } 
     #item2 h4{
         padding-top: 25px;
-    }
-     #item1 h4{
-       
     }
     .items{
         flex-direction: column;
@@ -84,6 +197,22 @@
     }
     #item3{
         margin-right: 0%;
+    }
+    #Accred1{
+        height: 40px;
+        margin:20px 0 10px 0;
+    }
+    #Accred2{
+        height: 50px;
+        margin:10px 0 10px 0;
+    }
+    #Accred3{
+        height: 60px;
+        margin:10px 0 10px 0;
+    }
+    #Accred4{
+        height: 40px;
+        margin:10px 0 10px 0;
     }
     
 }
