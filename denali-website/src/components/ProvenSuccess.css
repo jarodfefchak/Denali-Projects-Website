@@ -114,14 +114,12 @@ body {
 @media screen and (max-width: 750px) {
   .titlePS {
     font-size: 35pt;
-    margin-right: 50px;
   }
   .subtitlePS {
     font-size: 18pt;
   }
-  .carousel-container {
+  .carousel-wrapper {
     width: 100vw; /* Set the width of the carousel */
-    margin: 0 auto; /* Center the carousel */
   }
   .carousel-image {
     max-height: 62vh;
@@ -132,20 +130,6 @@ body {
   }
   .dot {
     top: -2%;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .titlePS {
-    font-size: 30pt;
-  }
-  .subtitlePS {
-    margin-bottom: 50px;
-  }
-  .carousel-image {
-    min-height: 40vh;
-  }
-  .dot {
     width: 15px;
     height: 15px;
     margin: 0 10px;
@@ -156,3 +140,18 @@ body {
   }
 }
 
+@media screen and (max-width: 500px) {
+  .titlePS {
+    font-size: 30pt;
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+  .subtitlePS {
+    margin-bottom: 50px;
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+  .carousel-image {
+    min-height: 40vh;
+  }
+}
