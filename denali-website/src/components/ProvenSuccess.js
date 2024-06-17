@@ -48,6 +48,7 @@ function ProvenSuccess() {
     <span
       className="carousel-arrow carousel-arrow-prev"
       style={{ opacity: isDisabled ? "0.5" : 1 }}
+      onClick={() => !isDisabled && setActiveIndex(activeIndex - 1)}
     >
       &lang;
     </span>
@@ -57,6 +58,7 @@ function ProvenSuccess() {
     <span
       className="carousel-arrow carousel-arrow-next"
       style={{ opacity: isDisabled ? "0.5" : 1 }}
+      onClick={() => !isDisabled && setActiveIndex(activeIndex + 1)}
     >
       &rang;
     </span>
@@ -69,7 +71,7 @@ function ProvenSuccess() {
           <b>Proven Success</b>
         </p>
         <p className="subtitlePS">Engineering Energy, Empowering Progress</p>
-        <div className="carousel-container">
+        <div className="carousel-wrapper">
           <AliceCarousel
             renderPrevButton={renderPrevButton}
             items={items}
@@ -80,7 +82,6 @@ function ProvenSuccess() {
             mouseTracking
             infinite
             animationType="fadeout"
-            // disableButtonsControls // Disable default controls to apply custom styles
           />
         </div>
       </div>

@@ -1,11 +1,12 @@
 .contentNC {
   position: relative;
-  padding: 100px;
-  min-height: 40vw;
+  padding: 150px 100px 100px 100px;
+  margin-top: -20px;
+  min-height: 78vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+
 }
 
 .contentNC::before {
@@ -23,9 +24,8 @@
 }
 
 .textNC {
-  font-size: 50pt;
+  font-size: 4vw;
   color: white;
-  z-index: 1;
 }
 
 .buttonNC {
@@ -44,4 +44,64 @@
 
 .button-hoverNC {
   box-shadow: 1px 1px 20px #000000;
+}
+@media screen and (max-width: 1600px){
+  .textNC {
+    font-size: 50pt;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .contentNC{
+    padding: 100px 50px 100px 50px;
+  }
+  .textNC {
+    font-size: 45pt;
+  }
+}
+@media screen and (max-width: 900px) {
+  .textNC {
+    font-size: 40pt;
+  }
+  .buttonNC {
+    width: 250px;
+    height: 70px;
+    border-radius: 22px;
+    font-size: 20pt;
+  }
+}
+@media screen and (max-width: 750px) {
+  .contentNC{
+    padding: 100px 25px 100px 25px;
+  }
+  .textNC {
+    font-size: 35pt;
+  }
+  .buttonNC {
+    width: 200px;
+    height: 60px;
+    border-radius: 20px;
+    font-size: 18pt;
+  }
+}
+@media screen and (max-width: 500px) {
+  .textNC {
+    font-size: 30pt;
+  }
+  .buttonNC {
+    width: 150px;
+    height: 55px;
+    border-radius: 16px;
+    font-size: 16pt;
+  }
+}
+@media screen and (max-width: 400px) {
+  .textNC {
+    font-size: 25pt;
+  }
+}
+
+@media screen and (max-height: 700px) {
+  .contentNC{
+    padding-top: 75px;
+  }
 }

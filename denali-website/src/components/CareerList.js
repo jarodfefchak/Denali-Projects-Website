@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import NoCareers from "./NoCareers";
 import { Link } from "react-router-dom";
 import "./CareerList.css";
-import NoCareers from './NoCareers'; // Import NoCareers component
 
 function CareerList() {
   const [jsonData, setJsonData] = useState(null);
