@@ -1,3 +1,18 @@
 [
-
+    {
+        "title": "Job title",
+        "location": "Calgary",
+        "description": "Are you fluent in flibber-flabber, proficient in quibbly-quab, and a master of wobble-wobble? Look no further! The Institute of Incoherent Communication is seeking a passionate Gibberish Linguist to join our zany team.",
+        "minimum_requirements": ["one", "two"],
+        "responsibilities": ["three", "four"],
+        "preferred": ["five", "six"]
+      },
+      {
+        "title": "Job title2",
+        "location": "Calgary2",
+        "description": "Flibberflabber zippity-zap, wobble-wobble, snicker-snack! Bippity-boppity, higgledy-piggledy, wiggly-waggly, and a dash of fiddle-faddle. Skippity-scoop, noodle-noodle, dingle-dangle, and a sprinkle of wobble-wobble. Hocus-pocus, jibber-jabber, ziggity-zag, and a smidgen of wibbly-wobbly. Blibber-blabber, dingle-dongle, flippity-flop, and a pinch of wobble-wobble.",
+        "minimum_requirements": ["one", "two"],
+        "responsibilities": ["three", "four"],
+        "preferred": ["five", "six"]
+      }
 ]

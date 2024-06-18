@@ -2,13 +2,19 @@ body {
   overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-.backgroundPS {
-  background-color: #f6f6f6;
-  background-size: cover;
-  margin: 0;
-  padding-bottom: 100px;
-  position: relative; /* Ensure relative positioning */
+.buttonPS {
+  position: absolute; /* Ensure absolute positioning for precise placement */
+  top: 0; /* Adjust top position as needed */
+  right: 0; /* Adjust right position as needed */
+  color: white;
+  background-color: #408697;
+  width: 150px;
+  height: 50px;
+  font-size: 14pt;
+  cursor: pointer;
+  z-index: 10; /* Ensure it's above other elements if necessary */
 }
+
 
 .layoutPS {
   display: flex;
@@ -90,7 +96,39 @@ body {
 .alice-carousel__stage-item.__inactive {
   opacity: 0 !important;
 }
+.image-container {
+  position: relative;
+}
 
+.image-container.blur img {
+  transition: 0.4s ease-in-out;
+  filter: blur(5px);
+}
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 24px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+}
+.buttonPS {
+  position: relative;
+  color: white;
+  background-color: #408697;
+  top: -50px;
+  width: 150px;
+  height: 50px;
+  font-size: 14pt;
+  cursor: pointer;
+}
+.close-button{
+  position: relative;
+
+}
 @media screen and (max-width: 1600px) {
   .titlePS {
     font-size: 50pt;
@@ -100,13 +138,21 @@ body {
     margin-right: 50pt;
   }
 }
-
+@media screen and (max-width: 1300px){
+  .overlay-text {
+    font-size: 22px;
+    width: 70vw;
+  }
+}
 @media screen and (max-width: 1000px) {
   .titlePS {
     font-size: 45pt;
   }
   .subtitlePS {
     font-size: 25pt;
+  }
+  .overlay-text {
+    font-size: 20px;
   }
 }
 
@@ -118,6 +164,11 @@ body {
   .subtitlePS {
     font-size: 20pt;
     margin-left: 50px;
+  }
+  .overlay-text {
+    top:45%;
+    font-size: 18px;
+    width: 80vw;
   }
 }
 
@@ -132,7 +183,7 @@ body {
     width: 100vw; /* Set the width of the carousel */
   }
   .carousel-image {
-    max-height: 62vh;
+    max-height: 65vh;
   }
   .carousel-arrow-prev,
   .carousel-arrow-next {
@@ -148,8 +199,21 @@ body {
     width: 33px;
     border-radius: 10px;
   }
-}
 
+.overlay-text {
+  top: 50%;
+  font-size: 18px;
+  width: 100vw;
+}
+.buttonPS {
+  top: 0px;
+}
+}
+@media screen and (max-width: 600px){
+  .overlay-text {
+    font-size: 16px;
+  }
+}
 @media screen and (max-width: 500px) {
   .titlePS {
     font-size: 30pt;
@@ -162,6 +226,16 @@ body {
     margin-right: 25px;
   }
   .carousel-image {
-    min-height: 40vh;
+    min-height: 50vh;
+  }
+  .overlay-text {
+    top: 50%;
+    font-size: 14px;
+  }
+  .buttonPS {
+    top: 0px;
+    width: 130px;
+    height: 35px;
+    font-size: 12pt;
   }
 }
