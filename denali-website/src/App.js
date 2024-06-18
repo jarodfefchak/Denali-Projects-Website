@@ -38,7 +38,7 @@ function App() {
     <Route path ="/Results" element = {<Results/>}/>
     <Route path="/SolutionsDisplay/:solutionId" element={<SolutionsDisplay/>} />
     <Route path="/SolutionsList/:solutionId" element={<SolutionsList/>} />
-    <Route path ="/NoCareers" element = {<NoCareers/>}/>
+    <Route path ="/NoCareers" element = {<NoCareers/>}/> 
 
   </Routes>
   </BrowserRouter>
@@ -46,3 +46,4 @@ function App() {
 }
 
 export default App;
+//
