@@ -30,18 +30,24 @@ function ProvenSuccess() {
         {showInfo && activeIndex === 0 && (
           <div className={`overlay-text ${showInfo ? "fade-in" : ""}`}>
             <p>{projectInfo[0]}</p>
+            <button
+              className={`close-button ${showInfo && activeIndex === 0 ? "show" : ""}`}
+              onClick={() => setShowInfo(false)}
+            >
+              X
+            </button>
           </div>
         )}
         <button
           onMouseEnter={() => setHover(true)}
           onMouseLeave={() => setHover(false)}
-          className={`buttonPS ${hover ? "button-hoverPS" : ""}`}
+          className={`buttonPS ${hover ? "button-hoverPS" : ""} ${showInfo && activeIndex === 0 ? "close-button" : ""}`}
           onClick={() => {
             setActiveIndex(0);
             setShowInfo(!showInfo);
           }}
         >
-          {showInfo && activeIndex === 0 ? 'X' : "Project 1 Info"}
+          {showInfo && activeIndex === 0 ? '' : "Project 1 Info"}
         </button>
       </div>
     </div>,
@@ -56,18 +62,24 @@ function ProvenSuccess() {
         {showInfo && activeIndex === 1 && (
           <div className={`overlay-text ${showInfo ? "fade-in" : ""}`}>
             <p>{projectInfo[1]}</p>
+            <button
+              className={`close-button ${showInfo && activeIndex === 1 ? "show" : ""}`}
+              onClick={() => setShowInfo(false)}
+            >
+              X
+            </button>
           </div>
         )}
         <button
           onMouseEnter={() => setHover(true)}
           onMouseLeave={() => setHover(false)}
-          className={`buttonPS ${hover ? "button-hoverPS" : ""}`}
+          className={`buttonPS ${hover ? "button-hoverPS" : ""} ${showInfo && activeIndex === 1 ? "close-button" : ""}`}
           onClick={() => {
             setActiveIndex(1);
             setShowInfo(!showInfo);
           }}
         >
-          {showInfo && activeIndex === 1 ? 'X' : "Project 2 Info"}
+          {showInfo && activeIndex === 1 ? '' : "Project 2 Info"}
         </button>
       </div>
     </div>,
@@ -82,22 +94,30 @@ function ProvenSuccess() {
         {showInfo && activeIndex === 2 && (
           <div className={`overlay-text ${showInfo ? "fade-in" : ""}`}>
             <p>{projectInfo[2]}</p>
+            <button
+              className={`close-button ${showInfo && activeIndex === 2 ? "show" : ""}`}
+              onClick={() => setShowInfo(false)}
+            >
+              X
+            </button>
           </div>
         )}
         <button
           onMouseEnter={() => setHover(true)}
           onMouseLeave={() => setHover(false)}
-          className={`buttonPS ${hover ? "button-hoverPS" : ""}`}
+          className={`buttonPS ${hover ? "button-hoverPS" : ""} ${showInfo && activeIndex === 2 ? "close-button" : ""}`}
           onClick={() => {
             setActiveIndex(2);
             setShowInfo(!showInfo);
           }}
         >
-          {showInfo && activeIndex === 2 ? 'X' : "Project 3 Info"}
+          {showInfo && activeIndex === 2 ? '' : "Project 3 Info"}
         </button>
       </div>
     </div>,
   ];
+  
+  
   
 
   const handleSlideChanged = ({ item }) => {
