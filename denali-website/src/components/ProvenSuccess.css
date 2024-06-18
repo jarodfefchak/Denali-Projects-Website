@@ -97,8 +97,8 @@ body {
 
 .buttonPS {
   position: absolute;
-  bottom: 0px; /* Adjust bottom position as needed */
-  left: 50%; /* Center horizontally */
+  bottom: 0px;
+  left: 50%;
   transform: translateX(-50%);
   color: white;
   background-color: #408697;
@@ -107,7 +107,10 @@ body {
   font-size: 14pt;
   cursor: pointer;
   z-index: 10;
+  border: none;
+  transition: font-size 0pt 0.5s ease;
 }
+
 
 .close-button {
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
