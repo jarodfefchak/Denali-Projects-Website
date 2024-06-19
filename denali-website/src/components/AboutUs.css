@@ -38,12 +38,15 @@
   }
   
   .paragraphAU {
-    font-size: 18pt;
+    font-size: 18pt; 
+    margin-top: 10px;
   }
   
   
   #sloganAU {
     font-size: 20pt;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
   
   .img-textAU {
@@ -180,5 +183,8 @@
       }
       #sloganAU {
         font-size: 16pt;
+      }
+      .contentAU {
+        padding: 125px 15px 150px 15px;
       }
   }
