@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from "react";
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import Logo from '../images/Logos/Denali_Logo_White_Transparent_BG.png';
 import './header.css';
 import axios from "axios";
 
-function Header() {
+function Header({ onLinkClick }) {
   const [jsonData, setJsonData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isSolutionsDropdownOpen, setIsSolutionsDropdownOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -37,7 +38,6 @@ function Header() {
     setIsSolutionsDropdownOpen(!isSolutionsDropdownOpen);
   };
 
-  // Use effect to handle window resize
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth > 750) {
@@ -59,34 +59,68 @@ function Header() {
   return (
     <div>
       <div className="navbar">
-        <Link to="/#HomeMainSection">
+        <Link to="/#HomeMainSection" onClick={onLinkClick}>
           <img src={Logo} alt="Logo" height="75px" className="Denali-Logo" />
         </Link>
         <div className="link-container">
-          <Link to="/#HomeMainSection" id="link1" className="nav-link">Home</Link>
+          <Link
+            to="/#HomeMainSection"
+            id="link1"
+            className={`nav-link ${location.hash === '#HomeMainSection' || location.pathname === '/' ? 'active' : ''}`}
+            onClick={onLinkClick}
+          >
+            Home
+          </Link>
           <div className="dropdown" id="link2">
-            <Link to="/#Solutions" className="dropdown-toggle nav-link">Solutions</Link>
+            <Link
+              to="/#Solutions"
+              className={`dropdown-toggle nav-link ${isSolutionsDropdownOpen ? 'dropdown-open' : location.hash === '#Solutions' ? 'active-solutions' : ''}`}
+              onClick={() => { onLinkClick(); toggleSolutionsDropdown(); }}
+            >
+              Solutions
+            </Link>
             <div className="dropdown-menu">
               {jsonData.map((data, index) => (
                 <Link
                   key={index}
                   to={`/SolutionsDisplay/${index + 1}`}
                   className="dropdown-item"
+                  onClick={onLinkClick}
                 >
                   {data[0].section}
                 </Link>
               ))}
             </div>
           </div>
-          <Link to="/AboutUs" id="link3" className="nav-link">About Us</Link>
-          <Link to="/Contact" id="link4" className="nav-link">Contact</Link>
+          <Link
+            to="/AboutUs"
+            id="link3"
+            className={`nav-link ${location.pathname === '/AboutUs' ? 'active' : ''}`}
+            onClick={onLinkClick}
+          >
+            About Us
+          </Link>
+          <Link
+            to="/Contact"
+            id="link4"
+            className={`nav-link ${location.pathname === '/Contact' ? 'active' : ''}`}
+            onClick={onLinkClick}
+          >
+            Contact
+          </Link>
         </div>
         <div className="menu-icon" onClick={toggleMainDropdown}>
-        {isDropdownOpen ? '✖' : '☰'}
-      </div>
+          {isDropdownOpen ? '✖' : '☰'}
+        </div>
       </div>
       <div className={`mobile-dropdown-menu ${isDropdownOpen ? 'open' : ''}`}>
-        <Link to="/#HomeMainSection" className="nav-link" onClick={toggleMainDropdown}>Home</Link>
+        <Link
+          to="/#HomeMainSection"
+          className={`nav-link ${location.hash === '#HomeMainSection' || location.pathname === '/' ? 'active' : ''}`}
+          onClick={() => { toggleMainDropdown(); onLinkClick(); }}
+        >
+          Home
+        </Link>
         <div className={`dropdown ${isSolutionsDropdownOpen ? 'open' : ''}`}>
           <div className="dropdown-toggle nav-link" onClick={toggleSolutionsDropdown}>Solutions</div>
           <div className="dropdown-menu">
@@ -95,15 +129,27 @@ function Header() {
                 key={index}
                 to={`/SolutionsDisplay/${index + 1}`}
                 className="dropdown-item"
-                onClick={toggleMainDropdown}
+                onClick={() => { toggleMainDropdown(); onLinkClick(); }}
               >
                 {data[0].section}
               </Link>
             ))}
           </div>
         </div>
-        <Link to="/AboutUs" className="nav-link" onClick={toggleMainDropdown}>About Us</Link>
-        <Link to="/Contact" className="nav-link" onClick={toggleMainDropdown}>Contact</Link>
+        <Link
+          to="/AboutUs"
+          className={`nav-link ${location.pathname === '/AboutUs' ? 'active' : ''}`}
+          onClick={() => { toggleMainDropdown(); onLinkClick(); }}
+        >
+          About Us
+        </Link>
+        <Link
+          to="/Contact"
+          className={`nav-link ${location.pathname === '/Contact' ? 'active' : ''}`}
+          onClick={() => { toggleMainDropdown(); onLinkClick(); }}
+        >
+          Contact
+        </Link>
       </div>
     </div>
   );

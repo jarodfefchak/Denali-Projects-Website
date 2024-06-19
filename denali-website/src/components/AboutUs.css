@@ -38,11 +38,12 @@
   }
   
   .paragraphAU {
-    font-size: 10px;
+    font-size: 18pt;
   }
   
+  
   #sloganAU {
-    font-size: 18pt;
+    font-size: 20pt;
   }
   
   .img-textAU {
@@ -77,6 +78,18 @@
         height: 300px;
         width: 250px;
       } 
+      .executive-titleAU {
+        font-size: 40pt;
+      }
+      .sub-header-textAU {
+        font-size: 35pt;
+      }
+      .paragraphAU {
+        font-size: 16pt;
+      }
+      #sloganAU {
+        font-size: 18pt;
+      }
       
   }
   @media screen and (max-width: 1000px){
@@ -92,20 +105,13 @@
       }
       
       .executive-titleAU {
-        font-size: 27pt;
+        font-size: 30pt;
       }
       
     .imgAU {
         height: 275px;
         width: 225px;
       }
-      .paragraphAU {
-        font-size: 14pt;
-      }
-       
-  #sloganAU {
-    font-size: 16pt;
-  }
       .buttonAU {
         width: 250px;
         height: 65px;
@@ -113,7 +119,25 @@
       }
       
   }
-
+  @media screen and (max-width: 900px){
+    .header-textAU {
+      font-size: 40pt;
+    }
+    
+    .sub-header-textAU {
+      font-size: 20pt;
+    }
+    
+    .executive-titleAU {
+      font-size: 25pt;
+  }
+  .paragraphAU {
+    font-size: 15pt;
+  }
+  #sloganAU {
+    font-size: 17pt;
+  }
+}
   @media screen and (max-width: 850px){   
     .teamAU{
         display: flex;
@@ -130,10 +154,31 @@
        text-align: center;
       }
   }
+
+  @media screen and (max-width: 750px){
+    .header-textAU {
+      font-size: 35pt;
+    }
+    
+    .sub-header-textAU {
+      font-size: 18pt;
+    }
+    
+    .executive-titleAU {
+      font-size: 22pt;
+  }
+  }
+
   @media screen and (max-width: 600px){
     .buttonAU {
         width: 200px;
         height: 55px;
+        font-size: 16pt;
+      }
+      .paragraphAU {
+        font-size: 14pt;
+      }
+      #sloganAU {
         font-size: 16pt;
       }
   }

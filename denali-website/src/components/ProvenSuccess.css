@@ -59,7 +59,7 @@ body {
 
 .carousel-arrow {
   position: absolute;
-  top: 45%;
+  top: 43%;
   transform: translateY(-50%); /* This will vertically center the arrows */
   font-size: 25pt;
   font-weight: 900;
@@ -99,24 +99,23 @@ body {
   position: absolute;
   bottom: 0px;
   left: 50%;
+  border-radius: 10px;
   transform: translateX(-50%);
   color: white;
   background-color: #408697;
-  width: 150px;
+  width: 20vw;
   height: 50px;
-  font-size: 14pt;
+  font-size: 16pt;
   cursor: pointer;
   z-index: 10;
   border: none;
-  transition: font-size 0pt 0.5s ease;
 }
 
-
 .close-button {
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   position: absolute;
-  top: -20%; 
-  right:-15%; 
+  top: -15%;
+  right: -15%;
   color: white;
   background: none;
   border: none;
@@ -167,13 +166,55 @@ body {
     font-size: 35pt;
     margin-right: 50pt;
   }
+  .buttonPS {
+    border-radius: 7px;
+    width: 270px;
+  }
+  .close-button {
+    top: -20%;
+    right: -2%;
+    font-size: 18pt;
+  }
+  .overlay-text {
+    font-size: 22px;
+    width: 65vw;
+  }
 }
-@media screen and (max-width: 1300px){
+
+@media screen and (max-width: 1300px) {
   .overlay-text {
     font-size: 22px;
     width: 70vw;
   }
+  .buttonPS {
+    border-radius: 7px;
+    width: 200px;
+  }
+  .close-button {
+    right: -3%;
+    font-size: 18pt;
+  }
 }
+
+@media screen and (max-width: 1200px) {
+  .close-button {
+    top: -10%;
+  }
+  .overlay-text {
+    font-size: 16px;
+    width: 70vw;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .close-button {
+    top: -8%;
+    font-size: 18px;
+  }
+  .overlay-text {
+    font-size: 14px;
+  }
+}
+
 @media screen and (max-width: 1000px) {
   .titlePS {
     font-size: 45pt;
@@ -183,6 +224,17 @@ body {
   }
   .overlay-text {
     font-size: 20px;
+  }
+  .buttonPS {
+    border-radius: 7px;
+    width: 150px;
+    height: 40px;
+    font-size: 14pt;
+  }
+  .close-button {
+    top: -27%;
+    right: -3%;
+    font-size: 18pt;
   }
 }
 
@@ -196,7 +248,7 @@ body {
     margin-left: 50px;
   }
   .overlay-text {
-    top:45%;
+    top: 45%;
     font-size: 18px;
     width: 80vw;
   }
@@ -230,20 +282,19 @@ body {
     border-radius: 10px;
   }
 
-.overlay-text {
-  top: 50%;
-  font-size: 18px;
-  width: 100vw;
+  .overlay-text {
+    top: 50%;
+    font-size: 18px;
+    width: 100vw;
+  }
 }
-.buttonPS {
-  top: 0px;
-}
-}
-@media screen and (max-width: 600px){
+
+@media screen and (max-width: 600px) {
   .overlay-text {
     font-size: 16px;
   }
 }
+
 @media screen and (max-width: 500px) {
   .titlePS {
     font-size: 30pt;
@@ -263,9 +314,27 @@ body {
     font-size: 14px;
   }
   .buttonPS {
-    top: 0px;
-    width: 130px;
-    height: 35px;
+    border-radius: 5px;
+    width: 125px;
+    height: 30px;
     font-size: 12pt;
+  }
+}
+
+@media screen and (max-height: 1350px) {
+  .carousel-arrow {
+    top: 40%;
+  }
+}
+
+@media screen and (max-height: 1100px) {
+  .carousel-arrow {
+    top: 37%;
+  }
+}
+
+@media screen and (max-height: 500px) {
+  .carousel-arrow {
+    top: 34%;
   }
 }

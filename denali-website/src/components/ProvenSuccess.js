@@ -12,15 +12,19 @@ function ProvenSuccess() {
   const [hover, setHover] = useState(false);
 
   const projectInfo = [
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Additional text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Additional text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Additional text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
   ];
   const handleDragStart = (e) => e.preventDefault();
 
   const items = [
     <div key="project1">
-      <div className={`image-container ${showInfo && activeIndex === 0 ? "blur" : ""}`}>
+      <div
+        className={`image-container ${
+          showInfo && activeIndex === 0 ? "blur" : ""
+        }`}
+      >
         <img
           src={Project1Img}
           alt="Project 1"
@@ -31,7 +35,9 @@ function ProvenSuccess() {
           <div className={`overlay-text ${showInfo ? "fade-in" : ""}`}>
             <p>{projectInfo[0]}</p>
             <button
-              className={`close-button ${showInfo && activeIndex === 0 ? "show" : ""}`}
+              className={`close-button ${
+                showInfo && activeIndex === 0 ? "show" : ""
+              }`}
               onClick={() => setShowInfo(false)}
             >
               X
@@ -41,18 +47,24 @@ function ProvenSuccess() {
         <button
           onMouseEnter={() => setHover(true)}
           onMouseLeave={() => setHover(false)}
-          className={`buttonPS ${hover ? "button-hoverPS" : ""} ${showInfo && activeIndex === 0 ? "close-button" : ""}`}
+          className={`buttonPS ${hover ? "button-hoverPS" : ""} ${
+            showInfo && activeIndex === 0 ? "close-button" : ""
+          }`}
           onClick={() => {
             setActiveIndex(0);
             setShowInfo(!showInfo);
           }}
         >
-          {showInfo && activeIndex === 0 ? '' : "Project 1 Info"}
+          {showInfo && activeIndex === 0 ? "" : "Project 1 Info"}
         </button>
       </div>
     </div>,
     <div key="project2">
-      <div className={`image-container ${showInfo && activeIndex === 1 ? "blur" : ""}`}>
+      <div
+        className={`image-container ${
+          showInfo && activeIndex === 1 ? "blur" : ""
+        }`}
+      >
         <img
           src={Project2Img}
           alt="Project 2"
@@ -63,7 +75,9 @@ function ProvenSuccess() {
           <div className={`overlay-text ${showInfo ? "fade-in" : ""}`}>
             <p>{projectInfo[1]}</p>
             <button
-              className={`close-button ${showInfo && activeIndex === 1 ? "show" : ""}`}
+              className={`close-button ${
+                showInfo && activeIndex === 1 ? "show" : ""
+              }`}
               onClick={() => setShowInfo(false)}
             >
               X
@@ -73,18 +87,24 @@ function ProvenSuccess() {
         <button
           onMouseEnter={() => setHover(true)}
           onMouseLeave={() => setHover(false)}
-          className={`buttonPS ${hover ? "button-hoverPS" : ""} ${showInfo && activeIndex === 1 ? "close-button" : ""}`}
+          className={`buttonPS ${hover ? "button-hoverPS" : ""} ${
+            showInfo && activeIndex === 1 ? "close-button" : ""
+          }`}
           onClick={() => {
             setActiveIndex(1);
             setShowInfo(!showInfo);
           }}
         >
-          {showInfo && activeIndex === 1 ? '' : "Project 2 Info"}
+          {showInfo && activeIndex === 1 ? "" : "Project 2 Info"}
         </button>
       </div>
     </div>,
     <div key="project3">
-      <div className={`image-container ${showInfo && activeIndex === 2 ? "blur" : ""}`}>
+      <div
+        className={`image-container ${
+          showInfo && activeIndex === 2 ? "blur" : ""
+        }`}
+      >
         <img
           src={Project3Img}
           alt="Project 3"
@@ -95,7 +115,9 @@ function ProvenSuccess() {
           <div className={`overlay-text ${showInfo ? "fade-in" : ""}`}>
             <p>{projectInfo[2]}</p>
             <button
-              className={`close-button ${showInfo && activeIndex === 2 ? "show" : ""}`}
+              className={`close-button ${
+                showInfo && activeIndex === 2 ? "show" : ""
+              }`}
               onClick={() => setShowInfo(false)}
             >
               X
@@ -105,20 +127,19 @@ function ProvenSuccess() {
         <button
           onMouseEnter={() => setHover(true)}
           onMouseLeave={() => setHover(false)}
-          className={`buttonPS ${hover ? "button-hoverPS" : ""} ${showInfo && activeIndex === 2 ? "close-button" : ""}`}
+          className={`buttonPS ${hover ? "button-hoverPS" : ""} ${
+            showInfo && activeIndex === 2 ? "close-button" : ""
+          }`}
           onClick={() => {
             setActiveIndex(2);
             setShowInfo(!showInfo);
           }}
         >
-          {showInfo && activeIndex === 2 ? '' : "Project 3 Info"}
+          {showInfo && activeIndex === 2 ? "" : "Project 3 Info"}
         </button>
       </div>
     </div>,
   ];
-  
-  
-  
 
   const handleSlideChanged = ({ item }) => {
     setActiveIndex(item);

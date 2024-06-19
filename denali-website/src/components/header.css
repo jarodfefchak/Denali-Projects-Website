@@ -23,13 +23,22 @@
   padding: 10px;
   font-size: 16pt;
 }
+.nav-link.active {
+  color:   #52d6f4;
+}
+.nav-link.active-solutions {
+  color: white;
+}
+.dropdown:hover .dropdown-toggle {
+  color: #52d6f4;
+}
 
 /* Hover effect for links */
 #link1:hover,
 #link2:hover,
 #link3:hover,
 #link4:hover {
-  color: #408697;
+  color: #52d6f4;
 }
 
 .dropdown-toggle {
@@ -59,13 +68,13 @@
 
 /* Additional styles for dropdown toggle when hovered or dropdown menu is open */
 .dropdown-toggle:hover,
-.dropdown-toggle:focus,
-.dropdown-toggle:active {
-  color: #408697;
+.dropdown-toggle:focus {
   text-decoration: none;
   border: none;
 }
-
+.dropdown-toggle:active{
+  color: white;
+}
 .Denali-Logo {
   margin: 15px 0px 15px 75px;
 }
@@ -77,7 +86,6 @@
   font-size: 30pt;
   margin-right: 50px;
   z-index: 1000; /* Ensure the menu icon is above the mobile dropdown menu */
-  background-color: #222222;
   position: relative; /* Make sure the icon is positioned relative to the .navbar */
 }
 
