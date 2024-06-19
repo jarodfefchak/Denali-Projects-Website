@@ -1,21 +1,45 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import Project1Img from "../images/ProvenSuccess/Project1.jpg";
 import Project2Img from "../images/ProvenSuccess/Project2.jpg";
 import Project3Img from "../images/ProvenSuccess/Project3.jpg";
+import axios from "axios";
 import "./ProvenSuccess.css";
 
 function ProvenSuccess() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [showInfo, setShowInfo] = useState(false);
   const [hover, setHover] = useState(false);
+  const [jsonData, setJsonData] = useState(null);
+  const [jsonData2, setJsonData2] = useState(null);
+  const [jsonData3, setJsonData3] = useState(null);
+  const [loading, setLoading] = useState(true);
 
-  const projectInfo = [
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Additional text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Additional text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Additional text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-  ];
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const [response1, response2, response3] = await Promise.all([
+          axios.get('/data/Projects/Project1.json'), // Adjust the path if necessary
+          axios.get('/data/Projects/Project2.json'), // Adjust the path if necessary
+          axios.get('/data/Projects/Project3.json') // Adjust the path if necessary
+        ]);
+        setJsonData(response1.data);
+        setJsonData2(response2.data);
+        setJsonData3(response3.data);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchData();
+  }, []);
+
+  if (loading) {
+    return <p>Loading data...</p>;
+  }
+
   const handleDragStart = (e) => e.preventDefault();
 
   const items = [
@@ -33,7 +57,7 @@ function ProvenSuccess() {
         />
         {showInfo && activeIndex === 0 && (
           <div className={`overlay-text ${showInfo ? "fade-in" : ""}`}>
-            <p>{projectInfo[0]}</p>
+            <p>{jsonData[0].description}</p>
             <button
               className={`close-button ${
                 showInfo && activeIndex === 0 ? "show" : ""
@@ -73,7 +97,7 @@ function ProvenSuccess() {
         />
         {showInfo && activeIndex === 1 && (
           <div className={`overlay-text ${showInfo ? "fade-in" : ""}`}>
-            <p>{projectInfo[1]}</p>
+            <p>{jsonData2[0].description}</p>
             <button
               className={`close-button ${
                 showInfo && activeIndex === 1 ? "show" : ""
@@ -113,7 +137,7 @@ function ProvenSuccess() {
         />
         {showInfo && activeIndex === 2 && (
           <div className={`overlay-text ${showInfo ? "fade-in" : ""}`}>
-            <p>{projectInfo[2]}</p>
+            <p>{jsonData3[0].description}</p>
             <button
               className={`close-button ${
                 showInfo && activeIndex === 2 ? "show" : ""
