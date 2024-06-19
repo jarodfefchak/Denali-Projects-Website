@@ -37,9 +37,6 @@ function CareerOpportunities() {
         return (
             <div>
                 <Header />
-                <div>
-                    <p className="mainTextOP">Will shrink this image, dogs look funny</p>
-                </div>
                 <NoCareers />
                 <Footer />
             </div>
@@ -50,7 +47,6 @@ function CareerOpportunities() {
         <div>
             <Header />
             <div className="titleImageOP" style={{ backgroundImage: `url(${CareerOpImage})` }}>
-                <p className="mainTextOP">Will shrink this image, dogs look funny</p>
             </div>
             <div className="contentOP">
                 <div className="navBarOP">
@@ -60,7 +56,7 @@ function CareerOpportunities() {
                         Fusce vel metus nec purus tincidunt rhoncus.
                         Vivamus euismod, urna in vestibulum aliquet, sapien odio tincidunt libero, et ultrices justo elit ut nunc.
                     </p>
-                    <Dropdown>
+                    {/* <Dropdown>
                         <Dropdown.Toggle className="dropdownToggleOP" variant="success" id="dropdown-basicOP">
                             Job Postings
                         </Dropdown.Toggle>
@@ -72,7 +68,7 @@ function CareerOpportunities() {
                                     </Dropdown.Item>
                                 ))}
                         </Dropdown.Menu>
-                    </Dropdown>
+                    </Dropdown> */}
                 </div>
                 <div className="jobListingsOP">
                     <CareerList />

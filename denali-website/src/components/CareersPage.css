@@ -42,6 +42,11 @@
     font-size: 50pt;
   }
 }
+@media screen and (max-width: 1500px){
+  .text {
+    margin-right: 100px;
+  }
+}
 @media screen and (max-width: 1300px){
   .text {
     margin-right: 100px;

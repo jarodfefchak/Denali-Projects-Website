@@ -66,9 +66,7 @@
 }
 
 @media screen and (max-width: 1200px) {
-  .titleR {
-    margin-left:75px;
-  }
+  
   .statsR {
     margin-left: 75px;
     margin-right: 75px;
@@ -111,6 +109,7 @@
 
 @media screen and (max-width: 900px){
     .titleR {
+      font-size: 40pt;
        text-align: center;
        margin-left: 0px;
         margin-right: 0px;
@@ -127,6 +126,11 @@
        padding-bottom: 40px;
       }
 }
+@media screen and (max-width: 750px) {
+  .titleR {
+    font-size: 35pt;
+  }
+}
 @media screen and (max-width: 600px){
       .countR {
         font-size: 60pt;
@@ -136,7 +140,11 @@
         font-size: 30pt;
       }
 }
-
+@media screen and (max-width: 500px) {
+  .titleR {
+    font-size: 30pt;
+  }
+}
 @media screen and (max-width: 400px){
     .titleR {
         font-size: 40pt;

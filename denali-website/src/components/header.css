@@ -108,9 +108,8 @@
 }
 
 .mobile-dropdown-menu.open {
-  max-height: 500px; /* Adjust as necessary for content */
+  max-height: 800px; /* Adjust as necessary for content */
 }
-
 @media (max-width: 750px) {
   .Denali-Logo {
     margin: 15px 0px 15px 20px;
@@ -124,6 +123,7 @@
   }
 
   .mobile-dropdown-menu {
+    margin-top: 105px;
     display: flex;
   }
 
