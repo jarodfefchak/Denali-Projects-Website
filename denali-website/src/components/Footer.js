@@ -1,5 +1,7 @@
 import React from "react";
+
 import wLogo from '../images/Logos/Denali_Logo_White_Transparent_BG.png';
+import LinkedIn from '../images/Logos/LinkedInLogoBW.png';
 import APEGA from '../images/Accreditations/APEGA.png';
 import APEGS from '../images/Accreditations/APEGS.png';
 import EGBC from '../images/Accreditations/EGBC.png';
@@ -16,6 +18,9 @@ function Footer(){
                 <p>#1500, 700 - 4th Avenue SW Calgary, AB T2P 3J4</p>
                 <p>info@denaliprojects.com</p>
                 <p>+1 (403) 984-6610</p>
+                <a href ="https://www.linkedin.com/company/denali-projects-ltd">
+                <img src ={LinkedIn} alt ="LinkedIn" id = 'LinkedIn' />
+                </a>
             </div>
             <div id = "item2">
                 <h4>Company</h4> 

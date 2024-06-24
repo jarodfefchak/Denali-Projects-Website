@@ -71,6 +71,9 @@
     height: 50px;
     margin:15px 0 0px 0;
 }
+#LinkedIn{
+    height: 100px;
+}
 @media screen and (max-width:1300px){
     #item1{
         width: 300px;
