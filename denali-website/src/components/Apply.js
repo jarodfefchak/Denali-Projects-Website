@@ -167,7 +167,7 @@ function Apply() {
           </p>
         </div>
         <form className="formAP" onSubmit={handleSignup}>
-          <p style={{ marginBottom: "0px", fontSize: "22px", fontWeight: 500 }}>
+          <p className="inputHeadingAP">
             Personal Details
           </p>
           <label className="labelAP">
@@ -190,7 +190,7 @@ function Apply() {
               required
             />
           </label>
-          <p style={{ marginBottom: "0px", fontSize: "22px", fontWeight: 500 }}>
+          <p className="inputHeadingAP ">
             Contact Details
           </p>
           <label className="labelAP">
@@ -242,7 +242,7 @@ function Apply() {
               required
             />
           </label>
-          <p style={{ marginBottom: "0px", fontSize: "22px", fontWeight: 500 }}>
+          <p className="inputHeadingAP ">
             Phone
           </p>
           <label className="longlabelAP">
@@ -256,7 +256,7 @@ function Apply() {
             />
           </label>
 
-          <p style={{ marginBottom: "0px", fontSize: "22px", fontWeight: 500 }}>
+          <p className="inputHeadingAP ">
             APEGA Membership Number
           </p>
           <label className="longlabelAP">
@@ -268,7 +268,7 @@ function Apply() {
               placeholder="Optional"
             />
           </label>
-          <p style={{ marginBottom: "0px", fontSize: "22px", fontWeight: 500 }}>
+          <p className="inputHeadingAP ">
             Do you currently reside in Alberta?
           </p>
           <label className="longlabelAP">
@@ -282,7 +282,7 @@ function Apply() {
               <option value="Yes">Yes</option>
             </select>
           </label>
-          <p style={{ marginBottom: "0", fontSize: "22px", fontWeight: 500 }}>
+          <p className="inputHeadingAP ">
             Are you legally entitled to work in Canada?
           </p>
           <label className="longlabelAP">
@@ -296,7 +296,7 @@ function Apply() {
               <option value="Yes">Yes</option>
             </select>
           </label>
-          <p style={{ marginBottom: "0px", fontSize: "22px", fontWeight: 500 }}>
+          <p className="inputHeadingAP ">
             LinkedIn Profile URL
           </p>
           <label className="longlabelAP">
@@ -308,18 +308,18 @@ function Apply() {
               placeholder="Optional"
             />
           </label>
-          <p style={{ marginBottom: "0px", fontSize: "22px", fontWeight: 500 }}>
+          <p className="inputHeadingAP ">
             Resume
           </p>
-          <label className="longlabelAP">
+          <label className="resumeButton">
             <input
-              className="input-field-largeAP"
               type="file"
               onChange={handleResumeChange}
               accept=".pdf"
               required
             />
           </label>
+          <br></br>
           <button className="buttonAP" type="submit" onClick={handleSignup}>
             Submit
           </button>
@@ -329,7 +329,10 @@ function Apply() {
             className="custom-alert-overlay"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ opacity: { duration: 0.4 }, y: { duration: 0.5, ease: "easeOut" } }}
+            transition={{
+              opacity: { duration: 0.4 },
+              y: { duration: 0.5, ease: "easeOut" },
+            }}
           >
             <div className="custom-alert-overlayOP">
               <div className="custom-alertOP">
@@ -344,7 +347,10 @@ function Apply() {
             className="custom-alert-overlay"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ opacity: { duration: 0.4 }, y: { duration: 0.5, ease: "easeOut" } }}
+            transition={{
+              opacity: { duration: 0.4 },
+              y: { duration: 0.5, ease: "easeOut" },
+            }}
           >
             <div className="custom-alert-overlayOP">
               <div className="custom-alertOP">
@@ -359,7 +365,10 @@ function Apply() {
             className="custom-alert-overlay"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ opacity: { duration: 0.4 }, y: { duration: 0.5, ease: "easeOut" } }}
+            transition={{
+              opacity: { duration: 0.4 },
+              y: { duration: 0.5, ease: "easeOut" },
+            }}
           >
             <div className="custom-alert-overlayOP">
               <div className="custom-alertOP">

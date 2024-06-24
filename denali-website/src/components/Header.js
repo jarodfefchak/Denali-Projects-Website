@@ -8,7 +8,6 @@ function Header({ onLinkClick }) {
   const [jsonData, setJsonData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [isSolutionsDropdownOpen, setIsSolutionsDropdownOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -30,19 +29,18 @@ function Header({ onLinkClick }) {
     fetchData();
   }, []);
 
-  const toggleMainDropdown = () => {
+  const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
-  const toggleSolutionsDropdown = () => {
-    setIsSolutionsDropdownOpen(!isSolutionsDropdownOpen);
+  const closeDropdowns = () => {
+    setIsDropdownOpen(false);
   };
 
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth > 750) {
-        setIsDropdownOpen(false);
-        setIsSolutionsDropdownOpen(false);
+        closeDropdowns();
       }
     };
 
@@ -57,96 +55,73 @@ function Header({ onLinkClick }) {
   }
 
   return (
-    <div>
-      <div className="navbar">
-        <Link to="/#HomeMainSection" onClick={onLinkClick}>
-          <img src={Logo} alt="Logo" height="75px" className="Denali-Logo" />
+    <div className="navbar">
+      <Link to="/#HomeMainSection" onClick={onLinkClick}>
+        <img src={Logo} alt="Logo" height="75px" className="Denali-Logo" />
+      </Link>
+      <div className="link-container">
+        <Link
+          to="/#HomeMainSection"
+          id="link1"
+          className={`nav-link ${location.hash === '#HomeMainSection' || location.pathname === '/' ? 'active' : ''}`}
+          onClick={onLinkClick}
+        >
+          Home
         </Link>
-        <div className="link-container">
-          <Link
-            to="/#HomeMainSection"
-            id="link1"
-            className={`nav-link ${location.hash === '#HomeMainSection' || location.pathname === '/' ? 'active' : ''}`}
-            onClick={onLinkClick}
-          >
-            Home
-          </Link>
-          <div className="dropdown" id="link2">
-            <Link
-              to="/#Solutions"
-              className={`dropdown-toggle nav-link ${isSolutionsDropdownOpen ? 'dropdown-open' : location.hash === '#Solutions' ? 'active-solutions' : ''}`}
-              onClick={() => { onLinkClick(); toggleSolutionsDropdown(); }}
-            >
-              Solutions
-            </Link>
-            <div className="dropdown-menu">
-              {jsonData.map((data, index) => (
-                <Link
-                  key={index}
-                  to={`/SolutionsDisplay/${index + 1}`}
-                  className="dropdown-item"
-                  onClick={onLinkClick}
-                >
-                  {data[0].section}
-                </Link>
-              ))}
-            </div>
-          </div>
-          <Link
-            to="/AboutUs"
-            id="link3"
-            className={`nav-link ${location.pathname === '/AboutUs' ? 'active' : ''}`}
-            onClick={onLinkClick}
-          >
-            About Us
-          </Link>
-          <Link
-            to="/Contact"
-            id="link4"
-            className={`nav-link ${location.pathname === '/Contact' ? 'active' : ''}`}
-            onClick={onLinkClick}
-          >
-            Contact
-          </Link>
-        </div>
-        <div className="menu-icon" onClick={toggleMainDropdown}>
-          {isDropdownOpen ? '✖' : '☰'}
-        </div>
+        <Link
+          to="/SolutionsHome"
+          id="link2"
+          className={`nav-link ${location.pathname === '/SolutionsHome' ? 'active' : ''}`}
+          onClick={onLinkClick}
+        >
+          Solutions
+        </Link>
+        <Link
+          to="/AboutUs"
+          id="link3"
+          className={`nav-link ${location.pathname === '/AboutUs' ? 'active' : ''}`}
+          onClick={onLinkClick}
+        >
+          About Us
+        </Link>
+        <Link
+          to="/Contact"
+          id="link4"
+          className={`nav-link ${location.pathname === '/Contact' ? 'active' : ''}`}
+          onClick={onLinkClick}
+        >
+          Contact
+        </Link>
+      </div>
+      <div className="menu-icon" onClick={toggleDropdown}>
+        {isDropdownOpen ? '✖' : '☰'}
       </div>
       <div className={`mobile-dropdown-menu ${isDropdownOpen ? 'open' : ''}`}>
         <Link
           to="/#HomeMainSection"
           className={`nav-link ${location.hash === '#HomeMainSection' || location.pathname === '/' ? 'active' : ''}`}
-          onClick={() => { toggleMainDropdown(); onLinkClick(); }}
+          onClick={() => { closeDropdowns(); onLinkClick(); }}
         >
           Home
         </Link>
-        <div className={`dropdown ${isSolutionsDropdownOpen ? 'open' : ''}`}>
-          <div className="dropdown-toggle nav-link" onClick={toggleSolutionsDropdown}>Solutions</div>
-          <div className="dropdown-menu">
-            {jsonData.map((data, index) => (
-              <Link
-                key={index}
-                to={`/SolutionsDisplay/${index + 1}`}
-                className="dropdown-item"
-                onClick={() => { toggleMainDropdown(); onLinkClick(); }}
-              >
-                {data[0].section}
-              </Link>
-            ))}
-          </div>
-        </div>
+        <Link
+          to="/SolutionsHome"
+          className={`nav-link ${location.pathname === '/SolutionsHome' ? 'active' : ''}`}
+          onClick={() => { closeDropdowns(); onLinkClick(); }}
+        >
+          Solutions
+        </Link>
         <Link
           to="/AboutUs"
           className={`nav-link ${location.pathname === '/AboutUs' ? 'active' : ''}`}
-          onClick={() => { toggleMainDropdown(); onLinkClick(); }}
+          onClick={() => { closeDropdowns(); onLinkClick(); }}
         >
           About Us
         </Link>
         <Link
           to="/Contact"
           className={`nav-link ${location.pathname === '/Contact' ? 'active' : ''}`}
-          onClick={() => { toggleMainDropdown(); onLinkClick(); }}
+          onClick={() => { closeDropdowns(); onLinkClick(); }}
         >
           Contact
         </Link>

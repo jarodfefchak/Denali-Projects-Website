@@ -14,19 +14,22 @@ function ProvenSuccess() {
   const [jsonData, setJsonData] = useState(null);
   const [jsonData2, setJsonData2] = useState(null);
   const [jsonData3, setJsonData3] = useState(null);
+  const [jsonData4, setJsonData4] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const [response1, response2, response3] = await Promise.all([
-          axios.get('/data/Projects/Project1.json'), // Adjust the path if necessary
-          axios.get('/data/Projects/Project2.json'), // Adjust the path if necessary
-          axios.get('/data/Projects/Project3.json') // Adjust the path if necessary
+        const [response1, response2, response3, response4] = await Promise.all([
+          axios.get('/data/Projects/Project1.json'), 
+          axios.get('/data/Projects/Project2.json'), 
+          axios.get('/data/Projects/Project3.json'),
+          axios.get('/data/Headings.json') 
         ]);
         setJsonData(response1.data);
         setJsonData2(response2.data);
         setJsonData3(response3.data);
+        setJsonData4(response4.data);
       } catch (error) {
         console.error('Error fetching data:', error);
       } finally {
@@ -202,9 +205,9 @@ function ProvenSuccess() {
     <div className="backgroundPS">
       <div className="layoutPS">
         <p className="titlePS">
-          <b>Proven Success</b>
+          <b>{jsonData4[0].projects}</b>
         </p>
-        <p className="subtitlePS">Engineering Energy, Empowering Progress</p>
+        <p className="subtitlePS">{jsonData4[0].projects_sub}</p>
         <div className="carousel-wrapper">
           <AliceCarousel
             renderPrevButton={renderPrevButton}

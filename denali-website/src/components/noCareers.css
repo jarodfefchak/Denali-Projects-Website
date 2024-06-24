@@ -1,13 +1,13 @@
 .contentNC {
   position: relative;
   padding: 150px 100px 100px 100px;
-  margin-top: -20px;
   min-height: 78vh;
   display: flex;
   flex-direction: column;
   align-items: center;
 
 }
+
 
 .contentNC::before {
   content: "";

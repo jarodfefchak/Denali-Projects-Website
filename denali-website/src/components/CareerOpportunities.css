@@ -3,9 +3,10 @@
   display: flex;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 700px;
+  height: 720px;
   background-attachment: fixed;
   position: relative;
+
   z-index: -1;
 }
 
@@ -26,14 +27,13 @@
   flex-direction: row;
   justify-content: space-between;
   padding: 50px;
-  margin-left: 50px;
+  margin-left: 150px;
   margin-right: 150px;
 }
 
 .navBarTextOP {
-  font-size: 14pt;
+  font-size: 1.4vw;
   margin-bottom: 0px;
-  width: 65vw;
 }
 
 .dropdownToggleOP {
@@ -61,6 +61,11 @@
 @media screen and (max-width: 1600px) {
   .navBarOP {
     margin-right: 0px;
+    margin-left: 50px;
+  }
+  .navBarTextOP {
+    font-size: 16pt;
+    margin-bottom: 0px;
   }
 }
 
@@ -73,5 +78,20 @@
     margin-top: 30px;
     margin-bottom: 100px;
     padding: 0px;
+  }
+}
+@media screen and (max-width: 800px){
+  .navBarOP {
+    padding: 50px 25px 50px 25px;
+  }
+}
+@media screen and (max-width: 600px){
+  .navBarTextOP {
+    font-size: 14pt;
+  }
+}
+@media screen and (max-width: 450px) {
+  .navBarOP {
+    padding: 50px 10px 50px 10px;
   }
 }

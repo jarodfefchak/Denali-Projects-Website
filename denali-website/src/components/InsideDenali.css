@@ -93,7 +93,7 @@
   .textID .headerID {
     font-size: 45pt;
     margin-bottom: 20px;
-    order: 1;
+    order: 1; /* Ensure order is explicitly set */
   }
 
   .imgID {
@@ -110,28 +110,7 @@
     font-size: 16pt;
     cursor: pointer;
     margin-top: 20px;
-    order: 4;
-  }
-}
-
-@media screen and (max-width: 900px) {
-  .textID .headerID {
-    margin-top: 20px;
-    font-size: 30pt;
-  }
-  .imgID {
-    width: 50vw;
-    height: 45vh;
-    margin: 50px 30px 50px 30px;
-  }
-  .buttonID {
-    width: 250px;
-    height: 65px;
-    border-radius: 17px;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    font-size: 16pt;
-    cursor: pointer;
+    order: 4; /* Ensure order is explicitly set */
   }
 }
 
@@ -139,26 +118,29 @@
   .contentID {
     display: flex;
     flex-direction: column;
-    text-align: center;
+    align-items: center; /* Added alignment */
+    text-align: center; /* Center text */
   }
 
   .textID p {
+    order: 3; /* Ensure order is explicitly set */
     font-size: 14pt;
   }
 
-  .headerID {
+  .textID .headerID {
     font-size: 25pt;
-    order: 1;
+    order: 1; /* Ensure order is explicitly set */
   }
 
   .imgID {
     width: 60vw;
     height: 50vh;
     margin: 0px 50px 50px 50px;
-    order: 2;
+    order: 2; /* Ensure order is explicitly set */
   }
 
   .buttonID {
+    order: 4; /* Ensure order is explicitly set */
     width: 225px;
     height: 60px;
     border-radius: 15px;
@@ -166,6 +148,7 @@
     cursor: pointer;
   }
 }
+
 
 @media screen and (max-width: 600px) {
   .headerID {

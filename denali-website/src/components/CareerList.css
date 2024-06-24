@@ -1,66 +1,89 @@
 /* CareerList.css */
 .careersCL {
-    margin-left: 200px;
-    margin-right: 200px;
-  }
-  
+  margin-left: 200px;
+  margin-right: 200px;
+}
+
+.postingsCL {
+  margin: 50px;
+}
+.headerCL {
+  font-size: 4vw;
+}
+
+.careerTitleCL {
+  font-size: 2.5vw;
+  font-weight: bold;
+}
+.textCL {
+  font-size: 1.2vw;
+}
+.applyButtonCL {
+  border: none;
+  border-radius: 10px;
+  background: #408697;
+  color: white;
+  padding: 5px;
+  width: 75px;
+  cursor: pointer;
+  font-size: 16pt;
+}
+
+.applyButtonCL:hover {
+  background: #346672;
+}
+@media screen and (max-width: 1600px) {
   .postingsCL {
-    margin: 50px;
+    margin: 50px 0px 50px 0px;
   }
-  .headerCL{
-    font-size: 40pt;
+  .careersCL {
+    margin-left: 100px;
+    margin-right: 100px;
   }
-  
+  .headerCL {
+    font-size: 45pt;
+  }
   .careerTitleCL {
-    font-size: 30px;
-    font-weight: bold;
+    font-size: 30pt;
   }
-  .textCL{
+  .textCL {
     font-size: 14pt;
   }
-  .applyButtonCL {
-    border: none;
-    border-radius: 10px;
-    background: #6e9477;
-    color: white;
-    padding: 5px;
-    width: 75px;
-    cursor: pointer;
-    font-size: 16pt;
+}
+@media screen and (max-width: 1000px) {
+  .careersCL {
+    margin-left: 50px;
+    margin-right: 50px;
   }
-  
-  .applyButtonCL:hover {
-    background: #5b7c61; 
+  .headerCL {
+    font-size: 40pt;
   }
-  @media screen and (max-width: 1600px){
-    .postingsCL {
-        margin: 50px 0px 50px 0px;
-      }
-      .careersCL {
-        margin-left: 100px;
-        margin-right: 100px;
-      }
-      .headerCL{
-        font-size: 35pt;
-      }
-  }
-  @media screen and (max-width: 1000px){
-    
-      .careersCL {
-        margin-left: 50px;
-        margin-right: 50px;
-      }
-      .textCL{
-        font-size: 12pt;
-      }
-       
   .careerTitleCL {
-    font-size:25px;
+    font-size: 27pt;
   }
   .applyButtonCL {
-   
     padding: 5px;
     width: 70px;
     font-size: 14pt;
   }
+}
+@media screen and (max-width: 800px) {
+  .careersCL {
+    margin-left: 25px;
+    margin-right: 25px;
   }
+}
+@media screen and (max-width: 600px) {
+  .headerCL {
+    font-size: 35pt;
+  }
+  .careerTitleCL {
+    font-size: 25pt;
+  }
+}
+@media screen and (max-width: 450px) {
+  .careersCL {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}

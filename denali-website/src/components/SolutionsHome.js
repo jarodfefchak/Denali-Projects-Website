@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Header from './Header';
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import VisibilitySensor from "react-visibility-sensor";
@@ -12,8 +13,8 @@ import Solution7 from "../images/Solutions/Solution7.jpg";
 import Solution8 from "../images/Solutions/Solution8.jpg";
 import Solution9 from "../images/Solutions/Solution9.jpg";
 import axios from "axios";
-
-import "./Solutions.css";
+import "./SolutionsHome.css";
+import Footer from './Footer';
 
 function Solutions() {
   const [visibility, setVisibility] = useState({});
@@ -84,10 +85,13 @@ function Solutions() {
   };
 
   return (
+    <div>
+        <Header/>
     <div style={background}>
       <h1 className="headingS">
         <b>Solutions We Offer</b>
       </h1>
+      <p>Information....</p>
       <motion.div
         className="solutionsS"
         variants={containerVariants}
@@ -121,7 +125,7 @@ function Solutions() {
           </VisibilitySensor>
         ))}
       </motion.div>
-      <div className="buttonContainerS">
+      {/* <div className="buttonContainerS">
         <Link to="/Contact">
           <button
             onMouseEnter={() => setHover(true)}
@@ -131,7 +135,9 @@ function Solutions() {
             Contact Us
           </button>
         </Link>
-      </div>
+      </div> */}
+    </div>
+    <Footer/>
     </div>
   );
 }

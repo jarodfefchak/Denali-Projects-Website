@@ -33,7 +33,6 @@ function InsideDenali() {
             </button>
           </Link>
         </div>
-        <hr></hr>
       </div>
     </div>
   );
@@ -47,3 +46,5 @@ const background = {
   margin: "0px",
   padding: "0px",
 };
+
+

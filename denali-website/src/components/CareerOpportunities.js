@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import axios from 'axios';
 import CareerOpImage from '../images/CareerOpportunities.jpg';
 import Header from './Header';
 import Footer from './Footer';
 import CareerList from './CareerList';
-import NoCareers from './NoCareers'; // Import NoCareers component
-import Dropdown from 'react-bootstrap/Dropdown';
+import NoCareers from './NoCareers'; 
 import './CareerOpportunities.css';
 
 function CareerOpportunities() {
