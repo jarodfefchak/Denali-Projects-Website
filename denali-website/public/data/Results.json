@@ -1,5 +1,14 @@
-[{
-    "projects":"2586",
-    "partnerships":"53",
-    "retention":"96"
-}]
+[
+  {
+    "number": "2586",
+    "category": "Projects to Date"
+  },
+  {
+    "number": "53",
+    "category": "Successful Partnerships"
+  },
+  {
+    "number": "96",
+    "category": "Retention Rate"
+  }
+]
