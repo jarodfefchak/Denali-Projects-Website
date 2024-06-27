@@ -163,8 +163,9 @@ function Apply() {
             projects that shape the future of the energy industry. With a strong
             emphasis on collaboration, sustainability, and excellence, employees
             are empowered to contribute their unique skills and ideas, ensuring
-            a fulfilling and impactful career. Apply at Denali Projects today!
+            a fulfilling and impactful career. Apply at Denali Projects today!<br></br><br></br><b>No Phone Calls Please!</b>
           </p>
+        
         </div>
         <form className="formAP" onSubmit={handleSignup}>
           <p className="inputHeadingAP">

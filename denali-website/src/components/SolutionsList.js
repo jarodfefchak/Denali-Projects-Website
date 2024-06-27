@@ -4,6 +4,7 @@ import "./SolutionsList.css";
 
 function SolutionsList({ solutionId }) {
   const [jsonData, setJsonData] = useState(null);
+  const [jsonData2, setJsonData2] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -18,6 +19,18 @@ function SolutionsList({ solutionId }) {
   }, [solutionId]);
 
   useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(`/data/Solutions/paragraphs.json`);
+        setJsonData2(response.data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+    fetchData();
+  }, []);
+
+  useEffect(() => {
     if (jsonData) {
       document.title = `${jsonData[0].section} - Denali Projects`;
     }
@@ -26,11 +39,15 @@ function SolutionsList({ solutionId }) {
   if (!jsonData) {
     return <p>Loading data...</p>;
   }
+  if (!jsonData2) {
+    return <p>Loading data...</p>;
+  }
 
   return (
     <div>
       <h2>{jsonData[0].section}</h2>
       <br />
+      <p className="textSL" >{jsonData2[0][solutionId]}</p>
       <div className="projectSL">
         {jsonData.map((project, index) => (
           <div key={index} className="informationSL">

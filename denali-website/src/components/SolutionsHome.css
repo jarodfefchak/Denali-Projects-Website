@@ -1,33 +1,39 @@
-.headingS {
+.headingSH {
     margin-left: 100px;
-    margin-top: 150px;
+    margin-top: 200px;
     margin-bottom: 25px;
     font-size: 4.5vw;
   }
+  .descriptionSH{
+    margin:25px 100px 25px 100px;
+    font-size: 18pt;
+  }
   
-  .solutionsS {
+  .solutionsSH {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin: 20px;
+    margin-bottom: 150px;
+    margin-top: 50px;
   }
   
-  .imageContainerS {
+  .imageContainerSH {
     position: relative;
     margin: 30px;
   }
   
-  .imgS {
+  .imgSH {
     height: 41vh;
     width: 24vw;
     object-fit: cover;
   }
-  .imgS:hover {
+  .imgSH:hover {
     opacity: 0.5;
     cursor: pointer;
   }
   
-  .textS {
+  .textSH {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -39,7 +45,7 @@
     box-sizing: border-box;
   }
   
-  .buttonContainerS {
+  .buttonContainerSH {
     display: flex;
     justify-content: center;
     width: 100%;
@@ -47,7 +53,7 @@
     margin-bottom: 20px;
   }
   
-  .buttonS {
+  .buttonSH {
     color: white;
     background-color: #408697;
     border: 0px;
@@ -58,27 +64,27 @@
     cursor: pointer;
   }
   
-  .button-hoverS {
+  .button-hoverSH {
     box-shadow: 1px 1px 20px #000000;
   }
   
   @media screen and (max-width: 1600px) {
-    .headingS {
+    .headingSH {
       font-size: 50pt;
     }
   }
   @media screen and (max-width: 1350px) {
-    .imgS {
+    .imgSH {
       height: 37vh;
     }
   }
   
   @media screen and (max-width: 1200px) {
-    .imgS {
+    .imgSH {
       height: 275px;
       width: 275px;
     }
-    .buttonS {
+    .buttonSH {
       width: 350px;
       height: 80px;
       border-radius: 20px;
@@ -86,27 +92,27 @@
     }
   }
   @media screen and (max-width: 1075px) {
-    .imageContainerS {
+    .imageContainerSH {
       margin: 10px;
     }
   }
   @media screen and (max-width: 1000px) {
-    .headingS {
+    .headingSH {
       font-size: 45pt;
     }
   }
   
   @media screen and (max-width: 950px) {
-    .imgS {
+    .imgSH {
       height: 27vw;
       width: 27vw;
     }
-    .textS {
+    .textSH {
       font-size: 14pt;
     }
   }
   @media screen and (max-width: 900px) {
-    .headingS {
+    .headingSH {
       margin-left: 45px;
       margin-top: 50px;
       margin-bottom: 25px;
@@ -114,14 +120,14 @@
     }
   }
   @media screen and (max-width: 800px) {
-    .imgS {
+    .imgSH {
       height: 35vw;
       width: 75vw;
     }
-    .imageContainerS {
+    .imageContainerSH {
       margin-bottom: 20px;
     }
-    .buttonS {
+    .buttonSH {
       width: 300px;
       height: 65px;
       border-radius: 18px;
@@ -129,22 +135,22 @@
     }
   } 
   @media screen and (max-width: 750px) {
-    .headingS {
+    .headingSH {
       font-size: 35pt;
     }
   }
   @media screen and (max-width: 600px) {
-    .headingS {
+    .headingSH {
       text-align: center;
       margin-left: 10px;
       margin-right: 10px;
     }
   
-    .imgS {
+    .imgSH {
       height: 45vw;
       width: 75vw;
     }
-    .buttonS {
+    .buttonSH {
       width: 225px;
       height: 50px;
       border-radius: 16px;
@@ -152,16 +158,16 @@
     }
   } 
   @media screen and (max-width: 500px) {
-    .headingS {
+    .headingSH {
       font-size: 30pt;
     }
   }
   @media screen and (max-width: 450px) {
-    .imgS {
+    .imgSH {
       height: 225px;
       width: 350px;
     }
-    .buttonS {
+    .buttonSH {
       width: 200px;
       height: 50px;
       border-radius: 14px;
@@ -169,18 +175,18 @@
     }
   } 
   @media screen and (max-width: 400px) {
-    .imgS {
+    .imgSH {
       width: 300px;
     }
-    .textS {
+    .textSH {
       font-size: 12pt;
     }
   } 
   @media screen and (max-width: 350px) {
-    .imgS {
+    .imgSH {
       width: 250px;
     }
-    .buttonS {
+    .buttonSH {
       width: 150px;
       height: 50px;
       border-radius: 12px;
@@ -188,7 +194,7 @@
     }
   } 
   @media screen and (max-width: 300px) {
-    .imgS {
+    .imgSH {
       width: 225px;
     }
   } 

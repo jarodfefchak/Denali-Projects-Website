@@ -10,7 +10,7 @@ function NoCareers() {
       <div className="contentNC">
         <p className="textNC">
           There are no Career Opportunities at the moment. If you believe you
-          would be a great fit for our team, please contact us.
+          would be a great fit for our team, please send us a copy of your resume.
         </p>
         <Link to="/Contact">
           <button
@@ -18,7 +18,7 @@ function NoCareers() {
             onMouseLeave={() => setHover(false)}
             className={`buttonNC ${hover ? "button-hoverNC" : ""}`}
           >
-            Contact Us
+            Send Us Your Resume
           </button>
         </Link>
       </div>

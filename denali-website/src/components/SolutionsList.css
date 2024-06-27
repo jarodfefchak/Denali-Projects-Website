@@ -2,7 +2,10 @@
     display: flex;
     flex-direction: column;
   }
-  
+.textSL{
+  margin-bottom: 40px;
+  margin-top: 20px;
+}
   .informationSL {
     margin-top: 25px;
     margin-bottom: 20px;
