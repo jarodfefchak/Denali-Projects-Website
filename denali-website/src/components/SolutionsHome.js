@@ -9,6 +9,9 @@ import Solution3 from "../images/Solutions/Solution3.jpg";
 import Solution4 from "../images/Solutions/Solution4.jpg";
 import Solution5 from "../images/Solutions/Solution5.jpg";
 import Solution6 from "../images/Solutions/Solution6.jpg";
+// import Solution7 from "../images/Solutions/Solution7.jpg";
+// import Solution8 from "../images/Solutions/Solution8.jpg";
+// import Solution9 from "../images/Solutions/Solution9.jpg";
 import axios from "axios";
 import "./SolutionsHome.css";
 import Footer from "./Footer";
@@ -83,6 +86,9 @@ function Solutions() {
     { src: Solution4, alt: "Solution 4" },
     { src: Solution5, alt: "Solution 5" },
     { src: Solution6, alt: "Solution 6" },
+    // { src: Solution4, alt: "Solution 7" },
+    // { src: Solution5, alt: "Solution 8" },
+    // { src: Solution6, alt: "Solution 9" },
   ];
 
   const containerVariants = {
