@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import NoCareers from "./NoCareers";
+
 import { Link } from "react-router-dom";
 import "./CareerList.css";
 
 function CareerList() {
   const [jsonData, setJsonData] = useState(null);
+  const [jsonData2, setJsonData2] = useState(null);
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -19,18 +21,32 @@ function CareerList() {
 
     fetchData();
   }, []);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get("/data/Headings.json");
+        setJsonData2(response.data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   if (!jsonData) {
     return <p>Loading data...</p>;
   }
 
-  if (Object.keys(jsonData).length === 0) {
-    return <NoCareers />;
+  if (!jsonData2) {
+    return <p>Loading data...</p>;
   }
+
+
 
   return (
     <div className="careersCL">
-      <h1 className="headerCL">Current Postings</h1>
+      <h1 className="headerCL">{jsonData2[0].careerPage}</h1>
       <div className="postingsCL">
         {jsonData.map((career) => (
           <div key={career.id} className="careerItemCL">

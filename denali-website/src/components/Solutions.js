@@ -8,9 +8,9 @@ import Solution3 from "../images/Solutions/Solution3.jpg";
 import Solution4 from "../images/Solutions/Solution4.jpg";
 import Solution5 from "../images/Solutions/Solution5.jpg";
 import Solution6 from "../images/Solutions/Solution6.jpg";
-import Solution7 from "../images/Solutions/Solution7.jpg";
-import Solution8 from "../images/Solutions/Solution8.jpg";
-import Solution9 from "../images/Solutions/Solution9.jpg";
+// import Solution7 from "../images/Solutions/Solution7.jpg";
+// import Solution8 from "../images/Solutions/Solution8.jpg";
+// import Solution9 from "../images/Solutions/Solution9.jpg";
 import axios from "axios";
 
 import "./Solutions.css";
@@ -19,6 +19,7 @@ function Solutions() {
   const [visibility, setVisibility] = useState({});
   const [hover, setHover] = useState(false);
   const [jsonData, setJsonData] = useState([]);
+  const [jsonData2, setJsonData2] = useState([]);
   const [loading, setLoading] = useState(true);
 
   const handleVisibilityChange = (index, isVisible) => {
@@ -41,6 +42,17 @@ function Solutions() {
         console.error("Error fetching data:", error);
       } finally {
         setLoading(false);
+      }
+    };
+    fetchData();
+  }, []);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(`/data/Headings.json`);
+        setJsonData2(response.data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
       }
     };
     fetchData();
@@ -86,7 +98,7 @@ function Solutions() {
   return (
     <div style={background}>
       <h1 className="headingS">
-        <b>Solutions We Offer</b>
+        <b>{jsonData2[0]?.solutions}</b>
       </h1>
       <motion.div
         className="solutionsS"

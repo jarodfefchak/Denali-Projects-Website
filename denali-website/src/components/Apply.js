@@ -3,19 +3,11 @@ import { useParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import Header from "./Header";
 import Footer from "./Footer";
+import axios from "axios";
 import "./Apply.css";
 
 function Apply() {
-  const { jobTitle } = useParams();
-
-  useEffect(() => {
-    document.title = "Apply - Denali Projects";
-  }, []);
-
-  useEffect(() => {
-    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
-  }, []);
-
+  const [jsonData, setJsonData] = useState(null);
   const [isFormValid, setIsFormValid] = useState(false);
   const [FLname, setFLname] = useState("");
   const [email, setEmail] = useState("");
@@ -35,6 +27,22 @@ function Apply() {
   const [show2, setShow2] = useState(false);
   const [show3, setShow3] = useState(false);
 
+  const checkFormValidity = () => {
+    if (
+      FLname.trim() !== "" &&
+      email.trim() !== "" &&
+      address1.trim() !== "" &&
+      city.trim() !== "" &&
+      province.trim() !== "" &&
+      postalCode.trim() !== "" &&
+      resume !== null
+    ) {
+      setIsFormValid(true);
+    } else {
+      setIsFormValid(false);
+    }
+  };
+
   useEffect(() => {
     checkFormValidity();
   }, [
@@ -48,6 +56,32 @@ function Apply() {
     resume,
     isValidPhoneNumber,
   ]);
+
+  const { jobTitle } = useParams();
+
+  useEffect(() => {
+    document.title = "Apply - Denali Projects";
+  }, []);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+  }, []);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(`/data/Text.json`);
+        setJsonData(response.data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+    fetchData();
+  }, []);
+
+  if (!jsonData) {
+    return <p>Loading data...</p>;
+  }
 
   const handleNameChange = (event) => {
     setFLname(event.target.value);
@@ -109,22 +143,6 @@ function Apply() {
     setValidPhoneNumber(regex.test(phone));
   };
 
-  const checkFormValidity = () => {
-    if (
-      FLname.trim() !== "" &&
-      email.trim() !== "" &&
-      address1.trim() !== "" &&
-      city.trim() !== "" &&
-      province.trim() !== "" &&
-      postalCode.trim() !== "" &&
-      resume !== null
-    ) {
-      setIsFormValid(true);
-    } else {
-      setIsFormValid(false);
-    }
-  };
-
   const handleSignup = (event) => {
     event.preventDefault();
     if (!isValidPhoneNumber) {
@@ -158,18 +176,13 @@ function Apply() {
         <div className="contentAP">
           <p className="headerAP">Apply to {decodeURIComponent(jobTitle)}</p>
           <p className="textAP">
-            Denali Projects offers exciting opportunities for professional
-            growth, allowing individuals to work on elaborate and complex
-            projects that shape the future of the energy industry. With a strong
-            emphasis on collaboration, sustainability, and excellence, employees
-            are empowered to contribute their unique skills and ideas, ensuring
-            a fulfilling and impactful career. Apply at Denali Projects today!<br></br><br></br><b>No Phone Calls Please!</b>
+           <br></br>{jsonData[0].apply}<br></br><br></br><b>No Phone Calls Please!</b>
           </p>
         
         </div>
         <form className="formAP" onSubmit={handleSignup}>
           <p className="inputHeadingAP">
-            Personal Details
+            Personal Details <span style ={{color:"red"}}>*</span>
           </p>
           <label className="labelAP">
             <input
@@ -192,7 +205,7 @@ function Apply() {
             />
           </label>
           <p className="inputHeadingAP ">
-            Contact Details
+            Contact Details <span style ={{color:"red"}}>*</span>
           </p>
           <label className="labelAP">
             <input
@@ -244,7 +257,7 @@ function Apply() {
             />
           </label>
           <p className="inputHeadingAP ">
-            Phone
+            Phone <span style ={{color:"red"}}>*</span>
           </p>
           <label className="longlabelAP">
             <input
@@ -266,11 +279,10 @@ function Apply() {
               type="text"
               value={APEGA}
               onChange={handleAPEGAChange}
-              placeholder="Optional"
             />
           </label>
           <p className="inputHeadingAP ">
-            Do you currently reside in Alberta?
+            Do you currently reside in Alberta? <span style ={{color:"red"}}>*</span>
           </p>
           <label className="longlabelAP">
             <select
@@ -284,7 +296,7 @@ function Apply() {
             </select>
           </label>
           <p className="inputHeadingAP ">
-            Are you legally entitled to work in Canada?
+            Are you legally entitled to work in Canada? <span style ={{color:"red"}}>*</span>
           </p>
           <label className="longlabelAP">
             <select
@@ -306,11 +318,10 @@ function Apply() {
               type="url"
               value={url}
               onChange={handleUrlChange}
-              placeholder="Optional"
             />
           </label>
           <p className="inputHeadingAP ">
-            Resume
+            Resume <span style ={{color:"red"}}>*</span>
           </p>
           <label className="resumeButton">
             <input
@@ -386,3 +397,4 @@ function Apply() {
 }
 
 export default Apply;
+

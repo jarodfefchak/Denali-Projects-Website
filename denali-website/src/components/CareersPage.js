@@ -1,25 +1,48 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 import "./CareersPage.css"
 
 const CareersPage = () => {
   const [hover, setHover] = useState(false);
-
+  const [jsonData, setJsonData] = useState(null);
+    const [jsonData2, setJsonData2] = useState(null);
+    useEffect(() => {
+      const fetchData = async () => {
+        try {
+          const response = await axios.get(`/data/Headings.json`);
+          setJsonData(response.data);
+        } catch (error) {
+          console.error("Error fetching data:", error);
+        }
+      };
+      fetchData();
+    }, []);
+  
+    useEffect(() => {
+      const fetchData = async () => {
+        try {
+          const response = await axios.get(`/data/Text.json`);
+          setJsonData2(response.data);
+        } catch (error) {
+          console.error("Error fetching data:", error);
+        }
+      };
+      fetchData();
+    }, []);
+  
+    if (!jsonData || !jsonData2) {
+      return <p>Loading data...</p>;
+    }
   return (
     <div style ={background}>
       <div className="text">
         <p className="header">
-          <b>Your Future With Denali</b>
+          <b>{jsonData[0].homeCareer}</b>
         </p>
-        <p>Let's build the future of energy together.</p>
+        <p>{jsonData2[0].futureTextLine1}</p>
         <p>
-          Are you ready to power up your career with a dynamic and innovative
-          company in the energy sector? At Denali, you will work on exciting
-          projects that drive sustainable solutions, collaborate with industry
-          experts, and grow your career in a supportive and forward-thinking
-          environment. If you're passionate about making a real impact and eager
-          to be a part of a company that values creativity, integrity, and
-          excellence, Denali is the perfect place for you.
+        {jsonData2[0].futureTextLine2}
         </p>
       </div>
       <Link to="/CareerOpportunities">

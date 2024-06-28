@@ -1,18 +1,47 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from "react";
 import CountUp from 'react-countup';
 import VisibilitySensor from 'react-visibility-sensor';
+import axios from 'axios';
 import './Results.css';
 
 function Results() {
     const [hasBeenVisible, setHasBeenVisible] = useState({ first: false, second: false, third: false });
-
+    const [jsonData, setJsonData] = useState(null);
+    const [jsonData2, setJsonData2] = useState(null);
+    useEffect(() => {
+        const fetchData = async () => {
+          try {
+            const response = await axios.get(`/data/Headings.json`);
+            setJsonData(response.data);
+          } catch (error) {
+            console.error("Error fetching data:", error);
+          }
+        };
+        fetchData();
+      }, []);
+    
+      useEffect(() => {
+        const fetchData = async () => {
+          try {
+            const response = await axios.get(`/data/Results.json`);
+            setJsonData2(response.data);
+          } catch (error) {
+            console.error("Error fetching data:", error);
+          }
+        };
+        fetchData();
+      }, []);
+    
+      if (!jsonData || !jsonData2) {
+        return <p>Loading data...</p>;
+      }
     return (
         <div style={background}>
-            <p className="titleR"><b>Our Results</b></p>
+            <p className="titleR"><b>{jsonData[0].results}</b></p>
             <div className="statsR">
                 <div className="counterR">
                     <div className="countR">
-                        <CountUp end={hasBeenVisible.first ? 2586 : 0} duration={6}>
+                        <CountUp end={hasBeenVisible.first ? jsonData2[0].number : 0} duration={20}>
                             {({ countUpRef, start }) => (
                                 <VisibilitySensor
                                     onChange={(isVisible) => {
@@ -30,11 +59,11 @@ function Results() {
                             )}
                         </CountUp>
                     </div>
-                    <p className="descriptionR">Projects to Date</p>
+                    <p className="descriptionR">{jsonData2[0].category}</p>
                 </div>
                 <div className="counterR">
                     <div className="countR">
-                        <CountUp end={hasBeenVisible.second ? 53 : 0} duration={4}>
+                        <CountUp end={hasBeenVisible.second ? jsonData2[1].number : 0} duration={6}>
                             {({ countUpRef, start }) => (
                                 <VisibilitySensor
                                     onChange={(isVisible) => {
@@ -52,11 +81,11 @@ function Results() {
                             )}
                         </CountUp>
                     </div>
-                    <p className="descriptionR">Successful Partnerships</p>
+                    <p className="descriptionR">{jsonData2[1].category}</p>
                 </div>
                 <div className="counterR">
                     <div className="countR">
-                        <CountUp end={hasBeenVisible.third ? 96 : 0} duration={6} formattingFn={(value) => `${value}%`}>
+                        <CountUp end={hasBeenVisible.third ? jsonData2[2].number : 0} duration={8} formattingFn={(value) => `${value}%`}>
                             {({ countUpRef, start }) => (
                                 <VisibilitySensor
                                     onChange={(isVisible) => {
@@ -74,7 +103,7 @@ function Results() {
                             )}
                         </CountUp>
                     </div>
-                    <p className="descriptionR">Retention Rate</p>
+                    <p className="descriptionR">{jsonData2[2].category}</p>
                 </div>
             </div>
         </div>

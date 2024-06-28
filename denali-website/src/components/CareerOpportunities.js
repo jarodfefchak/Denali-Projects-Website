@@ -13,12 +13,26 @@ function CareerOpportunities() {
     }, []);
 
     const [jsonData, setJsonData] = useState(null);
+    const [jsonData2, setJsonData2] = useState(null);
 
     useEffect(() => {
         const fetchData = async () => {
             try {
                 const response = await axios.get('/data/Careers.json'); // Adjust the path if necessary
                 setJsonData(response.data);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        };
+
+        fetchData();
+    }, []);
+    
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await axios.get('/data/Text.json'); // Adjust the path if necessary
+                setJsonData2(response.data);
             } catch (error) {
                 console.error('Error fetching data:', error);
             }
@@ -49,24 +63,8 @@ function CareerOpportunities() {
             <div className="contentOP">
                 <div className="navBarOP">
                     <p className="navBarTextOP">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Nullam euismod, velit eu tincidunt bibendum, justo nunc lacinia libero, nec dignissim odio nisl vel justo.
-                        Fusce vel metus nec purus tincidunt rhoncus.
-                        Vivamus euismod, urna in vestibulum aliquet, sapien odio tincidunt libero, et ultrices justo elit ut nunc.
+                        {jsonData2 && jsonData2.length > 0 ? jsonData2[0].currentPostings : 'No current postings available.'}
                     </p>
-                    {/* <Dropdown>
-                        <Dropdown.Toggle className="dropdownToggleOP" variant="success" id="dropdown-basicOP">
-                            Job Postings
-                        </Dropdown.Toggle>
-                        <Dropdown.Menu className="dropdownMenuOP">
-                            {jsonData &&
-                                jsonData.map((career) => (
-                                    <Dropdown.Item key={career.id} href={`#/career/${career.title}`}>
-                                        {career.title}
-                                    </Dropdown.Item>
-                                ))}
-                        </Dropdown.Menu>
-                    </Dropdown> */}
                 </div>
                 <div className="jobListingsOP">
                     <CareerList />
@@ -78,5 +76,6 @@ function CareerOpportunities() {
 }
 
 export default CareerOpportunities;
+
 
 

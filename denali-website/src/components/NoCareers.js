@@ -1,18 +1,35 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import axios from 'axios';
 import "./noCareers.css";
 
 function NoCareers() {
   const [hover, setHover] = useState(false);
+  const [jsonData, setJsonData] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(`/data/Text.json`);
+        setJsonData(response.data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+    fetchData();
+  }, []);
+
+  if (!jsonData) {
+    return <p>Loading data...</p>;
+  }
 
   return (
     <div>
       <div className="contentNC">
         <p className="textNC">
-          There are no Career Opportunities at the moment. If you believe you
-          would be a great fit for our team, please send us a copy of your resume.
+          {jsonData[0].noPostings}
         </p>
-        <Link to="/Contact">
+        <Link to="/SendResume">
           <button
             onMouseEnter={() => setHover(true)}
             onMouseLeave={() => setHover(false)}

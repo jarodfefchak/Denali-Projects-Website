@@ -1,10 +1,41 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import InsideImage from "../images/InsideDenali.jpg";
 import { Link } from "react-router-dom";
+import axios from 'axios';
 import "./InsideDenali.css";
 
 function InsideDenali() {
   const [hover, setHover] = useState(false);
+  const [jsonData, setJsonData] = useState(null);
+  const [jsonData2, setJsonData2] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(`/data/Headings.json`);
+        setJsonData(response.data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+    fetchData();
+  }, []);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(`/data/Text.json`);
+        setJsonData2(response.data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+    fetchData();
+  }, []);
+
+  if (!jsonData || !jsonData2) {
+    return <p>Loading data...</p>;
+  }
 
   return (
     <div style={background}>
@@ -12,16 +43,10 @@ function InsideDenali() {
         <img src={InsideImage} alt="inside denali" className="imgID" />
         <div className="textID">
           <p className="headerID">
-            <b>Inside Denali </b>
+            <b>{jsonData[0].inside} </b>
           </p>
           <p>
-            Founded in 2016, Denali Projects has been dedicated to delivering
-            top-tier project management and engineering solutions in the energy
-            industry. We prioritize client satisfaction by fostering strong
-            partnerships and delivering projects that meet the highest
-            standards of quality and safety. Our mission is to turn complex
-            challenges into successful outcomes, making us a trusted partner in
-            the EPC industry.
+           {jsonData2[0].insideText}
           </p>
           <Link to="/AboutUs">
             <button

@@ -16,6 +16,7 @@ import SolutionsDisplay from './components/SolutionsDisplay';
 import SolutionsHome from './components/SolutionsHome';
 import SolutionsList from './components/SolutionsList';
 import NoCareers from './components/NoCareers';
+import SendResume from './components/sendResume';
 
 import{ BrowserRouter, Routes, Route} from 'react-router-dom';
 
@@ -41,6 +42,7 @@ function App() {
     <Route path="/SolutionsList/:solutionId" element={<SolutionsList/>} />
     <Route path ="/NoCareers" element = {<NoCareers/>}/> 
     <Route path ="/SolutionsHome" element = {<SolutionsHome/>}/> 
+    <Route path ="/SendResume" element = {<SendResume/>}/> 
 
   </Routes>
   </BrowserRouter>
