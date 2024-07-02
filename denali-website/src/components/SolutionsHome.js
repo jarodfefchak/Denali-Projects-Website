@@ -9,9 +9,6 @@ import Solution3 from "../images/Solutions/Solution3.jpg";
 import Solution4 from "../images/Solutions/Solution4.jpg";
 import Solution5 from "../images/Solutions/Solution5.jpg";
 import Solution6 from "../images/Solutions/Solution6.jpg";
-// import Solution7 from "../images/Solutions/Solution7.jpg";
-// import Solution8 from "../images/Solutions/Solution8.jpg";
-// import Solution9 from "../images/Solutions/Solution9.jpg";
 import axios from "axios";
 import "./SolutionsHome.css";
 import Footer from "./Footer";
@@ -28,6 +25,7 @@ function Solutions() {
       setVisibility((prev) => ({ ...prev, [index]: true }));
     }
   };
+
   useEffect(() => {
     document.title = "Solutions - Denali Projects";
   }, []);
@@ -36,7 +34,7 @@ function Solutions() {
     const fetchData = async () => {
       try {
         const promises = [];
-        for (let i = 1; i <= 9; i++) {
+        for (let i = 1; i <= 6; i++) {
           promises.push(axios.get(`/data/Solutions/Solution${i}.json`));
         }
         const responses = await Promise.all(promises);
@@ -86,9 +84,6 @@ function Solutions() {
     { src: Solution4, alt: "Solution 4" },
     { src: Solution5, alt: "Solution 5" },
     { src: Solution6, alt: "Solution 6" },
-    // { src: Solution4, alt: "Solution 7" },
-    // { src: Solution5, alt: "Solution 8" },
-    // { src: Solution6, alt: "Solution 9" },
   ];
 
   const containerVariants = {
@@ -131,14 +126,13 @@ function Solutions() {
           {images.map((image, index) => (
             <VisibilitySensor
               key={index}
-              onChange={(isVisible) => handleVisibilityChange(index, isVisible)}
               partialVisibility
             >
               {({ isVisible }) => (
                 <motion.div
                   variants={itemVariants}
                   initial="hidden"
-                  animate={visibility[index] ? "visible" : "hidden"}
+                  animate={isVisible ? "visible" : "hidden"}
                   className="imageContainerSH"
                 >
                   <Link to={`/SolutionsDisplay/${index + 1}`}>
@@ -147,6 +141,11 @@ function Solutions() {
                       alt={image.alt}
                       className="imgSH"
                       loading="lazy"
+                      ref={imageRef => {
+                        if (imageRef && isVisible) {
+                          handleVisibilityChange(index, true);
+                        }
+                      }}
                     />
                     <p className="textSH">{jsonData[index][0].section}</p>
                   </Link>
