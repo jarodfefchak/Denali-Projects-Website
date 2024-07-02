@@ -5,7 +5,7 @@ import Footer from "./Footer";
 import axios from "axios";
 import "./sendResume.css";
 
-function Apply() {
+function SendResume() {
   const [jsonData, setJsonData] = useState(null);
   const [isFormValid, setIsFormValid] = useState(false);
   const [FLname, setFLname] = useState("");
@@ -13,7 +13,6 @@ function Apply() {
   const [phone, setPhone] = useState("");
   const [isValidPhoneNumber, setValidPhoneNumber] = useState(false);
   const [resume, setResume] = useState(null);
-  const [show, setShow] = useState(false);
   const [show2, setShow2] = useState(false);
   const [show3, setShow3] = useState(false);
 
@@ -71,7 +70,6 @@ function Apply() {
     setEmail(event.target.value);
   };
 
-  
   const handlePhoneChange = (event) => {
     const phoneNumber = event.target.value;
     validPhoneNumber(phoneNumber);
@@ -88,19 +86,12 @@ function Apply() {
 
   const handleSignup = (event) => {
     event.preventDefault();
-    if (!isValidPhoneNumber) {
-      setShow(true);
-    }
-    if (!isFormValid) {
+    if (!isFormValid || !isValidPhoneNumber) {
       setShow2(true);
     }
-    if (isFormValid && isValidPhoneNumber) {
+   else {
       setShow3(true);
     }
-  };
-
-  const closeAlert = () => {
-    setShow(false);
   };
 
   const closeAlert2 = () => {
@@ -174,25 +165,7 @@ function Apply() {
             Submit
           </button>
         </form>
-        {show && (
-          <motion.div
-            className="custom-alert-overlaySR"
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              opacity: { duration: 0.4 },
-              y: { duration: 0.5, ease: "easeOut" },
-            }}
-          >
-            <div className="custom-alert-overlaySR">
-              <div className="custom-alerSR">
-                <p>Please input a valid phone number.</p>
-                <button onClick={closeAlert}>Close</button>
-              </div>
-            </div>
-          </motion.div>
-        )}
-        {show2 && !show && (
+        {show2 && (
           <motion.div
             className="custom-alert-overlaySR"
             initial={{ opacity: 0, y: 40 }}
@@ -204,7 +177,8 @@ function Apply() {
           >
             <div className="custom-alert-overlaySR">
               <div className="custom-alertSR">
-                <p>Please fill in all fields.</p>
+                <p>Please fill in all fields write out the Phone Number in one of the following formats:
+                </p>
                 <button onClick={closeAlert2}>Close</button>
               </div>
             </div>
@@ -234,4 +208,4 @@ function Apply() {
   );
 }
 
-export default Apply;
+export default SendResume;
