@@ -2,33 +2,12 @@ import React, { useEffect, useState, useRef } from "react";
 import { Link, useLocation } from 'react-router-dom';
 import Logo from '../images/Logos/Denali_Logo_White_Transparent_BG.png';
 import './header.css';
-import axios from "axios";
 
 function Header({ onLinkClick }) {
-  const [jsonData, setJsonData] = useState([]);
-  const [loading, setLoading] = useState(true);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const location = useLocation();
   const dropdownRef = useRef(null);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const promises = [];
-        for (let i = 1; i <= 9; i++) {
-          promises.push(axios.get(`/data/Solutions/Solution${i}.json`));
-        }
-        const responses = await Promise.all(promises);
-        const data = responses.map(response => response.data);
-        setJsonData(data);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchData();
-  }, []);
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
@@ -61,20 +40,16 @@ function Header({ onLinkClick }) {
     }
   }, [isDropdownOpen]);
 
-  if (loading) {
-    return <p>Loading data...</p>;
-  }
-
   return (
     <div className="navbar">
-      <Link to="/#HomeMainSection" onClick={onLinkClick}>
+      <Link to="/" onClick={onLinkClick}>
         <img src={Logo} alt="Logo" height="75px" className="Denali-Logo" />
       </Link>
       <div className="link-container">
         <Link
-          to="/#HomeMainSection"
+          to="/"
           id="link1"
-          className={`nav-link ${location.hash === '#HomeMainSection' || location.pathname === '/' ? 'active' : ''}`}
+          className={`nav-link ${location.pathname === '/' ? 'active' : ''}`}
           onClick={onLinkClick}
         >
           Home
@@ -104,7 +79,10 @@ function Header({ onLinkClick }) {
           Contact
         </Link>
       </div>
-      <div className="menu-icon" onClick={toggleDropdown}>
+      <div
+        className={`menu-icon ${isDropdownOpen ? 'open' : ''}`}
+        onClick={toggleDropdown}
+      >
         {isDropdownOpen ? '✖' : '☰'}
       </div>
       <div ref={dropdownRef} className={`mobile-dropdown-menu ${isDropdownOpen ? 'open' : ''}`}>

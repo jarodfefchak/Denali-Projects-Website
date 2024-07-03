@@ -149,7 +149,7 @@
 
 @media (max-height: 750px) {
   .menu-icon {
-    font-size: 20pt;
+    font-size: 25pt;
   }
   .Denali-Logo {
     height: 45px;
@@ -159,6 +159,6 @@
     display: flex;
   }
   .nav-link{
-    font-size: 12pt;
+    font-size: 14pt;
   }
 }
