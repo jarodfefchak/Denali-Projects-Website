@@ -147,12 +147,12 @@
   }
 }
 
-/* @media (max-height: 750px) {
+@media (max-height: 750px) {
   .menu-icon {
     font-size: 20pt;
   }
   .Denali-Logo {
-    height: 40px;
+    height: 45px;
   }
   .mobile-dropdown-menu {
     margin-top: 70px;
@@ -161,10 +161,4 @@
   .nav-link{
     font-size: 12pt;
   }
-  .menu-icon {
-    font-size: 16pt;
-  }
-  .dropdown-menu {
-    font-size: 10pt;
-  }
-} */
+}
