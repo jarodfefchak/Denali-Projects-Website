@@ -77,13 +77,13 @@
 @media screen and (max-width: 1000px) {
   .contentID {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
   }
 
   .textID {
-    order: 3;
-    text-align: center;
+    text-align: left;
+    margin: 75px 50px 0px 50px;
   }
 
   .textID p {
@@ -93,14 +93,14 @@
   .textID .headerID {
     font-size: 45pt;
     margin-bottom: 20px;
-    order: 1; /* Ensure order is explicitly set */
   }
 
   .imgID {
-    width: 80vw;
+    width: 100%;
     height: 50vh;
-    margin: 0;
-    order: 2;
+    padding: 0px 50px 0px 50px;
+    margin-top: 0px;
+    margin-bottom: 0px;
   }
 
   .buttonID {
@@ -110,37 +110,20 @@
     font-size: 16pt;
     cursor: pointer;
     margin-top: 20px;
-    order: 4; /* Ensure order is explicitly set */
+    order: 1; 
   }
 }
 
 @media screen and (max-width: 750px) {
-  .contentID {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Added alignment */
-    text-align: center; /* Center text */
-  }
-
   .textID p {
-    order: 3; /* Ensure order is explicitly set */
     font-size: 14pt;
   }
 
   .textID .headerID {
     font-size: 25pt;
-    order: 1; /* Ensure order is explicitly set */
-  }
-
-  .imgID {
-    width: 60vw;
-    height: 50vh;
-    margin: 0px 50px 50px 50px;
-    order: 2; /* Ensure order is explicitly set */
   }
 
   .buttonID {
-    order: 4; /* Ensure order is explicitly set */
     width: 225px;
     height: 60px;
     border-radius: 15px;
@@ -149,16 +132,9 @@
   }
 }
 
-
 @media screen and (max-width: 600px) {
   .headerID {
     font-size: 20pt;
-  }
-  .imgID {
-    width: 60vw;
-    height: 45vh;
-    margin: 0px 30px 50px 30px;
-    order: 2;
   }
   .buttonID {
     width: 225px;
@@ -170,9 +146,6 @@
 }
 
 @media screen and (max-width: 500px) {
-  .imgID {
-    display: none;
-  }
   .buttonID {
     margin-bottom: 40px;
   }

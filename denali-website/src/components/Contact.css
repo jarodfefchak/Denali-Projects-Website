@@ -221,9 +221,7 @@
     .iframe-containerC iframe {
       min-height: 400px;
     }
-    .textareaC {
-      height: 200px;
-    }
+    
     .iframe-containerC {
       width: 100%;
     }
@@ -233,25 +231,25 @@
       margin-bottom: 0%;
     }
     .textC {
-      margin-top: 175px;
+      margin-top: 150px;
       margin-left:25px;
       margin-right:25px;
     }
     .input-shortC {
-      width: 65vw;
+      width: 80vw;
     }
     
     .input-longC {
-      width:65vw;
+      width:80vw;
     }
     .textareaC {
-      width: 65vw;
+      width: 80vw;
     }
     
   }
   @media screen and (max-width: 450px) {
     .iframe-containerC iframe {
-      min-height: 30vh;
+      min-height: 45vh;
     }
     .textC, .iframe-containerC {
       font-size: 18px;
@@ -265,13 +263,13 @@
   }
   @media screen and (max-width: 400px) {
     .iframe-containerC iframe {
-      min-height: 25vh;
+      min-height: 35vh;
     }
   
   }
   @media screen and (max-width: 350px) {
     .iframe-containerC iframe {
-      min-height: 20vh;
+      min-height: 30vh;
     }
   
   }

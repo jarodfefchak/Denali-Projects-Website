@@ -1,6 +1,6 @@
 .headImageHM {
   background-image: url('../images/Home_Page.jpg');
-  background-size:cover;
+  background-size:auto;
   background-attachment: fixed;
   background-repeat: no-repeat;
   height: 100vh;
@@ -83,9 +83,6 @@
 @media screen and (max-width: 1000px) and (min-height: 1100px) {
   .headImageHM p{
     font-size: 55pt;
-  }
-  .headImageHM {
-    background-size:contain;
   }
 }
 @media screen and (max-width: 600px) and (min-height: 800px) {
