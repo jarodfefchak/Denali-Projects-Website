@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
+import emailjs from '@emailjs/browser';
 import { motion } from "framer-motion";
 import Header from "./Header";
 import Footer from "./Footer";
@@ -16,9 +17,12 @@ function Contact() {
   const [jsonData, setJsonData] = useState(null);
   const [jsonData2, setJsonData2] = useState(null);
   const [hover, setHover] = useState(false);
+  const form = useRef();
+
   useEffect(() => {
     document.title = "Contact Us - Denali Projects";
   }, []);
+
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "instant" });
   }, []);
@@ -55,18 +59,22 @@ function Contact() {
     setFirstName(event.target.value);
     checkFormValidity();
   };
+
   const handleLastNameChange = (event) => {
     setLastName(event.target.value);
     checkFormValidity();
   };
+
   const handleMessageChange = (event) => {
     setMessage(event.target.value);
     checkFormValidity();
   };
+
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
     checkFormValidity();
   };
+
   const checkFormValidity = () => {
     if (
       firstName.trim() !== "" &&
@@ -79,6 +87,7 @@ function Contact() {
       setIsFormValid(false);
     }
   };
+
   const handleEmailMessage = (event) => {
     event.preventDefault();
 
@@ -90,15 +99,35 @@ function Contact() {
       setEmail("");
       setMessage("");
       setShow2(true);
+      sendEmail(event);
     }
   };
 
   const closeAlert = () => {
     setShow(false);
   };
+
   const closeAlert2 = () => {
     setShow2(false);
     window.location.href = "/";
+  };
+
+  const sendEmail = (e) => {
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+        form.current,
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        }
+      );
   };
 
   return (
@@ -111,7 +140,7 @@ function Contact() {
           <p className="no-marginC">{jsonData2[0].contactEmail}</p>
           <p className="no-marginC">{jsonData2[0].contactPhone}</p>
 
-          <form className="formC">
+          <form className="formC" ref={form} onSubmit={handleEmailMessage}>
             <p className="large-textC">Personal Information</p>
             <label className="labelC">
               <input
@@ -156,7 +185,6 @@ function Contact() {
             <button
               className={`buttonC ${hover ? "button-hover" : ""}`}
               type="submit"
-              onClick={handleEmailMessage}
               onMouseEnter={() => setHover(true)}
               onMouseLeave={() => setHover(false)}
             >
@@ -209,5 +237,3 @@ function Contact() {
 }
 
 export default Contact;
-
-
