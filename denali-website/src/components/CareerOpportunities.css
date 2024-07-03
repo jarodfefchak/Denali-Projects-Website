@@ -3,10 +3,9 @@
   display: flex;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 720px;
+  height: 80vh;
   background-attachment: fixed;
   position: relative;
-
   z-index: -1;
 }
 
@@ -84,6 +83,12 @@
   .navBarOP {
     padding: 50px 25px 50px 25px;
   }
+  .titleImageOP {
+    background-size: contain;
+    height: 40vh;
+   
+  }
+  
 }
 @media screen and (max-width: 600px){
   .navBarTextOP {

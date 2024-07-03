@@ -83,7 +83,7 @@ function Header({ onLinkClick }) {
         className={`menu-icon ${isDropdownOpen ? 'open' : ''}`}
         onClick={toggleDropdown}
       >
-        {isDropdownOpen ? '✖' : '☰'}
+        {isDropdownOpen ? 'X' : '☰'}
       </div>
       <div ref={dropdownRef} className={`mobile-dropdown-menu ${isDropdownOpen ? 'open' : ''}`}>
         <Link
