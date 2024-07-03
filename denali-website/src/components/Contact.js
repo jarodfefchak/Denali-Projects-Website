@@ -99,7 +99,7 @@ function Contact() {
       setEmail("");
       setMessage("");
       setShow2(true);
-      sendEmail(event);
+      sendEmail();
     }
   };
 
@@ -112,22 +112,21 @@ function Contact() {
     window.location.href = "/";
   };
 
-  const sendEmail = (e) => {
-    emailjs
-      .sendForm(
-        process.env.EMAILJS_SERVICE_ID,
-        process.env.EMAILJS_TEMPLATE_ID,
-        form.current,
-        process.env.EMAILJS_PUBLIC_KEY
-      )
-      .then(
-        () => {
-          console.log('SUCCESS!');
-        },
-        (error) => {
-          console.log('FAILED...', error.text);
-        }
-      );
+  const sendEmail = () => {
+    emailjs.sendForm(
+      process.env.EMAILJS_SERVICE_ID,
+      process.env.EMAILJS_TEMPLATE_ID, 
+      form.current,
+      process.env.EMAILJS_PUBLIC_KEY  
+    )
+    .then(
+      (result) => {
+        console.log('SUCCESS!', result.text);
+      },
+      (error) => {
+        console.log('FAILED...', error.text);
+      }
+    );
   };
 
   return (
@@ -146,6 +145,7 @@ function Contact() {
               <input
                 className="input-shortC"
                 type="text"
+                name="firstName"
                 value={firstName}
                 onChange={handleFirstNameChange}
                 placeholder="First Name"
@@ -156,6 +156,7 @@ function Contact() {
               <input
                 className="input-shortC"
                 type="text"
+                name="lastName"
                 value={lastName}
                 onChange={handleLastNameChange}
                 placeholder="Last Name"
@@ -166,6 +167,7 @@ function Contact() {
               <input
                 className="input-longC"
                 type="email"
+                name="email"
                 value={email}
                 onChange={handleEmailChange}
                 placeholder="Email"
@@ -176,12 +178,13 @@ function Contact() {
             <label className="labelC">
               <textarea
                 className="textareaC"
+                name="message"
                 value={message}
                 onChange={handleMessageChange}
                 autoResizeEnabled={true}
               />
             </label>
-            <br></br>
+            <br />
             <button
               className={`buttonC ${hover ? "button-hover" : ""}`}
               type="submit"
