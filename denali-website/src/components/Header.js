@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { Link, useLocation } from 'react-router-dom';
 import Logo from '../images/Logos/Denali_Logo_White_Transparent_BG.png';
 import './header.css';
@@ -9,6 +9,7 @@ function Header({ onLinkClick }) {
   const [loading, setLoading] = useState(true);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const location = useLocation();
+  const dropdownRef = useRef(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -49,6 +50,16 @@ function Header({ onLinkClick }) {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
+
+  useEffect(() => {
+    if (dropdownRef.current) {
+      if (isDropdownOpen) {
+        dropdownRef.current.style.maxHeight = `${dropdownRef.current.scrollHeight}px`;
+      } else {
+        dropdownRef.current.style.maxHeight = '0';
+      }
+    }
+  }, [isDropdownOpen]);
 
   if (loading) {
     return <p>Loading data...</p>;
@@ -96,7 +107,7 @@ function Header({ onLinkClick }) {
       <div className="menu-icon" onClick={toggleDropdown}>
         {isDropdownOpen ? '✖' : '☰'}
       </div>
-      <div className={`mobile-dropdown-menu ${isDropdownOpen ? 'open' : ''}`}>
+      <div ref={dropdownRef} className={`mobile-dropdown-menu ${isDropdownOpen ? 'open' : ''}`}>
         <Link
           to="/#HomeMainSection"
           className={`nav-link ${location.hash === '#HomeMainSection' || location.pathname === '/' ? 'active' : ''}`}
@@ -131,4 +142,3 @@ function Header({ onLinkClick }) {
 }
 
 export default Header;
-
