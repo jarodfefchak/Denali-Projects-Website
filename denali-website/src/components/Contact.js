@@ -113,11 +113,11 @@ function Contact() {
   };
 
   const sendEmail = () => {
-    console.log(process.env.EMAILJS_SERVICE_ID),
-    console.log(process.env.EMAILJS_TEMPLATE_ID),
-    console.log(process.env.EMAILJS_PUBLIC_KEY),
     emailjs
       .sendForm(
+        console.log("service id",process.env.EMAILJS_SERVICE_ID),
+        console.log("template id", process.env.EMAILJS_TEMPLATE_ID),
+        console.log( "public key",process.env.EMAILJS_PUBLIC_KEY),
         process.env.EMAILJS_SERVICE_ID,
         process.env.EMAILJS_TEMPLATE_ID,
         form.current,
