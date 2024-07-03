@@ -85,7 +85,7 @@
     font-size: 55pt;
   }
   .headImageHM {
-    background-repeat: contain;
+    background-size:contain;
   }
 }
 @media screen and (max-width: 600px) and (min-height: 800px) {
