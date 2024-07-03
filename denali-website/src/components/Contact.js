@@ -1,9 +1,9 @@
 import React, { useEffect, useState, useRef } from "react";
-import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 import Header from "./Header";
 import Footer from "./Footer";
-import axios from 'axios';
+import axios from "axios";
 import "./Contact.css";
 
 function Contact() {
@@ -113,20 +113,24 @@ function Contact() {
   };
 
   const sendEmail = () => {
-    emailjs.sendForm(
-      process.env.EMAILJS_SERVICE_ID,
-      process.env.EMAILJS_TEMPLATE_ID, 
-      form.current,
-      process.env.EMAILJS_PUBLIC_KEY  
-    )
-    .then(
-      (result) => {
-        console.log('SUCCESS!', result.text);
-      },
-      (error) => {
-        console.log('FAILED...', error.text);
-      }
-    );
+    emailjs
+      .sendForm(
+        console.log(process.env.EMAILJS_SERVICE_ID),
+        console.log(process.env.EMAILJS_TEMPLATE_ID),
+        console.log(process.env.EMAILJS_PUBLIC_KEY),
+        process.env.EMAILJS_SERVICE_ID,
+        process.env.EMAILJS_TEMPLATE_ID,
+        form.current,
+        process.env.EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        (result) => {
+          console.log("SUCCESS!", result.text);
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
   };
 
   return (
@@ -199,7 +203,10 @@ function Contact() {
               className="custom-alert-overlay"
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ opacity: { duration: 0.4 }, y: { duration: 0.5, ease: "easeOut" } }}
+              transition={{
+                opacity: { duration: 0.4 },
+                y: { duration: 0.5, ease: "easeOut" },
+              }}
             >
               <div className="custom-alert">
                 <p>Please fill in all fields before submitting.</p>
@@ -212,7 +219,10 @@ function Contact() {
               className="custom-alert-overlay"
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ opacity: { duration: 0.4 }, y: { duration: 0.5, ease: "easeOut" } }}
+              transition={{
+                opacity: { duration: 0.4 },
+                y: { duration: 0.5, ease: "easeOut" },
+              }}
             >
               <div className="custom-alert">
                 <p>Thank you for contacting Denali Projects.</p>
