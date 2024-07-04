@@ -1,120 +1,80 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import CountUp from 'react-countup';
 import VisibilitySensor from 'react-visibility-sensor';
 import axios from 'axios';
 import './Results.css';
 
 function Results() {
-    const [hasBeenVisible, setHasBeenVisible] = useState({ first: false, second: false, third: false });
-    const [jsonData, setJsonData] = useState(null);
-    const [jsonData2, setJsonData2] = useState(null);
-    useEffect(() => {
-        const fetchData = async () => {
-          try {
-            const response = await axios.get(`/data/Headings.json`);
-            setJsonData(response.data);
-          } catch (error) {
-            console.error("Error fetching data:", error);
-          }
-        };
-        fetchData();
-      }, []);
-    
-      useEffect(() => {
-        const fetchData = async () => {
-          try {
-            const response = await axios.get(`/data/Results.json`);
-            setJsonData2(response.data);
-          } catch (error) {
-            console.error("Error fetching data:", error);
-          }
-        };
-        fetchData();
-      }, []);
-    
-      if (!jsonData || !jsonData2) {
-        return;
+  const [hasBeenVisible, setHasBeenVisible] = useState({ first: false, second: false, third: false });
+  const [data, setData] = useState({ jsonData: null, jsonData2: null });
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const [response1, response2] = await Promise.all([
+          axios.get(`/data/Headings.json`),
+          axios.get(`/data/Results.json`)
+        ]);
+        setData({ jsonData: response1.data, jsonData2: response2.data });
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      } finally {
+        setLoading(false);
       }
-    return (
-        <div style={background}>
-            <p className="titleR"><b>{jsonData[0].results}</b></p>
-            <div className="statsR">
-                <div className="counterR">
-                    <div className="countR">
-                        <CountUp end={hasBeenVisible.first ? jsonData2[0].number : 0} duration={20}>
-                            {({ countUpRef, start }) => (
-                                <VisibilitySensor
-                                    onChange={(isVisible) => {
-                                        if (isVisible && !hasBeenVisible.first) {
-                                            setTimeout(() => {
-                                                start();
-                                                setHasBeenVisible((prev) => ({ ...prev, first: true }));
-                                            }, 250);
-                                        }
-                                    }}
-                                    delayedCall
-                                >
-                                    <span ref={countUpRef} />
-                                </VisibilitySensor>
-                            )}
-                        </CountUp>
-                    </div>
-                    <p className="descriptionR">{jsonData2[0].category}</p>
-                </div>
-                <div className="counterR">
-                    <div className="countR">
-                        <CountUp end={hasBeenVisible.second ? jsonData2[1].number : 0} duration={6}>
-                            {({ countUpRef, start }) => (
-                                <VisibilitySensor
-                                    onChange={(isVisible) => {
-                                        if (isVisible && !hasBeenVisible.second) {
-                                            setTimeout(() => {
-                                                start();
-                                                setHasBeenVisible((prev) => ({ ...prev, second: true }));
-                                            }, 250);
-                                        }
-                                    }}
-                                    delayedCall
-                                >
-                                    <span ref={countUpRef} />
-                                </VisibilitySensor>
-                            )}
-                        </CountUp>
-                    </div>
-                    <p className="descriptionR">{jsonData2[1].category}</p>
-                </div>
-                <div className="counterR">
-                    <div className="countR">
-                        <CountUp end={hasBeenVisible.third ? jsonData2[2].number : 0} duration={8} formattingFn={(value) => `${value}%`}>
-                            {({ countUpRef, start }) => (
-                                <VisibilitySensor
-                                    onChange={(isVisible) => {
-                                        if (isVisible && !hasBeenVisible.third) {
-                                            setTimeout(() => {
-                                                start();
-                                                setHasBeenVisible((prev) => ({ ...prev, third: true }));
-                                            }, 250);
-                                        }
-                                    }}
-                                    delayedCall
-                                >
-                                    <span ref={countUpRef} />
-                                </VisibilitySensor>
-                            )}
-                        </CountUp>
-                    </div>
-                    <p className="descriptionR">{jsonData2[2].category}</p>
-                </div>
+    };
+    fetchData();
+  }, []);
+
+  const handleVisibilityChange = useCallback((isVisible, key) => {
+    if (isVisible && !hasBeenVisible[key]) {
+      setTimeout(() => {
+        setHasBeenVisible(prev => ({ ...prev, [key]: true }));
+      }, 250);
+    }
+  }, [hasBeenVisible]);
+
+  if (loading) {
+    return;
+  }
+
+  const { jsonData, jsonData2 } = data;
+
+  return (
+    <div style={background}>
+      <p className="titleR"><b>{jsonData[0].results}</b></p>
+      <div className="statsR">
+        {jsonData2.map((item, index) => (
+          <div className="counterR" key={index}>
+            <div className="countR">
+              <CountUp
+                end={hasBeenVisible[index] ? item.number : 0}
+                duration={index === 0 ? 20 : index === 1 ? 6 : 8}
+                formattingFn={index === 2 ? value => `${value}%` : undefined}
+              >
+                {({ countUpRef, start }) => (
+                  <VisibilitySensor
+                    onChange={isVisible => handleVisibilityChange(isVisible, index)}
+                    delayedCall
+                  >
+                    <span ref={countUpRef} />
+                  </VisibilitySensor>
+                )}
+              </CountUp>
             </div>
-        </div>
-    );
+            <p className="descriptionR">{item.category}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 }
 
 export default Results;
 
 const background = {
-    display: 'flex',
-    flexDirection: 'column',
-    backgroundColor: '#2e2e2e',
-    color: "rgba(245, 245, 245, 0.938)",
+  display: 'flex',
+  flexDirection: 'column',
+  backgroundColor: '#2e2e2e',
+  color: "rgba(245, 245, 245, 0.938)",
 };

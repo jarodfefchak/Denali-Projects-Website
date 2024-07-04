@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo, useCallback } from "react";
 import InsideImage from "../images/InsideDenali.jpg";
 import { Link } from "react-router-dom";
 import axios from 'axios';
@@ -6,14 +6,16 @@ import "./InsideDenali.css";
 
 function InsideDenali() {
   const [hover, setHover] = useState(false);
-  const [jsonData, setJsonData] = useState(null);
-  const [jsonData2, setJsonData2] = useState(null);
+  const [data, setData] = useState({ jsonData: null, jsonData2: null });
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`/data/Headings.json`);
-        setJsonData(response.data);
+        const [response1, response2] = await Promise.all([
+          axios.get(`/data/Headings.json`),
+          axios.get(`/data/Text.json`)
+        ]);
+        setData({ jsonData: response1.data, jsonData2: response2.data });
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -21,37 +23,35 @@ function InsideDenali() {
     fetchData();
   }, []);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get(`/data/Text.json`);
-        setJsonData2(response.data);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
-    fetchData();
-  }, []);
+  const handleMouseEnter = useCallback(() => setHover(true), []);
+  const handleMouseLeave = useCallback(() => setHover(false), []);
 
-  if (!jsonData || !jsonData2) {
+  const background = useMemo(() => ({
+    backgroundColor: "#f6f6f6",
+    backgroundSize: "cover",
+    margin: "0px",
+    padding: "0px",
+  }), []);
+
+  if (!data.jsonData || !data.jsonData2) {
     return;
   }
 
   return (
     <div style={background}>
       <div className="contentID">
-        <img src={InsideImage} alt="inside denali" className="imgID" />
+        <img src={InsideImage} alt="inside denali" className="imgID" loading="lazy" />
         <div className="textID">
           <p className="headerID">
-            <b>{jsonData[0].inside} </b>
+            <b>{data.jsonData[0].inside}</b>
           </p>
           <p>
-           {jsonData2[0].insideText}
+            {data.jsonData2[0].insideText}
           </p>
           <Link to="/AboutUs">
             <button
-              onMouseEnter={() => setHover(true)}
-              onMouseLeave={() => setHover(false)}
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
               className={`buttonID ${hover ? "button-hoverID" : ""}`}
             >
               Discover Who We Are
@@ -64,12 +64,5 @@ function InsideDenali() {
 }
 
 export default InsideDenali;
-
-const background = {
-  backgroundColor: "#f6f6f6",
-  backgroundSize: "cover",
-  margin: "0px",
-  padding: "0px",
-};
 
 

@@ -52,7 +52,9 @@ function Footer() {
                 </div>
                 <div id="item2">
                     <h4>Company</h4>
+                    <a href = "https://denaliprojects.sharepoint.com/" style ={{color:"white"}}>
                     <p>SharePoint Login</p>
+                    </a>
                     <br></br>
                     <img src={wLogo} alt="Logo" />
                 </div>
