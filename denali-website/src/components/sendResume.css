@@ -70,6 +70,7 @@ body {
     height: 40px;
     font-size: 16pt;
     cursor: pointer;
+    padding-bottom: 0px;
   }
   
   .buttonSR:hover {
@@ -215,7 +216,6 @@ body {
     .buttonSR{
       font-size: 14pt;
     }
-    
   }
   
   @media screen and (max-width: 700px) {

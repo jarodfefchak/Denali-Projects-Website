@@ -91,6 +91,7 @@
     height: 20px;
     font-size: 16pt;
     cursor: pointer;
+    padding-bottom: 0px;
   }
   
   .buttonC:hover {
