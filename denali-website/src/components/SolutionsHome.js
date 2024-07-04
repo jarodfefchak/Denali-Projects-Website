@@ -31,46 +31,30 @@ function Solutions() {
   }, []);
 
   useEffect(() => {
-    const fetchData = async () => {
+    const fetchAllData = async () => {
       try {
-        const promises = [];
+        const solutionPromises = [];
         for (let i = 1; i <= 6; i++) {
-          promises.push(axios.get(`/data/Solutions/Solution${i}.json`));
+          solutionPromises.push(axios.get(`/data/Solutions/Solution${i}.json`));
         }
-        const responses = await Promise.all(promises);
-        const data = responses.map((response) => response.data);
-        setJsonData(data);
+
+        const [solutions, headings, text] = await Promise.all([
+          Promise.all(solutionPromises),
+          axios.get(`/data/Headings.json`),
+          axios.get(`/data/Text.json`)
+        ]);
+
+        setJsonData(solutions.map((response) => response.data));
+        setJsonData2(headings.data);
+        setJsonData3(text.data);
       } catch (error) {
         console.error("Error fetching data:", error);
       } finally {
         setLoading(false);
       }
     };
-    fetchData();
-  }, []);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get(`/data/Headings.json`);
-        setJsonData2(response.data);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
-    fetchData();
-  }, []);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get(`/data/Text.json`);
-        setJsonData3(response.data);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
-    fetchData();
+    fetchAllData();
   }, []);
 
   if (loading) {
@@ -126,13 +110,15 @@ function Solutions() {
           {images.map((image, index) => (
             <VisibilitySensor
               key={index}
+              onChange={(isVisible) => handleVisibilityChange(index, isVisible)}
               partialVisibility
+              delayedCall
             >
               {({ isVisible }) => (
                 <motion.div
                   variants={itemVariants}
                   initial="hidden"
-                  animate={isVisible ? "visible" : "hidden"}
+                  animate={visibility[index] ? "visible" : "hidden"}
                   className="imageContainerSH"
                 >
                   <Link to={`/SolutionsDisplay/${index + 1}`}>
@@ -141,11 +127,6 @@ function Solutions() {
                       alt={image.alt}
                       className="imgSH"
                       loading="lazy"
-                      ref={imageRef => {
-                        if (imageRef && isVisible) {
-                          handleVisibilityChange(index, true);
-                        }
-                      }}
                     />
                     <p className="textSH">{jsonData[index][0].section}</p>
                   </Link>
@@ -163,8 +144,6 @@ function Solutions() {
 export default Solutions;
 
 const background = {
-  display: "flex",
-  flexDirection: "column",
   backgroundColor: "#f6f6f6",
   backgroundSize: "cover",
   margin: "0px",
