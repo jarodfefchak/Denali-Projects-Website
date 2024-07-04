@@ -128,6 +128,11 @@ select {
 .custom-alertOP button:hover {
   background-color: #346370;
 }
+
+.resumeButton input{
+  width: 80vw;
+  text-wrap: wrap;
+}
 @media screen and (max-width: 1600px) {
   .headerAP {
     font-size: 50pt;
