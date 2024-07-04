@@ -8,7 +8,6 @@ function Header({ onLinkClick }) {
   const location = useLocation();
   const dropdownRef = useRef(null);
 
-
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
@@ -83,7 +82,9 @@ function Header({ onLinkClick }) {
         className={`menu-icon ${isDropdownOpen ? 'open' : ''}`}
         onClick={toggleDropdown}
       >
-        {isDropdownOpen ? 'X' : '☰'}
+        <div></div>
+        <div></div>
+        <div></div>
       </div>
       <div ref={dropdownRef} className={`mobile-dropdown-menu ${isDropdownOpen ? 'open' : ''}`}>
         <Link

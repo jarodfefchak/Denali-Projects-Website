@@ -52,25 +52,22 @@
 #item3 h4{
     font-size: 20pt;
     font-weight: 600;
+    margin-bottom: 40px; 
+} 
+#item3 h5{
+    margin-bottom: 25px;
+    text-align: left;
     
 } 
-
-#Accred1{
-    height: 50px;
-    margin:15px 0 15px 0;
-}
-#Accred2{
-    height: 60px;
-    margin:15px 0 15px 0;
-}
-#Accred3{
-    height: 70px;
-    margin:15px 0 15px 0;
-}
-#Accred4{
-    height: 50px;
-    margin:15px 0 0px 0;
-}
+#item3 ul{
+    font-size: 14pt;
+    text-align: left;
+    padding-left: 15px;
+    /* list-style-type: none;  */
+} 
+#item3 li{
+   padding-top: 5px;
+} 
 #LinkedIn{
     height: 100px;
 }

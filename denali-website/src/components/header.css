@@ -1,3 +1,5 @@
+/* header.css */
+
 .navbar {
   display: flex;
   position: fixed;
@@ -6,7 +8,7 @@
   background-image: linear-gradient(0, #222222, #303030);
   width: 100vw;
   z-index: 500;
-  box-shadow: 0 4px 8px rgba(0,0,0, 0.5);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   padding: 0 20px;
 }
 
@@ -96,7 +98,27 @@
   margin-right: 50px;
   z-index: 1000; /* Ensure the menu icon is above the mobile dropdown menu */
   position: relative; /* Make sure the icon is positioned relative to the .navbar */
-  /* transition: color 0.4s ease-in-out; */
+  transition: transform 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+.menu-icon div {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  margin: 6px 0;
+  transition: all 0.5s ease;
+}
+
+.menu-icon.open div:nth-child(1) {
+  transform: rotate(45deg) translate(7px, 7px);
+}
+
+.menu-icon.open div:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-icon.open div:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
 }
 
 .mobile-dropdown-menu {
@@ -114,10 +136,11 @@
   z-index: 1001; 
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.4s ease-out;
+  transition: max-height 0.5s ease-out;
 }
-.mobile-dropdown-menu .nav-link:hover{
-  color:#52d6f4;
+
+.mobile-dropdown-menu .nav-link:hover {
+  color: #52d6f4;
 }
 
 @media (max-width: 750px) {
@@ -162,7 +185,7 @@
     margin-top: 70px;
     display: flex;
   }
-  .nav-link{
+  .nav-link {
     font-size: 14pt;
   }
 }
