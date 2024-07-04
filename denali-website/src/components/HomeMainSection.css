@@ -1,6 +1,6 @@
 .headImageHM {
   background-image: url('../images/Home_Page.jpg');
-  background-size:auto;
+  background-size:cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
   height: 100vh;
@@ -52,6 +52,9 @@
 @media screen and (max-width: 750px){
   .mainTextHM {
     font-size: 35pt;
+  }
+  .headImageHM{
+    background-size: auto;
   }
 }
 @media screen and (max-width: 700px){
