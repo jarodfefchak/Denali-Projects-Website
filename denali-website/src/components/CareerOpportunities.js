@@ -45,7 +45,10 @@ function CareerOpportunities() {
         document.title = 'Career Opportunities - Denali Projects';
     }, []);
 
-    if (!jsonData || jsonData.length === 0) {
+    if (!jsonData){
+        return;
+    }
+    if (jsonData.length === 0) {
         return (
             <div>
                 <Header />

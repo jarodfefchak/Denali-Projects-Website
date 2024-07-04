@@ -1,8 +1,10 @@
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f6f6f6;
-  }
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f6f6f6;
+  overflow-x: hidden;
+}
+
   
   .layoutSR {
     display: flex;

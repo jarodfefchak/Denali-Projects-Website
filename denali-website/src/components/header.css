@@ -96,6 +96,7 @@
   margin-right: 50px;
   z-index: 1000; /* Ensure the menu icon is above the mobile dropdown menu */
   position: relative; /* Make sure the icon is positioned relative to the .navbar */
+  /* transition: color 0.4s ease-in-out; */
 }
 
 .mobile-dropdown-menu {
@@ -114,6 +115,9 @@
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.4s ease-out;
+}
+.mobile-dropdown-menu .nav-link:hover{
+  color:#52d6f4;
 }
 
 @media (max-width: 750px) {

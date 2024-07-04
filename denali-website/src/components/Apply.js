@@ -80,7 +80,7 @@ function Apply() {
   }, []);
 
   if (!jsonData) {
-    return <p>Loading data...</p>;
+    return;
   }
 
   const handleNameChange = (event) => {

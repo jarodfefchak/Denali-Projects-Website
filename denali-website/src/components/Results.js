@@ -33,7 +33,7 @@ function Results() {
       }, []);
     
       if (!jsonData || !jsonData2) {
-        return <p>Loading data...</p>;
+        return;
       }
     return (
         <div style={background}>

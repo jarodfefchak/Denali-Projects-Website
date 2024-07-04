@@ -52,7 +52,7 @@ function Contact() {
   }, []);
 
   if (!jsonData || !jsonData2) {
-    return <p>Loading data...</p>;
+    return;
   }
 
   const handleFirstNameChange = (event) => {
@@ -141,7 +141,7 @@ function Contact() {
           <p className="no-marginC">{jsonData2[0].contactPhone}</p>
 
           <form className="formC" ref={form} onSubmit={handleEmailMessage}>
-            <p className="large-textC">Personal Information</p>
+            <p className="large-textC">Personal Information <span style ={{color:"red"}}>*</span></p>
             <label className="labelC">
               <input
                 className="input-shortC"
@@ -175,7 +175,7 @@ function Contact() {
                 required
               />
             </label>
-            <p className="large-textC">Message</p>
+            <p className="large-textC">Message <span style ={{color:"red"}}>*</span></p>
             <label className="labelC">
               <textarea
                 className="textareaC"

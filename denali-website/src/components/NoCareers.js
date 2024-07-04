@@ -20,7 +20,7 @@ function NoCareers() {
   }, []);
 
   if (!jsonData) {
-    return <p>Loading data...</p>;
+    return;
   }
 
   return (

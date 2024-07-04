@@ -40,7 +40,7 @@ function ProvenSuccess() {
   }, []);
 
   if (loading) {
-    return <p>Loading data...</p>;
+    return;
   }
 
   const handleDragStart = (e) => e.preventDefault();

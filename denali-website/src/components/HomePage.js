@@ -7,7 +7,6 @@ import Solutions from './Solutions';
 import InsideDenali from './InsideDenali';
 import CareersPage from './CareersPage';
 import Footer from './Footer';
-import { SpeedInsights } from "@vercel/speed-insights/react";
 function HomePage() {
   const [renderKey, setRenderKey] = useState(0);
 
@@ -58,7 +57,6 @@ function HomePage() {
       <InsideDenali />
       <CareersPage />
       <Footer />
-      <SpeedInsights />
     </div>
   );
 }

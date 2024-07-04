@@ -58,7 +58,7 @@ function Solutions() {
   }, []);
 
   if (loading) {
-    return <p>Loading data...</p>;
+    return;
   }
 
   const images = [

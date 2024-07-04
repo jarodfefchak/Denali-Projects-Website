@@ -18,6 +18,7 @@ import SolutionsList from './components/SolutionsList';
 import NoCareers from './components/NoCareers';
 import SendResume from './components/sendResume';
 
+
 import{ BrowserRouter, Routes, Route} from 'react-router-dom';
 
 function App() {

@@ -114,7 +114,7 @@
   @media screen and (max-width: 900px) {
     .headingSH {
       margin-left: 45px;
-      margin-top: 50px;
+      padding-top: 150px;
       margin-bottom: 25px;
       font-size: 40pt;
     }

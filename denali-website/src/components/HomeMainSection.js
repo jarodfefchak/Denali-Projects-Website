@@ -19,7 +19,7 @@ function HomeMainSection() {
   }, []);
 
   if (!jsonData) {
-    return <p>Loading data...</p>;
+    return ;
   }
   return (
     <div className="headImageHM" loading= "lazy">

@@ -34,7 +34,7 @@ function InsideDenali() {
   }, []);
 
   if (!jsonData || !jsonData2) {
-    return <p>Loading data...</p>;
+    return;
   }
 
   return (

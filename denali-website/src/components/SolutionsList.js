@@ -37,10 +37,10 @@ function SolutionsList({ solutionId }) {
   }, [jsonData]);
 
   if (!jsonData) {
-    return <p>Loading data...</p>;
+    return;
   }
   if (!jsonData2) {
-    return <p>Loading data...</p>;
+    return;
   }
 
   return (
