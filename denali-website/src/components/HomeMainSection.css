@@ -56,12 +56,12 @@
 }
 @media screen and (max-width: 400px){
   .mainTextHM {
-    font-size: 30pt;
+    font-size: 32pt;
   }
 }
 @media screen and (max-width: 300px){
   .mainTextHM {
-    font-size: 25pt;
+    font-size: 30pt;
   }
 }
 
