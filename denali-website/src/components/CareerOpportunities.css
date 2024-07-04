@@ -36,28 +36,6 @@
   margin-bottom: 0px;
 }
 
-.dropdownToggleOP {
-  color: black;
-  background-color: transparent;
-  border: none;
-  font-size: 16pt;
-  z-index: 999;
-}
-.dropdownToggleOP:hover .dropdownMenuOP {
-  display: block;
-}
-
-.dropdownMenuOP {
-  border: none;
-}
-.dropdownToggleOP:hover,
-.dropdownToggleOP:focus,
-.dropdownToggleOP:active {
-  color: #408697;
-  background-color: transparent;
-  text-decoration: none;
-  border: none;
-}
 @media screen and (max-width: 1600px) {
   .navBarOP {
     margin-right: 0px;
@@ -74,11 +52,7 @@
     margin-left: 0px;
     flex-direction: column;
   }
-  .dropdownToggleOP {
-    margin-top: 30px;
-    margin-bottom: 100px;
-    padding: 0px;
-  }
+
 }
 @media screen and (max-width: 800px){
   .navBarOP {
@@ -98,6 +72,6 @@
 }
 @media screen and (max-width: 450px) {
   .navBarOP {
-    padding: 50px 10px 50px 10px;
+    padding: 50px 10px 50px 25px;
   }
 }

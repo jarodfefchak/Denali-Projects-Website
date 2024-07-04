@@ -207,6 +207,11 @@
       font-size: 40px;
     }
   }
+  @media screen and (max-width: 800px) {
+    .buttonC {
+      font-size:14pt;
+    }
+  }
   @media screen and (max-width: 730px) {
     .iframe-containerC iframe {
       min-height: 45vh;

@@ -132,6 +132,10 @@ body {
   .custom-alertSR button:hover {
     background-color: #346370;
   }
+  .resumeButton input{
+    width: 80vw;
+    text-wrap: wrap;
+  }
   @media screen and (max-width: 1600px) {
     .headerSR {
       font-size: 50pt;
@@ -206,6 +210,9 @@ body {
     }
     
     .custom-alertSR button {
+      font-size: 14pt;
+    }
+    .buttonSR{
       font-size: 14pt;
     }
     
