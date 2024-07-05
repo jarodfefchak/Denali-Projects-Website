@@ -146,6 +146,7 @@
 @media (max-width: 750px) {
   .Denali-Logo {
     margin: 15px 0px 15px 20px;
+    height: 47px;
   } 
   .link-container {
     display: none;
@@ -153,34 +154,9 @@
 
   .menu-icon {
     display: block;
-  }
-
-  .mobile-dropdown-menu {
-    margin-top: 105px;
-    display: flex;
-  }
-
-  .dropdown-menu {
-    display: none;
-    position: static;
-    font-size: 14pt;
-  }
-  .dropdown:hover .dropdown-toggle {
-    cursor: pointer; /* Ensure cursor changes on mobile hover */
-  }
-
-  .dropdown.open .dropdown-menu {
-    display: block;
-  }
-}
-
-@media (max-height: 750px) {
-  .menu-icon {
     font-size: 23pt;
   }
-  .Denali-Logo {
-    height: 47px;
-  }
+
   .mobile-dropdown-menu {
     margin-top: 70px;
     display: flex;
@@ -188,4 +164,20 @@
   .nav-link {
     font-size: 14pt;
   }
+
+  .dropdown-menu {
+    display: none;
+    position: static;
+    
+  }
+  .dropdown:hover .dropdown-toggle {
+    cursor: pointer; /* Ensure cursor changes on mobile hover */
+  }
+
+  .dropdown.open .dropdown-menu {
+    display: block;
+    padding-bottom: 15px;
+  }
 }
+
+

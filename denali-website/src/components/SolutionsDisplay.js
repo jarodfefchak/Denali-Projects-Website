@@ -17,7 +17,7 @@ function SolutionsDisplay() {
         <div>
             <Header />
             <div className="listSD">
-                <h1 className="projects-titleSD">Projects</h1>
+                <h1 className="projects-titleSD"><b>Projects</b></h1>
                 <SolutionsList solutionId={solutionId} />
             </div>
             <Footer />

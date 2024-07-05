@@ -5,12 +5,12 @@
 .textSL{
   margin-bottom: 40px;
   margin-top: 20px;
+  font-size:1.2vw ;
 }
   .informationSL {
     margin-top: 25px;
     margin-bottom: 20px;
-    margin-right:50px ;
-    font-size:16pt ;
+
   }
   
   .rectangleSL {
@@ -20,19 +20,30 @@
     background: #408697;
   }
   p {
-    font-size: 16pt;
+    font-size:1.2vw;
     margin: 0;
     padding: 5px 0;
   }
+  @media screen and (max-width: 1650px){
+    .textSL{
+      font-size:16pt
+    }
+    p {
+      font-size:16pt;
+    }
+  }
   @media screen and (max-width: 1200px){
+    .textSL{
+      font-size:14pt
+    }
+    p {
+      font-size:14pt;
+    }
     .informationSL {
       margin-right:0px ;
-      font-size:14pt ;
       margin-top: 20px;
     }
   }
-  @media screen and (max-width: 450px){
-    .informationSL{
-      font-size:12pt ;
-    }
+  @media screen and (max-width: 500px){
+
   }
