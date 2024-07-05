@@ -6,6 +6,7 @@ import Footer from "./Footer";
 import BradImg from "../images/AboutUs/BradMeaney.jpg";
 import JarodImg from "../images/AboutUs/JarodFefchak.jpg";
 import DeanImg from "../images/AboutUs/DeanKirkby.jpg";
+import LinkedInB from "../images/Logos/LinkedInBB.png";
 import "./AboutUs.css";
 
 function AboutUs() {
@@ -76,21 +77,45 @@ function AboutUs() {
         <div className="teamAU">
           <div className="imgcontainerAU">
             <img className="imgAU" src={BradImg} alt="Brad Meaney" loading="lazy" />
-            <p className="img-textAU">Brad Meaney</p>
-            <p className="img-textAU">Principal</p>
-            <p className="img-textAU">Instrumentation Lead</p>
+            <div className="img-detailsAU">
+              <div className="text-containerAU">
+                <p className="img-textAU"style = {{padding:"0px"}}>Brad Meaney</p>
+                <p className="img-textAU" style = {{padding:"0px"}}>Principal</p>
+                <p className="img-textAU"style = {{padding:"0px"}}>Instrumentation Lead</p>
+              </div>
+              <div className="lineAU"></div>
+              <a href="https://www.linkedin.com/in/brad-meaney-946b6158/">
+                <img src={LinkedInB} alt="LinkedIn" className="linkedinAU" loading="lazy" />
+              </a>
+            </div>
           </div>
           <div className="imgcontainerAU">
-            <img className="imgAU" src={JarodImg} alt="Jarod Fechak" loading="lazy" />
-            <p className="img-textAU">Jarod Fefchak, P.Eng.</p>
-            <p className="img-textAU">Principal</p>
-            <p className="img-textAU">Electrical Lead</p>
+            <img className="imgAU" src={JarodImg} alt="Jarod Fefchak" loading="lazy" />
+            <div className="img-detailsAU">
+              <div className="text-containerAU">
+                <p className="img-textAU" style = {{padding:"0px"}}>Jarod Fefchak, P.Eng.</p>
+                <p className="img-textAU" style = {{padding:"0px"}}>Principal</p>
+                <p className="img-textAU"style = {{padding:"0px"}}>Electrical Lead</p>
+              </div>
+              <div className="lineAU"></div>
+              <a href="https://www.linkedin.com/in/jarod-fefchak/">
+                <img src={LinkedInB} alt="LinkedIn" className="linkedinAU" loading="lazy" />
+              </a>
+            </div>
           </div>
           <div className="imgcontainerAU">
             <img className="imgAU" src={DeanImg} alt="Dean Kirkby" loading="lazy" />
-            <p className="img-textAU">Dean Kirkby, P.Eng.</p>
-            <p className="img-textAU">Principal</p>
-            <p className="img-textAU">Engineering Lead</p>
+            <div className="img-detailsAU">
+              <div className="text-containerAU">
+                <p className="img-textAU"style = {{padding:"0px"}}>Dean Kirkby, P.Eng.</p>
+                <p className="img-textAU" style = {{padding:"0px"}}>Principal</p>
+                <p className="img-textAU"style = {{padding:"0px"}}>Engineering Lead</p>
+              </div>
+              <div className="lineAU"></div>
+              <a href="https://www.linkedin.com/in/dean-kirkby-274a3a149/">
+                <img src={LinkedInB} alt="LinkedIn" className="linkedinAU" loading="lazy" />
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -100,4 +125,3 @@ function AboutUs() {
 }
 
 export default AboutUs;
-

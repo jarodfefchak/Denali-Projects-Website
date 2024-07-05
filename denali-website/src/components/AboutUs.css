@@ -1,138 +1,151 @@
 .contentAU {
-    padding: 150px;
-    background-color: #f6f6f6;
-  }
-  
-  
-  .buttonAU {
-    color: white;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    background-color: #408697;
-    border: 0px;
-    width: 300px;
-    height: 75px;
-    border-radius: 25px;
-    font-size: 25pt;
-    cursor: pointer;
-  }
-  
-  .button-hoverAU {
-    box-shadow: 1px 1px 20px #000000;
-  }
-  
+  padding: 150px;
+  background-color: #f6f6f6;
+}
+
+.buttonAU {
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: #408697;
+  border: 0px;
+  width: 300px;
+  height: 75px;
+  border-radius: 25px;
+  font-size: 25pt;
+  cursor: pointer;
+}
+
+.button-hoverAU {
+  box-shadow: 1px 1px 20px #000000;
+}
+
+.header-textAU {
+  font-size: 4.5vw;
+}
+
+.sub-header-textAU {
+  font-size: 2.7vw;
+}
+
+.executive-titleAU {
+  font-size: 3.5vw;
+  font-weight: 600;
+  margin-top: 75px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.paragraphAU {
+  font-size: 18pt;
+  margin-top: 10px;
+}
+
+#sloganAU {
+  font-size: 20pt;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.teamAU {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.imgcontainerAU {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+.imgAU {
+  height: 19vw;
+  width: 19vw;
+  border-radius: 25px;
+  margin: 70px 30px 10px 30px;
+}
+
+.img-detailsAU {
+  display: flex;
+  align-items: center;
+  width: 19vw;
+  padding-left: 15px;
+  padding-top: 5px;
+}
+
+.text-containerAU {
+  text-align: left;
+  margin-right: 10px;
+  width: 13vw;
+}
+
+.lineAU {
+  width: 2px;
+  background-color: #408697;;
+  height: 95px;
+}
+
+.linkedinAU {
+  height: 80px;
+}
+
+@media screen and (max-width: 1600px) {
   .header-textAU {
-    font-size: 4.5vw;
+    font-size: 50pt;
   }
-  
-  .sub-header-textAU {
-    font-size: 2.7vw;
-  }
-  
-  .executive-titleAU {
-    font-size: 3.5vw;
-    font-weight: 600;
-    margin-top: 75px;
-   margin-bottom: 25px;
-    text-align: center;
-  }
-  
-  .paragraphAU {
-    font-size: 18pt; 
-    margin-top: 10px;
-  }
-  
-  
-  #sloganAU {
-    font-size: 20pt;
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-  
-  .img-textAU {
-    font-size: 14pt;
-    margin: 0px;
-    padding: 0px;
-  }
-  .teamAU{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
-  .imgcontainerAU {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
   .imgAU {
-    height: 19vw;
-    width: 19vw;
-    border-radius: 25px;
-    margin: 70px 30px 10px 30px;
+    height: 300px;
+    width: 250px;
   }
-  
-  @media screen and (max-width: 1600px){
-    .header-textAU {
-      font-size: 50pt;
-    }
-    
-    .imgAU {
-        height: 300px;
-        width: 250px;
-      } 
-      .executive-titleAU {
-        font-size: 40pt;
-      }
-      .sub-header-textAU {
-        font-size: 35pt;
-      }
-      .paragraphAU {
-        font-size: 16pt;
-      }
-      #sloganAU {
-        font-size: 18pt;
-      }
-      
+  .executive-titleAU {
+    font-size: 40pt;
   }
-  @media screen and (max-width: 1000px){
-    .contentAU {
-        padding: 150px 50px 150px 50px;
-      }
-      .header-textAU {
-        font-size: 45pt;
-      }
-      
-      .sub-header-textAU {
-        font-size: 25pt;
-      }
-      
-      .executive-titleAU {
-        font-size: 30pt;
-      }
-      
-    .imgAU {
-        height: 275px;
-        width: 225px;
-      }
-      .buttonAU {
-        width: 250px;
-        height: 65px;
-        font-size: 18pt;
-      }
-      
+  .sub-header-textAU {
+    font-size: 35pt;
   }
-  @media screen and (max-width: 900px){
-    .header-textAU {
-      font-size: 40pt;
-    }
-    
-    .sub-header-textAU {
-      font-size: 20pt;
-    }
-    
-    .executive-titleAU {
-      font-size: 25pt;
+  .paragraphAU {
+    font-size: 16pt;
+  }
+  #sloganAU {
+    font-size: 18pt;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .contentAU {
+    padding: 150px 50px 150px 50px;
+  }
+  .header-textAU {
+    font-size: 45pt;
+  }
+  .sub-header-textAU {
+    font-size: 25pt;
+  }
+  .executive-titleAU {
+    font-size: 30pt;
+  }
+  .imgAU {
+    height: 275px;
+    width: 225px;
+  }
+  .buttonAU {
+    width: 250px;
+    height: 65px;
+    font-size: 18pt;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .header-textAU {
+    font-size: 40pt;
+  }
+  .sub-header-textAU {
+    font-size: 20pt;
+  }
+  .executive-titleAU {
+    font-size: 25pt;
   }
   .paragraphAU {
     font-size: 15pt;
@@ -141,50 +154,50 @@
     font-size: 17pt;
   }
 }
-  @media screen and (max-width: 850px){   
-    .teamAU{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-      }
-    .imgAU {
-        height: 300px;
-        width: 250px;
-        margin: 40px 0px 10px 0px;
-      }
-      .img-textAU {
-       width:250px;
-       text-align: center;
-      }
-  }
 
-  @media screen and (max-width: 750px){
-    .header-textAU {
-      font-size: 35pt;
-    }
-    
-    .sub-header-textAU {
-      font-size: 18pt;
-    }
-    
-    .executive-titleAU {
-      font-size: 22pt;
+@media screen and (max-width: 850px) {
+  .teamAU {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
+  .imgAU {
+    height: 300px;
+    width: 250px;
+    margin: 40px 0px 10px 0px;
   }
+  .img-textAU {
+    width: 250px;
+    text-align: center;
+  }
+}
 
-  @media screen and (max-width: 600px){
-    .buttonAU {
-        width: 200px;
-        height: 55px;
-        font-size: 16pt;
-      }
-      .paragraphAU {
-        font-size: 14pt;
-      }
-      #sloganAU {
-        font-size: 16pt;
-      }
-      .contentAU {
-        padding: 125px 15px 150px 15px;
-      }
+@media screen and (max-width: 750px) {
+  .header-textAU {
+    font-size: 35pt;
   }
+  .sub-header-textAU {
+    font-size: 18pt;
+  }
+  .executive-titleAU {
+    font-size: 22pt;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .buttonAU {
+    width: 200px;
+    height: 55px;
+    font-size: 16pt;
+  }
+  .paragraphAU {
+    font-size: 14pt;
+  }
+  #sloganAU {
+    font-size: 16pt;
+  }
+  .contentAU {
+    padding: 125px 15px 150px 15px;
+  }
+}
