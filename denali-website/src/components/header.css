@@ -160,6 +160,7 @@
   .mobile-dropdown-menu {
     margin-top: 70px;
     display: flex;
+    background-image: linear-gradient(0, #1b1b1b, #161616);
   }
   .nav-link {
     font-size: 14pt;
@@ -176,6 +177,9 @@
 
   .dropdown.open .dropdown-menu {
     display: block;
+  }
+  .navbar {
+    background-image: linear-gradient(0, #161616, #1b1b1b);
   }
 }
 

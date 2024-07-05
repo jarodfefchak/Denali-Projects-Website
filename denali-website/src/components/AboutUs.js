@@ -82,13 +82,13 @@ function AboutUs() {
           </div>
           <div className="imgcontainerAU">
             <img className="imgAU" src={JarodImg} alt="Jarod Fechak" loading="lazy" />
-            <p className="img-textAU">Jarod Fefchak</p>
+            <p className="img-textAU">Jarod Fefchak, P.Eng.</p>
             <p className="img-textAU">Principal</p>
             <p className="img-textAU">Electrical Lead</p>
           </div>
           <div className="imgcontainerAU">
             <img className="imgAU" src={DeanImg} alt="Dean Kirkby" loading="lazy" />
-            <p className="img-textAU">Dean Kirkby</p>
+            <p className="img-textAU">Dean Kirkby, P.Eng.</p>
             <p className="img-textAU">Principal</p>
             <p className="img-textAU">Engineering Lead</p>
           </div>
