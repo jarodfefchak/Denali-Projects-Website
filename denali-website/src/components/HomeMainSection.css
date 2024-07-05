@@ -1,5 +1,5 @@
 .headImageHM {
-  background-image: url('../images/Home_Page.jpg');
+  background-image: url('../images/Home_Page.png');
   background-size:cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -47,21 +47,22 @@
   }
   .headImageHM{
     background-size: auto;
+     padding:15px;
   }
 }
 @media screen and (max-width: 500px){
   .mainTextHM {
-    font-size: 35pt;
+    font-size: 40pt;
   }
 }
 @media screen and (max-width: 400px){
   .mainTextHM {
-    font-size: 32pt;
+    font-size: 37pt;
   }
 }
 @media screen and (max-width: 300px){
   .mainTextHM {
-    font-size: 30pt;
+    font-size: 35pt;
   }
 }
 
