@@ -45,7 +45,7 @@ function SolutionsList({ solutionId }) {
 
   return (
     <div>
-      <h2>{jsonData[0].section}</h2>
+      <h2 className="subHeadingSL">{jsonData[0].section}</h2>
       <br />
       <p className="textSL" >{jsonData2[0][solutionId]}</p>
       <div className="projectSL">

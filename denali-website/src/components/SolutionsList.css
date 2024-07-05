@@ -2,6 +2,9 @@
     display: flex;
     flex-direction: column;
   }
+  .subHeadingSL{
+    font-size: 2.5vw;
+  }
 .textSL{
   margin-bottom: 40px;
   margin-top: 20px;
@@ -31,6 +34,9 @@
     p {
       font-size:16pt;
     }
+    .subHeadingSL{
+      font-size: 35pt;
+    }
   }
   @media screen and (max-width: 1200px){
     .textSL{
@@ -43,7 +49,17 @@
       margin-right:0px ;
       margin-top: 20px;
     }
+    .subHeadingSL{
+      font-size: 30pt;
+    }
   }
-  @media screen and (max-width: 500px){
-
+  @media screen and (max-width: 800px){
+    .subHeadingSL{
+      font-size: 25pt;
+    }
+  }
+  @media screen and (max-width: 600px){
+    .subHeadingSL{
+      font-size: 20pt;
+    }
   }

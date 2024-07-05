@@ -5,7 +5,13 @@
 }
 
 .projects-titleSD {
+    font-size:  3.7vw;
     padding-top: 50px;
+}
+@media screen and (max-width: 1650px){
+    .projects-titleSD {
+        font-size:45pt;
+    }
 }
 @media screen and (max-width: 1200px){
     .listSD {
@@ -13,26 +19,27 @@
     }
     
     .projects-titleSD {
+        font-size:40pt;
         padding-top: 100px;
     }
 }
-@media screen and (max-width: 900px){
+@media screen and (max-width: 800px){
     .projects-titleSD {
-        font-size: 27pt;
+        font-size: 35pt;
     }
 }
-@media screen and (max-width: 450px){
+@media screen and (max-width: 750px){
     .projects-titleSD {
-        font-size: 25pt;
-        padding-top: 175px;
+        padding-top: 80px;
+    }
+}
+@media screen and (max-width: 600px){
+    .projects-titleSD {
+        font-size: 30pt;
     }
     .listSD {
-        padding: 25px;
+        padding: 50px 25px;
     }
 
 }
-@media (max-height: 700px) { 
-    .projects-titleSD {
-        padding-top: 75px;
-    }
-}
+
