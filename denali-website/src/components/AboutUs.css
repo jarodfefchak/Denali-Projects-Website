@@ -83,7 +83,7 @@
 
 .lineAU {
   width: 2px;
-  background-color: #408697;;
+  background-color: #408697;
   height: 95px;
 }
 
@@ -92,6 +92,48 @@
 }
 
 @media screen and (max-width: 1600px) {
+  .header-textAU {
+    font-size: 50pt;
+  }
+  .imgAU {
+    height: 300px;
+    width: 275px;
+  }
+  .executive-titleAU {
+    font-size: 40pt;
+  }
+  .sub-header-textAU {
+    font-size: 35pt;
+  }
+  .paragraphAU {
+    font-size: 16pt;
+  }
+  #sloganAU {
+    font-size: 18pt;
+  }
+  .img-detailsAU {
+    width: 275px;
+    padding-left: 10px;
+  }
+
+  .text-containerAU {
+    width: 200px;
+  }
+  .text-containerAU p {
+    font-size: 14pt;
+  }
+
+  .lineAU {
+    width: 2px;
+    background-color: #408697;
+    height: 95px;
+  }
+
+  .linkedinAU {
+    height: 70px;
+  }
+}
+@media screen and (max-width: 1200px) {
   .header-textAU {
     font-size: 50pt;
   }
@@ -111,6 +153,22 @@
   #sloganAU {
     font-size: 18pt;
   }
+  .img-detailsAU {
+    width: 250px;
+    padding-left: 10px;
+  }
+  .text-containerAU p {
+    font-size: 14pt;
+  }
+
+  .lineAU {
+    width: 1.5px;
+    height: 95px;
+  }
+
+  .linkedinAU {
+    height:65px;
+  }
 }
 
 @media screen and (max-width: 1000px) {
@@ -129,12 +187,27 @@
   .imgAU {
     height: 275px;
     width: 225px;
+    margin: 70px 15px 10px 15px;
   }
   .buttonAU {
     width: 250px;
     height: 65px;
     font-size: 18pt;
   }
+  .img-detailsAU {
+    width: 225px;
+    padding-left: 10px;
+  }
+  .text-containerAU p {
+    font-size: 13pt;
+  }
+
+  .lineAU {
+    width: 1.5px;
+    height: 95px;
+  }
+  
+
 }
 
 @media screen and (max-width: 900px) {
@@ -169,7 +242,33 @@
   }
   .img-textAU {
     width: 250px;
+  }
+  .img-detailsAU {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-left: 0;
+  }
+  
+  .lineAU {
+    height: 2px;
+    width: 95%;
+  }
+  
+  .linkedinAU {
+    height: 70px;
+  
+  }
+  
+  .text-containerAU {
+    width: 100%;
     text-align: center;
+    margin: 10px 0;
+  }
+  
+  .text-containerAU p {
+    font-size: 14pt;
   }
 }
 
