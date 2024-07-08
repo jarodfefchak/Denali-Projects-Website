@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { useParams } from "react-router-dom";
 import { motion } from "framer-motion";
+import emailjs from "@emailjs/browser";
 import Header from "./Header";
 import Footer from "./Footer";
 import axios from "axios";
@@ -26,6 +27,7 @@ function Apply() {
   const [show, setShow] = useState(false);
   const [show2, setShow2] = useState(false);
   const [show3, setShow3] = useState(false);
+  const form = useRef();
 
   const checkFormValidity = () => {
     if (
@@ -80,7 +82,7 @@ function Apply() {
   }, []);
 
   if (!jsonData) {
-    return;
+    return null;
   }
 
   const handleNameChange = (event) => {
@@ -138,20 +140,51 @@ function Apply() {
   };
 
   const validPhoneNumber = (phone) => {
-    const regex =
-      /^(\+\d{1,3}[- ]?)?\(?\d{1,4}\)?[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/;
+    const regex = /^(\+\d{1,3}[- ]?)?\(?\d{1,4}\)?[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/;
     setValidPhoneNumber(regex.test(phone));
+  };
+
+  const sendEmail = () => {
+    const formData = new FormData();
+    formData.append("name", FLname);
+    formData.append("email", email);
+    formData.append("address", address1);
+    formData.append("address2", address2);
+    formData.append("city", city);
+    formData.append("province", province);
+    formData.append("postalCode", postalCode);
+    formData.append("phone", phone);
+    formData.append("apega", APEGA);
+    formData.append("alberta", alberta);
+    formData.append("linkedin", url);
+    formData.append("job_title", jobTitle);
+    formData.append("resume", resume);
+
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_APPLICATION_TEMPLATE_ID,
+        formData,
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        (result) => {
+          console.log("SUCCESS!", result.text);
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
   };
 
   const handleSignup = (event) => {
     event.preventDefault();
     if (!isValidPhoneNumber) {
       setShow(true);
-    }
-    if (!isFormValid) {
+    } else if (!isFormValid) {
       setShow2(true);
-    }
-    if (isFormValid && isValidPhoneNumber) {
+    } else {
+      sendEmail();
       setShow3(true);
     }
   };
@@ -176,13 +209,16 @@ function Apply() {
         <div className="contentAP">
           <p className="headerAP">Apply to {decodeURIComponent(jobTitle)}</p>
           <p className="textAP">
-           <br></br>{jsonData[0].apply}<br></br><br></br><b>No Phone Calls Please!</b>
+            <br />
+            {jsonData[0].apply}
+            <br />
+            <br />
+            <b>No Phone Calls Please!</b>
           </p>
-        
         </div>
-        <form className="formAP" onSubmit={handleSignup}>
+        <form className="formAP" onSubmit={handleSignup} ref={form}>
           <p className="inputHeadingAP">
-            Personal Details <span style ={{color:"red"}}>*</span>
+            Personal Details <span style={{ color: "red" }}>*</span>
           </p>
           <label className="labelAP">
             <input
@@ -205,7 +241,7 @@ function Apply() {
             />
           </label>
           <p className="inputHeadingAP ">
-            Contact Details <span style ={{color:"red"}}>*</span>
+            Contact Details <span style={{ color: "red" }}>*</span>
           </p>
           <label className="labelAP">
             <input
@@ -246,9 +282,9 @@ function Apply() {
               required
             />
           </label>
-          <label className="longlabelAP">
+          <label className="labelAP">
             <input
-              className="input-field-largeAP"
+              className="input-fieldAP"
               type="text"
               value={postalCode}
               onChange={handlePostalChange}
@@ -257,11 +293,11 @@ function Apply() {
             />
           </label>
           <p className="inputHeadingAP ">
-            Phone <span style ={{color:"red"}}>*</span>
+            Phone <span style={{ color: "red" }}>*</span>
           </p>
-          <label className="longlabelAP">
+          <label className="labelAP">
             <input
-              className="input-field-largeAP"
+              className="input-fieldAP"
               type="tel"
               value={phone}
               onChange={handlePhoneChange}
@@ -273,20 +309,20 @@ function Apply() {
           <p className="inputHeadingAP ">
             APEGA Membership Number
           </p>
-          <label className="longlabelAP">
+          <label className="labelAP">
             <input
-              className="input-field-largeAP"
+              className="input-fieldAP"
               type="text"
               value={APEGA}
               onChange={handleAPEGAChange}
             />
           </label>
           <p className="inputHeadingAP ">
-            Do you currently reside in Alberta? <span style ={{color:"red"}}>*</span>
+            Do you currently reside in Alberta? <span style={{ color: "red" }}>*</span>
           </p>
-          <label className="longlabelAP">
+          <label className="labelAP">
             <select
-              className="input-field-largeAP"
+              className="input-fieldAP"
               value={alberta}
               onChange={handleAlbertaChange}
               required
@@ -296,11 +332,11 @@ function Apply() {
             </select>
           </label>
           <p className="inputHeadingAP ">
-            Are you legally entitled to work in Canada? <span style ={{color:"red"}}>*</span>
+            Are you legally entitled to work in Canada? <span style={{ color: "red" }}>*</span>
           </p>
-          <label className="longlabelAP">
+          <label className="labelAP">
             <select
-              className="input-field-largeAP"
+              className="input-fieldAP"
               value={legalToWork}
               onChange={handleLegalToWorkChange}
               required
@@ -312,16 +348,16 @@ function Apply() {
           <p className="inputHeadingAP ">
             LinkedIn Profile URL
           </p>
-          <label className="longlabelAP">
+          <label className="labelAP">
             <input
-              className="input-field-largeAP"
+              className="input-fieldAP"
               type="url"
               value={url}
               onChange={handleUrlChange}
             />
           </label>
           <p className="inputHeadingAP ">
-            Resume <span style ={{color:"red"}}>*</span>
+            Resume <span style={{ color: "red" }}>*</span>
           </p>
           <label className="resumeButton">
             <input
@@ -331,8 +367,8 @@ function Apply() {
               required
             />
           </label>
-          <br></br>
-          <button className="buttonAP" type="submit" onClick={handleSignup}>
+          <br />
+          <button className="buttonAP" type="submit">
             Submit
           </button>
         </form>
@@ -397,4 +433,5 @@ function Apply() {
 }
 
 export default Apply;
+
 

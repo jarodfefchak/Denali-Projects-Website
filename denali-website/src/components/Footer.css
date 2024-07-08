@@ -26,6 +26,7 @@
 #item1 p{
     margin-top: 15px ;
     margin-bottom: 15px;
+    font-size: 16pt;
 }
 #item2{
     text-align: center;
@@ -37,6 +38,9 @@
     font-size: 20pt;
     font-weight: 600;
     
+} 
+#item2 p{
+    font-size: 16pt;
 } 
 #item2 img{
     margin-top: 20px;
@@ -57,13 +61,13 @@
 #item3 h5{
     margin-bottom: 25px;
     text-align: left;
+    font-size: 16pt;
     
 } 
 #item3 ul{
-    font-size: 14pt;
+    font-size: 16pt;
     text-align: left;
     padding-left: 15px;
-    /* list-style-type: none;  */
 } 
 #item3 li{
    padding-top: 5px;
@@ -102,12 +106,21 @@
     #item3 h4{
         font-size: 18pt;    
     } 
+}
+@media screen and (max-width:1200px){
     #item3 h5{
-        font-size: 14pt;    
+        font-size: 14pt;
+        
     } 
-    #item3 li{
-        font-size: 14pt;    
+    #item3 ul{
+        font-size: 14pt;
     } 
+    #item2 p{
+        font-size: 14pt;
+    } 
+    #item1 p{
+        font-size: 14pt;
+    }
 }
 @media screen and (max-width:900px){
     #item1{
