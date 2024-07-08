@@ -244,6 +244,8 @@ body {
     right: 3%;
     font-size: 18pt;
   }
+  .carousel-image {
+    height: 70vh; 
 }
 
 @media screen and (max-width: 900px) {
@@ -262,6 +264,7 @@ body {
   .close-button {
     top: -8%;
   }
+}
 }
 
 @media screen and (max-width: 850px) {
@@ -297,6 +300,9 @@ body {
   .close-button {
     top: -15%;
   }
+  .carousel-image {
+    height: 65vh; 
+}
 }
 @media screen and (max-width: 750px){
   .close-button {
@@ -305,6 +311,9 @@ body {
   .overlay-text {
     top: 52%;
   }
+  .carousel-image {
+    height: 60vh; 
+}
   
 }
 @media screen and (max-width: 650px){
@@ -320,6 +329,9 @@ body {
   .close-button {
     font-size:15pt ;
   }
+  .carousel-image {
+    height: 50vh; 
+}
   
 }
 
