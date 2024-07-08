@@ -4,27 +4,40 @@ import axios from "axios";
 
 function HomeMainSection() {
   const [jsonData, setJsonData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await axios.get("/data/Headings.json");
         setJsonData(response.data);
+        setLoading(false);
       } catch (error) {
-        console.error("Error fetching data:", error);
+        setError(error);
+        setLoading(false);
       }
     };
 
     fetchData();
   }, []);
 
-  if (!jsonData) {
+  if (loading) {
     return ;
   }
+
+  if (error) {
+    return <div>Error loading data</div>;
+  }
+
+  if (!jsonData) {
+    return null;
+  }
+
   return (
-    <div className="headImageHM" loading= "lazy">
+    <div className="headImageHM" loading="lazy">
       <p className="mainTextHM">
-       {jsonData[0].Main}
+        {jsonData[0].Main}
       </p>
     </div>
   );

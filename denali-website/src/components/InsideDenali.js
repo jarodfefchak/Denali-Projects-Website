@@ -7,6 +7,8 @@ import "./InsideDenali.css";
 function InsideDenali() {
   const [hover, setHover] = useState(false);
   const [data, setData] = useState({ jsonData: null, jsonData2: null });
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -16,8 +18,10 @@ function InsideDenali() {
           axios.get(`/data/Text.json`)
         ]);
         setData({ jsonData: response1.data, jsonData2: response2.data });
+        setLoading(false);
       } catch (error) {
-        console.error("Error fetching data:", error);
+        setError(error);
+        setLoading(false);
       }
     };
     fetchData();
@@ -33,8 +37,16 @@ function InsideDenali() {
     padding: "0px",
   }), []);
 
-  if (!data.jsonData || !data.jsonData2) {
+  if (loading) {
     return;
+  }
+
+  if (error) {
+    return <div>Error loading data</div>;
+  }
+
+  if (!data.jsonData || !data.jsonData2) {
+    return null;
   }
 
   return (

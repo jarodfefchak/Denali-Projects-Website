@@ -59,7 +59,7 @@ body {
 
 .carousel-arrow {
   position: absolute;
-  top: 43%;
+  top: 41%;
   transform: translateY(-50%); /* This will vertically center the arrows */
   font-size: 25pt;
   font-weight: 900;
@@ -347,11 +347,11 @@ body {
     margin-right: 25px;
   }
   .buttonPS {
-    border-radius: 5px;
-    width: 125px;
-    height: 30px;
-    font-size: 12pt;
+    background-color: #408697;
+    width: 75%;
+    height: 40px;
   }
+  
 }
 
 
