@@ -1,5 +1,5 @@
 body {
-  overflow-x: hidden; /* Prevent horizontal scrolling */
+  overflow-x: hidden;
 }
 
 .layoutPS {
@@ -7,8 +7,8 @@ body {
   flex-direction: column;
   padding-top: 100px;
   color: black;
-  overflow-x: hidden; /* Prevent overflow within layout */
-  position: relative; /* Ensure relative positioning */
+  overflow-x: hidden;
+  position: relative;
 }
 
 .titlePS {
@@ -24,8 +24,8 @@ body {
 }
 
 .carousel-image {
-  width: 100%; 
-  height: 75vh; /* Maintain aspect ratio */
+  width: 100%;
+  height: 75vh;
   object-fit: cover;
   display: block;
 }
@@ -44,7 +44,7 @@ body {
   background-color: #000;
   width: 30px;
   border-radius: 10px;
-  transition: width 0.4s ease-out; /* Transition width and height */
+  transition: width 0.4s ease-out;
 }
 
 .dot.inactive-dot {
@@ -52,7 +52,7 @@ body {
 }
 
 .carousel-wrapper {
-  position: relative; /* This is now the positioning context for the arrows */
+  position: relative;
   width: 82vw;
   margin: 0 auto;
 }
@@ -60,7 +60,7 @@ body {
 .carousel-arrow {
   position: absolute;
   top: 41%;
-  transform: translateY(-50%); /* This will vertically center the arrows */
+  transform: translateY(-50%);
   font-size: 25pt;
   font-weight: 900;
   cursor: pointer;
@@ -71,7 +71,7 @@ body {
 }
 
 .carousel-arrow-prev {
-  left: -5%; /* Adjust as needed */
+  left: -5%;
 }
 
 .alice-carousel__stage-item.__active {
@@ -79,7 +79,7 @@ body {
 }
 
 .carousel-arrow-next {
-  right: -5%; /* Adjust as needed */
+  right: -5%;
 }
 
 .alice-carousel__stage-item.__inactive {
@@ -113,57 +113,46 @@ body {
 
 .close-button {
   position: absolute;
-  top: 5px; /* Adjust top position as needed */
-  right: 5px; /* Adjust right position as needed */
+  top:3%;
+  right:3%;
   color: white;
   background: none;
   border: none;
   font-size: 1.4vw;
   cursor: pointer;
   z-index: 20;
-  display: none; /* Initially hidden */
 }
-
-.image-container:hover .close-button {
-  display: block; 
-}
-
 .close-button:hover {
-  color: rgb(192, 192, 192);
+  color: #afafaf;
 }
-
 
 .overlay-text {
   position: absolute;
-  top: 50%; /* Align vertically centered */
-  left: 50%; /* Align horizontally centered */
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   color: white;
   text-align: center;
-  padding: 10px;
+  width: 95%;
+  margin-top: 26px;
+  padding: 0px 10px 0px 10px;
   opacity: 0;
-  width: 75vw;
-  height: 70vh; /* Limit height */
-  overflow-y: auto; /* Enable vertical scrolling */
-  overflow-x: hidden; /* Hide horizontal scrollbar */
+  max-height: 90%;
+  overflow-y: auto;
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Center content vertically */
+  justify-content: flex-start;
 }
 
 .overlay-text p {
   font-size: 1.2vw;
-  margin: 0; /* Remove default margins */
+ padding-left: 30px;
+ padding-right: 30px;
 }
 
 .overlay-text.fade-in {
   opacity: 1;
-}
-
-
-
-.image-container:hover .close-button {
-  display: block; 
 }
 
 @media screen and (max-width: 1650px) {
@@ -175,183 +164,76 @@ body {
     margin-right: 50pt;
   }
   .buttonPS {
-    border-radius: 7px;
-    width: 270px;
-  }
-  .close-button {
-    font-size: 18pt;
-  }
-  .overlay-text p {
-    font-size: 16pt;
-  }
-}
-
-@media screen and (max-width: 1300px) {
-  .overlay-text {
-   top: 55%;
-    width: 70vw;
-  }
-  .buttonPS {
-    border-radius: 7px;
-    width: 200px;
-  }
-  .close-button {
-    right: -3%;
-    top: -10%;
-    font-size: 18pt;
-  }
-}
-
-@media screen and (max-width: 1200px) {
-  .close-button {
-    top: -10%;
-  }
-  .overlay-text p {
-    font-size: 14pt; /* Adjusted font size */
-  }
-  .close-button {
-    font-size: 16pt;
-  }
-}
-@media screen and (max-width: 1100px) {
-  .close-button {
-    top: -8%;
-    font-size: 18pt;
-  }
-  .overlay-text {
-    font-size: 14pt; 
-}
-}
-
-@media screen and (max-width: 1000px) {
-  .titlePS {
-    font-size: 45pt;
-  }
-  .subtitlePS {
-    font-size: 25pt;
-  }
-  .overlay-text  {
-    width: 80vw;
-  }
-  .buttonPS {
-    border-radius: 7px;
-    width: 150px;
-    height: 40px;
+    height: 35px;
     font-size: 14pt;
   }
   .close-button {
-    top: -15%;
-    right: 3%;
-    font-size: 18pt;
+    font-size: 20pt;
   }
-  .carousel-image {
-    height: 70vh; 
+  .overlay-text p {
+    font-size: 16pt;
+  }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1050px) {
+  .carousel-arrow {
+    display: none;
+  }
+  .carousel-image {
+    height: 55vh;
+  }
+  .carousel-wrapper {
+    width: 100vw;
+  }
+  
   .titlePS {
     font-size: 40pt;
-    margin-left: 50px;
+  }
+  .subtitlePS {
+    font-size: 30pt;
+    margin-bottom: 50pt;
+  }
+  .buttonPS {
+    height: 30px;
+    font-size: 12pt;
+  }
+  .close-button {
+    font-size: 16pt;
+  }
+  .overlay-text p {
+    font-size: 14pt;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .titlePS {
+    font-size: 25pt;
+    margin-left: 50pt;
   }
   .subtitlePS {
     font-size: 20pt;
-    margin-left: 50px;
-  }
-  .overlay-text  {
-    top: 55%;
-    width: 80vw;
-  }
-  .close-button {
-    top: -8%;
-  }
-}
-}
-
-@media screen and (max-width: 850px) {
-  .titlePS {
-    font-size: 35pt;
-  }
-  .subtitlePS {
-    font-size: 18pt;
-  }
-  .carousel-wrapper {
-    width: 100vw; /* Set the width of the carousel */
-  }
-  
-  .carousel-arrow-prev,
-  .carousel-arrow-next {
-    display: none;
-  }
-  .dot {
-    top: -2%;
-    width: 15px;
-    height: 15px;
-    margin: 0 10px 50px 10px;
-  }
-  .dot.active-dot {
-    width: 33px;
-    border-radius: 10px;
-  }
-
-  .overlay-text {
-    top: 50%;
-    width: 97vw;
-  }
-  .close-button {
-    top: -15%;
-  }
-  .carousel-image {
-    height: 65vh; 
-}
-}
-@media screen and (max-width: 750px){
-  .close-button {
-    top: -10%;
-  }
-  .overlay-text {
-    top: 52%;
-  }
-  .carousel-image {
-    height: 60vh; 
-}
-  
-}
-@media screen and (max-width: 650px){
-  .close-button {
-    top: -8%;
-  }
-  .overlay-text {
-    top: 55%;
-  }
-  .overlay-text p{
-    font-size: 13pt;
-  }
-  .close-button {
-    font-size:15pt ;
-  }
-  .carousel-image {
-    height: 50vh; 
-}
-  
-}
-
-@media screen and (max-width: 500px) {
-  .titlePS {
-    font-size: 30pt;
-    margin-left: 25px;
-    margin-right: 25px;
-  }
-  .subtitlePS {
-    margin-bottom: 50px;
-    margin-left: 25px;
-    margin-right: 25px;
+    margin-left: 50pt;
   }
   .buttonPS {
-    background-color: #408697;
-    width: 75%;
-    height: 40px;
+    height: 30px;
+    font-size: 12pt;
   }
-  
+  .overlay-text p {
+    font-size: 14pt;
+   padding-left: 15px;
+   padding-right: 15px;
+  }
 }
 
+@media screen and (max-width: 550px) {
+  .buttonPS {
+    width: 60vw;
+    font-size: 14pt;
+    border-radius: 5px;
+  }
+  .overlay-text p {
 
+   padding-left: 5px;
+   padding-right: 5px;
+  }
+}

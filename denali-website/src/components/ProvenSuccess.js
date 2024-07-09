@@ -123,15 +123,17 @@ function ProvenSuccess() {
                     loading="lazy"
                   />
                   {showInfo && activeIndex === index && (
-                    <div className={`overlay-text ${showInfo ? "fade-in" : ""}`}>
-                      <p>{item.description}</p>
+                    <>
+                      <div className={`overlay-text ${showInfo ? "fade-in" : ""}`}>
+                        <p>{item.description}</p>
+                      </div>
                       <button
-                        className={`close-button ${showInfo && activeIndex === index ? "show" : ""}`}
+                        className="close-button"
                         onClick={() => setShowInfo(false)}
                       >
                         X
                       </button>
-                    </div>
+                    </>
                   )}
                   <button
                     onMouseEnter={handleMouseEnter}
@@ -161,3 +163,4 @@ function ProvenSuccess() {
 }
 
 export default ProvenSuccess;
+
