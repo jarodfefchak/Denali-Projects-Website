@@ -148,15 +148,10 @@ function Apply() {
     if (!isFormValid) {
       setShow2(true);
     }
-    if (isFormValid && isValidPhoneNumber) {
+    if (isFormValid && isValidPhoneNumber&& (legalToWork = "Yes")) {
       try {
-        // Access the file directly from the form input
         const resumeFile = event.target.elements.resume.files[0];
-
-        // Convert resume file to base64
         const resumeBase64 = await convertFileToBase64(resumeFile);
-
-        // Construct email template parameters
         const templateParams = {
           job_title: decodeURIComponent(jobTitle),
           name: FLname,
@@ -170,7 +165,6 @@ function Apply() {
           linkedin: url,
           uploaded_resume: resumeBase64,
         };
-
         emailjs
           .send(
             process.env.REACT_APP_EMAILJS_SERVICE_ID,
@@ -180,23 +174,24 @@ function Apply() {
           )
           .then((response) => {
             console.log("Email sent!", response.status, response.text);
-            setShow3(true); // Show success message
+           
           })
           .catch((error) => {
             console.error("Error sending email:", error);
-            setShow3(true); // Show error message
+      
           });
       } catch (error) {
         console.error("Error converting file to base64:", error);
       }
     }
+    setShow3(true); 
   };
 
   const convertFileToBase64 = (file) => {
     return new Promise((resolve, reject) => {
       const reader = new FileReader();
       reader.readAsDataURL(file);
-      reader.onload = () => resolve(reader.result.split(",")[1]); // Get only the base64 part
+      reader.onload = () => resolve(reader.result.split(",")[1]); 
       reader.onerror = (error) => reject(error);
     });
   };
