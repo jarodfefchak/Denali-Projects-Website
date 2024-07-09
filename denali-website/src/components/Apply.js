@@ -1,10 +1,10 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { motion } from "framer-motion";
-import emailjs from "@emailjs/browser";
+import axios from "axios";
+import emailjs from "emailjs-com";
 import Header from "./Header";
 import Footer from "./Footer";
-import axios from "axios";
 import "./Apply.css";
 
 function Apply() {
@@ -27,7 +27,28 @@ function Apply() {
   const [show, setShow] = useState(false);
   const [show2, setShow2] = useState(false);
   const [show3, setShow3] = useState(false);
-  const form = useRef();
+
+  const { jobTitle } = useParams();
+
+  useEffect(() => {
+    document.title = "Apply - Denali Projects";
+  }, []);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+  }, []);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get("/data/Text.json");
+        setJsonData(response.data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+    fetchData();
+  }, []);
 
   const checkFormValidity = () => {
     if (
@@ -58,32 +79,6 @@ function Apply() {
     resume,
     isValidPhoneNumber,
   ]);
-
-  const { jobTitle } = useParams();
-
-  useEffect(() => {
-    document.title = "Apply - Denali Projects";
-  }, []);
-
-  useEffect(() => {
-    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
-  }, []);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get(`/data/Text.json`);
-        setJsonData(response.data);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
-    fetchData();
-  }, []);
-
-  if (!jsonData) {
-    return null;
-  }
 
   const handleNameChange = (event) => {
     setFLname(event.target.value);
@@ -140,53 +135,70 @@ function Apply() {
   };
 
   const validPhoneNumber = (phone) => {
-    const regex = /^(\+\d{1,3}[- ]?)?\(?\d{1,4}\)?[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/;
+    const regex =
+      /^(\+\d{1,3}[- ]?)?\(?\d{1,4}\)?[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/;
     setValidPhoneNumber(regex.test(phone));
   };
 
-  const sendEmail = () => {
-    const formData = new FormData();
-    formData.append("name", FLname);
-    formData.append("email", email);
-    formData.append("address", address1);
-    formData.append("address2", address2);
-    formData.append("city", city);
-    formData.append("province", province);
-    formData.append("postalCode", postalCode);
-    formData.append("phone", phone);
-    formData.append("apega", APEGA);
-    formData.append("alberta", alberta);
-    formData.append("linkedin", url);
-    formData.append("job_title", jobTitle);
-    formData.append("resume", resume);
-
-    emailjs
-      .sendForm(
-        process.env.REACT_APP_EMAILJS_SERVICE_ID,
-        process.env.REACT_APP_EMAILJS_APPLICATION_TEMPLATE_ID,
-        formData,
-        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
-      )
-      .then(
-        (result) => {
-          console.log("SUCCESS!", result.text);
-        },
-        (error) => {
-          console.log("FAILED...", error.text);
-        }
-      );
-  };
-
-  const handleSignup = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     if (!isValidPhoneNumber) {
       setShow(true);
-    } else if (!isFormValid) {
-      setShow2(true);
-    } else {
-      sendEmail();
-      setShow3(true);
     }
+    if (!isFormValid) {
+      setShow2(true);
+    }
+    if (isFormValid && isValidPhoneNumber) {
+      try {
+        // Access the file directly from the form input
+        const resumeFile = event.target.elements.resume.files[0];
+
+        // Convert resume file to base64
+        const resumeBase64 = await convertFileToBase64(resumeFile);
+
+        // Construct email template parameters
+        const templateParams = {
+          job_title: decodeURIComponent(jobTitle),
+          name: FLname,
+          email: email,
+          address: `${address1} ${address2}`,
+          city: city,
+          province: province,
+          phone: phone,
+          apega: APEGA,
+          alberta: alberta,
+          linkedin: url,
+          uploaded_resume: resumeBase64,
+        };
+
+        emailjs
+          .send(
+            process.env.REACT_APP_EMAILJS_SERVICE_ID,
+            process.env.REACT_APP_EMAILJS_APPLICATION_TEMPLATE_ID,
+            templateParams,
+            process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+          )
+          .then((response) => {
+            console.log("Email sent!", response.status, response.text);
+            setShow3(true); // Show success message
+          })
+          .catch((error) => {
+            console.error("Error sending email:", error);
+            setShow3(true); // Show error message
+          });
+      } catch (error) {
+        console.error("Error converting file to base64:", error);
+      }
+    }
+  };
+
+  const convertFileToBase64 = (file) => {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload = () => resolve(reader.result.split(",")[1]); // Get only the base64 part
+      reader.onerror = (error) => reject(error);
+    });
   };
 
   const closeAlert = () => {
@@ -209,14 +221,13 @@ function Apply() {
         <div className="contentAP">
           <p className="headerAP">Apply to {decodeURIComponent(jobTitle)}</p>
           <p className="textAP">
-            <br />
-            {jsonData[0].apply}
-            <br />
-            <br />
+            {jsonData && jsonData.length > 0 && jsonData[0].apply}
+            <br></br>
+            <br></br>
             <b>No Phone Calls Please!</b>
           </p>
         </div>
-        <form className="formAP" onSubmit={handleSignup} ref={form}>
+        <form className="formAP" onSubmit={handleSubmit}>
           <p className="inputHeadingAP">
             Personal Details <span style={{ color: "red" }}>*</span>
           </p>
@@ -282,9 +293,9 @@ function Apply() {
               required
             />
           </label>
-          <label className="labelAP">
+          <label className="longlabelAP">
             <input
-              className="input-fieldAP"
+              className="input-field-largeAP"
               type="text"
               value={postalCode}
               onChange={handlePostalChange}
@@ -295,9 +306,9 @@ function Apply() {
           <p className="inputHeadingAP ">
             Phone <span style={{ color: "red" }}>*</span>
           </p>
-          <label className="labelAP">
+          <label className="longlabelAP">
             <input
-              className="input-fieldAP"
+              className="input-field-largeAP"
               type="tel"
               value={phone}
               onChange={handlePhoneChange}
@@ -306,23 +317,22 @@ function Apply() {
             />
           </label>
 
-          <p className="inputHeadingAP ">
-            APEGA Membership Number
-          </p>
-          <label className="labelAP">
+          <p className="inputHeadingAP ">APEGA Membership Number</p>
+          <label className="longlabelAP">
             <input
-              className="input-fieldAP"
+              className="input-field-largeAP"
               type="text"
               value={APEGA}
               onChange={handleAPEGAChange}
             />
           </label>
           <p className="inputHeadingAP ">
-            Do you currently reside in Alberta? <span style={{ color: "red" }}>*</span>
+            Do you currently reside in Alberta?{" "}
+            <span style={{ color: "red" }}>*</span>
           </p>
-          <label className="labelAP">
+          <label className="longlabelAP">
             <select
-              className="input-fieldAP"
+              className="input-field-largeAP"
               value={alberta}
               onChange={handleAlbertaChange}
               required
@@ -332,11 +342,12 @@ function Apply() {
             </select>
           </label>
           <p className="inputHeadingAP ">
-            Are you legally entitled to work in Canada? <span style={{ color: "red" }}>*</span>
+            Are you legally entitled to work in Canada?{" "}
+            <span style={{ color: "red" }}>*</span>
           </p>
-          <label className="labelAP">
+          <label className="longlabelAP">
             <select
-              className="input-fieldAP"
+              className="input-field-largeAP"
               value={legalToWork}
               onChange={handleLegalToWorkChange}
               required
@@ -345,12 +356,10 @@ function Apply() {
               <option value="Yes">Yes</option>
             </select>
           </label>
-          <p className="inputHeadingAP ">
-            LinkedIn Profile URL
-          </p>
-          <label className="labelAP">
+          <p className="inputHeadingAP ">LinkedIn Profile URL</p>
+          <label className="longlabelAP">
             <input
-              className="input-fieldAP"
+              className="input-field-largeAP"
               type="url"
               value={url}
               onChange={handleUrlChange}
@@ -362,12 +371,13 @@ function Apply() {
           <label className="resumeButton">
             <input
               type="file"
+              name="resume"
               onChange={handleResumeChange}
-              accept=".pdf"
+              accept=".pdf, .docx"
               required
             />
           </label>
-          <br />
+          <br></br>
           <button className="buttonAP" type="submit">
             Submit
           </button>
@@ -433,5 +443,3 @@ function Apply() {
 }
 
 export default Apply;
-
-
