@@ -91,7 +91,7 @@ function SendResume() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    if (!isFormValid|| !isFormValid) {
+    if (!isFormValid || !isValidPhoneNumber) {
       setShow2(true);
     }
     if (isFormValid && isValidPhoneNumber) {
@@ -114,18 +114,17 @@ function SendResume() {
           )
           .then((response) => {
             console.log("Email sent!", response.status, response.text);
-           
           })
           .catch((error) => {
             console.error("Error sending email:", error);
-      
           });
       } catch (error) {
         console.error("Error converting file to base64:", error);
       }
     }
-    setShow3(true); 
+    setShow3(true);
   };
+  
 
   const convertFileToBase64 = (file) => {
     return new Promise((resolve, reject) => {
