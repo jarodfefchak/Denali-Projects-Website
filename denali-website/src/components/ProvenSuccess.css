@@ -131,6 +131,9 @@ body {
 .close-button:hover {
   color: #afafaf;
 }
+.hide-button {
+  display: none;
+}
 
 .overlay-text {
   position: absolute;

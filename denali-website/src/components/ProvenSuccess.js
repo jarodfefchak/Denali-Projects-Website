@@ -10,27 +10,31 @@ import "./ProvenSuccess.css";
 function ProvenSuccess() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [showInfo, setShowInfo] = useState(false);
-  const [hover, setHover] = useState(false);
-  const [data, setData] = useState({ jsonData: null, jsonData2: null, jsonData3: null, jsonData4: null });
+  const [data, setData] = useState({
+    jsonData: null,
+    jsonData2: null,
+    jsonData3: null,
+    jsonData4: null,
+  });
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const [response1, response2, response3, response4] = await Promise.all([
-          axios.get('/data/Projects/Project1.json'),
-          axios.get('/data/Projects/Project2.json'),
-          axios.get('/data/Projects/Project3.json'),
-          axios.get('/data/Headings.json')
+          axios.get("/data/Projects/Project1.json"),
+          axios.get("/data/Projects/Project2.json"),
+          axios.get("/data/Projects/Project3.json"),
+          axios.get("/data/Headings.json"),
         ]);
         setData({
           jsonData: response1.data,
           jsonData2: response2.data,
           jsonData3: response3.data,
-          jsonData4: response4.data
+          jsonData4: response4.data,
         });
       } catch (error) {
-        console.error('Error fetching data:', error);
+        console.error("Error fetching data:", error);
       } finally {
         setLoading(false);
       }
@@ -40,11 +44,9 @@ function ProvenSuccess() {
 
   const handleDragStart = (e) => e.preventDefault();
 
-  const handleMouseEnter = useCallback(() => setHover(true), []);
-  const handleMouseLeave = useCallback(() => setHover(false), []);
   const toggleShowInfo = useCallback((index) => {
     setActiveIndex(index);
-    setShowInfo(prevShowInfo => !prevShowInfo);
+    setShowInfo((prevShowInfo) => !prevShowInfo);
   }, []);
 
   const handleSlideChanged = ({ item }) => {
@@ -80,26 +82,29 @@ function ProvenSuccess() {
     </span>
   );
 
-  const items = useMemo(() => [
-    {
-      key: "project1",
-      img: Project1Img,
-      description: data.jsonData && data.jsonData[0].description
-    },
-    {
-      key: "project2",
-      img: Project2Img,
-      description: data.jsonData2 && data.jsonData2[0].description
-    },
-    {
-      key: "project3",
-      img: Project3Img,
-      description: data.jsonData3 && data.jsonData3[0].description
-    }
-  ], [data.jsonData, data.jsonData2, data.jsonData3]);
+  const items = useMemo(
+    () => [
+      {
+        key: "project1",
+        img: Project1Img,
+        description: data.jsonData && data.jsonData[0].description,
+      },
+      {
+        key: "project2",
+        img: Project2Img,
+        description: data.jsonData2 && data.jsonData2[0].description,
+      },
+      {
+        key: "project3",
+        img: Project3Img,
+        description: data.jsonData3 && data.jsonData3[0].description,
+      },
+    ],
+    [data.jsonData, data.jsonData2, data.jsonData3]
+  );
 
   if (loading) {
-    return;
+    return null; // Render loading indicator or placeholder
   }
 
   return (
@@ -111,10 +116,13 @@ function ProvenSuccess() {
         <p className="subtitlePS">{data.jsonData4[0].projects_sub}</p>
         <div className="carousel-wrapper">
           <AliceCarousel
-            renderPrevButton={renderPrevButton}
             items={items.map((item, index) => (
               <div key={item.key}>
-                <div className={`image-container ${showInfo && activeIndex === index ? "blur" : ""}`}>
+                <div
+                  className={`image-container ${
+                    showInfo && activeIndex === index ? "blur" : ""
+                  }`}
+                >
                   <img
                     src={item.img}
                     alt={`Project ${index + 1}`}
@@ -124,8 +132,10 @@ function ProvenSuccess() {
                   />
                   {showInfo && activeIndex === index && (
                     <>
-                      <div className={`overlay-text ${showInfo ? "fade-in" : ""}`}>
-                        <p>{item.description}</p><br></br>
+                      <div
+                        className={`overlay-text ${showInfo ? "fade-in" : ""}`}
+                      >
+                        <p>{item.description}</p>
                       </div>
                       <button
                         className="close-button"
@@ -135,10 +145,9 @@ function ProvenSuccess() {
                       </button>
                     </>
                   )}
+
                   <button
-                    onMouseEnter={handleMouseEnter}
-                    onMouseLeave={handleMouseLeave}
-                    className={`buttonPS ${hover ? "button-hoverPS" : ""} ${showInfo && activeIndex === index ? "close-button" : ""}`}
+                    className={`buttonPS ${showInfo && activeIndex === index ? "hide-button" : ""}`}
                     onClick={() => toggleShowInfo(index)}
                   >
                     {showInfo && activeIndex === index ? "" : `Project ${index + 1} Info`}
@@ -146,6 +155,7 @@ function ProvenSuccess() {
                 </div>
               </div>
             ))}
+            renderPrevButton={renderPrevButton}
             renderNextButton={renderNextButton}
             activeIndex={activeIndex}
             onSlideChanged={handleSlideChanged}
