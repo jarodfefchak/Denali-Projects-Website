@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import emailjs from "emailjs-com";
 import Header from "./Header";
 import Footer from "./Footer";
 import axios from "axios";
@@ -11,6 +12,7 @@ function SendResume() {
   const [FLname, setFLname] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
+  const [message, setMessage] = useState("");
   const [isValidPhoneNumber, setValidPhoneNumber] = useState(false);
   const [resume, setResume] = useState(null);
   const [show2, setShow2] = useState(false);
@@ -83,15 +85,55 @@ function SendResume() {
     const regex = /^(\+\d{1,3}[- ]?)?\(?\d{1,4}\)?[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/;
     setValidPhoneNumber(regex.test(phone));
   };
+  const handleMessageChange = (event) => {
+    setMessage(event.target.value);
+  };
 
-  const handleSignup = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    if (!isFormValid || !isValidPhoneNumber) {
+    if (!isFormValid|| !isFormValid) {
       setShow2(true);
     }
-   else {
-      setShow3(true);
+    if (isFormValid && isValidPhoneNumber) {
+      try {
+        const resumeFile = event.target.elements.resume.files[0];
+        const resumeBase64 = await convertFileToBase64(resumeFile);
+        const templateParams = {
+          name: FLname,
+          email: email,
+          phone: phone,
+          message: message,
+          uploaded_resume: resumeBase64,
+        };
+        emailjs
+          .send(
+            process.env.REACT_APP_EMAILJS_SERVICE_ID,
+            process.env.REACT_APP_EMAILJS_SEND_RESUME_TEMPLATE_ID,
+            templateParams,
+            process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+          )
+          .then((response) => {
+            console.log("Email sent!", response.status, response.text);
+           
+          })
+          .catch((error) => {
+            console.error("Error sending email:", error);
+      
+          });
+      } catch (error) {
+        console.error("Error converting file to base64:", error);
+      }
     }
+    setShow3(true); 
+  };
+
+  const convertFileToBase64 = (file) => {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload = () => resolve(reader.result.split(",")[1]); 
+      reader.onerror = (error) => reject(error);
+    });
   };
 
   const closeAlert2 = () => {
@@ -113,7 +155,7 @@ function SendResume() {
            <br></br>{jsonData[0].apply}<br></br><br></br><b>No Phone Calls Please!</b>
           </p>
         </div>
-        <form className="formSR" onSubmit={handleSignup}>
+        <form className="formSR" onSubmit={handleSubmit}>
           <p className="inputHeadingSR">Personal Details <span style ={{color:"red"}}>*</span></p>
           <label className="labelSR">
             <input
@@ -149,7 +191,7 @@ function SendResume() {
           </label>
          
           <p className="inputHeadingSR">Message</p>
-          <textarea className="longlabelSR">
+          <textarea className="longlabelSR" value= {message}  onChange={handleMessageChange}>
            </textarea>
           <p className="inputHeadingSR">Resume <span style ={{color:"red"}}>*</span></p>
           <label className="resumeButton">
@@ -161,7 +203,7 @@ function SendResume() {
             />
           </label>
           <br></br>
-          <button className="buttonSR" type="submit" onClick={handleSignup}>
+          <button className="buttonSR" type="submit" onClick={handleSubmit}>
             Submit
           </button>
         </form>

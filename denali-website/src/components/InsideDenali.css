@@ -44,7 +44,7 @@
   box-shadow: 1px 1px 20px #000000;
 }
 
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 1650px) {
   .textID p {
     font-size: 20pt;
   }
@@ -115,12 +115,12 @@
 }
 
 @media screen and (max-width: 750px) {
-  .textID p {
-    font-size: 14pt;
-  }
 
   .textID .headerID {
-    font-size: 25pt;
+    font-size: 30pt;
+  }
+  .textID { 
+    margin: 75px 20px 0px 20px;
   }
 
   .buttonID {
@@ -130,6 +130,14 @@
     font-size: 14pt;
     cursor: pointer;
   }
+  .imgID {
+    width: 100%;
+    height: 50vh;
+    padding: 0px 10px 0px 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
 }
 
 @media screen and (max-width: 600px) {

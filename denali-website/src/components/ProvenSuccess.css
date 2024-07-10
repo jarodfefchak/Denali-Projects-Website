@@ -135,7 +135,7 @@ body {
   text-align: center;
   width: 95%;
   margin-top: 26px;
-  padding: 0px 10px 0px 10px;
+  padding: 0px 10px 10ppx 10px;
   opacity: 0;
   max-height: 90%;
   overflow-y: auto;
