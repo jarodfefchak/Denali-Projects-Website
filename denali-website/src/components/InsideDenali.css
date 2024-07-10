@@ -41,7 +41,10 @@
 }
 
 .button-hoverID {
-  box-shadow: 1px 1px 20px #000000;
+  background-color: white;
+  color: #346c7a;
+  border: 2px solid #408697;
+  transition: background-color 0.5s ease-out, color 0.4s ease-out, border 0.2s ease; /* Correct the transition property */
 }
 
 @media screen and (max-width: 1650px) {

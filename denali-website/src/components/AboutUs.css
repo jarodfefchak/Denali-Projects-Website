@@ -17,7 +17,10 @@
 }
 
 .button-hoverAU {
-  box-shadow: 1px 1px 20px #000000;
+  background-color: white;
+  color: #346c7a;
+  border: 2px solid #408697;
+  transition: background-color 0.5s ease-out, color 0.4s ease-out, border 0.2s ease; /* Correct the transition property */
 }
 
 .header-textAU {
@@ -91,7 +94,7 @@
   height: 80px;
 }
 
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 1650px) {
   .header-textAU {
     font-size: 50pt;
   }
@@ -260,6 +263,9 @@
     height: 70px;
   
   }
+  #sloganAU {
+    margin-bottom: 0px;
+  }
   
   .text-containerAU {
     width: 100%;
@@ -282,6 +288,9 @@
   .executive-titleAU {
     font-size: 22pt;
   }
+  .contentAU {
+    padding: 125px 20px 150px 20px;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -296,7 +305,5 @@
   #sloganAU {
     font-size: 16pt;
   }
-  .contentAU {
-    padding: 125px 15px 150px 15px;
-  }
+ 
 }

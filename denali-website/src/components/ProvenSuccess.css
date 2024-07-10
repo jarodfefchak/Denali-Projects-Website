@@ -111,6 +111,12 @@ body {
   border: none;
 }
 
+.buttonPS:hover {
+  background-color: white;
+  color: #346c7a;
+  border: 2px solid #408697;
+  transition: background-color 0.5s ease-out, color 0.4s ease-out, border 0.2s ease; /* Correct the transition property */
+}
 .close-button {
   position: absolute;
   top:3%;

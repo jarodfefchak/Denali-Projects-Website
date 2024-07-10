@@ -45,29 +45,6 @@
     box-sizing: border-box;
   }
   
-  .buttonContainerSH {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-  
-  .buttonSH {
-    color: white;
-    background-color: #408697;
-    border: 0px;
-    width: 400px;
-    height: 90px;
-    border-radius: 25px;
-    font-size: 25pt;
-    cursor: pointer;
-  }
-  
-  .button-hoverSH {
-    box-shadow: 1px 1px 20px #000000;
-  }
-  
   @media screen and (max-width: 1650px) {
     .headingSH {
       font-size: 45pt;
@@ -94,7 +71,7 @@
       font-size: 22pt;
     }
     .descriptionSH{
-      font-size: 14pt;
+      font-size: 16pt;
     }
     .headingSH {
       font-size: 40pt;
@@ -147,17 +124,17 @@
   @media screen and (max-width: 750px) {
     .headingSH {
       font-size: 35pt;
+      padding-top: 125px;
     }
   }
   @media screen and (max-width: 600px) {
     .headingSH {
       margin-left: 20px;
       margin-right: 20px;
-      padding-top: 130px;
       font-size: 30pt;
     }
     .descriptionSH{
-      margin:25px 20px 25px 20px;
+      margin:25px 20px 100px 20px;
     }
   
     .imgSH {

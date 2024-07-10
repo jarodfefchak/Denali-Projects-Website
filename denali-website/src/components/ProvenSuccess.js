@@ -125,7 +125,7 @@ function ProvenSuccess() {
                   {showInfo && activeIndex === index && (
                     <>
                       <div className={`overlay-text ${showInfo ? "fade-in" : ""}`}>
-                        <p>{item.description}</p>
+                        <p>{item.description}</p><br></br>
                       </div>
                       <button
                         className="close-button"
