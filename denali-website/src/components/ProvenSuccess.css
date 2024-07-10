@@ -181,7 +181,7 @@ body {
   }
 }
 
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 1000px) {
   .carousel-arrow {
     display: none;
   }
@@ -194,10 +194,14 @@ body {
   
   .titlePS {
     font-size: 40pt;
+    margin-left: 50px;
+    margin-right: 50px;
   }
   .subtitlePS {
     font-size: 30pt;
     margin-bottom: 50pt;
+    margin-left: 50px;
+    margin-right: 50px;
   }
   .buttonPS {
     height: 30px;
@@ -230,7 +234,16 @@ body {
    padding-right: 15px;
   }
 }
-
+@media screen and (max-width: 550px){
+.titlePS {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.subtitlePS {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+}
 @media screen and (max-width: 550px) {
   .buttonPS {
     width: 60vw;
