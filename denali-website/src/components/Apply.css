@@ -128,13 +128,28 @@ select {
   padding: 5px 10px;
 }
 .custom-alertOP button:hover {
-  background-color: #346370;
+  background-color: white;
+  color: #346c7a;
+  border: 2px solid #408697;
+  transition: background-color 0.5s ease-out, color 0.4s ease-out, border 0.2s ease; 
 }
 
 .resumeButton input{
   width: 80vw;
   text-wrap: wrap;
 }
+.phone-format-listOP {
+  max-height: 150px;
+  overflow-y: auto;
+  padding: 0;
+  margin: 0;
+  list-style-position: inside;
+}
+
+.phone-format-listOP li {
+  font-size: 14pt;
+}
+
 @media screen and (max-width: 1600px) {
   .headerAP {
     font-size: 50pt;

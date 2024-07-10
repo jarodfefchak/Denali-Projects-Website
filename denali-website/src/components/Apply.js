@@ -142,56 +142,71 @@ function Apply() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    if (!isValidPhoneNumber) {
+
+    // Reset alerts before validation
+    setShow(false);
+    setShow2(false);
+    setShow3(false);
+
+    // Validate phone number
+    if (!isValidPhoneNumber && isFormValid) {
       setShow(true);
     }
+
+    // Validate form fields
     if (!isFormValid) {
       setShow2(true);
     }
-    if (isFormValid && isValidPhoneNumber&& (legalToWork = "Yes")) {
-      try {
-        const resumeFile = event.target.elements.resume.files[0];
-        const resumeBase64 = await convertFileToBase64(resumeFile);
-        const templateParams = {
-          job_title: decodeURIComponent(jobTitle),
-          name: FLname,
-          email: email,
-          address: `${address1} ${address2}`,
-          city: city,
-          province: province,
-          phone: phone,
-          apega: APEGA,
-          alberta: alberta,
-          linkedin: url,
-          uploaded_resume: resumeBase64,
-        };
-        emailjs
-          .send(
-            process.env.REACT_APP_EMAILJS_SERVICE_ID,
-            process.env.REACT_APP_EMAILJS_APPLICATION_TEMPLATE_ID,
-            templateParams,
-            process.env.REACT_APP_EMAILJS_PUBLIC_KEY
-          )
-          .then((response) => {
-            console.log("Email sent!", response.status, response.text);
-           
-          })
-          .catch((error) => {
-            console.error("Error sending email:", error);
-      
-          });
-      } catch (error) {
-        console.error("Error converting file to base64:", error);
+
+    // If form is valid and phone number is valid, proceed with submission
+    if (isFormValid && isValidPhoneNumber) {
+      if (legalToWork === "Yes") {
+        try {
+          const resumeFile = event.target.elements.resume.files[0];
+          const resumeBase64 = await convertFileToBase64(resumeFile);
+
+          const templateParams = {
+            job_title: decodeURIComponent(jobTitle),
+            name: FLname,
+            email: email,
+            address: `${address1} ${address2}`,
+            city: city,
+            province: province,
+            phone: phone,
+            apega: APEGA,
+            alberta: alberta,
+            linkedin: url,
+            uploaded_resume: resumeBase64,
+          };
+
+          // Send email using emailjs
+          emailjs
+            .send(
+              process.env.REACT_APP_EMAILJS_SERVICE_ID,
+              process.env.REACT_APP_EMAILJS_APPLICATION_TEMPLATE_ID,
+              templateParams,
+              process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+            )
+            .then((response) => {
+              console.log("Email sent!", response.status, response.text);
+            })
+            .catch((error) => {
+              console.error("Error sending email:", error);
+            });
+
+        } catch (error) {
+          console.error("Error converting file to base64:", error);
+        }
       }
+      setShow3(true);
     }
-    setShow3(true); 
   };
 
   const convertFileToBase64 = (file) => {
     return new Promise((resolve, reject) => {
       const reader = new FileReader();
       reader.readAsDataURL(file);
-      reader.onload = () => resolve(reader.result.split(",")[1]); 
+      reader.onload = () => resolve(reader.result.split(",")[1]);
       reader.onerror = (error) => reject(error);
     });
   };
@@ -233,7 +248,6 @@ function Apply() {
               value={FLname}
               onChange={handleNameChange}
               placeholder="First and Last Name"
-           
             />
           </label>
           <label className="labelAP">
@@ -243,7 +257,6 @@ function Apply() {
               value={email}
               onChange={handleEmailChange}
               placeholder="Email"
-            
             />
           </label>
           <p className="inputHeadingAP ">
@@ -256,7 +269,6 @@ function Apply() {
               value={address1}
               onChange={handleAddress1Change}
               placeholder="Street Address"
-         
             />
           </label>
           <label className="labelAP">
@@ -275,7 +287,6 @@ function Apply() {
               value={city}
               onChange={handleCityChange}
               placeholder="City"
-  
             />
           </label>
           <label className="labelAP">
@@ -285,7 +296,6 @@ function Apply() {
               value={province}
               onChange={handleProvinceChange}
               placeholder="Province"
-    
             />
           </label>
           <label className="longlabelAP">
@@ -295,7 +305,6 @@ function Apply() {
               value={postalCode}
               onChange={handlePostalChange}
               placeholder="Postal Code"
-      
             />
           </label>
           <p className="inputHeadingAP ">
@@ -308,7 +317,6 @@ function Apply() {
               value={phone}
               onChange={handlePhoneChange}
               placeholder="Phone"
-         
             />
           </label>
 
@@ -344,7 +352,6 @@ function Apply() {
               className="input-field-largeAP"
               value={legalToWork}
               onChange={handleLegalToWorkChange}
-              
             >
               <option value="No">No</option>
               <option value="Yes">Yes</option>
@@ -368,7 +375,6 @@ function Apply() {
               name="resume"
               onChange={handleResumeChange}
               accept=".pdf, .docx"
-    
             />
           </label>
           <br></br>
@@ -388,7 +394,22 @@ function Apply() {
           >
             <div className="custom-alert-overlayOP">
               <div className="custom-alertOP">
-                <p>Please input a valid phone number.</p>
+              <p>Please enter a valid phone number in one of the following formats:
+                </p>
+                <ol className="phone-format-listOP">
+                  <li>123-456-7890</li>
+                  <li>123.456.7890</li>
+                  <li>123 456 7890</li>
+                  <li>(123) 456-7890</li>
+                  <li>+1 123-456-7890</li>
+                  <li>+1 (123) 456-7890</li>
+                  <li>+12 123 456 7890</li>
+                  <li>+123 123 456 7890</li>
+                  <li>1234567890</li>
+                  <li>(123)456-7890</li>
+                  <li>+12-123-456-7890</li>
+                  <li>+123-123-456-7890</li>
+                </ol>
                 <button onClick={closeAlert}>Close</button>
               </div>
             </div>

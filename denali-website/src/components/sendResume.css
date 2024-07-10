@@ -5,250 +5,285 @@ body {
   overflow-x: hidden;
 }
 
-  
-  .layoutSR {
-    display: flex;
-    flex-direction: row;
-  }
-  
-  .contentSR {
-    flex-direction: column;
-    align-items: center;
-    margin-top: 200px;
-    margin-left: 75px;
-    margin-right: 50px;
-  }
-  .headerSR {
-    font-size: 4.2vw;
-    font-weight: 550;
+.layoutSR {
+  display: flex;
+  flex-direction: row;
+}
 
-  
+.contentSR {
+  flex-direction: column;
+  align-items: center;
+  margin-top: 200px;
+  margin-left: 75px;
+  margin-right: 50px;
+}
+
+.headerSR {
+  font-size: 4.2vw;
+  font-weight: 550;
+}
+
+.textSR {
+  font-size: 1.2vw;
+}
+
+.formSR {
+  margin: 200px 75px 200px 50px;
+  font-size: 16pt;
+}
+
+.inputHeadingSR {
+  margin-bottom: 0px;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.labelSR {
+  width: 20vw;
+  padding: 5px;
+  margin-bottom: 15px;
+  font-size: 16pt;
+}
+
+.longlabelSR {
+  width: 40vw;
+  padding: 5px;
+  margin-bottom: 15px;
+  font-size: 16pt;
+}
+
+.resumeButton {
+  width: 20vw;
+  margin-bottom: 40px;
+  border: none;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.buttonSR {
+  color: white;
+  background-color: #408697;
+  border: 0;
+  border-radius: 7px;
+  width: 100px;
+  height: 40px;
+  font-size: 16pt;
+  cursor: pointer;
+}
+
+.buttonSR:hover {
+  background-color: white;
+  color: #346c7a;
+  border: 2px solid #408697;
+  transition: background-color 0.5s ease-out, color 0.4s ease-out, border 0.2s ease;
+}
+
+.input-fieldSR,
+.input-field-largeSR {
+  width: 100%;
+  padding: 10px;
+  font-size: 14pt;
+  box-sizing: border-box;
+}
+
+input[type="file"] {
+  font-size: 14pt;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  font-size: 14pt;
+  box-sizing: border-box;
+}
+
+.text-large {
+  font-size: 14pt;
+}
+
+.custom-alert-overlaySR {
+  position: fixed;
+  font-size: 18pt;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.custom-alertSR {
+  background: white;
+  width: 350px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.custom-alertSR button {
+  background-color: #408697;
+  border-radius: 10px;
+  border: 1px solid #346370;
+  font-size: 16pt;
+  color: #fff;
+  margin-top: 10px;
+  padding: 5px 10px;
+}
+
+.custom-alertSR button:hover {
+  background-color: white;
+  color: #346c7a;
+  border: 2px solid #408697;
+  transition: background-color 0.5s ease-out, color 0.4s ease-out, border 0.2s ease;
+}
+
+.resumeButton input {
+  width: 80vw;
+  text-wrap: wrap;
+}
+
+.phone-format-list {
+  max-height: 150px;
+  overflow-y: auto;
+  padding: 0;
+  margin: 0;
+  list-style-position: inside;
+}
+
+.phone-format-list li {
+  font-size: 14pt;
+}
+
+@media screen and (max-width: 1600px) {
+  .headerSR {
+    font-size: 50pt;
   }
-  
+
   .textSR {
-    font-size: 1.2vw;
+    font-size: 16pt;
   }
+}
+
+@media screen and (max-width: 1200px) {
+  .headerSR {
+    font-size: 45pt;
+  }
+
+  .textSR {
+    font-size: 14pt;
+  }
+
+  .contentSR {
+    margin-left: 50px;
+  }
+
   .formSR {
-    margin: 200px 75px 200px 50px;
-    font-size: 16pt;
+    margin: 200px 50px 200px 50px;
   }
-  .inputHeadingSR {
-    margin-bottom: 0px;
-    font-size: 22px;
-    font-weight: 500;
+}
+
+@media screen and (max-width: 1000px) {
+  .layoutSR {
+    flex-direction: column;
+    margin-left: 100px;
+    margin-right: 100px;
   }
-  
-  .labelSR {
-    width: 20vw;
-    padding: 5px;
-    margin-bottom: 15px;
-    font-size: 16pt;
+
+  .contentSR {
+    margin-top: 150px;
+    margin-left: 0px;
+    margin-right: 0px;
   }
-  .longlabelSR {
-    width: 40vw;
-    padding: 5px;
-    margin-bottom: 15px;
-    font-size: 16pt;
+
+  .headerSR {
+    font-size: 40pt;
   }
-  .resumeButton {
-    width: 20vw;
-    margin-bottom: 40px;
-    border: none;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  
-  .buttonSR {
-    color: white;
-    background-color: #408697;
-    border: 0;
-    border-radius: 7px;
-    width: 100px;
-    height: 40px;
-    font-size: 16pt;
-    cursor: pointer;
-  }
-  
-  .buttonSR:hover {
-    background-color: white;
-    color: #346c7a;
-    border: 2px solid #408697;
-    transition: background-color 0.5s ease-out, color 0.4s ease-out, border 0.2s ease; /* Correct the transition property */
-  }
-  
-  .input-fieldSR,
-  .input-field-largeSR {
-    width: 100%;
-    padding: 10px;
-    font-size: 14pt;
-    box-sizing: border-box;
-  }
-  
-  input[type="file"] {
-    font-size: 14pt;
-  }
-  
-  select {
-    width: 100%;
-    padding: 10px;
-    font-size: 14pt;
-    box-sizing: border-box;
-  }
-  
-  .text-large {
-    font-size: 14pt;
-  }
-  .custom-alert-overlaySR {
-    position: fixed;
-    font-size: 18pt;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    align-items: center;
+
+  .formSR {
+    margin-top: 50px;
     justify-content: center;
-    z-index: 1000;
   }
-  
-  .custom-alertSR {
-    background: white;
-    width:400px;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+  .labelSR {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 15px;
+    font-size: 14pt;
   }
-  
-  .custom-alertSR button {
-    background-color: #408697;
-    border-radius: 10px;
-    border: 1px solid #346370;
+
+  .longlabelSR {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 15px;
+    font-size: 14pt;
+  }
+
+  .inputHeadingSR {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .layoutSR {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+  .custom-alert-overlaySR {
     font-size: 16pt;
-    color: #fff;
-    margin-top: 10px;
-    padding: 5px 10px;
   }
-  .custom-alertSR button:hover {
-    background-color: #346370;
+
+  .custom-alertSR {
+    width: 350px;
+    padding: 20px;
   }
-  .resumeButton input{
-    width: 80vw;
-    text-wrap: wrap;
+
+  .custom-alertSR button {
+    font-size: 14pt;
   }
-  @media screen and (max-width: 1600px) {
-    .headerSR {
-      font-size: 50pt;
-    }
-    
-    .textSR {
-      font-size: 16pt;
-    }
+
+  .buttonSR {
+    font-size: 14pt;
   }
-  
-  @media screen and (max-width: 1200px) {
-    .headerSR {
-      font-size: 45pt;
-    }
-    .textSR {
-      font-size: 14pt;
-    }
-    .contentSR {
-      margin-left: 50px;
-    }
-    .formSR {
-      margin: 200px 50px 200px 50px;
-    }
+}
+
+@media screen and (max-width: 700px) {
+  .headerSR {
+    font-size: 35pt;
   }
-  @media screen and (max-width: 1000px) {
-    .layoutSR {
-      flex-direction: column;
-      margin-left: 100px;
-      margin-right: 100px;
-    }
-    .contentSR {
-      margin-top: 150px;
-      margin-left: 0px;
-      margin-right: 0px;
-    }
-    .headerSR {
-      font-size: 40pt;
-    }
-    .formSR {
-      margin-top: 50px;
-     justify-content: center;
-    }
-    .labelSR {
-      width: 100%;
-      padding: 5px;
-      margin-bottom: 15px;
-      font-size: 14pt;
-    }
-    .longlabelSR {
-      width: 100%;
-      padding: 5px;
-      margin-bottom: 15px;
-      font-size: 14pt;
-    }
-    .inputHeadingSR {
-      font-size: 20px;
-    }
+
+  .formSR {
+    margin: 50px 0px 75px 0px;
   }
-  @media screen and (max-width: 800px){
-    .layoutSR {
-      margin-left: 30px;
-      margin-right: 30px;
-    }
-    .custom-alert-overlaySR {
-      font-size: 16pt;
-    }
-    
-    .custom-alertSR {
-      width:350px;
-      padding: 20px;
-  
-    }
-    
-    .custom-alertSR button {
-      font-size: 14pt;
-    }
-    .buttonSR{
-      font-size: 14pt;
-    }
+}
+
+@media screen and (max-width: 500px) {
+  .headerSR {
+    font-size: 30pt;
   }
-  
-  @media screen and (max-width: 700px) {
-    .headerSR {
-      font-size: 35pt;
-    }
-    .formSR {
-      margin: 50px 0px 75px 0px;
-    }
+
+  .custom-alert-overlaySR {
+    font-size: 14pt;
   }
-  @media screen and (max-width: 500px) {
-    .headerSR {
-      font-size: 30pt;
-    }
-    .custom-alert-overlaySR {
-      font-size: 14pt;
-    }
-    
-    .custom-alertSR {
-      width:300px;
-      padding: 20px;
-  
-    }
-    
-    .custom-alertSR button {
-      font-size: 12pt;
-    }
+
+  .custom-alertSR {
+    width: 300px;
+    padding: 20px;
   }
-  @media screen and (max-width: 350px){
-    .custom-alertSR {
-      width:250px;
-      padding: 10px;
-  
-    }
+
+  .custom-alertSR button {
+    font-size: 12pt;
   }
+}
+
+@media screen and (max-width: 350px) {
+  .custom-alertSR {
+    width: 250px;
+    padding: 10px;
+  }
+}

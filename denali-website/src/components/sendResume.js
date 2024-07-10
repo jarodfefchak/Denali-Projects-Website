@@ -15,8 +15,9 @@ function SendResume() {
   const [message, setMessage] = useState("");
   const [isValidPhoneNumber, setValidPhoneNumber] = useState(false);
   const [resume, setResume] = useState(null);
-  const [show2, setShow2] = useState(false);
-  const [show3, setShow3] = useState(false);
+  const [showFillFieldsAlert, setShowFillFieldsAlert] = useState(false);
+  const [showInvalidPhoneAlert, setShowInvalidPhoneAlert] = useState(false);
+  const [showSuccessAlert, setShowSuccessAlert] = useState(false);
 
   useEffect(() => {
     document.title = "Send Resume - Denali Projects";
@@ -83,8 +84,13 @@ function SendResume() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    if (!isFormValid || !isValidPhoneNumber) {
-      setShow2(true);
+    if (!isFormValid) {
+      setShowFillFieldsAlert(true);
+      return;
+    }
+
+    if (!isValidPhoneNumber) {
+      setShowInvalidPhoneAlert(true);
       return;
     }
 
@@ -115,7 +121,7 @@ function SendResume() {
         console.error("Error converting file to base64:", error);
       }
     }
-    setShow3(true);
+    setShowSuccessAlert(true);
   };
 
   const convertFileToBase64 = (file) => {
@@ -127,12 +133,16 @@ function SendResume() {
     });
   };
 
-  const closeAlert2 = () => {
-    setShow2(false);
+  const closeFillFieldsAlert = () => {
+    setShowFillFieldsAlert(false);
   };
 
-  const closeAlert3 = () => {
-    setShow3(false);
+  const closeInvalidPhoneAlert = () => {
+    setShowInvalidPhoneAlert(false);
+  };
+
+  const closeSuccessAlert = () => {
+    setShowSuccessAlert(false);
     window.location.href = "/";
   };
 
@@ -161,7 +171,6 @@ function SendResume() {
               value={FLname}
               onChange={handleNameChange}
               placeholder="First and Last Name"
-              required
             />
           </label>
           <label className="labelSR">
@@ -171,10 +180,8 @@ function SendResume() {
               value={email}
               onChange={handleEmailChange}
               placeholder="Email"
-              required
             />
           </label>
-
           <p className="inputHeadingSR">
             Phone <span style={{ color: "red" }}>*</span>
           </p>
@@ -185,7 +192,6 @@ function SendResume() {
               value={phone}
               onChange={handlePhoneChange}
               placeholder="Phone"
-              required
             />
           </label>
 
@@ -203,7 +209,6 @@ function SendResume() {
               type="file"
               onChange={handleResumeChange}
               accept=".pdf, .docx"
-              required
             />
           </label>
           <br />
@@ -211,7 +216,7 @@ function SendResume() {
             Submit
           </button>
         </form>
-        {show2 && (
+        {showFillFieldsAlert && (
           <motion.div
             className="custom-alert-overlaySR"
             initial={{ opacity: 0, y: 40 }}
@@ -223,16 +228,46 @@ function SendResume() {
           >
             <div className="custom-alert-overlaySR">
               <div className="custom-alertSR">
-                <p>
-                  Please fill in all fields and write out the Phone Number in one
-                  of the following formats:
-                </p>
-                <button onClick={closeAlert2}>Close</button>
+                <p>Please fill in all fields.</p>
+                <button onClick={closeFillFieldsAlert}>Close</button>
               </div>
             </div>
           </motion.div>
         )}
-        {show3 && (
+        {showInvalidPhoneAlert && (
+          <motion.div
+            className="custom-alert-overlaySR"
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              opacity: { duration: 0.4 },
+              y: { duration: 0.5, ease: "easeOut" },
+            }}
+          >
+            <div className="custom-alert-overlaySR">
+              <div className="custom-alertSR">
+                <p>Please enter a valid phone number in one of the following formats:
+                </p>
+                <ol className="phone-format-list">
+                  <li>123-456-7890</li>
+                  <li>123.456.7890</li>
+                  <li>123 456 7890</li>
+                  <li>(123) 456-7890</li>
+                  <li>+1 123-456-7890</li>
+                  <li>+1 (123) 456-7890</li>
+                  <li>+12 123 456 7890</li>
+                  <li>+123 123 456 7890</li>
+                  <li>1234567890</li>
+                  <li>(123)456-7890</li>
+                  <li>+12-123-456-7890</li>
+                  <li>+123-123-456-7890</li>
+                </ol>
+                <button onClick={closeInvalidPhoneAlert}>Close</button>
+              </div>
+            </div>
+          </motion.div>
+        )}
+        {showSuccessAlert && (
           <motion.div
             className="custom-alert-overlaySR"
             initial={{ opacity: 0, y: 40 }}
@@ -245,7 +280,7 @@ function SendResume() {
             <div className="custom-alert-overlaySR">
               <div className="custom-alertSR">
                 <p>Thank you for contacting Denali Projects.</p>
-                <button onClick={closeAlert3}>Close</button>
+                <button onClick={closeSuccessAlert}>Close</button>
               </div>
             </div>
           </motion.div>
@@ -257,3 +292,4 @@ function SendResume() {
 }
 
 export default SendResume;
+
