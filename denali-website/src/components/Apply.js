@@ -233,7 +233,7 @@ function Apply() {
               value={FLname}
               onChange={handleNameChange}
               placeholder="First and Last Name"
-              required
+           
             />
           </label>
           <label className="labelAP">
@@ -243,7 +243,7 @@ function Apply() {
               value={email}
               onChange={handleEmailChange}
               placeholder="Email"
-              required
+            
             />
           </label>
           <p className="inputHeadingAP ">
@@ -256,7 +256,7 @@ function Apply() {
               value={address1}
               onChange={handleAddress1Change}
               placeholder="Street Address"
-              required
+         
             />
           </label>
           <label className="labelAP">
@@ -275,7 +275,7 @@ function Apply() {
               value={city}
               onChange={handleCityChange}
               placeholder="City"
-              required
+  
             />
           </label>
           <label className="labelAP">
@@ -285,7 +285,7 @@ function Apply() {
               value={province}
               onChange={handleProvinceChange}
               placeholder="Province"
-              required
+    
             />
           </label>
           <label className="longlabelAP">
@@ -295,7 +295,7 @@ function Apply() {
               value={postalCode}
               onChange={handlePostalChange}
               placeholder="Postal Code"
-              required
+      
             />
           </label>
           <p className="inputHeadingAP ">
@@ -308,7 +308,7 @@ function Apply() {
               value={phone}
               onChange={handlePhoneChange}
               placeholder="Phone"
-              required
+         
             />
           </label>
 
@@ -330,7 +330,6 @@ function Apply() {
               className="input-field-largeAP"
               value={alberta}
               onChange={handleAlbertaChange}
-              required
             >
               <option value="No">No</option>
               <option value="Yes">Yes</option>
@@ -345,7 +344,7 @@ function Apply() {
               className="input-field-largeAP"
               value={legalToWork}
               onChange={handleLegalToWorkChange}
-              required
+              
             >
               <option value="No">No</option>
               <option value="Yes">Yes</option>
@@ -369,7 +368,7 @@ function Apply() {
               name="resume"
               onChange={handleResumeChange}
               accept=".pdf, .docx"
-              required
+    
             />
           </label>
           <br></br>

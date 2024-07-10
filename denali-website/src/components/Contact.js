@@ -150,7 +150,6 @@ function Contact() {
                 value={firstName}
                 onChange={handleFirstNameChange}
                 placeholder="First Name"
-                required
               />
             </label>
             <label className="labelC">
@@ -161,7 +160,6 @@ function Contact() {
                 value={lastName}
                 onChange={handleLastNameChange}
                 placeholder="Last Name"
-                required
               />
             </label>
             <label className="labelC">
@@ -172,7 +170,6 @@ function Contact() {
                 value={email}
                 onChange={handleEmailChange}
                 placeholder="Email"
-                required
               />
             </label>
             <p className="large-textC">Message <span style ={{color:"red"}}>*</span></p>

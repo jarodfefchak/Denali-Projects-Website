@@ -39,11 +39,7 @@ function SendResume() {
   }, []);
 
   const checkFormValidity = () => {
-    if (
-      FLname.trim() !== "" &&
-      email.trim() !== "" &&
-      resume !== null
-    ) {
+    if (FLname.trim() !== "" && email.trim() !== "" && resume !== null) {
       setIsFormValid(true);
     } else {
       setIsFormValid(false);
@@ -52,13 +48,7 @@ function SendResume() {
 
   useEffect(() => {
     checkFormValidity();
-  }, [
-    FLname,
-    email,
-    phone,
-    resume,
-    isValidPhoneNumber,
-  ]);
+  }, [FLname, email, phone, resume, isValidPhoneNumber]);
 
   if (!jsonData) {
     return;
@@ -77,6 +67,7 @@ function SendResume() {
     validPhoneNumber(phoneNumber);
     setPhone(phoneNumber);
   };
+
   const handleResumeChange = (event) => {
     setResume(event.target.files[0]);
   };
@@ -85,6 +76,7 @@ function SendResume() {
     const regex = /^(\+\d{1,3}[- ]?)?\(?\d{1,4}\)?[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/;
     setValidPhoneNumber(regex.test(phone));
   };
+
   const handleMessageChange = (event) => {
     setMessage(event.target.value);
   };
@@ -93,11 +85,12 @@ function SendResume() {
     event.preventDefault();
     if (!isFormValid || !isValidPhoneNumber) {
       setShow2(true);
+      return;
     }
+
     if (isFormValid && isValidPhoneNumber) {
       try {
-        const resumeFile = event.target.elements.resume.files[0];
-        const resumeBase64 = await convertFileToBase64(resumeFile);
+        const resumeBase64 = await convertFileToBase64(resume);
         const templateParams = {
           name: FLname,
           email: email,
@@ -124,13 +117,12 @@ function SendResume() {
     }
     setShow3(true);
   };
-  
 
   const convertFileToBase64 = (file) => {
     return new Promise((resolve, reject) => {
       const reader = new FileReader();
       reader.readAsDataURL(file);
-      reader.onload = () => resolve(reader.result.split(",")[1]); 
+      reader.onload = () => resolve(reader.result.split(",")[1]);
       reader.onerror = (error) => reject(error);
     });
   };
@@ -151,11 +143,17 @@ function SendResume() {
         <div className="contentSR">
           <p className="headerSR">Send Us Your Resume</p>
           <p className="textSR">
-           <br></br>{jsonData[0].apply}<br></br><br></br><b>No Phone Calls Please!</b>
+            <br />
+            {jsonData[0].apply}
+            <br />
+            <br />
+            <b>No Phone Calls Please!</b>
           </p>
         </div>
         <form className="formSR" onSubmit={handleSubmit}>
-          <p className="inputHeadingSR">Personal Details <span style ={{color:"red"}}>*</span></p>
+          <p className="inputHeadingSR">
+            Personal Details <span style={{ color: "red" }}>*</span>
+          </p>
           <label className="labelSR">
             <input
               className="input-fieldSR"
@@ -177,7 +175,9 @@ function SendResume() {
             />
           </label>
 
-          <p className="inputHeadingSR">Phone <span style ={{color:"red"}}>*</span></p>
+          <p className="inputHeadingSR">
+            Phone <span style={{ color: "red" }}>*</span>
+          </p>
           <label className="longlabelSR">
             <input
               className="input-field-largeSR"
@@ -188,11 +188,16 @@ function SendResume() {
               required
             />
           </label>
-         
+
           <p className="inputHeadingSR">Message</p>
-          <textarea className="longlabelSR" value= {message}  onChange={handleMessageChange}>
-           </textarea>
-          <p className="inputHeadingSR">Resume <span style ={{color:"red"}}>*</span></p>
+          <textarea
+            className="longlabelSR"
+            value={message}
+            onChange={handleMessageChange}
+          ></textarea>
+          <p className="inputHeadingSR">
+            Resume <span style={{ color: "red" }}>*</span>
+          </p>
           <label className="resumeButton">
             <input
               type="file"
@@ -201,8 +206,8 @@ function SendResume() {
               required
             />
           </label>
-          <br></br>
-          <button className="buttonSR" type="submit" onClick={handleSubmit}>
+          <br />
+          <button className="buttonSR" type="submit">
             Submit
           </button>
         </form>
@@ -218,7 +223,9 @@ function SendResume() {
           >
             <div className="custom-alert-overlaySR">
               <div className="custom-alertSR">
-                <p>Please fill in all fields write out the Phone Number in one of the following formats:
+                <p>
+                  Please fill in all fields and write out the Phone Number in one
+                  of the following formats:
                 </p>
                 <button onClick={closeAlert2}>Close</button>
               </div>
