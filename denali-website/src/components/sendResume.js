@@ -197,7 +197,7 @@ function SendResume() {
             <input
               type="file"
               onChange={handleResumeChange}
-              accept=".pdf"
+              accept=".pdf .docx"
               required
             />
           </label>
