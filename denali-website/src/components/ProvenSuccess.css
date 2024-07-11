@@ -243,14 +243,13 @@ body {
   margin-left: 20px;
   margin-right: 20px;
 }
+.buttonPS {
+  width: 60vw;
+  border-radius: 5px;
 }
-@media screen and (max-width: 550px) {
-  .buttonPS {
-    width: 60vw;
-    border-radius: 5px;
-  }
-  .overlay-text p {
-   padding-left: 5px;
-   padding-right: 5px;
-  }
+.overlay-text p {
+ padding-left: 5px;
+ padding-right: 5px;
 }
+}
+

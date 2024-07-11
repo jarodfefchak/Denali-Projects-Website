@@ -29,11 +29,13 @@
 .input-shortC {
   width: 17vw;
   font-size: 16pt;
+  border: 1px solid black;
 }
 
 .input-longC {
   width: 35vw;
   font-size: 16pt;
+  border: 1px solid black;
 }
 
 .no-marginC {

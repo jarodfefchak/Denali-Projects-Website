@@ -80,7 +80,11 @@ body {
   padding: 10px;
   font-size: 14pt;
   box-sizing: border-box;
-}
+  border: 1px solid black}
+  .input-field-largeAP option{
+    font-size: 14pt;
+    min-height: 30px;
+  }
 
 input[type="file"] {
   font-size: 14pt;

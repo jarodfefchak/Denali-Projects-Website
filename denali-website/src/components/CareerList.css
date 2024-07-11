@@ -19,7 +19,7 @@
   font-size: 1.2vw;
 }
 .applyButtonCL {
-  border: none;
+  border: 2px solid #408697;
   border-radius: 10px;
   background: #408697;
   color: white;
@@ -33,7 +33,7 @@
   background-color: white;
   color: #346c7a;
   border: 2px solid #408697;
-  transition: background-color 0.5s ease-out, color 0.4s ease-out, border 0.2s ease; /* Correct the transition property */
+  transition: background-color 0.5s ease-out, color 0.4s ease-out; /* Correct the transition property */
 }
 @media screen and (max-width: 1600px) {
   .postingsCL {
