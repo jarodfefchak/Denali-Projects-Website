@@ -25,7 +25,8 @@ body {
 
 .carousel-image {
   width: 100%;
-  height: 75vh;
+  height: 70vh;
+  max-height: 800px;
   object-fit: cover;
   display: block;
 }
@@ -200,7 +201,7 @@ body {
     display: none;
   }
   .carousel-image {
-    height: 55vh;
+    height: 50vh;
   }
   .carousel-wrapper {
     width: 100vw;

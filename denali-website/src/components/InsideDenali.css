@@ -8,6 +8,7 @@
 
 .imgID {
   width: 40vw;
+  max-height: 800px;
   height: 70vh;
   object-fit: cover;
   margin: 75px 50px 75px 50px;

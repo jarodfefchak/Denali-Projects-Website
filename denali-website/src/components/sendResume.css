@@ -160,6 +160,9 @@ select {
 .phone-format-list li {
   font-size: 14pt;
 }
+textarea{
+  border: 1px solid black;
+}
 
 @media screen and (max-width: 1650px) {
   .headerSR {
