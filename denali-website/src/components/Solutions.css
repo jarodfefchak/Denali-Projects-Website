@@ -31,6 +31,7 @@
   position: absolute;
   bottom: 0;
   left: 0;
+  font-size: 14pt;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.65);
   color: whitesmoke;
@@ -65,7 +66,7 @@
   transition: background-color 0.5s ease-out, color 0.4s ease-out, border 0.2s ease; /* Correct the transition property */
 }
 
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 1650px) {
   .headingS {
     font-size: 50pt;
   }
@@ -87,6 +88,9 @@
     border-radius: 20px;
     font-size: 22pt;
   }
+  .headingS {
+    font-size: 45pt;
+  }
 }
 @media screen and (max-width: 1075px) {
   .imageContainerS {
@@ -95,25 +99,14 @@
 }
 @media screen and (max-width: 1000px) {
   .headingS {
-    font-size: 45pt;
-  }
+    margin-left: 50px;
+    margin-left: 50px;
 }
-
+}
 @media screen and (max-width: 950px) {
   .imgS {
     height: 27vw;
     width: 27vw;
-  }
-  .textS {
-    font-size: 14pt;
-  }
-}
-@media screen and (max-width: 900px) {
-  .headingS {
-    margin-left: 45px;
-    margin-top: 50px;
-    margin-bottom: 25px;
-    font-size: 40pt;
   }
 }
 @media screen and (max-width: 800px) {
@@ -130,17 +123,16 @@
     border-radius: 18px;
     font-size: 20pt;
   }
-} 
-@media screen and (max-width: 750px) {
-  .headingS {
-    font-size: 35pt;
+  .headingS{
+    font-size:40pt;
   }
-}
+} 
+
 @media screen and (max-width: 600px) {
   .headingS {
-    text-align: center;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 35pt;
   }
 
   .imgS {
@@ -154,11 +146,6 @@
     font-size: 18pt;
   }
 } 
-@media screen and (max-width: 500px) {
-  .headingS {
-    font-size: 30pt;
-  }
-}
 @media screen and (max-width: 450px) {
   .imgS {
     height: 225px;
@@ -174,9 +161,6 @@
 @media screen and (max-width: 400px) {
   .imgS {
     width: 300px;
-  }
-  .textS {
-    font-size: 12pt;
   }
 } 
 @media screen and (max-width: 350px) {
