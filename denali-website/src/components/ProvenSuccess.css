@@ -155,7 +155,7 @@ body {
 }
 
 .overlay-text p {
-  font-size: 1.2vw;
+  font-size: 1.6vw;
  padding-left: 30px;
  padding-right: 30px;
 }
@@ -180,7 +180,7 @@ body {
     font-size: 20pt;
   }
   .overlay-text p {
-    font-size: 16pt;
+    font-size: 20pt;
   }
 }
   @media screen and (max-width: 1200px){
@@ -191,7 +191,7 @@ body {
       font-size: 30pt;
     }
     .overlay-text p {
-      font-size: 14pt;
+      font-size: 16pt;
     }
   }
 
@@ -239,6 +239,9 @@ body {
   }
   .subtitlePS {
     font-size: 25pt;
+  }
+  .overlay-text p {
+    font-size: 14pt;
   }
 }
 @media screen and (max-width: 600px){

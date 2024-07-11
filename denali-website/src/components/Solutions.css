@@ -101,6 +101,7 @@
   .headingS {
     margin-left: 50px;
     margin-left: 50px;
+    margin-top: 100px;
 }
 }
 @media screen and (max-width: 950px) {
@@ -125,6 +126,7 @@
   }
   .headingS{
     font-size:40pt;
+    margin-top: 75px;
   }
 } 
 
