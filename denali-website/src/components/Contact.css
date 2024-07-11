@@ -8,7 +8,7 @@
 }
 
 .textC {
-  margin: 150px 50px 150px 150px;
+  margin: 200px 50px 150px 150px;
   font-size: 25px;
 }
 
@@ -42,6 +42,7 @@
   margin-bottom: 0px;
   margin-top: 0px;
   padding: 0px;
+  font-size: 1.5vw;
 }
 .no-marginHeaderC {
   margin-bottom: 0px;
@@ -49,6 +50,7 @@
   padding: 0px;
   font-size: 40px;
   font-weight: 600;
+  font-size: 2.7vw;
 }
 
 
@@ -71,8 +73,7 @@
     padding-bottom: 40.25%; 
     height: 0;
     overflow: hidden;
-    margin: 150px 150px 0px 50px;
-    font-size: 25px;
+    margin: 200px 150px 0px 50px;
   }
   
   .iframe-containerC iframe {
@@ -135,7 +136,14 @@
   transition: background-color 0.5s ease-out, color 0.4s ease-out, border 0.2s ease; 
   }
 
-
+  @media screen and (max-width: 1650px){
+    .no-marginHeaderC {
+      font-size: 35px;
+    }
+    .no-marginC {
+      font-size: 18pt;
+    }
+  }
   @media screen and (max-width: 1200px){
     .textC {
       margin: 150px 50px 50px 50px;
@@ -157,6 +165,9 @@
     .input-longC {
       font-size: 14pt;
     }
+    .no-marginC {
+      font-size: 16pt;
+    }
   }
   @media screen and (max-width: 1050px){
     .iframe-containerC {
@@ -168,6 +179,17 @@
       width: 100%;
       min-height: 50vh;
       border: 0;
+    }
+  }
+  @media screen and (max-width: 1000px){
+    .no-marginC {
+      font-size: 14pt;
+    }
+    .textC {
+      margin: 175px 50px 150px 150px;
+    }
+    .iframe-containerC {
+      margin: 175px 150px 0px 50px;
     }
   }
   @media screen and (max-width: 950px) and (max-height: 600px){
@@ -188,11 +210,6 @@
       justify-content: center;
       align-items: center;
     }
-    .textC {
-      margin-top: 150px;
-      font-size: 22px;
-    }
-  
     .iframe-containerC {
       margin: 10px 50px 50px 50px;
     }
@@ -209,19 +226,23 @@
     .iframe-containerC {
       font-size: 22px;
     }
-    .no-marginHeaderC {
-      font-size: 40px;
-    }
   }
   @media screen and (max-width: 800px) {
     .buttonC {
       font-size:14pt;
       
     }
+    .no-marginHeaderC {
+      font-size: 25px;
+    }
+    
   }
-  @media screen and (max-width: 730px) {
+  @media screen and (max-width: 750px) {
     .iframe-containerC iframe {
       min-height: 45vh;
+    }
+    .textC {
+      margin-top: 125px;
     }
   }
   @media screen and (max-width: 675px) and (max-height:700px) {
@@ -249,6 +270,9 @@
     }
     .input-shortC {
       width: 80vw;
+    }
+    .no-marginHeaderC {
+      font-size: 20px;
     }
     
     .input-longC {

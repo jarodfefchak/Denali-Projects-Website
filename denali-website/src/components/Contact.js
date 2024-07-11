@@ -228,7 +228,7 @@ function Contact() {
         <div className="iframe-containerC">
           <p className="no-marginHeaderC">{jsonData[0].contactUs2}</p>
           <p className="no-marginC">{jsonData2[0].contactAddress}</p>
-          <p>{jsonData2[0].contactCity}</p>
+          <p className="no-marginC">{jsonData2[0].contactCity}</p>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4218.223674639591!2d-114.07818068628151!3d51.04993390290784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53716fe521a5d8f7%3A0xd9dccb4dd492ed30!2s700%204%20Ave%20SW%2C%20Calgary%2C%20AB%20T2P%203J4!5e0!3m2!1sen!2sca!4v1716931062195!5m2!1sen!2sca"
             title="Google Maps"
