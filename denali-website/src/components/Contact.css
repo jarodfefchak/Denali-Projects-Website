@@ -223,9 +223,6 @@
     .textareaC {
       width: 60vw;
     }
-    .iframe-containerC {
-      font-size: 22px;
-    }
   }
   @media screen and (max-width: 800px) {
     .buttonC {
@@ -286,9 +283,6 @@
   @media screen and (max-width: 450px) {
     .iframe-containerC iframe {
       min-height: 45vh;
-    }
-    .textC, .iframe-containerC {
-      font-size: 18px;
     }
     .no-marginHeaderC {
       font-size: 30px;

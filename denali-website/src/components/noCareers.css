@@ -1,6 +1,6 @@
 .contentNC {
   position: relative;
-  padding: 150px 100px 100px 100px;
+  padding: 200px 100px 150px 100px;
   min-height: 78vh;
   display: flex;
   flex-direction: column;
@@ -24,7 +24,7 @@
 }
 
 .textNC {
-  font-size: 4vw;
+  font-size: 3.7vw;
   color: white;
 }
 
@@ -48,63 +48,51 @@
   border: 2px solid #408697;
   transition: background-color 0.5s ease-out, color 0.4s ease-out, border 0.2s ease; 
 }
-@media screen and (max-width: 1600px){
-  .textNC {
-    font-size: 50pt;
-  }
-}
-@media screen and (max-width: 1000px) {
-  .contentNC{
-    padding: 100px 50px 100px 50px;
-  }
+@media screen and (max-width: 1650px){
   .textNC {
     font-size: 45pt;
   }
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1200px){
   .textNC {
     font-size: 40pt;
   }
   .buttonNC {
-    width: 250px;
-    height: 70px;
-    border-radius: 22px;
+    width: 350px;
+    height: 75px;
+    border-radius: 23px;
     font-size: 20pt;
   }
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 1000px) {
   .contentNC{
-    padding: 100px 25px 100px 25px;
+    padding: 175px 50px 150px 50px;
   }
+}
+@media screen and (max-width: 800px) {
   .textNC {
     font-size: 35pt;
   }
   .buttonNC {
-    width: 200px;
-    height: 60px;
-    border-radius: 20px;
-    font-size: 18pt;
+    width: 300px;
+    height: 70px;
+    border-radius: 22px;
+    font-size: 218pt;
   }
 }
-@media screen and (max-width: 500px) {
-  .textNC {
-    font-size: 30pt;
+@media screen and (max-width: 750px) {
+  .contentNC{
+    padding: 125px 50px 150px 50px;
   }
   .buttonNC {
-    width: 150px;
-    height: 55px;
-    border-radius: 16px;
+    width: 250px;
+    height: 60px;
+    border-radius: 20px;
     font-size: 16pt;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
   .textNC {
-    font-size: 25pt;
-  }
-}
-
-@media screen and (max-height: 700px) {
-  .contentNC{
-    padding-top: 75px;
+    font-size: 30pt;
   }
 }
