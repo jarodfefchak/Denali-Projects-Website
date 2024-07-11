@@ -223,6 +223,9 @@
     .textareaC {
       width: 60vw;
     }
+    .textC {
+      margin-bottom:50px;
+    }
   }
   @media screen and (max-width: 800px) {
     .buttonC {
