@@ -55,7 +55,7 @@
 }
 @media screen and (max-width: 1200px){
   .textNC {
-    font-size: 40pt;
+    font-size: 35pt;
   }
   .buttonNC {
     width: 350px;
@@ -71,7 +71,7 @@
 }
 @media screen and (max-width: 800px) {
   .textNC {
-    font-size: 35pt;
+    font-size: 25pt;
   }
   .buttonNC {
     width: 300px;
@@ -85,14 +85,17 @@
     padding: 125px 50px 150px 50px;
   }
   .buttonNC {
-    width: 250px;
+    width: 260px;
     height: 60px;
     border-radius: 20px;
-    font-size: 16pt;
+    font-size: 14pt;
   }
 }
 @media screen and (max-width: 600px) {
   .textNC {
-    font-size: 30pt;
+    font-size: 20pt;
+  }
+  .contentNC{
+    padding: 125px 20px 150px 20px;
   }
 }
