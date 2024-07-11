@@ -204,7 +204,7 @@ body {
     height: 50vh;
   }
   .carousel-wrapper {
-    width: 90vw;
+    padding: 0px 20px 0px 20px;
   }
   
   .titlePS {
