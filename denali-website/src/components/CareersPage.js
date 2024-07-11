@@ -32,7 +32,8 @@ const CareersPage = () => {
         <p className="header">
           <b>{data.headings[0].homeCareer}</b>
         </p>
-        <p>{data.text[0].futureTextLine1}</p>
+        <p className="sub-header">{data.text[0].futureTextLine1}</p>
+        <br></br>
         <p>{data.text[0].futureTextLine2}</p>
       </div>
       <Link to="/CareerOpportunities">

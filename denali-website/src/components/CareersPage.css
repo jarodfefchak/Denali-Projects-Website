@@ -1,9 +1,8 @@
 .text {
-  padding-top:25px;
   display: flex;
   flex-direction: column;
   margin-left:100px;
-  margin-right: 250px;
+  margin-right: 100px;
 }
 
 .text p {
@@ -14,7 +13,9 @@
   margin-top: 100px;
   margin-bottom: 30px;
 }
-
+.text .sub-header {
+  font-size: 2.7vw;
+}
 .buttonCP {
   color: white;
   margin-left:100px;
@@ -35,25 +36,17 @@
   border: 2px solid #408697;
   transition: background-color 0.5s ease-out, color 0.4s ease-out, border 0.2s ease; /* Correct the transition property */
 }
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 1650px) {
   .text p {
     font-size: 20pt;
   }
   .text .header {
     font-size: 50pt;
   }
-}
-@media screen and (max-width: 1500px){
-  .text {
-    margin-right: 100px;
+  .text .sub-header {
+    font-size: 35pt;
   }
 }
-@media screen and (max-width: 1300px){
-  .text {
-    margin-right: 100px;
-  }
-}
-
 @media screen and (max-width: 1200px){
   .buttonCP {
     width: 350px;
@@ -61,14 +54,20 @@
     border-radius: 20px;
     font-size: 22pt;
   }
-}
-
-@media screen and (max-width: 1000px) {
   .text p {
     font-size: 18pt;
   }
   .text .header {
     font-size: 45pt;
+  }
+  .text .sub-header {
+    font-size: 30pt;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .text p {
+    font-size: 16pt;
   }
   .text {
     margin-right: 50px;
@@ -86,14 +85,17 @@
     border-radius: 18px;
     font-size: 20pt;
   }
-}
-@media screen and (max-width: 700px) {
   .text p {
-    font-size: 16pt;
+    font-size: 14pt;
   }
   .text .header {
     font-size: 40pt;
   }
+  .text .sub-header {
+    font-size: 25pt;
+  }
+}
+@media screen and (max-width: 700px) {
   .buttonCP {
     font-size: 18pt;
     width: 300px;
@@ -108,6 +110,19 @@
     height: 50px;
     border-radius: 16px;
     font-size: 18pt;
+  }
+  .text p {
+    font-size: 18pt;
+  }
+  .text .header {
+    font-size: 35pt;
+  }
+  .text .sub-header {
+    font-size: 20pt;
+  }
+  .text {
+    margin-right: 20px;
+    margin-left: 20px;
   }
 }
 @media screen and (max-width: 500px){
