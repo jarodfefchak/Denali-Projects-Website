@@ -3,12 +3,12 @@
     flex-direction: column;
   }
   .subHeadingSL{
-    font-size: 2.5vw;
+    font-size: 2.7vw;
   }
 .textSL{
   margin-bottom: 40px;
   margin-top: 20px;
-  font-size:1.2vw ;
+  font-size:1.5vw ;
 }
   .informationSL {
     margin-top: 25px;
@@ -23,16 +23,16 @@
     background: #408697;
   }
   p {
-    font-size:1.2vw;
+    font-size:1.5vw;
     margin: 0;
     padding: 5px 0;
   }
   @media screen and (max-width: 1650px){
     .textSL{
-      font-size:16pt
+      font-size:18pt
     }
     p {
-      font-size:16pt;
+      font-size:18pt;
     }
     .subHeadingSL{
       font-size: 35pt;
@@ -40,10 +40,10 @@
   }
   @media screen and (max-width: 1200px){
     .textSL{
-      font-size:14pt
+      font-size:16pt
     }
     p {
-      font-size:14pt;
+      font-size:16pt;
     }
     .informationSL {
       margin-right:0px ;
@@ -51,6 +51,14 @@
     }
     .subHeadingSL{
       font-size: 30pt;
+    }
+  }
+  @media screen and (max-width: 800px){
+    .textSL{
+      font-size:14pt
+    }
+    p {
+      font-size:14pt;
     }
   }
   @media screen and (max-width: 800px){

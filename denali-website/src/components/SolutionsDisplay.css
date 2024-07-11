@@ -5,40 +5,44 @@
 }
 
 .projects-titleSD {
-    font-size:  3.7vw;
-    padding-top: 50px;
+    font-size:  4.5vw;
+    padding-top: 100px;
 }
 @media screen and (max-width: 1650px){
+    .projects-titleSD {
+        font-size:50pt;
+    }
+}
+@media screen and (max-width: 1200px){
     .projects-titleSD {
         font-size:45pt;
     }
 }
-@media screen and (max-width: 1200px){
+@media screen and (max-width: 1000px){
     .listSD {
-        padding: 50px;
+        padding: 175px 50px 150px 50px;
     }
     
     .projects-titleSD {
-        font-size:40pt;
-        padding-top: 100px;
+        padding-top: 0px;
     }
 }
 @media screen and (max-width: 800px){
     .projects-titleSD {
-        font-size: 35pt;
+        font-size: 40pt;
     }
 }
 @media screen and (max-width: 750px){
-    .projects-titleSD {
-        padding-top: 80px;
+    .listSD {
+        padding: 125px 50px 150px 50px;
     }
 }
 @media screen and (max-width: 600px){
     .projects-titleSD {
-        font-size: 30pt;
+        font-size: 35pt;
     }
     .listSD {
-        padding: 50px 25px;
+        padding: 125px 20px 150px 20px;
     }
 
 }
