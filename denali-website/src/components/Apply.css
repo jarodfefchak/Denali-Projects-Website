@@ -80,7 +80,7 @@ body {
   padding: 10px;
   font-size: 14pt;
   box-sizing: border-box;
-  border: 1.5px solid black;
+  border: 1px solid black;
 }
 input[type="file"] {
   font-size: 14pt;
@@ -91,7 +91,7 @@ select {
   padding: 10px;
   box-sizing: border-box;
   font-size: 14pt;
-  min-height: 30px;
+  min-height: 40px;
   background-color: white;
   color: black;
 }

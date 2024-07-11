@@ -216,6 +216,16 @@ body {
   .overlay-text p {
     font-size: 14pt;
   }
+  .dot.active-dot {
+    width: 40px;
+    border-radius: 12px;
+  }
+  
+  .dot {
+    width: 15px;
+    height: 15px;
+    margin: 0 9px 75px 9px;
+  }
 }
 
 @media screen and (max-width: 700px) {
