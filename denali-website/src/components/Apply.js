@@ -374,7 +374,7 @@ function Apply() {
               type="file"
               name="resume"
               onChange={handleResumeChange}
-              accept=".pdf, .docx"
+              accept=".pdf"
             />
           </label>
           <br></br>

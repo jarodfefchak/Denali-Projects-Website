@@ -77,7 +77,7 @@
     width: 300px;
     height: 70px;
     border-radius: 22px;
-    font-size: 218pt;
+    font-size: 18pt;
   }
 }
 @media screen and (max-width: 750px) {
@@ -88,12 +88,12 @@
     width: 260px;
     height: 60px;
     border-radius: 20px;
-    font-size: 14pt;
+    font-size: 16pt;
   }
 }
 @media screen and (max-width: 600px) {
   .textNC {
-    font-size: 20pt;
+    font-size: 25pt;
   }
   .contentNC{
     padding: 125px 20px 150px 20px;

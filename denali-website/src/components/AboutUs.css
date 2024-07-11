@@ -8,9 +8,10 @@
   margin-top: 20px;
   margin-bottom: 20px;
   background-color: #408697;
-  border: 0px;
-  width: 300px;
-  height: 75px;
+  order: 0px;
+  width: 400px;
+  height: 90px;
+  border: 1px solid  #408697;
   border-radius: 25px;
   font-size: 25pt;
   cursor: pointer;
@@ -168,6 +169,12 @@
   .linkedinAU {
     height:65px;
   }
+  .buttonAU {
+    width: 350px;
+    height: 80px;
+    border-radius: 20px;
+    font-size: 18pt;
+  }
 }
 
 @media screen and (max-width: 1000px) {
@@ -180,10 +187,11 @@
     margin: 70px 15px 10px 15px;
   }
   .buttonAU {
-    width: 250px;
-    height: 65px;
-    font-size: 18pt;
-  }
+      width: 250px;
+      height: 60px;
+      border-radius: 15px;
+      font-size: 14pt;
+    }
   .img-detailsAU {
     width: 225px;
     padding-left: 10px;
@@ -278,11 +286,6 @@
 }
 
 @media screen and (max-width: 600px) {
-  .buttonAU {
-    width: 200px;
-    height: 55px;
-    font-size: 16pt;
-  }
   .contentAU {
     padding: 125px 20px 150px 20px;
   }

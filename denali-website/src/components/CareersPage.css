@@ -1,7 +1,7 @@
 .text {
   display: flex;
   flex-direction: column;
-  margin-left:100px;
+  margin-left: 100px;
   margin-right: 100px;
 }
 
@@ -18,7 +18,7 @@
 }
 .buttonCP {
   color: white;
-  margin-left:100px;
+  margin-left: 100px;
   margin-top: 40px;
   margin-bottom: 175px;
   background-color: #408697;
@@ -34,7 +34,8 @@
   background-color: white;
   color: #346c7a;
   border: 2px solid #408697;
-  transition: background-color 0.5s ease-out, color 0.4s ease-out, border 0.2s ease; /* Correct the transition property */
+  transition: background-color 0.5s ease-out, color 0.4s ease-out,
+    border 0.2s ease; /* Correct the transition property */
 }
 @media screen and (max-width: 1650px) {
   .text p {
@@ -47,12 +48,12 @@
     font-size: 35pt;
   }
 }
-@media screen and (max-width: 1200px){
+@media screen and (max-width: 1200px) {
   .buttonCP {
     width: 350px;
     height: 80px;
     border-radius: 20px;
-    font-size: 22pt;
+    font-size: 18pt;
   }
   .text p {
     font-size: 18pt;
@@ -74,17 +75,14 @@
     margin-left: 50px;
   }
   .buttonCP {
-    margin-left:50px;
-   
+    width: 250px;
+    height: 65px;
+    border-radius: 17px;
+    font-size: 16pt;
+    margin-left: 50px;
   }
 }
-@media screen and (max-width: 800px)  {
-  .buttonCP {
-    width: 300px;
-    height: 65px;
-    border-radius: 18px;
-    font-size: 20pt;
-  }
+@media screen and (max-width: 800px) {
   .text p {
     font-size: 14pt;
   }
@@ -95,22 +93,17 @@
     font-size: 25pt;
   }
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 750px) {
   .buttonCP {
-    font-size: 18pt;
-    width: 300px;
-    height: 62px;
+    width: 250px;
+    height: 60px;
+    border-radius: 15px;
+    font-size: 14pt;
     border-radius: 19px;
     margin-left: 50px;
   }
 }
 @media screen and (max-width: 600px) {
-  .buttonCP {
-    width: 250px;
-    height: 50px;
-    border-radius: 16px;
-    font-size: 18pt;
-  }
   .text .header {
     font-size: 35pt;
   }
@@ -122,18 +115,3 @@
     margin-left: 20px;
   }
 }
-@media screen and (max-width: 500px){
-  .buttonCP {
-    margin-left: 20px;
-    margin-right: 20px;
-
-  }
-}
-@media screen and (max-width: 350px) {
-  .buttonCP {
-    width: 150px;
-    height: 50px;
-    border-radius: 12px;
-    font-size: 14pt;
-  }
-} 
