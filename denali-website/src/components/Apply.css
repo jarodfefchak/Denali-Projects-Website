@@ -1,6 +1,5 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
   background-color: #f6f6f6;
   overflow-x: hidden;
 }
@@ -17,12 +16,12 @@ body {
   margin-right: 50px;
 }
 .headerAP {
-  font-size: 4.2vw;
+  font-size: 4.5vw;
   font-weight: 550;
 }
 
 .textAP {
-  font-size: 1.2vw;
+  font-size: 1.5vw;
 }
 .formAP {
   margin: 200px 75px 200px 50px;
@@ -153,13 +152,13 @@ select {
   font-size: 14pt;
 }
 
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 1650px) {
   .headerAP {
     font-size: 50pt;
   }
   
   .textAP {
-    font-size: 16pt;
+    font-size: 18pt;
   }
 }
 
@@ -168,7 +167,7 @@ select {
     font-size: 45pt;
   }
   .textAP {
-    font-size: 14pt;
+    font-size: 16pt;
   }
   .contentAP {
     margin-left: 50px;
@@ -180,16 +179,13 @@ select {
 @media screen and (max-width: 1000px) {
   .layoutAP {
     flex-direction: column;
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 50px;
+    margin-right: 50px;
   }
   .contentAP {
-    margin-top: 150px;
+    margin-top: 175px;
     margin-left: 0px;
     margin-right: 0px;
-  }
-  .headerAP {
-    font-size: 40pt;
   }
   .formAP {
     margin-top: 50px;
@@ -210,6 +206,9 @@ select {
   .inputHeadingAP {
     font-size: 20px;
   }
+  .textAP {
+    font-size: 14pt;
+  }
 }
 @media screen and (max-width: 800px){
   .layoutAP {
@@ -225,7 +224,9 @@ select {
     padding: 20px;
 
   }
-  
+  .headerAP {
+    font-size: 40pt;
+  }
   .custom-alertOP button {
     font-size: 14pt;
   }
@@ -234,19 +235,24 @@ select {
   }
   
 }
-
-@media screen and (max-width: 700px) {
-  .headerAP {
-    font-size: 35pt;
+@media screen and (max-width: 750px) {
+  .contentAP {
+    margin-top: 125px;
   }
   .formAP {
     margin: 50px 0px 75px 0px;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px){
   .headerAP {
-    font-size: 30pt;
+    font-size: 35pt;
   }
+  .layoutAP {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+@media screen and (max-width: 500px) {
   .custom-alert-overlayOP {
     font-size: 14pt;
   }
@@ -256,9 +262,8 @@ select {
     padding: 20px;
 
   }
-  
   .custom-alertOP button {
-    font-size: 12pt;
+    font-size: 14pt;
   }
 }
 @media screen and (max-width: 350px){
