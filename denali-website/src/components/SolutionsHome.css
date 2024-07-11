@@ -6,7 +6,7 @@
   }
   .descriptionSH{
     margin:25px 100px 25px 100px;
-    font-size: 1.2vw;
+    font-size: 1.5vw;
   }
   
   .solutionsSH {
@@ -47,10 +47,10 @@
   
   @media screen and (max-width: 1650px) {
     .headingSH {
-      font-size: 45pt;
+      font-size: 50pt;
     }
     .descriptionSH{
-      font-size: 16pt;
+      font-size: 18pt;
     }
   }
   @media screen and (max-width: 1350px) {
@@ -74,7 +74,7 @@
       font-size: 16pt;
     }
     .headingSH {
-      font-size: 40pt;
+      font-size: 45pt;
     }
   }
   @media screen and (max-width: 1075px) {
@@ -85,12 +85,14 @@
   @media screen and (max-width: 1000px) {
     .headingSH {
       margin-left: 50px;
+      margin-right: 50px;
       padding-top: 175px;
     }
     .descriptionSH{
       margin:25px 50px 25px 50px;
+      font-size: 16pt;
     }
-    
+
   }
   
   @media screen and (max-width: 950px) {
@@ -118,12 +120,11 @@
       font-size: 20pt;
     }
     .headingSH {
-      font-size: 35pt;
+      font-size: 40pt;
     }
   } 
   @media screen and (max-width: 750px) {
     .headingSH {
-      font-size: 35pt;
       padding-top: 125px;
     }
   }
@@ -131,7 +132,7 @@
     .headingSH {
       margin-left: 20px;
       margin-right: 20px;
-      font-size: 30pt;
+      font-size: 35pt;
     }
     .descriptionSH{
       margin:25px 20px 100px 20px;
