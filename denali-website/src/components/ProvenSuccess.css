@@ -170,7 +170,7 @@ body {
   }
   .subtitlePS {
     font-size: 35pt;
-    margin-right: 50pt;
+    margin-right: 100pt;
   }
   .buttonPS {
     height: 35px;
@@ -183,6 +183,17 @@ body {
     font-size: 16pt;
   }
 }
+  @media screen and (max-width: 1200px){
+    .titlePS {
+      font-size: 45pt;
+    }
+    .subtitlePS {
+      font-size: 30pt;
+    }
+    .overlay-text p {
+      font-size: 14pt;
+    }
+  }
 
 @media screen and (max-width: 1000px) {
   .carousel-arrow {
@@ -196,12 +207,10 @@ body {
   }
   
   .titlePS {
-    font-size: 40pt;
     margin-left: 50px;
     margin-right: 50px;
   }
   .subtitlePS {
-    font-size: 30pt;
     margin-bottom: 50pt;
     margin-left: 50px;
     margin-right: 50px;
@@ -212,9 +221,6 @@ body {
   }
   .close-button {
     font-size: 16pt;
-  }
-  .overlay-text p {
-    font-size: 14pt;
   }
   .dot.active-dot {
     width: 40px;
@@ -227,31 +233,24 @@ body {
     margin: 0 9px 75px 9px;
   }
 }
-
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px){
   .titlePS {
-    font-size: 25pt;
-    margin-left: 50pt;
+    font-size: 40pt;
   }
   .subtitlePS {
-    font-size: 20pt;
-    margin-left: 50pt;
-  }
- 
-  .overlay-text p {
-    font-size: 14pt;
-   padding-left: 15px;
-   padding-right: 15px;
+    font-size: 25pt;
   }
 }
-@media screen and (max-width: 550px){
+@media screen and (max-width: 600px){
 .titlePS {
   margin-left: 20px;
   margin-right: 20px;
+  font-size: 35pt;
 }
 .subtitlePS {
   margin-left: 20px;
   margin-right: 20px;
+  font-size: 20pt;
 }
 .buttonPS {
   width: 60vw;
