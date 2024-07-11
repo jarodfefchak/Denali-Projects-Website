@@ -125,16 +125,16 @@
 @media screen and (max-width:900px){
     #item1{
         width: 250px;
-        font-size: 12pt;
+        font-size: 14pt;
         margin-left: 5%;
     }
     #item2{
         width: 250px;
-        font-size: 12pt;
+        font-size: 14pt;
     }
     #item3{
         width: 250px;
-        font-size: 12pt;
+        font-size: 14pt;
         margin-right: 5%;
     }
     #Accred1{
@@ -163,7 +163,6 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        font-size: 11pt;
     }
     #item1{
         margin-left: 0%;

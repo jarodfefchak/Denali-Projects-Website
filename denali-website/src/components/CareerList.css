@@ -1,22 +1,22 @@
 /* CareerList.css */
 .careersCL {
-  margin-left: 200px;
-  margin-right: 200px;
+  margin-left: 100px;
+  margin-right:  100px;
 }
 
 .postingsCL {
   margin: 50px;
 }
 .headerCL {
-  font-size: 4vw;
+  font-size: 4.5vw;
 }
 
 .careerTitleCL {
-  font-size: 2.5vw;
+  font-size: 2.7vw;
   font-weight: bold;
 }
 .textCL {
-  font-size: 1.2vw;
+  font-size: 1.5vw;
 }
 .applyButtonCL {
   border: 2px solid #408697;
@@ -35,14 +35,18 @@
   border: 2px solid #408697;
   transition: background-color 0.5s ease-out, color 0.4s ease-out; /* Correct the transition property */
 }
-@media screen and (max-width: 1600px) {
-  .postingsCL {
-    margin: 50px 0px 50px 0px;
+@media screen and (max-width: 1650px) {
+  .headerCL {
+    font-size: 50pt;
   }
-  .careersCL {
-    margin-left: 100px;
-    margin-right: 100px;
+  .careerTitleCL {
+    font-size: 35pt;
   }
+  .textCL {
+    font-size: 18pt;
+  }
+}
+@media screen and (max-width: 1200px) {
   .headerCL {
     font-size: 45pt;
   }
@@ -50,7 +54,7 @@
     font-size: 30pt;
   }
   .textCL {
-    font-size: 14pt;
+    font-size: 16pt;
   }
 }
 @media screen and (max-width: 1000px) {
@@ -58,22 +62,21 @@
     margin-left: 50px;
     margin-right: 50px;
   }
-  .headerCL {
-    font-size: 40pt;
-  }
-  .careerTitleCL {
-    font-size: 27pt;
-  }
   .applyButtonCL {
     padding: 5px;
     width: 70px;
     font-size: 14pt;
   }
+  .textCL {
+    font-size: 14pt;
+  }
 }
 @media screen and (max-width: 800px) {
-  .careersCL {
-    margin-left: 25px;
-    margin-right: 25px;
+  .headerCL {
+    font-size: 40pt;
+  }
+  .careerTitleCL {
+    font-size: 25pt;
   }
 }
 @media screen and (max-width: 600px) {
@@ -81,11 +84,10 @@
     font-size: 35pt;
   }
   .careerTitleCL {
-    font-size: 25pt;
+    font-size: 20pt;
   }
-}
-@media screen and (max-width: 450px) {
   .careersCL {
-    margin-right: 10px;
+    margin-left: 20px;
+    margin-right:  20px;
   }
 }

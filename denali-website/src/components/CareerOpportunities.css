@@ -10,12 +10,6 @@
   z-index: -1;
 }
 
-.mainTextOP {
-  display: flex;
-  align-items: center;
-  color: pink;
-}
-
 .contentOP {
   display: flex;
   flex-direction: column;
@@ -26,52 +20,52 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 50px;
-  margin-left: 150px;
-  margin-right: 150px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-left: 100px;
+  margin-right: 100px;
 }
 
 .navBarTextOP {
-  font-size: 1.4vw;
+  font-size: 1.7vw;
   margin-bottom: 0px;
 }
 
-@media screen and (max-width: 1600px) {
-  .navBarOP {
-    margin-right: 0px;
-    margin-left: 50px;
-  }
+@media screen and (max-width: 1650px) {
   .navBarTextOP {
-    font-size: 16pt;
-    margin-bottom: 0px;
+    font-size: 20pt;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .navBarTextOP {
+    font-size: 18pt;
   }
 }
 
 @media screen and (max-width: 1000px) {
+  .navBarTextOP {
+    font-size: 16pt;
+  }
   .navBarOP {
-    margin-left: 0px;
-    flex-direction: column;
+    margin-left: 50px;
+    margin-right: 50px;
   }
 
 }
 @media screen and (max-width: 800px){
-  .navBarOP {
-    padding: 50px 25px 50px 25px;
-  }
   .titleImageOP {
     background-size: auto;
     height: 40vh;
-   
+  }
+  .navBarTextOP {
+    font-size: 14pt;
   }
   
 }
 @media screen and (max-width: 600px){
-  .navBarTextOP {
-    font-size: 14pt;
-  }
-}
-@media screen and (max-width: 450px) {
   .navBarOP {
-    padding: 50px 10px 50px 25px;
+    margin-left: 20px;
+    margin-right: 20px;
   }
+
 }
