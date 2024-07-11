@@ -80,12 +80,8 @@ body {
   padding: 10px;
   font-size: 14pt;
   box-sizing: border-box;
-  border: 1px solid black}
-  .input-field-largeAP option{
-    font-size: 14pt;
-    min-height: 30px;
-  }
-
+  border: 1.5px solid black;
+}
 input[type="file"] {
   font-size: 14pt;
 }
@@ -93,8 +89,11 @@ input[type="file"] {
 select {
   width: 100%;
   padding: 10px;
-  font-size: 14pt;
   box-sizing: border-box;
+  font-size: 14pt;
+  min-height: 30px;
+  background-color: white;
+  color: black;
 }
 
 .text-large {
