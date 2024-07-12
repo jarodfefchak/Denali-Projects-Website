@@ -110,9 +110,9 @@ function ProvenSuccess() {
   return (
     <div className="backgroundPS">
       <div className="layoutPS">
-        <p className="titlePS">
+        <h1 className="titlePS">
           <b>{data.jsonData4[0].projects}</b>
-        </p>
+        </h1>
         <p className="subtitlePS">{data.jsonData4[0].projects_sub}</p>
         <div className="carousel-wrapper">
           <AliceCarousel

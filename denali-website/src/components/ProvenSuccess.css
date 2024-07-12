@@ -12,6 +12,10 @@ body {
 }
 
 .titlePS {
+  padding-top:0px;
+  padding-bottom: 0px;
+  margin-bottom:0px;
+  margin-bottom: 0px;
   font-size: 4.5vw;
   margin-left: 100px;
 }
