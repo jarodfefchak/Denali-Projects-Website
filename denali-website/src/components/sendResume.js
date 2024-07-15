@@ -208,7 +208,7 @@ function SendResume() {
             <input
               type="file"
               onChange={handleResumeChange}
-              accept=".pdfs"
+              accept=".pdf"
             />
           </label>
           <br />
