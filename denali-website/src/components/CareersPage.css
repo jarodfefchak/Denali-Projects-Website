@@ -102,6 +102,11 @@
     border-radius: 19px;
     margin-left: 50px;
   }
+  a{
+    display: flex;
+    justify-content: center;
+  }
+
 }
 @media screen and (max-width: 600px) {
   .text .header {

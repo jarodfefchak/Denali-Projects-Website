@@ -7,6 +7,7 @@ import './Footer.css';
 function Footer() {
     const [jsonData, setJsonData] = useState(null);
     const [jsonData2, setJsonData2] = useState(null);
+    const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -34,6 +35,14 @@ function Footer() {
         fetchData();
     }, []);
 
+    useEffect(() => {
+        const mediaQuery = window.matchMedia("(max-width: 768px)");
+        setIsMobile(mediaQuery.matches);
+        const handleMediaChange = (e) => setIsMobile(e.matches);
+        mediaQuery.addEventListener("change", handleMediaChange);
+        return () => mediaQuery.removeEventListener("change", handleMediaChange);
+    }, []);
+
     if (!jsonData || !jsonData2) {
         return null;
     }
@@ -44,18 +53,24 @@ function Footer() {
                 <div id="item1">
                     <h4>Let's Talk</h4>
                     <p>{jsonData2[0].contactAddress} {jsonData2[0].contactCity}</p>
-                    <p>{jsonData2[0].contactEmail}</p>
-                    <p>{jsonData2[0].contactPhone}</p>
+                    <p><a href="mailto:info@denaliprojects.com" style={{ color: "white" }}>{jsonData2[0].contactEmail}</a></p>
+                    <p>
+                        {isMobile ? (
+                            <a href="tel:+14039846610" style={{ color: "white" }}>{jsonData2[0].contactPhone}</a>
+                        ) : (
+                            jsonData2[0].contactPhone
+                        )}
+                    </p>
                     <a href="https://www.linkedin.com/company/denali-projects-ltd">
                         <img src={LinkedIn} alt="LinkedIn" id='LinkedIn' />
                     </a>
                 </div>
                 <div id="item2">
                     <h4>Company</h4>
-                    <a href = "https://denaliprojects.sharepoint.com/" style ={{color:"white"}}>
-                    <p>SharePoint Login</p>
+                    <a href="https://denaliprojects.sharepoint.com/" style={{ color: "white" }}>
+                        <p>SharePoint Login</p>
                     </a>
-                    <br></br>
+                    <br />
                     <img src={wLogo} alt="Logo" />
                 </div>
                 <div id="item3">
