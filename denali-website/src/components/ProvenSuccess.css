@@ -249,6 +249,11 @@ body {
     font-size: 14pt;
   }
 }
+@media screen and (max-width: 750px){
+  .layoutPS{
+    text-align: center;
+  }
+}
 @media screen and (max-width: 600px){
 .titlePS {
   margin-left: 20px;

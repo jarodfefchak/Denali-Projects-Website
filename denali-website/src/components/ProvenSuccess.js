@@ -50,8 +50,9 @@ function ProvenSuccess() {
   }, []);
 
   const handleSlideChanged = ({ item }) => {
-    setActiveIndex(item);
-    setShowInfo(false);
+    if (!showInfo) {
+      setActiveIndex(item);
+    }
   };
 
   const renderDotsItem = ({ isActive, itemIndex }) => (
@@ -147,10 +148,17 @@ function ProvenSuccess() {
                   )}
 
                   <button
-                    className={`buttonPS ${showInfo && activeIndex === index ? "hide-button" : ""}`}
+                    className={`buttonPS ${
+                      showInfo && activeIndex === index ? "hide-button" : ""
+                    }`}
                     onClick={() => toggleShowInfo(index)}
+                    onMouseDown={(e) => {
+                      if (showInfo) e.preventDefault();
+                    }}
                   >
-                    {showInfo && activeIndex === index ? "" : `Project ${index + 1} Info`}
+                    {showInfo && activeIndex === index
+                      ? ""
+                      : `Project ${index + 1} Info`}
                   </button>
                 </div>
               </div>
@@ -160,7 +168,7 @@ function ProvenSuccess() {
             activeIndex={activeIndex}
             onSlideChanged={handleSlideChanged}
             renderDotsItem={renderDotsItem}
-            mouseTracking
+            mouseTracking={!showInfo} // Disable mouse tracking when showInfo is true
             infinite
             animationType="fadeout"
             animationEasingFunction="ease-in-out"

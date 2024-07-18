@@ -155,8 +155,15 @@
     display: flex;
     justify-content: center;
   }
+  .textID p {
+    font-size: 14pt;
+    text-align: center;
+  }
 
-
+  .textID .headerID {
+    font-size: 40pt;
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 600px) {

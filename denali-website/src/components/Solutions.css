@@ -137,6 +137,11 @@
     border-radius: 15px;
     font-size: 14pt;
   }
+  .headingS {
+    font-size: 40pt;
+    margin-top: 75px;
+    text-align: center;
+  }
 }
 @media screen and (max-width: 600px) {
   .headingS {
