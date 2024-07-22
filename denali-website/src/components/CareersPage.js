@@ -36,6 +36,7 @@ const CareersPage = () => {
         <br></br>
         <p>{data.text[0].futureTextLine2}</p>
       </div>
+      <div className = "buttonTextCP">
       <Link to="/CareerOpportunities">
         <button 
           onMouseEnter={() => setHover(true)}
@@ -45,6 +46,7 @@ const CareersPage = () => {
           Career Opportunities
         </button>
       </Link>
+      </div>
     </div>
   );
 };

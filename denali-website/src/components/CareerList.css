@@ -33,7 +33,7 @@
   background-color: white;
   color: #346c7a;
   border: 2px solid #408697;
-  transition: background-color 0.5s ease-out, color 0.4s ease-out; /* Correct the transition property */
+  transition: background-color 0.5s ease-out, color 0.4s ease-out; 
 }
 @media screen and (max-width: 1650px) {
   .headerCL {

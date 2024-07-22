@@ -378,9 +378,11 @@ function Apply() {
             />
           </label>
           <br></br>
+          <div className="submitAP">
           <button className="buttonAP" type="submit">
             Submit
           </button>
+          </div>
         </form>
         {show && (
           <motion.div

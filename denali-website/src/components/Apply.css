@@ -209,6 +209,12 @@ select {
   .textAP {
     font-size: 14pt;
   }
+  /* .submitAP{
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+  } */
 }
 @media screen and (max-width: 800px){
   .layoutAP {
