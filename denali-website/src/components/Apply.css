@@ -114,7 +114,8 @@ select {
 
 .custom-alertOP {
   background: white;
-  width:400px;
+  text-align: center;
+  width:37vw;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -123,7 +124,7 @@ select {
 .custom-alertOP button {
   background-color: #408697;
   border-radius: 10px;
-  border: 1px solid #346370;
+  border: 2px solid #408697;
   font-size: 16pt;
   color: #fff;
   margin-top: 10px;
@@ -160,6 +161,9 @@ select {
   .textAP {
     font-size: 18pt;
   }
+  .custom-alertOP {
+    width:600px;
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -174,6 +178,9 @@ select {
   }
   .formAP {
     margin: 200px 50px 200px 50px;
+  }
+  .custom-alertOP button {
+    font-size: 14pt;
   }
 }
 @media screen and (max-width: 1000px) {
@@ -209,12 +216,7 @@ select {
   .textAP {
     font-size: 14pt;
   }
-  /* .submitAP{
-    padding-top: 20px;
-    display: flex;
-    justify-content: center;
-    text-decoration: none;
-  } */
+ 
 }
 @media screen and (max-width: 800px){
   .layoutAP {

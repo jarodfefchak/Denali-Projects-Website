@@ -1,6 +1,8 @@
 import React, { useEffect, useState, useMemo, useCallback } from "react";
 import InsideImage from "../images/InsideDenali.jpg";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import VisibilitySensor from "react-visibility-sensor";
 import axios from 'axios';
 import "./InsideDenali.css";
 
@@ -9,6 +11,7 @@ function InsideDenali() {
   const [data, setData] = useState({ jsonData: null, jsonData2: null });
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [visibility, setVisibility] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -29,6 +32,12 @@ function InsideDenali() {
 
   const handleMouseEnter = useCallback(() => setHover(true), []);
   const handleMouseLeave = useCallback(() => setHover(false), []);
+  
+  const handleVisibilityChange = (isVisible) => {
+    if (isVisible) {
+      setVisibility(true);
+    }
+  };
 
   const background = useMemo(() => ({
     backgroundColor: "#f6f6f6",
@@ -38,7 +47,7 @@ function InsideDenali() {
   }), []);
 
   if (loading) {
-    return;
+    return null;
   }
 
   if (error) {
@@ -48,18 +57,55 @@ function InsideDenali() {
   if (!data.jsonData || !data.jsonData2) {
     return null;
   }
+  
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 40 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        staggerChildren: 2.5,
+        delay: 0.2,
+        duration: 1.2,
+        ease: "easeInOut",
+      },
+    },
+  };
 
   return (
     <div style={background}>
       <div className="contentID">
-        <img src={InsideImage} alt="inside denali" className="imgID" loading="lazy" />
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <VisibilitySensor
+            onChange={handleVisibilityChange}
+            partialVisibility
+          >
+            {({ isVisible }) => (
+              <motion.div
+                variants={itemVariants}
+                initial="hidden"
+                animate={visibility ? "visible" : "hidden"}
+                className="imageContainerS"
+              >
+                <img src={InsideImage} alt="inside denali" className="imgID" loading="lazy" />
+              </motion.div>
+            )}
+          </VisibilitySensor>
+        </motion.div>
         <div className="textID">
           <p className="headerID">
             <b>{data.jsonData[0].inside}</b>
           </p>
-          <p>
-            {data.jsonData2[0].insideText}
-          </p>
+          <p>{data.jsonData2[0].insideText}</p>
           <Link to="/AboutUs">
             <button
               onMouseEnter={handleMouseEnter}
@@ -76,5 +122,4 @@ function InsideDenali() {
 }
 
 export default InsideDenali;
-
 

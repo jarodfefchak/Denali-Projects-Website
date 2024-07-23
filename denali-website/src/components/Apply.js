@@ -447,7 +447,7 @@ function Apply() {
           >
             <div className="custom-alert-overlayOP">
               <div className="custom-alertOP">
-                <p>Thank you for applying to work at Denali Projects.</p>
+                <p>Thank for your applying for a position at Denali Projects Ltd. We have received your application. If you are selected to continue to the interview process, our human resources department will be in contact with you. <i>Please no phone calls.</i></p>
                 <button onClick={closeAlert3}>Close</button>
               </div>
             </div>
