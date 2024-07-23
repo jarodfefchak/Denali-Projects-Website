@@ -168,7 +168,8 @@ function ProvenSuccess() {
             activeIndex={activeIndex}
             onSlideChanged={handleSlideChanged}
             renderDotsItem={renderDotsItem}
-            mouseTracking={!showInfo} // Disable mouse tracking when showInfo is true
+            mouseTracking={!showInfo} 
+            touchTrackingTracking={!showInfo}
             infinite
             animationType="fadeout"
             animationEasingFunction="ease-in-out"
