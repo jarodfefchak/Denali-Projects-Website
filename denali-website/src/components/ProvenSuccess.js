@@ -169,7 +169,7 @@ function ProvenSuccess() {
             onSlideChanged={handleSlideChanged}
             renderDotsItem={renderDotsItem}
             mouseTracking={!showInfo} 
-            touchTrackingTracking={!showInfo}
+            touchTracking={!showInfo}
             infinite
             animationType="fadeout"
             animationEasingFunction="ease-in-out"
