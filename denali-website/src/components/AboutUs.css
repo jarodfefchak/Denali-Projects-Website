@@ -95,6 +95,10 @@
 .linkedinAU {
   height: 80px;
 }
+.linkedinAU:hover{
+  opacity: 60%;
+  transition: opacity 0.3s ease-in-out ;
+}
 
 @media screen and (max-width: 1650px) {
   .header-textAU {
