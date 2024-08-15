@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import VisibilitySensor from "react-visibility-sensor";
 import axios from "axios";
 import Header from "./Header";
 import Footer from "./Footer";
@@ -10,9 +12,16 @@ import LinkedInB from "../images/Logos/LinkedInBB.png";
 import "./AboutUs.css";
 
 function AboutUs() {
+  const [visibility, setVisibility] = useState({});
   const [jsonData, setJsonData] = useState(null);
   const [jsonData2, setJsonData2] = useState(null);
   const [hover, setHover] = useState(false);
+
+  const handleVisibilityChange = (index, isVisible) => {
+    if (isVisible && !visibility[index]) {
+      setVisibility((prev) => ({ ...prev, [index]: true }));
+    }
+  };
 
   useEffect(() => {
     document.title = "About Us - Denali Projects";
@@ -47,8 +56,35 @@ function AboutUs() {
   }, []);
 
   if (!jsonData || !jsonData2) {
-    return;
+    return null;
   }
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 40 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        staggerChildren: 2.5,
+        delay: 0.1,
+        duration: 1.2,
+        ease: "easeInOut",
+      },
+    },
+  };
+
+  const teamMembers = [
+    { img: BradImg, name: "Brad Meaney", title: "Principal", role: "Instrumentation Lead", linkedin: "https://www.linkedin.com/in/brad-meaney-946b6158/" },
+    { img: JarodImg, name: "Jarod Fefchak, P.Eng.", title: "Principal", role: "Electrical Lead", linkedin: "https://www.linkedin.com/in/jarod-fefchak/" },
+    { img: DeanImg, name: "Dean Kirkby, P.Eng.", title: "Principal", role: "Engineering Lead", linkedin: "https://www.linkedin.com/in/dean-kirkby-274a3a149/" },
+  ];
 
   return (
     <div>
@@ -74,50 +110,42 @@ function AboutUs() {
           </button>
         </Link>
         <p className="executive-titleAU">Executive Team</p>
-        <div className="teamAU">
-          <div className="imgcontainerAU">
-            <img className="imgAU" src={BradImg} alt="Brad Meaney" loading="lazy" />
-            <div className="img-detailsAU">
-              <div className="text-containerAU">
-                <p className="img-textAU"style = {{padding:"0px"}}>Brad Meaney</p>
-                <p className="img-textAU" style = {{padding:"0px"}}>Principal</p>
-                <p className="img-textAU"style = {{padding:"0px"}}>Instrumentation Lead</p>
-              </div>
-              <div className="lineAU"></div>
-              <a href="https://www.linkedin.com/in/brad-meaney-946b6158/">
-                <img src={LinkedInB} alt="LinkedIn" className="linkedinAU" loading="lazy" />
-              </a>
-            </div>
-          </div>
-          <div className="imgcontainerAU">
-            <img className="imgAU" src={JarodImg} alt="Jarod Fefchak" loading="lazy" />
-            <div className="img-detailsAU">
-              <div className="text-containerAU">
-                <p className="img-textAU" style = {{padding:"0px"}}>Jarod Fefchak, P.Eng.</p>
-                <p className="img-textAU" style = {{padding:"0px"}}>Principal</p>
-                <p className="img-textAU"style = {{padding:"0px"}}>Electrical Lead</p>
-              </div>
-              <div className="lineAU"></div>
-              <a href="https://www.linkedin.com/in/jarod-fefchak/">
-                <img src={LinkedInB} alt="LinkedIn" className="linkedinAU" loading="lazy" />
-              </a>
-            </div>
-          </div>
-          <div className="imgcontainerAU">
-            <img className="imgAU" src={DeanImg} alt="Dean Kirkby" loading="lazy" />
-            <div className="img-detailsAU">
-              <div className="text-containerAU">
-                <p className="img-textAU"style = {{padding:"0px"}}>Dean Kirkby, P.Eng.</p>
-                <p className="img-textAU" style = {{padding:"0px"}}>Principal</p>
-                <p className="img-textAU"style = {{padding:"0px"}}>Engineering Lead</p>
-              </div>
-              <div className="lineAU"></div>
-              <a href="https://www.linkedin.com/in/dean-kirkby-274a3a149/">
-                <img src={LinkedInB} alt="LinkedIn" className="linkedinAU" loading="lazy" />
-              </a>
-            </div>
-          </div>
-        </div>
+        <motion.div
+          className="teamAU"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          {teamMembers.map((member, index) => (
+            <VisibilitySensor
+              key={index}
+              onChange={(isVisible) => handleVisibilityChange(index, isVisible)}
+              partialVisibility
+            >
+              {({ isVisible }) => (
+                <motion.div
+                  className="imgcontainerAU"
+                  variants={itemVariants}
+                  initial="hidden"
+                  animate={visibility[index] ? "visible" : "hidden"}
+                >
+                  <img className="imgAU" src={member.img} alt={member.name} loading="lazy" />
+                  <div className="img-detailsAU">
+                    <div className="text-containerAU">
+                      <p className="img-textAU">{member.name}</p>
+                      <p className="img-textAU">{member.title}</p>
+                      <p className="img-textAU">{member.role}</p>
+                    </div>
+                    <div className="lineAU"></div>
+                    <a href={member.linkedin}>
+                      <img src={LinkedInB} alt="LinkedIn" className="linkedinAU" loading="lazy" />
+                    </a>
+                  </div>
+                </motion.div>
+              )}
+            </VisibilitySensor>
+          ))}
+        </motion.div>
       </div>
       <Footer />
     </div>
