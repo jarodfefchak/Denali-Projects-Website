@@ -1,18 +1,2 @@
 [
-    {
-        "title": "Cat Herder",
-        "location": "Middle of No-Where",
-        "description": "Herd the cats into the barn. This will be done entirely on foot.",
-        "minimum_requirements": [
-            "Must have previous experience herding cats"
-        ],
-        "responsibilities": [
-          "Feed the cats",
-          "Clean the cats",
-          "Chase after the cats when they run away"
-        ],
-        "preferred": [
-          "It is preferred that you like cats"
-        ]
-      }
 ]

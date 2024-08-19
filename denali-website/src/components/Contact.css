@@ -84,6 +84,7 @@
     width: 100%;
     min-height: 50vh;
     border: 0;
+  padding-top: 20px;
   }
   .buttonC {
     color: white;
