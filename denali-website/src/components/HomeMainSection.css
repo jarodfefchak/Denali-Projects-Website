@@ -4,7 +4,9 @@
   width: 100vw;
   margin: 0;
   padding: 0 150px;
-  overflow: hidden; /* Ensure that the image doesn't overflow */
+  background-attachment: fixed;
+  position: relative;
+  z-index: -1;
 }
 
 .backgroundImageHM {
