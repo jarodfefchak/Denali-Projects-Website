@@ -2,13 +2,9 @@
   height: 100vh;
   width: 100vw;
   margin: 0;
-  padding: 0 150px;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  padding: 0;
   position: relative;
-  z-index: -1;
+  overflow: hidden; /* Ensures no overflow of the image */
 }
 
 .backgroundImageHM {
@@ -46,9 +42,6 @@
   .mainTextHM {
     font-size: 45pt;
   }
-  .headImageHM {
-    padding: 0 50px;
-  }
 }
 
 @media screen and (max-width: 750px) {
@@ -60,9 +53,6 @@
 @media screen and (max-width: 500px) {
   .mainTextHM {
     font-size: 40pt;
-  }
-  .headImageHM {
-    padding: 0 15px;
   }
 }
 
@@ -77,4 +67,3 @@
     font-size: 35pt;
   }
 }
-

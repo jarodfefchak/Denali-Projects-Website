@@ -36,7 +36,8 @@ function HomeMainSection() {
   }
 
   return (
-    <div className="headImageHM" style={{ Image: `url(${HeaderImage})` }} loading="lazy">
+    <div className="headImageHM">
+      <img src={HeaderImage} alt="Header" className="backgroundImageHM" loading="lazy" />
       <p className="mainTextHM">
         {jsonData[0].Main}
       </p>
