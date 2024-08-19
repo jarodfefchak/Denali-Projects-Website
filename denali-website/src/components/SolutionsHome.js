@@ -92,6 +92,11 @@ function Solutions() {
   };
 
   return (
+    <motion.div
+    initial={{ opacity: 0.7 }}
+    animate={{ opacity: 1 }}
+    transition={{ duration: 0.4, ease: 'easeInOut' }}
+  >
     <div>
       <Header />
       <div style={background}>
@@ -138,6 +143,7 @@ function Solutions() {
       </div>
       <Footer />
     </div>
+    </motion.div>
   );
 }
 

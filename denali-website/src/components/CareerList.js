@@ -89,6 +89,16 @@ function CareerList() {
                 </li>
               ))}
             </ul>
+            <p className="textCL">
+              <b>Benefits:</b>
+            </p>
+            <ul>
+              {career.benefits.map((req, index) => (
+                <li key={index} className="textCL">
+                  {req}
+                </li>
+              ))}
+            </ul>
             <Link to={`/apply/${encodeURIComponent(career.title)}`}>
               <button className="applyButtonCL">Apply</button>
             </Link>

@@ -81,73 +81,109 @@ function AboutUs() {
   };
 
   const teamMembers = [
-    { img: BradImg, name: "Brad Meaney", title: "Principal", role: "Instrumentation Lead", linkedin: "https://www.linkedin.com/in/brad-meaney-946b6158/" },
-    { img: JarodImg, name: "Jarod Fefchak, P.Eng.", title: "Principal", role: "Electrical Lead", linkedin: "https://www.linkedin.com/in/jarod-fefchak/" },
-    { img: DeanImg, name: "Dean Kirkby, P.Eng.", title: "Principal", role: "Engineering Lead", linkedin: "https://www.linkedin.com/in/dean-kirkby-274a3a149/" },
+    {
+      img: BradImg,
+      name: "Brad Meaney",
+      title: "Principal",
+      role: "Instrumentation Lead",
+      linkedin: "https://www.linkedin.com/in/brad-meaney-946b6158/",
+    },
+    {
+      img: JarodImg,
+      name: "Jarod Fefchak, P.Eng.",
+      title: "Principal",
+      role: "Electrical Lead",
+      linkedin: "https://www.linkedin.com/in/jarod-fefchak/",
+    },
+    {
+      img: DeanImg,
+      name: "Dean Kirkby, P.Eng.",
+      title: "Principal",
+      role: "Engineering Lead",
+      linkedin: "https://www.linkedin.com/in/dean-kirkby-274a3a149/",
+    },
   ];
 
   return (
     <div>
-      <Header />
-      <div className="contentAU">
-        <p className="header-textAU">
-          <b>{jsonData[0].aboutUs}</b>
-        </p>
-        <p className="sub-header-textAU">{jsonData[0].aboutUsSub}</p>
-        <p className="paragraphAU">{jsonData2[0].aboutTextLine1}</p>
-        <p className="paragraphAU">{jsonData2[0].aboutTextLine2}</p>
-        <p className="paragraphAU">{jsonData2[0].aboutTextLine3}</p>
-        <p id="sloganAU">
-          <b>{jsonData2[0].aboutTextLine4}</b>
-        </p>
-        <Link to="/Contact">
-          <button
-            onMouseEnter={() => setHover(true)}
-            onMouseLeave={() => setHover(false)}
-            className={`buttonAU ${hover ? "button-hoverAU" : ""}`}
-          >
-            Contact Us
-          </button>
-        </Link>
-        <p className="executive-titleAU">Executive Team</p>
-        <motion.div
-          className="teamAU"
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-        >
-          {teamMembers.map((member, index) => (
-            <VisibilitySensor
-              key={index}
-              onChange={(isVisible) => handleVisibilityChange(index, isVisible)}
-              partialVisibility
+      <motion.div
+        initial={{ opacity: 0.7 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.4, ease: "easeInOut" }}
+      >
+        <Header />
+        <div className="contentAU">
+          <p className="header-textAU">
+            <b>{jsonData[0].aboutUs}</b>
+          </p>
+          <p className="sub-header-textAU">{jsonData[0].aboutUsSub}</p>
+          <p className="paragraphAU">{jsonData2[0].aboutTextLine1}</p>
+          <p className="paragraphAU">{jsonData2[0].aboutTextLine2}</p>
+          <p className="paragraphAU">{jsonData2[0].aboutTextLine3}</p>
+          <p id="sloganAU">
+            <b>{jsonData2[0].aboutTextLine4}</b>
+          </p>
+          <Link to="/Contact">
+            <button
+              onMouseEnter={() => setHover(true)}
+              onMouseLeave={() => setHover(false)}
+              className={`buttonAU ${hover ? "button-hoverAU" : ""}`}
             >
-              {({ isVisible }) => (
-                <motion.div
-                  className="imgcontainerAU"
-                  variants={itemVariants}
-                  initial="hidden"
-                  animate={visibility[index] ? "visible" : "hidden"}
-                >
-                  <img className="imgAU" src={member.img} alt={member.name} loading="lazy" />
-                  <div className="img-detailsAU">
-                    <div className="text-containerAU">
-                      <p className="img-textAU">{member.name}</p>
-                      <p className="img-textAU">{member.title}</p>
-                      <p className="img-textAU">{member.role}</p>
+              Contact Us
+            </button>
+          </Link>
+          <p className="executive-titleAU">Executive Team</p>
+          <motion.div
+            className="teamAU"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+          >
+            {teamMembers.map((member, index) => (
+              <VisibilitySensor
+                key={index}
+                onChange={(isVisible) =>
+                  handleVisibilityChange(index, isVisible)
+                }
+                partialVisibility
+              >
+                {({ isVisible }) => (
+                  <motion.div
+                    className="imgcontainerAU"
+                    variants={itemVariants}
+                    initial="hidden"
+                    animate={visibility[index] ? "visible" : "hidden"}
+                  >
+                    <img
+                      className="imgAU"
+                      src={member.img}
+                      alt={member.name}
+                      loading="lazy"
+                    />
+                    <div className="img-detailsAU">
+                      <div className="text-containerAU">
+                        <p className="img-textAU">{member.name}</p>
+                        <p className="img-textAU">{member.title}</p>
+                        <p className="img-textAU">{member.role}</p>
+                      </div>
+                      <div className="lineAU"></div>
+                      <a href={member.linkedin}>
+                        <img
+                          src={LinkedInB}
+                          alt="LinkedIn"
+                          className="linkedinAU"
+                          loading="lazy"
+                        />
+                      </a>
                     </div>
-                    <div className="lineAU"></div>
-                    <a href={member.linkedin}>
-                      <img src={LinkedInB} alt="LinkedIn" className="linkedinAU" loading="lazy" />
-                    </a>
-                  </div>
-                </motion.div>
-              )}
-            </VisibilitySensor>
-          ))}
-        </motion.div>
-      </div>
-      <Footer />
+                  </motion.div>
+                )}
+              </VisibilitySensor>
+            ))}
+          </motion.div>
+        </div>
+        <Footer />
+      </motion.div>
     </div>
   );
 }

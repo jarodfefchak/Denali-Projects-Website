@@ -74,7 +74,8 @@ function SendResume() {
   };
 
   const validPhoneNumber = (phone) => {
-    const regex = /^(\+\d{1,3}[- ]?)?\(?\d{1,4}\)?[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/;
+    const regex =
+      /^(\+\d{1,3}[- ]?)?\(?\d{1,4}\)?[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/;
     setValidPhoneNumber(regex.test(phone));
   };
 
@@ -148,148 +149,151 @@ function SendResume() {
 
   return (
     <div>
-      <Header />
-      <div className="layoutSR">
-        <div className="contentSR">
-          <p className="headerSR">Send Us Your Resume</p>
-          <p className="textSR">
-            <br />
-            {jsonData[0].apply}
-            <br />
-            <br />
-            <b>No Phone Calls Please!</b>
-          </p>
-        </div>
-        <form className="formSR" onSubmit={handleSubmit}>
-          <p className="inputHeadingSR">
-            Personal Details <span style={{ color: "red" }}>*</span>
-          </p>
-          <label className="labelSR">
-            <input
-              className="input-fieldSR"
-              type="text"
-              value={FLname}
-              onChange={handleNameChange}
-              placeholder="First and Last Name"
-            />
-          </label>
-          <label className="labelSR">
-            <input
-              className="input-fieldSR"
-              type="email"
-              value={email}
-              onChange={handleEmailChange}
-              placeholder="Email"
-            />
-          </label>
-          <p className="inputHeadingSR">
-            Phone <span style={{ color: "red" }}>*</span>
-          </p>
-          <label className="longlabelSR">
-            <input
-              className="input-field-largeSR"
-              type="tel"
-              value={phone}
-              onChange={handlePhoneChange}
-              placeholder="Phone"
-            />
-          </label>
+      <motion.div
+        initial={{ opacity: 0.7 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.4, ease: "easeInOut" }}
+      >
+        <Header />
+        <div className="layoutSR">
+          <div className="contentSR">
+            <p className="headerSR">Send Us Your Resume</p>
+            <p className="textSR">
+              <br />
+              {jsonData[0].apply}
+              <br />
+              <br />
+              <b>No Phone Calls Please!</b>
+            </p>
+          </div>
+          <form className="formSR" onSubmit={handleSubmit}>
+            <p className="inputHeadingSR">
+              Personal Details <span style={{ color: "red" }}>*</span>
+            </p>
+            <label className="labelSR">
+              <input
+                className="input-fieldSR"
+                type="text"
+                value={FLname}
+                onChange={handleNameChange}
+                placeholder="First and Last Name"
+              />
+            </label>
+            <label className="labelSR">
+              <input
+                className="input-fieldSR"
+                type="email"
+                value={email}
+                onChange={handleEmailChange}
+                placeholder="Email"
+              />
+            </label>
+            <p className="inputHeadingSR">
+              Phone <span style={{ color: "red" }}>*</span>
+            </p>
+            <label className="longlabelSR">
+              <input
+                className="input-field-largeSR"
+                type="tel"
+                value={phone}
+                onChange={handlePhoneChange}
+                placeholder="Phone"
+              />
+            </label>
 
-          <p className="inputHeadingSR">Message</p>
-          <textarea
-            className="longlabelSR"
-            value={message}
-            onChange={handleMessageChange}
-          ></textarea>
-          <p className="inputHeadingSR">
-            Resume <span style={{ color: "red" }}>*</span>
-          </p>
-          <label className="resumeButton">
-            <input
-              type="file"
-              onChange={handleResumeChange}
-              accept=".pdf"
-            />
-          </label>
-          <br />
-          <button className="buttonSR" type="submit">
-            Submit
-          </button>
-        </form>
-        {showFillFieldsAlert && (
-          <motion.div
-            className="custom-alert-overlaySR"
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              opacity: { duration: 0.4 },
-              y: { duration: 0.5, ease: "easeOut" },
-            }}
-          >
-            <div className="custom-alert-overlaySR">
-              <div className="custom-alertSR">
-                <p>Please fill in all fields.</p>
-                <button onClick={closeFillFieldsAlert}>Close</button>
+            <p className="inputHeadingSR">Message</p>
+            <textarea
+              className="longlabelSR"
+              value={message}
+              onChange={handleMessageChange}
+            ></textarea>
+            <p className="inputHeadingSR">
+              Resume <span style={{ color: "red" }}>*</span>
+            </p>
+            <label className="resumeButton">
+              <input type="file" onChange={handleResumeChange} accept=".pdf" />
+            </label>
+            <br />
+            <button className="buttonSR" type="submit">
+              Submit
+            </button>
+          </form>
+          {showFillFieldsAlert && (
+            <motion.div
+              className="custom-alert-overlaySR"
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                opacity: { duration: 0.4 },
+                y: { duration: 0.5, ease: "easeOut" },
+              }}
+            >
+              <div className="custom-alert-overlaySR">
+                <div className="custom-alertSR">
+                  <p>Please fill in all fields.</p>
+                  <button onClick={closeFillFieldsAlert}>Close</button>
+                </div>
               </div>
-            </div>
-          </motion.div>
-        )}
-        {showInvalidPhoneAlert && (
-          <motion.div
-            className="custom-alert-overlaySR"
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              opacity: { duration: 0.4 },
-              y: { duration: 0.5, ease: "easeOut" },
-            }}
-          >
-            <div className="custom-alert-overlaySR">
-              <div className="custom-alertSR">
-                <p>Please enter a valid phone number in one of the following formats:
-                </p>
-                <ol className="phone-format-list">
-                  <li>123-456-7890</li>
-                  <li>123.456.7890</li>
-                  <li>123 456 7890</li>
-                  <li>(123) 456-7890</li>
-                  <li>+1 123-456-7890</li>
-                  <li>+1 (123) 456-7890</li>
-                  <li>+12 123 456 7890</li>
-                  <li>+123 123 456 7890</li>
-                  <li>1234567890</li>
-                  <li>(123)456-7890</li>
-                  <li>+12-123-456-7890</li>
-                  <li>+123-123-456-7890</li>
-                </ol>
-                <button onClick={closeInvalidPhoneAlert}>Close</button>
+            </motion.div>
+          )}
+          {showInvalidPhoneAlert && (
+            <motion.div
+              className="custom-alert-overlaySR"
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                opacity: { duration: 0.4 },
+                y: { duration: 0.5, ease: "easeOut" },
+              }}
+            >
+              <div className="custom-alert-overlaySR">
+                <div className="custom-alertSR">
+                  <p>
+                    Please enter a valid phone number in one of the following
+                    formats:
+                  </p>
+                  <ol className="phone-format-list">
+                    <li>123-456-7890</li>
+                    <li>123.456.7890</li>
+                    <li>123 456 7890</li>
+                    <li>(123) 456-7890</li>
+                    <li>+1 123-456-7890</li>
+                    <li>+1 (123) 456-7890</li>
+                    <li>+12 123 456 7890</li>
+                    <li>+123 123 456 7890</li>
+                    <li>1234567890</li>
+                    <li>(123)456-7890</li>
+                    <li>+12-123-456-7890</li>
+                    <li>+123-123-456-7890</li>
+                  </ol>
+                  <button onClick={closeInvalidPhoneAlert}>Close</button>
+                </div>
               </div>
-            </div>
-          </motion.div>
-        )}
-        {showSuccessAlert && (
-          <motion.div
-            className="custom-alert-overlaySR"
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              opacity: { duration: 0.4 },
-              y: { duration: 0.5, ease: "easeOut" },
-            }}
-          >
-            <div className="custom-alert-overlaySR">
-              <div className="custom-alertSR">
-                <p>Thank you for contacting Denali Projects.</p>
-                <button onClick={closeSuccessAlert}>Close</button>
+            </motion.div>
+          )}
+          {showSuccessAlert && (
+            <motion.div
+              className="custom-alert-overlaySR"
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                opacity: { duration: 0.4 },
+                y: { duration: 0.5, ease: "easeOut" },
+              }}
+            >
+              <div className="custom-alert-overlaySR">
+                <div className="custom-alertSR">
+                  <p>Thank you for contacting Denali Projects.</p>
+                  <button onClick={closeSuccessAlert}>Close</button>
+                </div>
               </div>
-            </div>
-          </motion.div>
-        )}
-      </div>
-      <Footer />
+            </motion.div>
+          )}
+        </div>
+        <Footer />
+      </motion.div>
     </div>
   );
 }
 
 export default SendResume;
-

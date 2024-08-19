@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
 import Header from './Header';
 import HomeMainSection from './HomeMainSection';
 import ProvenSuccess from './ProvenSuccess';
@@ -7,6 +8,7 @@ import Solutions from './Solutions';
 import InsideDenali from './InsideDenali';
 import CareersPage from './CareersPage';
 import Footer from './Footer';
+
 function HomePage() {
   const [renderKey, setRenderKey] = useState(0);
 
@@ -36,7 +38,7 @@ function HomePage() {
     };
 
     window.addEventListener('hashchange', hashChangeListener);
-    scrollToHashElement(); // initial call to handle direct links
+    scrollToHashElement(); 
 
     return () => {
       window.removeEventListener('hashchange', hashChangeListener);
@@ -48,7 +50,12 @@ function HomePage() {
   };
 
   return (
-    <div key={renderKey}>
+    <motion.div
+      key={renderKey}
+      initial={{ opacity: 0.85 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.4, ease: 'easeInOut' }}
+    >
       <Header onLinkClick={handleLinkClick} />
       <div id="HomeMainSection"><HomeMainSection /></div>
       <ProvenSuccess />
@@ -57,10 +64,8 @@ function HomePage() {
       <InsideDenali />
       <CareersPage />
       <Footer />
-    </div>
+    </motion.div>
   );
 }
 
 export default HomePage;
-
-

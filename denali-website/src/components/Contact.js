@@ -17,6 +17,7 @@ function Contact() {
   const [jsonData, setJsonData] = useState(null);
   const [jsonData2, setJsonData2] = useState(null);
   const [hover, setHover] = useState(false);
+  const [errors, setErrors] = useState({});
   const form = useRef();
 
   useEffect(() => {
@@ -52,27 +53,42 @@ function Contact() {
   }, []);
 
   if (!jsonData || !jsonData2) {
-    return;
+    return null;
   }
+
+  const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
 
   const handleFirstNameChange = (event) => {
     setFirstName(event.target.value);
     checkFormValidity();
+    setErrors((prevErrors) => ({ ...prevErrors, firstName: false }));
   };
 
   const handleLastNameChange = (event) => {
     setLastName(event.target.value);
     checkFormValidity();
+    setErrors((prevErrors) => ({ ...prevErrors, lastName: false }));
   };
 
   const handleMessageChange = (event) => {
     setMessage(event.target.value);
     checkFormValidity();
+    setErrors((prevErrors) => ({ ...prevErrors, message: false }));
   };
 
   const handleEmailChange = (event) => {
-    setEmail(event.target.value);
+    const inputEmail = event.target.value;
+    setEmail(inputEmail);
     checkFormValidity();
+
+    if (!validateEmail(inputEmail)) {
+      setErrors((prevErrors) => ({ ...prevErrors, email: true }));
+    } else {
+      setErrors((prevErrors) => ({ ...prevErrors, email: false }));
+    }
   };
 
   const checkFormValidity = () => {
@@ -80,7 +96,7 @@ function Contact() {
       firstName.trim() !== "" &&
       lastName.trim() !== "" &&
       message.trim() !== "" &&
-      email.trim() !== ""
+      validateEmail(email)
     ) {
       setIsFormValid(true);
     } else {
@@ -92,14 +108,20 @@ function Contact() {
     event.preventDefault();
 
     if (!isFormValid) {
+      setErrors({
+        firstName: firstName.trim() === "",
+        lastName: lastName.trim() === "",
+        message: message.trim() === "",
+        email: !validateEmail(email),
+      });
       setShow(true);
     } else {
+      sendEmail();
       setFirstName("");
       setLastName("");
       setEmail("");
       setMessage("");
       setShow2(true);
-      sendEmail();
     }
   };
 
@@ -130,8 +152,21 @@ function Contact() {
       );
   };
 
+  const getErrorMessage = () => {
+    let errorMessage = "Please fill in all fields correctly before submitting.";
+    if (errors.email) {
+      errorMessage += " The email address is invalid.";
+    }
+    return errorMessage;
+  };
+
   return (
     <div>
+       <motion.div
+        initial={{ opacity: 0.7 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.4, ease: "easeInOut" }}
+      >
       <Header />
       <div className="contentC">
         <div className="textC">
@@ -141,10 +176,14 @@ function Contact() {
           <p className="no-marginC">{jsonData2[0].contactPhone}</p>
 
           <form className="formC" ref={form} onSubmit={handleEmailMessage}>
-            <p className="large-textC">Personal Information <span style ={{color:"red"}}>*</span></p>
+            <p className="large-textC">
+              Personal Information <span style={{ color: "red" }}>*</span>
+            </p>
             <label className="labelC">
               <input
-                className="input-shortC"
+                className={`input-shortC ${
+                  errors.firstName ? "input-errorC" : ""
+                }`}
                 type="text"
                 name="firstName"
                 value={firstName}
@@ -154,7 +193,9 @@ function Contact() {
             </label>
             <label className="labelC">
               <input
-                className="input-shortC"
+                className={`input-shortC ${
+                  errors.lastName ? "input-errorC" : ""
+                }`}
                 type="text"
                 name="lastName"
                 value={lastName}
@@ -164,7 +205,7 @@ function Contact() {
             </label>
             <label className="labelC">
               <input
-                className="input-longC"
+                className={`input-longC ${errors.email ? "input-errorC" : ""}`}
                 type="email"
                 name="email"
                 value={email}
@@ -172,10 +213,14 @@ function Contact() {
                 placeholder="Email"
               />
             </label>
-            <p className="large-textC">Message <span style ={{color:"red"}}>*</span></p>
+            <p className="large-textC">
+              Message <span style={{ color: "red" }}>*</span>
+            </p>
             <label className="labelC">
               <textarea
-                className="textareaC"
+                className={`textareaC ${
+                  errors.message ? "textarea-errorC" : ""
+                }`}
                 name="message"
                 value={message}
                 onChange={handleMessageChange}
@@ -203,7 +248,7 @@ function Contact() {
               }}
             >
               <div className="custom-alert">
-                <p>Please fill in all fields before submitting.</p>
+                <p>{getErrorMessage()}</p>
                 <button onClick={closeAlert}>Close</button>
               </div>
             </motion.div>
@@ -230,7 +275,7 @@ function Contact() {
           <p className="no-marginC">{jsonData2[0].contactAddress}</p>
           <p className="no-marginC">{jsonData2[0].contactCity}</p>
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4218.223674639591!2d-114.07818068628151!3d51.04993390290784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53716fe521a5d8f7%3A0xd9dccb4dd492ed30!2s700%204%20Ave%20SW%2C%20Calgary%2C%20AB%20T2P%203J4!5e0!3m2!1sen!2sca!4v1716931062195!5m2!1sen!2sca"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4218.223674639591!2d-114.07818068628151!3d51.04993390290784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53716fdd5043c07f%3A0xdccb4dd492ed30!2s700%204%20Ave%20SW%2C%20Calgary%2C%20AB%20T2P%203J4!5e0!3m2!1sen!2sca!4v1716931062195!5m2!1sen!2sca"
             title="Google Maps"
             allowFullScreen=""
             loading="lazy"
@@ -239,6 +284,7 @@ function Contact() {
         </div>
       </div>
       <Footer />
+      </motion.div>
     </div>
   );
 }

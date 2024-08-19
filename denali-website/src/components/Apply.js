@@ -226,6 +226,11 @@ function Apply() {
 
   return (
     <div>
+      <motion.div
+        initial={{ opacity: 0.7 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.4, ease: "easeInOut" }}
+      >
       <Header />
       <div className="layoutAP">
         <div className="contentAP">
@@ -455,6 +460,7 @@ function Apply() {
         )}
       </div>
       <Footer />
+      </motion.div>
     </div>
   );
 }

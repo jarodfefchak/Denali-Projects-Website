@@ -7,6 +7,14 @@
   min-height: 80vh;
 }
 
+.input-errorC {
+ background-color:  rgba(247, 208, 208, 0.6);
+}
+
+.textarea-errorC {
+  background-color:  rgba(247, 208, 208, 0.6);
+}
+
 .textC {
   margin: 200px 50px 150px 150px;
   font-size: 25px;
@@ -130,6 +138,7 @@
     color: #fff;
     margin-top: 10px;
     padding: 5px 10px;
+    border: 2px solid #408697;
   }
   .custom-alert button:hover {
     background-color: white;
