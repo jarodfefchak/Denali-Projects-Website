@@ -50,12 +50,13 @@ function HomePage() {
   };
 
   return (
-    <motion.div
-      key={renderKey}
-      initial={{ opacity: 0.85 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.4, ease: 'easeInOut' }}
-    >
+    <div>
+    {/* // <motion.div
+    //   key={renderKey}
+    //   initial={{ opacity: 0.85 }}
+    //   animate={{ opacity: 1 }}
+    //   transition={{ duration: 0.4, ease: 'easeInOut' }}
+    // > */}
       <Header onLinkClick={handleLinkClick} />
       <div id="HomeMainSection"><HomeMainSection /></div>
       <ProvenSuccess />
@@ -64,7 +65,8 @@ function HomePage() {
       <InsideDenali />
       <CareersPage />
       <Footer />
-    </motion.div>
+     {/* </motion.div> */}
+    </div>
   );
 }
 
