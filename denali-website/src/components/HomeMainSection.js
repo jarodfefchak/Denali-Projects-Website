@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./HomeMainSection.css";
 import axios from "axios";
+import HeaderImage from "../images/Home_Page.png";
 
 function HomeMainSection() {
   const [jsonData, setJsonData] = useState(null);
@@ -23,7 +24,7 @@ function HomeMainSection() {
   }, []);
 
   if (loading) {
-    return ;
+    return <div>Loading...</div>;
   }
 
   if (error) {
@@ -35,7 +36,8 @@ function HomeMainSection() {
   }
 
   return (
-    <div className="headImageHM" loading="lazy">
+    <div className="headImageHM">
+      <img src= {HeaderImage} alt="Home Background" className="backgroundImageHM" loading="lazy" />
       <p className="mainTextHM">
         {jsonData[0].Main}
       </p>
