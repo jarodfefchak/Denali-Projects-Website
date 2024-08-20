@@ -1,3 +1,19 @@
 [
-  
+  {
+    "title": "test",
+    "location": "test",
+    "description": "test",
+    "minimum_requirements": [
+      "test"
+    ],
+    "responsibilities": [
+      "test"
+    ],
+    "preferred": [
+      "test"
+    ],
+    "benefits": [
+      "test"
+    ]
+  }
 ]
