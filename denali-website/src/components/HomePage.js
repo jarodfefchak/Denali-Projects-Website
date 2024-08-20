@@ -11,7 +11,7 @@ import Footer from './Footer';
 
 function HomePage() {
   const [renderKey, setRenderKey] = useState(0);
-  const [isHomeMainSectionVisible, setHomeMainSectionVisible] = useState(true);
+  const [isFooterVisible, setFooterVisible] = useState(false);
   const footerRef = useRef(null);
 
   useEffect(() => {
@@ -19,7 +19,7 @@ function HomePage() {
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        setHomeMainSectionVisible(!entry.isIntersecting);
+        setFooterVisible(entry.isIntersecting);
       },
       { threshold: 0.1 } // Adjust this value to control when the visibility should change
     );
@@ -75,12 +75,10 @@ function HomePage() {
         initial={{ opacity: 0.85 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.4, ease: 'easeInOut' }}
+        style={{ backgroundColor: isFooterVisible ? '#303030' : 'transparent' }}
       >
         <Header onLinkClick={handleLinkClick} />
-        <div
-          id="HomeMainSection"
-          style={{ display: isHomeMainSectionVisible ? 'block' : 'none' }}
-        >
+        <div id="HomeMainSection">
           <HomeMainSection />
         </div>
         <div style={{ backgroundColor: "#f6f6f6" }}>
@@ -89,15 +87,16 @@ function HomePage() {
           <div id="Solutions" style={{ minHeight: "85vh" }}><Solutions /></div>
           <InsideDenali />
           <CareersPage />
-          </div>
-          <div ref={footerRef}>
-            <Footer />
-            </div>
+        </div>
+        <div ref={footerRef}>
+          <Footer />
+        </div>
       </motion.div>
     </div>
   );
 }
 
 export default HomePage;
+
 
 
