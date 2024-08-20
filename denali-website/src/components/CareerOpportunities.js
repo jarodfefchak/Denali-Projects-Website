@@ -73,10 +73,9 @@ function CareerOpportunities() {
         transition={{ duration: 0.4, ease: "easeInOut" }}
       >
         <Header />
-        <div
-          className="titleImageOP"
-          style={{ backgroundImage: `url(${CareerOpImage})` }}
-        ></div>
+        <div className="titleImageOP">
+          <img src={CareerOpImage} alt="Career Opportunities" className="titleImageOPImg" />
+        </div>
         <div className="contentOP">
           <div className="navBarOP">
             <p className="navBarTextOP">
