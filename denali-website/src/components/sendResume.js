@@ -11,12 +11,15 @@ function SendResume() {
   const [isFormValid, setIsFormValid] = useState(false);
   const [FLname, setFLname] = useState("");
   const [email, setEmail] = useState("");
+  const [isValidEmail, setValidEmail] = useState(false);
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
   const [isValidPhoneNumber, setValidPhoneNumber] = useState(false);
   const [resume, setResume] = useState(null);
   const [showFillFieldsAlert, setShowFillFieldsAlert] = useState(false);
+  const [showInvalidEmail, setShowInvalidEmail] = useState(false);
   const [showInvalidPhoneAlert, setShowInvalidPhoneAlert] = useState(false);
+
   const [showSuccessAlert, setShowSuccessAlert] = useState(false);
 
   useEffect(() => {
@@ -40,7 +43,7 @@ function SendResume() {
   }, []);
 
   const checkFormValidity = () => {
-    if (FLname.trim() !== "" && email.trim() !== "" && resume !== null) {
+    if (FLname.trim() !== "" && resume !== null) {
       setIsFormValid(true);
     } else {
       setIsFormValid(false);
@@ -49,7 +52,7 @@ function SendResume() {
 
   useEffect(() => {
     checkFormValidity();
-  }, [FLname, email, phone, resume, isValidPhoneNumber]);
+  }, [FLname, email,  isValidEmail, phone, resume, isValidPhoneNumber]);
 
   if (!jsonData) {
     return;
@@ -60,7 +63,9 @@ function SendResume() {
   };
 
   const handleEmailChange = (event) => {
-    setEmail(event.target.value);
+    const emailCheck = event.target.value;
+    validEmail(emailCheck);
+    setEmail(emailCheck);
   };
 
   const handlePhoneChange = (event) => {
@@ -78,6 +83,11 @@ function SendResume() {
       /^(\+\d{1,3}[- ]?)?\(?\d{1,4}\)?[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/;
     setValidPhoneNumber(regex.test(phone));
   };
+  const validEmail = (email) => {
+    const regex = /^.*@.*\..*$/;
+    setValidEmail(regex.test(email));
+  };
+
 
   const handleMessageChange = (event) => {
     setMessage(event.target.value);
@@ -90,8 +100,12 @@ function SendResume() {
       return;
     }
 
-    if (!isValidPhoneNumber) {
+    if (!isValidPhoneNumber && isFormValid) {
       setShowInvalidPhoneAlert(true);
+      return;
+    }
+    if (!isValidEmail && isFormValid) {
+      setShowInvalidEmail(true);
       return;
     }
 
@@ -141,6 +155,9 @@ function SendResume() {
   const closeInvalidPhoneAlert = () => {
     setShowInvalidPhoneAlert(false);
   };
+  const closeInvalidEmail = () => {
+    setShowInvalidEmail(false);
+  };
 
   const closeSuccessAlert = () => {
     setShowSuccessAlert(false);
@@ -182,7 +199,7 @@ function SendResume() {
             <label className="labelSR">
               <input
                 className="input-fieldSR"
-                type="email"
+                type="text"
                 value={email}
                 onChange={handleEmailChange}
                 placeholder="Email"
@@ -267,6 +284,26 @@ function SendResume() {
                     <li>+123-123-456-7890</li>
                   </ol>
                   <button onClick={closeInvalidPhoneAlert}>Close</button>
+                </div>
+              </div>
+            </motion.div>
+          )}
+          {showInvalidEmail && (
+            <motion.div
+              className="custom-alert-overlaySR"
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                opacity: { duration: 0.4 },
+                y: { duration: 0.5, ease: "easeOut" },
+              }}
+            >
+              <div className="custom-alert-overlaySR">
+                <div className="custom-alertSR">
+                  <p>
+                    Please Enter a Valid Email
+                  </p>
+                  <button onClick={closeInvalidEmail}>Close</button>
                 </div>
               </div>
             </motion.div>

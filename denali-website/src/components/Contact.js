@@ -12,8 +12,9 @@ function Contact() {
   const [lastName, setLastName] = useState("");
   const [message, setMessage] = useState("");
   const [email, setEmail] = useState("");
-  const [show, setShow] = useState(false);
-  const [show2, setShow2] = useState(false);
+  const [show, setShow] = useState(false); // General form errors
+  const [show2, setShow2] = useState(false); // Success message
+  const [showEmailError, setShowEmailError] = useState(false); // Email-specific error
   const [jsonData, setJsonData] = useState(null);
   const [jsonData2, setJsonData2] = useState(null);
   const [hover, setHover] = useState(false);
@@ -56,11 +57,6 @@ function Contact() {
     return null;
   }
 
-  const validateEmail = (email) => {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-  };
-
   const handleFirstNameChange = (event) => {
     setFirstName(event.target.value);
     checkFormValidity();
@@ -80,24 +76,17 @@ function Contact() {
   };
 
   const handleEmailChange = (event) => {
-    const inputEmail = event.target.value;
-    setEmail(inputEmail);
+    setEmail(event.target.value);
     checkFormValidity();
-
-    if (!validateEmail(inputEmail)) {
-      setErrors((prevErrors) => ({ ...prevErrors, email: true }));
-    } else {
-      setErrors((prevErrors) => ({ ...prevErrors, email: false }));
-    }
+    setErrors((prevErrors) => ({ ...prevErrors, email: false }));
+    setShowEmailError(false); // Reset email-specific error on change
   };
 
   const checkFormValidity = () => {
-    if (
-      firstName.trim() !== "" &&
-      lastName.trim() !== "" &&
-      message.trim() !== "" &&
-      validateEmail(email)
-    ) {
+    const allFieldsFilled = firstName.trim() !== "" && lastName.trim() !== "" && message.trim() !== "";
+    const emailFilled = email.trim() !== "";
+
+    if (allFieldsFilled && emailFilled) {
       setIsFormValid(true);
     } else {
       setIsFormValid(false);
@@ -106,16 +95,36 @@ function Contact() {
 
   const handleEmailMessage = (event) => {
     event.preventDefault();
-
-    if (!isFormValid) {
+  
+    // Regular expression for validating email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const isValidEmail = emailRegex.test(email);
+  
+    const allFieldsFilled = firstName.trim() !== "" && lastName.trim() !== "" && message.trim() !== "";
+    const emailFilled = email.trim() !== "";
+  
+    if (!allFieldsFilled) {
       setErrors({
         firstName: firstName.trim() === "",
         lastName: lastName.trim() === "",
         message: message.trim() === "",
-        email: !validateEmail(email),
+        email: false, // No need to show email error here
       });
       setShow(true);
+      setShowEmailError(false);
+    } else if (!emailFilled || !isValidEmail) {
+      setErrors({
+        firstName: false,
+        lastName: false,
+        message: false,
+        email: true,
+      });
+      setShow(false); // Ensure general error alert is hidden
+      setShowEmailError(true); // Show email-specific error
     } else {
+      setErrors({});
+      setShow(false);
+      setShowEmailError(false);
       sendEmail();
       setFirstName("");
       setLastName("");
@@ -124,6 +133,7 @@ function Contact() {
       setShow2(true);
     }
   };
+  
 
   const closeAlert = () => {
     setShow(false);
@@ -132,6 +142,10 @@ function Contact() {
   const closeAlert2 = () => {
     setShow2(false);
     window.location.href = "/";
+  };
+
+  const closeEmailAlert = () => {
+    setShowEmailError(false);
   };
 
   const sendEmail = () => {
@@ -153,137 +167,152 @@ function Contact() {
   };
 
   const getErrorMessage = () => {
-    let errorMessage = "Please fill in all fields correctly before submitting.";
-    if (errors.email) {
-      errorMessage += " The email address is invalid.";
-    }
+    let errorMessage = "Please fill in all fields before submitting.";
     return errorMessage;
   };
 
   return (
     <div>
-       <motion.div
+      <motion.div
         initial={{ opacity: 0.7 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.4, ease: "easeInOut" }}
       >
-      <Header />
-      <div className="contentC">
-        <div className="textC">
-          <p className="no-marginHeaderC">{jsonData[0].contactUs1}</p>
-          <p className="no-marginC">Denali Projects</p>
-          <p className="no-marginC">{jsonData2[0].contactEmail}</p>
-          <p className="no-marginC">{jsonData2[0].contactPhone}</p>
+        <Header />
+        <div className="contentC">
+          <div className="textC">
+            <p className="no-marginHeaderC">{jsonData[0].contactUs1}</p>
+            <p className="no-marginC">Denali Projects</p>
+            <p className="no-marginC">{jsonData2[0].contactEmail}</p>
+            <p className="no-marginC">{jsonData2[0].contactPhone}</p>
 
-          <form className="formC" ref={form} onSubmit={handleEmailMessage}>
-            <p className="large-textC">
-              Personal Information <span style={{ color: "red" }}>*</span>
-            </p>
-            <label className="labelC">
-              <input
-                className={`input-shortC ${
-                  errors.firstName ? "input-errorC" : ""
-                }`}
-                type="text"
-                name="firstName"
-                value={firstName}
-                onChange={handleFirstNameChange}
-                placeholder="First Name"
-              />
-            </label>
-            <label className="labelC">
-              <input
-                className={`input-shortC ${
-                  errors.lastName ? "input-errorC" : ""
-                }`}
-                type="text"
-                name="lastName"
-                value={lastName}
-                onChange={handleLastNameChange}
-                placeholder="Last Name"
-              />
-            </label>
-            <label className="labelC">
-              <input
-                className={`input-longC ${errors.email ? "input-errorC" : ""}`}
-                type="email"
-                name="email"
-                value={email}
-                onChange={handleEmailChange}
-                placeholder="Email"
-              />
-            </label>
-            <p className="large-textC">
-              Message <span style={{ color: "red" }}>*</span>
-            </p>
-            <label className="labelC">
-              <textarea
-                className={`textareaC ${
-                  errors.message ? "textarea-errorC" : ""
-                }`}
-                name="message"
-                value={message}
-                onChange={handleMessageChange}
-                autoResizeEnabled={true}
-              />
-            </label>
-            <br />
-            <button
-              className={`buttonC ${hover ? "button-hover" : ""}`}
-              type="submit"
-              onMouseEnter={() => setHover(true)}
-              onMouseLeave={() => setHover(false)}
-            >
-              Submit
-            </button>
-          </form>
-          {show && (
-            <motion.div
-              className="custom-alert-overlay"
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{
-                opacity: { duration: 0.4 },
-                y: { duration: 0.5, ease: "easeOut" },
-              }}
-            >
-              <div className="custom-alert">
-                <p>{getErrorMessage()}</p>
-                <button onClick={closeAlert}>Close</button>
-              </div>
-            </motion.div>
-          )}
-          {show2 && (
-            <motion.div
-              className="custom-alert-overlay"
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{
-                opacity: { duration: 0.4 },
-                y: { duration: 0.5, ease: "easeOut" },
-              }}
-            >
-              <div className="custom-alert">
-                <p>Thank you for contacting Denali Projects.</p>
-                <button onClick={closeAlert2}>Close</button>
-              </div>
-            </motion.div>
-          )}
+            <form className="formC" ref={form} onSubmit={handleEmailMessage}>
+              <p className="large-textC">
+                Personal Information <span style={{ color: "red" }}>*</span>
+              </p>
+              <label className="labelC">
+                <input
+                  className={`input-shortC ${
+                    errors.firstName ? "input-errorC" : ""
+                  }`}
+                  type="text"
+                  name="firstName"
+                  value={firstName}
+                  onChange={handleFirstNameChange}
+                  placeholder="First Name"
+                />
+              </label>
+              <label className="labelC">
+                <input
+                  className={`input-shortC ${
+                    errors.lastName ? "input-errorC" : ""
+                  }`}
+                  type="text"
+                  name="lastName"
+                  value={lastName}
+                  onChange={handleLastNameChange}
+                  placeholder="Last Name"
+                />
+              </label>
+              <label className="labelC">
+                <input
+                  className={`input-longC ${
+                    errors.email ? "input-errorC" : ""
+                  }`}
+                  type="text"
+                  name="email"
+                  value={email}
+                  onChange={handleEmailChange}
+                  placeholder="Email"
+                />
+              </label>
+              <p className="large-textC">
+                Message <span style={{ color: "red" }}>*</span>
+              </p>
+              <label className="labelC">
+                <textarea
+                  className={`textareaC ${
+                    errors.message ? "textarea-errorC" : ""
+                  }`}
+                  name="message"
+                  value={message}
+                  onChange={handleMessageChange}
+                  autoResizeEnabled={true}
+                />
+              </label>
+              <br />
+              <button
+                className={`buttonC ${hover ? "button-hover" : ""}`}
+                type="submit"
+                onMouseEnter={() => setHover(true)}
+                onMouseLeave={() => setHover(false)}
+              >
+                Submit
+              </button>
+            </form>
+            {show && !showEmailError && (
+              <motion.div
+                className="custom-alert-overlay"
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  opacity: { duration: 0.4 },
+                  y: { duration: 0.5, ease: "easeOut" },
+                }}
+              >
+                <div className="custom-alert">
+                  <p>{getErrorMessage()}</p>
+                  <button onClick={closeAlert}>Close</button>
+                </div>
+              </motion.div>
+            )}
+            {showEmailError && (
+              <motion.div
+                className="custom-alert-overlay"
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  opacity: { duration: 0.4 },
+                  y: { duration: 0.5, ease: "easeOut" },
+                }}
+              >
+                <div className="custom-alert">
+                  <p>Please enter a valid email address.</p>
+                  <button onClick={closeEmailAlert}>Close</button>
+                </div>
+              </motion.div>
+            )}
+            {show2 && (
+              <motion.div
+                className="custom-alert-overlay"
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  opacity: { duration: 0.4 },
+                  y: { duration: 0.5, ease: "easeOut" },
+                }}
+              >
+                <div className="custom-alert">
+                  <p>Thank you for contacting Denali Projects.</p>
+                  <button onClick={closeAlert2}>Close</button>
+                </div>
+              </motion.div>
+            )}
+          </div>
+          <div className="iframe-containerC">
+            <p className="no-marginHeaderC">{jsonData[0].contactUs2}</p>
+            <p className="no-marginC">{jsonData2[0].contactAddress}</p>
+            <p className="no-marginC">{jsonData2[0].contactCity}</p>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4218.223674639591!2d-114.07818068628151!3d51.04993390290784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53716fdd5043c07f%3A0xdccb4dd492ed30!2s700%204%20Ave%20SW%2C%20Calgary%2C%20AB%20T2P%203J4!5e0!3m2!1sen!2sca!4v1716931062195!5m2!1sen!2sca"
+              title="Google Maps"
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
         </div>
-        <div className="iframe-containerC">
-          <p className="no-marginHeaderC">{jsonData[0].contactUs2}</p>
-          <p className="no-marginC">{jsonData2[0].contactAddress}</p>
-          <p className="no-marginC">{jsonData2[0].contactCity}</p>
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4218.223674639591!2d-114.07818068628151!3d51.04993390290784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53716fdd5043c07f%3A0xdccb4dd492ed30!2s700%204%20Ave%20SW%2C%20Calgary%2C%20AB%20T2P%203J4!5e0!3m2!1sen!2sca!4v1716931062195!5m2!1sen!2sca"
-            title="Google Maps"
-            allowFullScreen=""
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
-      </div>
-      <Footer />
+        <Footer />
       </motion.div>
     </div>
   );

@@ -7,14 +7,6 @@
   min-height: 80vh;
 }
 
-.input-errorC {
- background-color:  rgba(247, 208, 208, 0.6);
-}
-
-.textarea-errorC {
-  background-color:  rgba(247, 208, 208, 0.6);
-}
-
 .textC {
   margin: 200px 50px 150px 150px;
   font-size: 25px;

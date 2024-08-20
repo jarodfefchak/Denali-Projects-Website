@@ -12,6 +12,7 @@ function Apply() {
   const [isFormValid, setIsFormValid] = useState(false);
   const [FLname, setFLname] = useState("");
   const [email, setEmail] = useState("");
+  const [isValidEmail, setValidEmail] = useState(false);
   const [address1, setAddress1] = useState("");
   const [address2, setAddress2] = useState("");
   const [city, setCity] = useState("");
@@ -27,6 +28,7 @@ function Apply() {
   const [show, setShow] = useState(false);
   const [show2, setShow2] = useState(false);
   const [show3, setShow3] = useState(false);
+  const [show4, setShow4] = useState(false);
 
   const { jobTitle } = useParams();
 
@@ -53,7 +55,6 @@ function Apply() {
   const checkFormValidity = () => {
     if (
       FLname.trim() !== "" &&
-      email.trim() !== "" &&
       address1.trim() !== "" &&
       city.trim() !== "" &&
       province.trim() !== "" &&
@@ -71,6 +72,7 @@ function Apply() {
   }, [
     FLname,
     email,
+    isValidEmail,
     address1,
     city,
     province,
@@ -85,7 +87,9 @@ function Apply() {
   };
 
   const handleEmailChange = (event) => {
-    setEmail(event.target.value);
+    const emailCheck = event.target.value;
+    validEmail(emailCheck);
+    setEmail(emailCheck);
   };
 
   const handleAddress1Change = (event) => {
@@ -139,27 +143,30 @@ function Apply() {
       /^(\+\d{1,3}[- ]?)?\(?\d{1,4}\)?[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/;
     setValidPhoneNumber(regex.test(phone));
   };
+  const validEmail = (email) => {
+    const regex = /^.*@.*\..*$/;
+    setValidEmail(regex.test(email));
+  };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-
-    // Reset alerts before validation
     setShow(false);
     setShow2(false);
     setShow3(false);
-
-    // Validate phone number
+    setShow4(false);
     if (!isValidPhoneNumber && isFormValid) {
       setShow(true);
     }
-
-    // Validate form fields
+    if (!isValidEmail && isFormValid) {
+      setShow4(true);
+    }
     if (!isFormValid) {
       setShow2(true);
     }
+   
 
     // If form is valid and phone number is valid, proceed with submission
-    if (isFormValid && isValidPhoneNumber) {
+    if (isFormValid && isValidPhoneNumber && isValidEmail) {
       if (legalToWork === "Yes") {
         try {
           const resumeFile = event.target.elements.resume.files[0];
@@ -223,6 +230,9 @@ function Apply() {
     setShow3(false);
     window.location.href = "/";
   };
+  const closeAlert4 = () => {
+    setShow4(false);
+  };
 
   return (
     <div>
@@ -258,7 +268,7 @@ function Apply() {
           <label className="labelAP">
             <input
               className="input-fieldAP"
-              type="email"
+              type="text"
               value={email}
               onChange={handleEmailChange}
               placeholder="Email"
@@ -366,7 +376,7 @@ function Apply() {
           <label className="longlabelAP">
             <input
               className="input-field-largeAP"
-              type="url"
+              type="text"
               value={url}
               onChange={handleUrlChange}
             />
@@ -458,9 +468,27 @@ function Apply() {
             </div>
           </motion.div>
         )}
+           {show4 && (
+          <motion.div
+            className="custom-alert-overlay"
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              opacity: { duration: 0.4 },
+              y: { duration: 0.5, ease: "easeOut" },
+            }}
+          >
+            <div className="custom-alert-overlayOP">
+              <div className="custom-alertOP">
+                <p>Please Enter a Valid Email.</p>
+                <button onClick={closeAlert4}>Close</button>
+              </div>
+            </div>
+          </motion.div>
+        )}
       </div>
       <Footer />
-      </motion.div>
+      </motion.div> 
     </div>
   );
 }

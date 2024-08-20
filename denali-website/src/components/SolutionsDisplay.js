@@ -3,6 +3,7 @@ import { useLocation, useParams } from 'react-router-dom';
 import Header from "./Header";
 import Footer from "./Footer";
 import SolutionsList from './SolutionsList';
+import { motion } from "framer-motion";
 import './SolutionsDisplay.css';
 
 function SolutionsDisplay() {
@@ -15,12 +16,18 @@ function SolutionsDisplay() {
 
     return (
         <div>
+             <motion.div
+    initial={{ opacity: 0.7 }}
+    animate={{ opacity: 1 }}
+    transition={{ duration: 0.4, ease: 'easeInOut' }}
+  >
             <Header />
             <div className="listSD">
                 <h1 className="projects-titleSD"><b>Projects</b></h1>
                 <SolutionsList solutionId={solutionId} />
             </div>
             <Footer />
+            </motion.div>
         </div>
     );
 };
