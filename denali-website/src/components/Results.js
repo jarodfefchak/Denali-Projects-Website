@@ -49,7 +49,7 @@ function Results() {
             <div className="countR">
               <CountUp
                 end={hasBeenVisible[index] ? item.number : 0}
-                duration={index === 0 ? 15 : index === 1 ? 6 : 3}
+                duration={index === 0 ? 17: index === 1 ? 6 : 3}
                 formattingFn={index === 2 ? value => `${value}%` : undefined}
               >
                 {({ countUpRef, start }) => (
