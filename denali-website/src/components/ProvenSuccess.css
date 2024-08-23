@@ -106,7 +106,7 @@
   transform: translateX(-50%);
   color: white;
   background-color: #408697;
-  width: 20vw;
+  width: 50vw;
   height: 50px;
   font-size: 1.5vw;
   cursor: pointer;
@@ -264,7 +264,7 @@
   font-size: 20pt;
 }
 .buttonPS {
-  width: 60vw;
+  width: 80vw;
   border-radius: 5px;
 }
 .overlay-text p {
