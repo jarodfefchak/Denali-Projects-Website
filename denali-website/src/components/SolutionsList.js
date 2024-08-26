@@ -47,21 +47,28 @@ function SolutionsList({ solutionId }) {
     <div>
       <h2 className="subHeadingSL">{jsonData[0].section}</h2>
       <br />
-      <p className="textSL" >{jsonData2[0][solutionId]}</p>
+      <p className="textSL">{jsonData2[0][solutionId]}</p>
       <div className="projectSL">
         {jsonData.map((project, index) => (
           <div key={index} className="informationSL">
             <p><b>PROJECT:</b> {project.project}</p>
             <p><b>CLIENT:</b> {project.client}</p>
             <p><b>LOCATION:</b> {project.location}</p>
-            <p>{project.description}</p>
+            <p>
+              {project.description.split('\n').map((line, i) => (
+                <React.Fragment key={i}>
+                  {line}
+                  <br />
+                </React.Fragment>
+              ))}
+            </p>
             <div className="rectangleSL" />
           </div>
         ))}
       </div>
     </div>
   );
-}
+};
 
 export default SolutionsList;
 
