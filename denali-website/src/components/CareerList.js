@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-
 import { Link } from "react-router-dom";
 import "./CareerList.css";
 
 function CareerList() {
   const [jsonData, setJsonData] = useState(null);
   const [jsonData2, setJsonData2] = useState(null);
-
 
   useEffect(() => {
     const fetchData = async () => {
@@ -21,6 +19,7 @@ function CareerList() {
 
     fetchData();
   }, []);
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -34,15 +33,9 @@ function CareerList() {
     fetchData();
   }, []);
 
-  if (!jsonData) {
-    return;
+  if (!jsonData || !jsonData2) {
+    return null;
   }
-
-  if (!jsonData2) {
-    return;
-  }
-
-
 
   return (
     <div className="careersCL">
@@ -57,8 +50,17 @@ function CareerList() {
             </p>
             <p className="textCL">
               <b>Description: </b>
-              {career.description}
+              <span>{career.description.split("\n")[0]}</span>
             </p>
+            {career.description
+              .split("\n")
+              .slice(1)
+              .map((line, index) => (
+                <p key={index} className="textCL">
+                  {line}
+                </p>
+              ))}
+
             <p className="textCL">
               <b>Responsibilities:</b>
             </p>
@@ -102,7 +104,14 @@ function CareerList() {
             <Link to={`/apply/${encodeURIComponent(career.title)}`}>
               <button className="applyButtonCL">Apply</button>
             </Link>
-            <hr style={{ height: "1px", border: "none", color: "black", backgroundColor: "black" }} />
+            <hr
+              style={{
+                height: "1px",
+                border: "none",
+                color: "black",
+                backgroundColor: "black",
+              }}
+            />
           </div>
         ))}
       </div>
@@ -111,5 +120,3 @@ function CareerList() {
 }
 
 export default CareerList;
-
-
