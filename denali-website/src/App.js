@@ -25,33 +25,33 @@ import{ BrowserRouter, Routes, Route} from 'react-router-dom';
 
 function App() {
   return (
-  <BrowserRouter>
-  <Routes>
-    <Route path = "/" element = {<HomePage />} />
-    <Route path = "/HomeMainSection" element = {<HomeMainSection/>} />
-    <Route path = "/Header" element = {<Header/>} />
-    <Route path = "/Footer" element = {<Footer/>} />
-    <Route path ="/CareersPage" element = {<CareersPage/>} />
-    <Route path ="/Solutions" element = {<SolutionsPage/>} />
-    <Route path ="/Contact" element = {<ContactPage/>} />
-    <Route path ="/AboutUs" element = {<AboutUs/>}/>
-    <Route path ="/ProvenSuccess" element = {<ProvenSuccess/>}/>  
-    <Route path ="/InsideDenali" element = {<InsideDenali/>}/>
-    <Route path ="/CareerOpportunities" element = {<CareerOpportunities/>}/>
-    <Route path="/apply/:jobTitle" element={<Apply />} />
-    <Route path ="/CareerList" element = {<CareerList/>}/>
-    <Route path ="/Results" element = {<Results/>}/>
-    <Route path="/SolutionsDisplay/:solutionId" element={<SolutionsDisplay/>} />
-    <Route path="/SolutionsList/:solutionId" element={<SolutionsList/>} />
-    <Route path ="/NoCareers" element = {<NoCareers/>}/> 
-    <Route path ="/SolutionsHome" element = {<SolutionsHome/>}/> 
-    <Route path ="/SendResume" element = {<SendResume/>}/> 
-
-  </Routes>
-  </BrowserRouter>
+    <BrowserRouter>
+      <SpeedInsights />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/HomeMainSection" element={<HomeMainSection />} />
+        <Route path="/Header" element={<Header />} />
+        <Route path="/Footer" element={<Footer />} />
+        <Route path="/CareersPage" element={<CareersPage />} />
+        <Route path="/Solutions" element={<SolutionsPage />} />
+        <Route path="/Contact" element={<ContactPage />} />
+        <Route path="/AboutUs" element={<AboutUs />} />
+        <Route path="/ProvenSuccess" element={<ProvenSuccess />} />
+        <Route path="/InsideDenali" element={<InsideDenali />} />
+        <Route path="/CareerOpportunities" element={<CareerOpportunities />} />
+        <Route path="/apply/:jobTitle" element={<Apply />} />
+        <Route path="/CareerList" element={<CareerList />} />
+        <Route path="/Results" element={<Results />} />
+        <Route path="/SolutionsDisplay/:solutionId" element={<SolutionsDisplay />} />
+        <Route path="/SolutionsList/:solutionId" element={<SolutionsList />} />
+        <Route path="/NoCareers" element={<NoCareers />} />
+        <Route path="/SolutionsHome" element={<SolutionsHome />} />
+        <Route path="/SendResume" element={<SendResume />} />
+      </Routes>
+    </BrowserRouter>
   );
-  <SpeedInsights />
 }
 
 export default App;
+
 //
