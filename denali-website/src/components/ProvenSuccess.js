@@ -138,8 +138,11 @@ function ProvenSuccess() {
                     <>
                       <div
                         className={`overlay-text ${showInfo ? "fade-in" : ""}`}
+                        style={{ whiteSpace: 'pre-line' }}
                       >
-                        <p>{item.description}</p>
+                        {item.description.split('\n').map((line, i) => (
+                          <p key={i}>{line}</p>
+                        ))}
                       </div>
                       <button
                         className="close-button"
@@ -185,4 +188,3 @@ function ProvenSuccess() {
 }
 
 export default ProvenSuccess;
-
