@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useCallback, useMemo } from "react";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
-import Project1Img from "../images/ProvenSuccess/Project1.jpg";
-import Project2Img from "../images/ProvenSuccess/Project2.jpg";
-import Project3Img from "../images/ProvenSuccess/Project3.jpg";
+import Project1Img from "../images/ProvenSuccess/Project1.png";
+import Project2Img from "../images/ProvenSuccess/Project2.png";
+import Project3Img from "../images/ProvenSuccess/Project3.png";
 import axios from "axios";
 import "./ProvenSuccess.css";
 
@@ -89,19 +89,19 @@ function ProvenSuccess() {
         key: "project1",
         img: Project1Img,
         description: data.jsonData && data.jsonData[0].description,
-        title: data.jsonData && data.jsonData[0].title,  // Use the title from JSON
+        title: data.jsonData && data.jsonData[0].title, // Use the title from JSON
       },
       {
         key: "project2",
         img: Project2Img,
         description: data.jsonData2 && data.jsonData2[0].description,
-        title: data.jsonData2 && data.jsonData2[0].title,  // Use the title from JSON
+        title: data.jsonData2 && data.jsonData2[0].title, // Use the title from JSON
       },
       {
         key: "project3",
         img: Project3Img,
         description: data.jsonData3 && data.jsonData3[0].description,
-        title: data.jsonData3 && data.jsonData3[0].title,  // Use the title from JSON
+        title: data.jsonData3 && data.jsonData3[0].title, // Use the title from JSON
       },
     ],
     [data.jsonData, data.jsonData2, data.jsonData3]
@@ -138,15 +138,18 @@ function ProvenSuccess() {
                     <>
                       <div
                         className={`overlay-text ${showInfo ? "fade-in" : ""}`}
-                        style={{ whiteSpace: 'pre-line' }}
+                        style={{ whiteSpace: "pre-line" }}
                       >
-                        {item.description.split('\n').map((line, i) => (
+                        {item.description.split("\n").map((line, i) => (
                           <p key={i}>{line}</p>
                         ))}
                       </div>
                       <button
                         className="close-button"
-                        onClick={() => setShowInfo(false)}
+                        onClick={() => {
+                          setShowInfo(false);
+                          setTimeout(() => setActiveIndex(-1), 600); // Ensure fade-out before clearing the index
+                        }}
                       >
                         X
                       </button>
@@ -162,9 +165,7 @@ function ProvenSuccess() {
                       if (showInfo) e.preventDefault();
                     }}
                   >
-                    {showInfo && activeIndex === index
-                      ? ""
-                      : item.title}
+                    {showInfo && activeIndex === index ? "" : item.title}
                   </button>
                 </div>
               </div>
@@ -174,7 +175,7 @@ function ProvenSuccess() {
             activeIndex={activeIndex}
             onSlideChanged={handleSlideChanged}
             renderDotsItem={renderDotsItem}
-            mouseTracking={!showInfo} 
+            mouseTracking={!showInfo}
             touchTracking={!showInfo}
             infinite
             animationType="fadeout"
