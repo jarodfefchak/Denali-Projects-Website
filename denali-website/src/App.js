@@ -17,6 +17,8 @@ import SolutionsHome from './components/SolutionsHome';
 import SolutionsList from './components/SolutionsList';
 import NoCareers from './components/NoCareers';
 import SendResume from './components/sendResume';
+import { SpeedInsights } from '@vercel/speed-insights/react';
+
 
 
 import{ BrowserRouter, Routes, Route} from 'react-router-dom';
@@ -48,6 +50,7 @@ function App() {
   </Routes>
   </BrowserRouter>
   );
+  <SpeedInsights />
 }
 
 export default App;
