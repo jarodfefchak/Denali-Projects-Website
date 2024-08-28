@@ -18,6 +18,7 @@ import SolutionsList from './components/SolutionsList';
 import NoCareers from './components/NoCareers';
 import SendResume from './components/sendResume';
 import { SpeedInsights } from '@vercel/speed-insights/react';
+import { Analytics } from "@vercel/analytics/react"
 
 
 
@@ -27,6 +28,7 @@ function App() {
   return (
     <BrowserRouter>
       <SpeedInsights />
+      <Analytics/>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/HomeMainSection" element={<HomeMainSection />} />
