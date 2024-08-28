@@ -21,7 +21,7 @@ function HomePage() {
       ([entry]) => {
         setFooterVisible(entry.isIntersecting);
       },
-      { threshold: 0.1 } // Adjust this value to control when the visibility should change
+      { threshold: 0.1 } 
     );
 
     if (footerRef.current) {

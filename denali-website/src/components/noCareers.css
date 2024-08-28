@@ -20,7 +20,7 @@
   background-image: url("../images/NoCareers.jpg");
   background-size: cover;
   background-position: center;
-  opacity: 0.85; /* Set the desired opacity here */
+  opacity: 0.85; 
   z-index: -1;
 }
 

@@ -89,26 +89,26 @@ function ProvenSuccess() {
         key: "project1",
         img: Project1Img,
         description: data.jsonData && data.jsonData[0].description,
-        title: data.jsonData && data.jsonData[0].title, // Use the title from JSON
+        title: data.jsonData && data.jsonData[0].title, 
       },
       {
         key: "project2",
         img: Project2Img,
         description: data.jsonData2 && data.jsonData2[0].description,
-        title: data.jsonData2 && data.jsonData2[0].title, // Use the title from JSON
+        title: data.jsonData2 && data.jsonData2[0].title, 
       },
       {
         key: "project3",
         img: Project3Img,
         description: data.jsonData3 && data.jsonData3[0].description,
-        title: data.jsonData3 && data.jsonData3[0].title, // Use the title from JSON
+        title: data.jsonData3 && data.jsonData3[0].title, 
       },
     ],
     [data.jsonData, data.jsonData2, data.jsonData3]
   );
 
   if (loading) {
-    return null; // Render loading indicator or placeholder
+    return null; 
   }
 
   return (

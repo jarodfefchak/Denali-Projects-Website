@@ -165,7 +165,6 @@ function Apply() {
     }
    
 
-    // If form is valid and phone number is valid, proceed with submission
     if (isFormValid && isValidPhoneNumber && isValidEmail) {
       if (legalToWork === "Yes") {
         try {
@@ -186,7 +185,7 @@ function Apply() {
             uploaded_resume: resumeBase64,
           };
 
-          // Send email using emailjs
+      
           emailjs
             .send(
               process.env.REACT_APP_EMAILJS_SERVICE_ID,

@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import Logo from '../images/Logos/Denali_Logo_White_Transparent_BG.png';
 import './header.css';
 
-function Header({ onLinkClick = () => {} }) { // Default function for onLinkClick
+function Header({ onLinkClick = () => {} }) { 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const location = useLocation();
   const dropdownRef = useRef(null);

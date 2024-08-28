@@ -8,6 +8,7 @@ function Footer() {
     const [jsonData, setJsonData] = useState(null);
     const [jsonData2, setJsonData2] = useState(null);
     const [isMobile, setIsMobile] = useState(false);
+    const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
 
     useEffect(() => {
         const fetchData = async () => {
@@ -86,7 +87,7 @@ function Footer() {
                 </div>
             </div>
             <p style={{ fontSize: "14px", color: "white", textAlign: "center", paddingBottom: "20px" }}>
-                Copyright &copy; 2024 Denali Projects Ltd.
+                Copyright &copy; {currentYear} Denali Projects Ltd.
             </p>
         </div>
     );

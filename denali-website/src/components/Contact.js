@@ -12,9 +12,9 @@ function Contact() {
   const [lastName, setLastName] = useState("");
   const [message, setMessage] = useState("");
   const [email, setEmail] = useState("");
-  const [show, setShow] = useState(false); // General form errors
-  const [show2, setShow2] = useState(false); // Success message
-  const [showEmailError, setShowEmailError] = useState(false); // Email-specific error
+  const [show, setShow] = useState(false); 
+  const [show2, setShow2] = useState(false); 
+  const [showEmailError, setShowEmailError] = useState(false); 
   const [jsonData, setJsonData] = useState(null);
   const [jsonData2, setJsonData2] = useState(null);
   const [hover, setHover] = useState(false);
@@ -79,7 +79,7 @@ function Contact() {
     setEmail(event.target.value);
     checkFormValidity();
     setErrors((prevErrors) => ({ ...prevErrors, email: false }));
-    setShowEmailError(false); // Reset email-specific error on change
+    setShowEmailError(false); 
   };
 
   const checkFormValidity = () => {
@@ -96,7 +96,7 @@ function Contact() {
   const handleEmailMessage = (event) => {
     event.preventDefault();
   
-    // Regular expression for validating email format
+    
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const isValidEmail = emailRegex.test(email);
   
@@ -108,7 +108,7 @@ function Contact() {
         firstName: firstName.trim() === "",
         lastName: lastName.trim() === "",
         message: message.trim() === "",
-        email: false, // No need to show email error here
+        email: false, 
       });
       setShow(true);
       setShowEmailError(false);
@@ -119,8 +119,8 @@ function Contact() {
         message: false,
         email: true,
       });
-      setShow(false); // Ensure general error alert is hidden
-      setShowEmailError(true); // Show email-specific error
+      setShow(false); 
+      setShowEmailError(true); 
     } else {
       setErrors({});
       setShow(false);

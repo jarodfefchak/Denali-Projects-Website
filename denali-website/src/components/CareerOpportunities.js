@@ -19,7 +19,7 @@ function CareerOpportunities() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("/data/Careers.json"); // Adjust the path if necessary
+        const response = await axios.get("/data/Careers.json"); 
         setJsonData(response.data);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -32,7 +32,7 @@ function CareerOpportunities() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("/data/Text.json"); // Adjust the path if necessary
+        const response = await axios.get("/data/Text.json"); 
         setJsonData2(response.data);
       } catch (error) {
         console.error("Error fetching data:", error);

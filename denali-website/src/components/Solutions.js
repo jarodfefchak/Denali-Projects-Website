@@ -8,6 +8,15 @@ import Solution3 from "../images/Solutions/Solution3.jpg";
 import Solution4 from "../images/Solutions/Solution4.jpg";
 import Solution5 from "../images/Solutions/Solution5.jpg";
 import Solution6 from "../images/Solutions/Solution6.jpg";
+
+//(PART 1 OF 6) To add more solutions, uncomment the following three lines by highliting the entire area and pressing ctrl + /. Scroll down to uncomment the second section. 
+
+// import Solution7 from "../images/Solutions/Solution7.jpg";
+// import Solution8 from "../images/Solutions/Solution8.jpg";
+// import Solution9 from "../images/Solutions/Solution9.jpg";
+
+// To comment the additional 3 solutions out again, highligh the text, then press ctrl + /. 
+
 import axios from "axios";
 
 import "./Solutions.css";
@@ -29,7 +38,7 @@ function Solutions() {
     const fetchData = async () => {
       try {
         const promises = [];
-        for (let i = 1; i <= 6; i++) { // Updated to match the number of solutions you have
+        for (let i = 1; i <= 6; i++) {  //(PART 2 OF 6) Updated to match the number of solutions you have. Either  i<= 6 or i<= 9
           promises.push(axios.get(`/data/Solutions/Solution${i}.json`));
         }
         const responses = await Promise.all(promises);
@@ -67,6 +76,15 @@ function Solutions() {
     { src: Solution4, alt: "Solution 4" },
     { src: Solution5, alt: "Solution 5" },
     { src: Solution6, alt: "Solution 6" },
+
+    
+    //(PART 3 OF 6) To add more solutions, uncomment the following three lines by highliting the entire area and pressing ctrl + /. Procceed part 4 in SolutionsHome.js  
+
+    // { src: Solution7, alt: "Solution 7" },
+    // { src: Solution8, alt: "Solution 8" },
+    // { src: Solution9, alt: "Solution 9" },
+
+    // To comment the additional 3 solutions out again, highligh the text, then press ctrl + /. 
   ];
 
   const containerVariants = {
