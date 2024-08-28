@@ -128,6 +128,8 @@
   .headingS {
     font-size: 40pt;
     margin-top: 75px;
+    text-align: center;
+    margin-left: 0px;
   }
 }
 @media screen and (max-width: 750px) {
