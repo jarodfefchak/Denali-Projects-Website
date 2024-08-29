@@ -1,20 +1,3 @@
 [
-  {
-    "title": "Monkey Babysitter",
-    "location": "Oz",
-    "description": "Denali Projects Ltd. (Denali) is an EPC located in Calgary, Alberta. We provide services for small to medium-sized energy projects in Canada and worldwide. Denali is currently looking for an Intermediate Electrical Engineer to work with our project team. Our employees are driven and passionate in their chosen fields. We are individuals who together make an excellent group through our close collaborative environment. Our company is growing, and we want you to join our dynamic team today.",
-    "minimum_requirements": [
-      "1-3 years previous experience caring for fairy tale creatures.  "
-    ],
-    "responsibilities": [
-      "Feed the monkeys",
-      "Take them out for flying walks"
-    ],
-    "preferred": [
-      "Previous experience working in Oz "
-    ],
-    "benefits": [
-      "You will get Sundays off"
-    ]
-  }
+  
 ]

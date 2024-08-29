@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./HomeMainSection.css";
 import axios from "axios";
-import HeaderImage from "../images/Home_Page.png";
+import HeaderImage from "../images/HomePage.png";
 
 function HomeMainSection() {
   const [jsonData, setJsonData] = useState(null);

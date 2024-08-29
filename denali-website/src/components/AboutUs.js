@@ -5,9 +5,9 @@ import VisibilitySensor from "react-visibility-sensor";
 import axios from "axios";
 import Header from "./Header";
 import Footer from "./Footer";
-import BradImg from "../images/AboutUs/BradMeaney.jpg";
-import JarodImg from "../images/AboutUs/JarodFefchak.jpg";
-import DeanImg from "../images/AboutUs/DeanKirkby.jpg";
+import BradImg from "../images/AboutUs/BradMeaney.png";
+import JarodImg from "../images/AboutUs/JarodFefchak.png";
+import DeanImg from "../images/AboutUs/DeanKirkby.png";
 import LinkedInB from "../images/Logos/LinkedInBB.png";
 import "./AboutUs.css";
 

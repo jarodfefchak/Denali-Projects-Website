@@ -3,18 +3,18 @@ import Header from "./Header";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import VisibilitySensor from "react-visibility-sensor";
-import Solution1 from "../images/Solutions/Solution1.jpg";
-import Solution2 from "../images/Solutions/Solution2.jpg";
-import Solution3 from "../images/Solutions/Solution3.jpg";
-import Solution4 from "../images/Solutions/Solution4.jpg";
-import Solution5 from "../images/Solutions/Solution5.jpg";
-import Solution6 from "../images/Solutions/Solution6.jpg";
+import Solution1 from "../images/Solutions/Solution1.png";
+import Solution2 from "../images/Solutions/Solution2.png";
+import Solution3 from "../images/Solutions/Solution3.png";
+import Solution4 from "../images/Solutions/Solution4.png";
+import Solution5 from "../images/Solutions/Solution5.png";
+import Solution6 from "../images/Solutions/Solution6.png";
 
 //(PART 4 OF 6) To add more solutions, uncomment the following three lines by highliting the entire area and pressing ctrl + /. Scroll down to uncomment the final section. 
 
-// import Solution7 from "../images/Solutions/Solution7.jpg";
-// import Solution8 from "../images/Solutions/Solution8.jpg";
-// import Solution9 from "../images/Solutions/Solution9.jpg";
+// import Solution7 from "../images/Solutions/Solution7.png";
+// import Solution8 from "../images/Solutions/Solution8.png";
+// import Solution9 from "../images/Solutions/Solution9.png";
 
 // To comment the additional 3 solutions out again, highligh the text, then press ctrl + /. 
 

@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useMemo, useCallback } from "react";
-import InsideImage from "../images/InsideDenali.jpg";
+import InsideImage from "../images/InsideDenali.png";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import VisibilitySensor from "react-visibility-sensor";
