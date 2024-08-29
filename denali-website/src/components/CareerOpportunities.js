@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { motion } from "framer-motion";
-import CareerOpImage from "../images/CareerOpportunities.jpg";
+import CareerOpImage from "../images/CareerOpportunities.png";
 import Header from "./Header";
 import Footer from "./Footer";
 import CareerList from "./CareerList";

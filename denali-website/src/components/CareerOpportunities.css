@@ -4,10 +4,10 @@
   align-items: center;
   height: 60vh;
   min-height: 275px;
-  width: 100vw;
   position: relative;
   z-index: -1;
   overflow: hidden;
+  margin-left: 0px;
 }
 
 .titleImageOPImg {
