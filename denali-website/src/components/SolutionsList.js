@@ -47,7 +47,7 @@ function SolutionsList({ solutionId }) {
     <div>
       <h2 className="subHeadingSL">{jsonData[0].section}</h2>
       <br />
-      <p className="textSL">{jsonData2[0][solutionId]}</p>
+      <p className="textSL">{jsonData2[0][solutionId]} </p>
       <div className="projectSL">
         {jsonData.map((project, index) => (
           <div key={index} className="informationSL">
