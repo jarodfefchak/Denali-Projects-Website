@@ -12,6 +12,7 @@ import Solution6 from "../images/Solutions/Solution6.png";
 
 //(PART 4 OF 6) To add more solutions, uncomment the following three lines by highliting the entire area and pressing ctrl + /. Scroll down to uncomment the final section. 
 
+
 // import Solution7 from "../images/Solutions/Solution7.png";
 // import Solution8 from "../images/Solutions/Solution8.png";
 // import Solution9 from "../images/Solutions/Solution9.png";

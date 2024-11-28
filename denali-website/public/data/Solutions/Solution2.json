@@ -1,9 +1,66 @@
 [
     {
-      "section":"Power Generation",
-      "project": "Random name",
-      "client": "confidential",
-      "location": "Solution2",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vestibulum felis auctor, consectetur sapien quis, ornare tellus. Duis vitae semper mauris. Integer sit amet justo in justo consectetur fermentum. Morbi vestibulum purus id turpis fringilla, sed lobortis nulla fringilla. Fusce vel ex ac odio dapibus sodales. Curabitur euismod, tortor sed consequat vulputate, ipsum ex posuere neque, id fringilla elit odio sed justo. Nunc sed arcu at mauris tincidunt consequat. Maecenas malesuada massa in enim viverra, nec interdum nunc hendrerit. Etiam tincidunt congue urna, sit amet rutrum metus placerat vitae."
-    }
+    "section": "Power Generation",
+    "project": "100 MMSCFD Sour Facility Plant Optimization",
+    "client": "Confidential",
+    "design": "Pre-FEED, FEED, Detailed Design, Procurement, Demolition, Construction Support",
+    "discipline": "Mechanical, Process, Civil, Structural, Electrical, Instrumentation, Controls and Procurement ",
+    "location": "Outside Fort St. John, BC - Brownfield",
+    "description": "Denali was responsible for the redevelopment of an existing 100MMSCFD sour gas facility to handle new producer gas volumes. Scope included new refrigeration unit, heat medium, 3.6MW total of generators, bullet storage, truck unloading and upgraded sweetening system packages as well as several utility systems upgrades. From the electrical side, Denali was responsible for the power generation integration plan, medium voltage development plan, and controls system development plan. Denali prepared a total installed cost estimate and evaluation including numerous engineering documents for the proposed brownfield facility improvements. "
+  },
+  {
+    "section": "Power Generation",
+    "project": "LNG/Diesel Power Plant ",
+    "client": "Confidential",
+    "design": "FEED, Detailed Design",
+    "discipline": "Mechanical, Process ",
+    "location": "Fort Simpson, NWT - Greenfield",
+    "description": "Mechanical design of power plant that produces 1.8MW of local grid power by using a combination of LNG and diesel for fuel. Evaluated numerous options for configurations and fuel usage to aid with end users economic evaluations. Created specifications and equipment RFP packages for 3 genset packages and other associated equipment.  Genset packages include jacket water heat recovery system to optimize energy efficiency within the power plant. "
+  },
+  {
+    "section": "Power Generation",
+    "project": "Power Generation Addition Evaluation ",
+    "client": "Confidential",
+    "design": "FEED",
+    "discipline": "Mechanical, Process, Civil, Structural, Electrical, Instrumentation, Procurement",
+    "location": "Alberta/Saskatchewan – Brownfield",
+    "description": "Denali evaluated the feasibility of installing power generation for the client at 6 of its sites to isolate from the utility grid to reduce operating costs. This included an evaluation of existing and future loads, selection of technology (turbine vs. reciprocating generators) preliminary block flow diagrams and Class 4 estimates for each site to evaluate economics of the proposed facilities. The sites ranged from 1 to 6 MW of required power production. "
+  },
+  {
+    "section": "Power Generation",
+    "project": "Diesel Generator Engine Replacement ",
+    "client": "Confidential",
+    "design": "FEED, Detailed Design, Construction Support",
+    "discipline": "Mechanical, Process",
+    "location": "Ulukhaktok, NWT - Brownfield",
+    "description": "Denali was responsible for the mechanical design for the replacement of an 800 kW diesel engine at an existing power plant providing power for the local municipality. Reviewed feasibility of the replacement, as well as created construction drawings to integrate the new engine with the existing on-site utilities and generator.  "
+  },
+  {
+    "section": "Power Generation",
+    "project": "Diesel Generator Engine Replacement ",
+    "client": "Confidential",
+    "design": "FEED",
+    "discipline": "Mechanical, Process",
+    "location": "Fort Liard, NWT - Brownfield",
+    "description": "Denali was responsible for reviewing the feasibility of replacing an 800 kW diesel engine at an existing power plant providing power for the local municipality. Reviewed feasibility of integrating the newer model engine within the existing infrastructure on site. "
+  },
+  {
+    "section": "Power Generation",
+    "project": "Diesel Genset Replacement ",
+    "client": "Confidential",
+    "design": "FEED, Detailed Design, Construction Support",
+    "discipline": "Mechanical, Process",
+    "location": "Tulita, NWT - Brownfield",
+    "description": "Denali was responsible for the mechanical design for the replacement of an 800 kW diesel genset at an existing power plant providing power for the local municipality. Reviewed feasibility of the replacement, as well as created construction drawings to integrate the new engine and generator with the existing on-site utilities. "
+  },
+  {
+    "section": "Power Generation",
+    "project": "Diesel Genset Replacement ",
+    "client": "Confidential",
+    "design": "FEED",
+    "discipline": "Mechanical, Process",
+    "location": "Tuktoyyaktuk, NWT - Brownfield",
+    "description": "Denali was responsible for reviewing the feasibility of replacing an 800 kW diesel genset at an existing power plant providing power for the local municipality. Reviewed feasibility of integrating the newer model engine and generator within the existing infrastructure on site. "
+  }
+
   ]

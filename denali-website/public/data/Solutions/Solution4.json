@@ -1,16 +1,20 @@
 [
     {
-      "section":"Well Tie-Ins & Pipelines",
-      "project": "Random name",
-      "client": "confidential",
-      "location": "Solution4",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vestibulum felis auctor, consectetur sapien quis, ornare tellus. Duis vitae semper mauris. Integer sit amet justo in justo consectetur fermentum. Morbi vestibulum purus id turpis fringilla, sed lobortis nulla fringilla. Fusce vel ex ac odio dapibus sodales. Curabitur euismod, tortor sed consequat vulputate, ipsum ex posuere neque, id fringilla elit odio sed justo. Nunc sed arcu at mauris tincidunt consequat. Maecenas malesuada massa in enim viverra, nec interdum nunc hendrerit. Etiam tincidunt congue urna, sit amet rutrum metus placerat vitae."
+      "section": "Well Tie-Ins & Pipelines",
+      "project": "Water Disposal Facility ",
+      "client": "Confidential",
+      "design": "Detailed Design, Procurement, Construction Support",
+      "discipline": "Mechanical, Process, Civil, Structural, Electrical, Instrumentation, Controls and Procurement",
+      "location": "Outside Grande Prairie, AB - Greenfield",
+      "description": "Denali was responsible for the design of site-wide piping, equipment packages and utilities for a greenfield water disposal terminal. Included truck in packages, tank farm, water filtration building, pump packages, multistage high pressure injection pumps, and flare system.  Included a 4km water injection pipeline and disposal well.  Reviewed the feasibility of using natural gas, propane, or diesel for power generation options. Design of the site fuel gas system (including conditioning) and sourcing generators to provide site power before permanent power was installed. Site-wide electrical design, equipment packages and electrical house for a greenfield water disposal terminal. Denali incorporated a 1.5MW utility transformer with a cable bus design to feed multiple 400HP water injection pumps. Oversaw electrical design and power studies including harmonic calculations, breaker settings, coordination curves and arc flash calculations. \n Denali would go on to expand the facility adding increased water handling capabilities, incoming water and fuel gas pipelines, and additional high pressure injection pumps, pipeline and disposal well. "
     },
     {
-      "section":"Well Tie-Ins & Pipelines",
-      "project": "One",
-      "client": "confidential",
-      "location": "Canada",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vestibulum felis auctor, consectetur sapien quis, ornare tellus. Duis vitae semper mauris. Integer sit amet justo in justo consectetur fermentum. Morbi vestibulum purus id turpis fringilla, sed lobortis nulla fringilla. Fusce vel ex ac odio dapibus sodales. Curabitur euismod, tortor sed consequat vulputate, ipsum ex posuere neque, id fringilla elit odio sed justo. Nunc sed arcu at mauris tincidunt consequat. Maecenas malesuada massa in enim viverra, nec interdum nunc hendrerit. Etiam tincidunt congue urna, sit amet rutrum metus placerat vitae."
+      "section": "Well Tie-Ins & Pipelines",
+      "project": "Water Disposal Facility Expansion ",
+      "client": "Confidential",
+      "design": "Detailed Design, Procurement, Construction Support",
+      "discipline": "Mechanical, Process, Civil, Structural, Electrical, Instrumentation, Controls and Procurement ",
+      "location": "Outside Grande Prairie, AB - Brownfield",
+      "description": "Denali was responsible for an expansion to an existing water disposal facility.  Included the addition of truck in packages, tanks to an existing tank farm, water filtration building, pump packages, multistage high pressure injection pumps and integration to an existing flare system.  Included a 3km water injection pipeline and disposal well.  Denali oversaw electrical design and power studies including harmonic calculations, breaker settings, coordination curves and arc flash calculations. "
     }
   ]

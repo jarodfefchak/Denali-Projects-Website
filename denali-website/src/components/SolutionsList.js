@@ -53,8 +53,10 @@ function SolutionsList({ solutionId }) {
           <div key={index} className="informationSL">
             <p><b>PROJECT:</b> {project.project}</p>
             <p><b>CLIENT:</b> {project.client}</p>
-            <p><b>LOCATION:</b> {project.location}</p>
-            <p>
+            <p><b>DESIGN STAGES:</b> {project.design}</p>
+            <p><b>DISCIPLINES:</b> {project.discipline}</p>
+            <p><b>LOCATION:</b> {project.location}</p> 
+            <p><br></br>
               {project.description.split('\n').map((line, i) => (
                 <React.Fragment key={i}>
                   {line}

@@ -1,16 +1,11 @@
 [
-    {
-      "section":"Gas & Liquid Processing",
-      "project": "Random name",
-      "client": "confidential",
-      "location": "Solution5",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vestibulum felis auctor, consectetur sapien quis, ornare tellus. Duis vitae semper mauris. Integer sit amet justo in justo consectetur fermentum. Morbi vestibulum purus id turpis fringilla, sed lobortis nulla fringilla. Fusce vel ex ac odio dapibus sodales. Curabitur euismod, tortor sed consequat vulputate, ipsum ex posuere neque, id fringilla elit odio sed justo. Nunc sed arcu at mauris tincidunt consequat. Maecenas malesuada massa in enim viverra, nec interdum nunc hendrerit. Etiam tincidunt congue urna, sit amet rutrum metus placerat vitae."
-    },
-    {
-      "section":"Gas & Liquid Processing",
-      "project": "One",
-      "client": "confidential",
-      "location": "Canada",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vestibulum felis auctor, consectetur sapien quis, ornare tellus. Duis vitae semper mauris. Integer sit amet justo in justo consectetur fermentum. Morbi vestibulum purus id turpis fringilla, sed lobortis nulla fringilla. Fusce vel ex ac odio dapibus sodales. Curabitur euismod, tortor sed consequat vulputate, ipsum ex posuere neque, id fringilla elit odio sed justo. Nunc sed arcu at mauris tincidunt consequat. Maecenas malesuada massa in enim viverra, nec interdum nunc hendrerit. Etiam tincidunt congue urna, sit amet rutrum metus placerat vitae."
-    }
+  {
+    "section": "Gas & Liquid Processing",
+    "project": "100 MMSCFD Sour Facility Plant Optimization",
+    "client": "Confidential",
+    "design": "Pre-FEED, FEED, Detailed Design, Procurement, Demolition, Construction Support",
+    "discipline": "Mechanical, Process, Civil, Structural, Electrical, Instrumentation, Controls and Procurement ",
+    "location": "Outside Fort St. John, BC - Brownfield",
+    "description": "Denali was responsible for the redevelopment of an existing 100MMSCFD sour gas facility to handle new producer gas volumes. Scope included new refrigeration unit, heat medium, 3.6MW total of generators, bullet storage, truck unloading and upgraded sweetening system packages as well as several utility systems upgrades. From the electrical side, Denali was responsible for the power generation integration plan, medium voltage development plan, and controls system development plan. Denali prepared a total installed cost estimate and evaluation including numerous engineering documents for the proposed brownfield facility improvements. "
+  }
   ]
