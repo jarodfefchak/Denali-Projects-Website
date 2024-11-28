@@ -1,16 +1,3 @@
 [
-    {
-      "section":"Produced Water Treatment/Storage/Injection",
-      "project": "Random name",
-      "client": "confidential",
-      "location": "Solution7",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vestibulum felis auctor, consectetur sapien quis, ornare tellus. Duis vitae semper mauris. Integer sit amet justo in justo consectetur fermentum. Morbi vestibulum purus id turpis fringilla, sed lobortis nulla fringilla. Fusce vel ex ac odio dapibus sodales. Curabitur euismod, tortor sed consequat vulputate, ipsum ex posuere neque, id fringilla elit odio sed justo. Nunc sed arcu at mauris tincidunt consequat. Maecenas malesuada massa in enim viverra, nec interdum nunc hendrerit. Etiam tincidunt congue urna, sit amet rutrum metus placerat vitae."
-    },
-    {
-      "section":"Produced Water Treatment/Storage/Injection",
-      "project": "One",
-      "client": "confidential",
-      "location": "Canada",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vestibulum felis auctor, consectetur sapien quis, ornare tellus. Duis vitae semper mauris. Integer sit amet justo in justo consectetur fermentum. Morbi vestibulum purus id turpis fringilla, sed lobortis nulla fringilla. Fusce vel ex ac odio dapibus sodales. Curabitur euismod, tortor sed consequat vulputate, ipsum ex posuere neque, id fringilla elit odio sed justo. Nunc sed arcu at mauris tincidunt consequat. Maecenas malesuada massa in enim viverra, nec interdum nunc hendrerit. Etiam tincidunt congue urna, sit amet rutrum metus placerat vitae."
-    }
+    
   ]

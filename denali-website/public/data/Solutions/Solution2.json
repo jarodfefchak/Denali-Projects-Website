@@ -2,7 +2,6 @@
     {
     "section": "Power Generation",
     "project": "100 MMSCFD Sour Facility Plant Optimization",
-    "client": "Confidential",
     "design": "Pre-FEED, FEED, Detailed Design, Procurement, Demolition, Construction Support",
     "discipline": "Mechanical, Process, Civil, Structural, Electrical, Instrumentation, Controls and Procurement ",
     "location": "Outside Fort St. John, BC - Brownfield",
@@ -11,7 +10,6 @@
   {
     "section": "Power Generation",
     "project": "LNG/Diesel Power Plant ",
-    "client": "Confidential",
     "design": "FEED, Detailed Design",
     "discipline": "Mechanical, Process ",
     "location": "Fort Simpson, NWT - Greenfield",
@@ -20,7 +18,6 @@
   {
     "section": "Power Generation",
     "project": "Power Generation Addition Evaluation ",
-    "client": "Confidential",
     "design": "FEED",
     "discipline": "Mechanical, Process, Civil, Structural, Electrical, Instrumentation, Procurement",
     "location": "Alberta/Saskatchewan – Brownfield",
@@ -29,7 +26,6 @@
   {
     "section": "Power Generation",
     "project": "Diesel Generator Engine Replacement ",
-    "client": "Confidential",
     "design": "FEED, Detailed Design, Construction Support",
     "discipline": "Mechanical, Process",
     "location": "Ulukhaktok, NWT - Brownfield",
@@ -38,7 +34,6 @@
   {
     "section": "Power Generation",
     "project": "Diesel Generator Engine Replacement ",
-    "client": "Confidential",
     "design": "FEED",
     "discipline": "Mechanical, Process",
     "location": "Fort Liard, NWT - Brownfield",
@@ -47,7 +42,6 @@
   {
     "section": "Power Generation",
     "project": "Diesel Genset Replacement ",
-    "client": "Confidential",
     "design": "FEED, Detailed Design, Construction Support",
     "discipline": "Mechanical, Process",
     "location": "Tulita, NWT - Brownfield",
@@ -56,11 +50,18 @@
   {
     "section": "Power Generation",
     "project": "Diesel Genset Replacement ",
-    "client": "Confidential",
     "design": "FEED",
     "discipline": "Mechanical, Process",
     "location": "Tuktoyyaktuk, NWT - Brownfield",
     "description": "Denali was responsible for reviewing the feasibility of replacing an 800 kW diesel genset at an existing power plant providing power for the local municipality. Reviewed feasibility of integrating the newer model engine and generator within the existing infrastructure on site. "
+  },
+  {
+    "section": "Power Generation",
+    "project": "Compressor Station Plant Relocate and Power Generation Addition",
+    "design": "Detailed Design, Construction Support",
+    "discipline": "Electrical and Controls",
+    "location": "Central Alberta - Brownfield",
+    "description": "Our client was upgrading the capacity of an existing compressor station to increase gas throughput to 25mmscf/d. The upgrade required relocating equipment from an existing facility. The equipment included two gas driven compressor with coolers, condensate pump skid and conditioner vessel, line heater, 36” dehy package, coalescer skid, knockout skid, inlet separator skid and MCC building. To provide power to the relocated compression equipment a 3 x 535 kW generator package was refurbished and integrated. Denali completed the electrical and controls design for the compressor station relocation and the generator integration."
   }
 
   ]

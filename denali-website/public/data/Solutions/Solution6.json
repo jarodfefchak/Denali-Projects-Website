@@ -1,16 +1,52 @@
 [
     {
       "section":"Debottlenecking/MOC & As-Building",
-      "project": "Random name",
-      "client": "confidential",
-      "location": "Solution6",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vestibulum felis auctor, consectetur sapien quis, ornare tellus. Duis vitae semper mauris. Integer sit amet justo in justo consectetur fermentum. Morbi vestibulum purus id turpis fringilla, sed lobortis nulla fringilla. Fusce vel ex ac odio dapibus sodales. Curabitur euismod, tortor sed consequat vulputate, ipsum ex posuere neque, id fringilla elit odio sed justo. Nunc sed arcu at mauris tincidunt consequat. Maecenas malesuada massa in enim viverra, nec interdum nunc hendrerit. Etiam tincidunt congue urna, sit amet rutrum metus placerat vitae."
+     "project": "180 MMSCFD Sour Gas Complex – Custody Metering",
+    "design": "Detailed Design, Construction and Commissioning Support",
+    "discipline": "Electrical, Instrumentation and Controls",
+    "location": "Brazeau River, Central Alberta – Brownfield",
+    "description": "The client was upgrading the trucking capacity of the facility by installing four new truck loading and unloading stations. Denali’s responsibility included reviewing third party equipment to ensure the measurement and controls would meet regulatory and commercial requirements. As part of the design Denali integrated the new stations into the existing electrical, controls and communications infrastructure. "
     },
     {
       "section":"Debottlenecking/MOC & As-Building",
-      "project": "One",
-      "client": "confidential",
-      "location": "Canada",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vestibulum felis auctor, consectetur sapien quis, ornare tellus. Duis vitae semper mauris. Integer sit amet justo in justo consectetur fermentum. Morbi vestibulum purus id turpis fringilla, sed lobortis nulla fringilla. Fusce vel ex ac odio dapibus sodales. Curabitur euismod, tortor sed consequat vulputate, ipsum ex posuere neque, id fringilla elit odio sed justo. Nunc sed arcu at mauris tincidunt consequat. Maecenas malesuada massa in enim viverra, nec interdum nunc hendrerit. Etiam tincidunt congue urna, sit amet rutrum metus placerat vitae."
+     "project": "Refinery Automation and Plant Mass Balance ",
+    "design": "FEED, Detailed Design, Procurement, Construction Support",
+    "discipline": "Mechanical, Process, Structural, Electrical, Instrumentation, Controls and Procurement",
+    "location": "Moose Jaw, SK - Brownfield",
+    "description": "Denali was responsible for the design of additional valve automation and truck scale upgrades.  This included a mass balance evaluation of existing metering and modifications to increase the overall mass balance accuracy of the Refinery.  Denali completed the FEED, detailed design and execution of the project throughout construction"
+    },
+    {
+      "section":"Debottlenecking/MOC & As-Building",
+     "project": "Trucking and Shipping Debottlenecking Project",
+    "design": "FEED, Detailed Design, Construction Support, Procurement",
+    "discipline": "Mechanical, Civil, Structural, Electrical, Instrumentation, Controls and Procurement",
+    "location": "Hardisty, AB",
+    "description": "Denali was responsible for the full-service engineering and procurement of a new trucking system at an existing storage and shipping facility in Hardisty Alberta. Denali completed the FEED, detailed design and execution of the project throughout construction.  The scope included a new scale, building and measurement system to replace aging infrastructure. A large part of the project was related to civil design of the new area including road additions, drainage and accessibility to accommodate additional shipping and trucking volumes."
+    },
+    {
+      "section":"Debottlenecking/MOC & As-Building",
+     "project": "Trucking and Shipping Debottlenecking Project",
+    "design": "FEED, Detailed Design, Construction Support, Procurement",
+    "discipline": "Mechanical, Civil, Structural, Electrical, Instrumentation, Controls and Procurement",
+    "location": "Edmonton, AB",
+    "description": "Denali was responsible for the full-service engineering and procurement of a new trucking system at an existing storage and shipping facility in Edmonton Alberta. Denali completed the FEED, detailed design and execution of the project throughout construction.  The scope included upgrades and replacement to existing building and measurement system due to aging infrastructure. "
+    },
+    {
+      "section":"Debottlenecking/MOC & As-Building",
+     "project": "Refinery Electrical Distribution and Power Upgrade FEED Study",
+    "design": "FEED",
+    "discipline": "Civil, Structural, Electrical, Instrumentation",
+    "location": "Moose Jaw, SK - Brownfield",
+    "description": "Denali was responsible for the FEED study to upgrade the electrical distribution system of a 60-year-old refinery. The project consisted of as-building existing infrastructure, designing the facility upgrade to a 60% level, developing a class 3 cost estimate, level 3 schedule, procurement plan and execution strategy for the project. "
+    },
+    {
+      "section":"Debottlenecking/MOC & As-Building",
+     "project": "Tank CIR Maintenance and Modification Programy",
+    "design": "Detailed Design, Construction Support, Procurement Support, MOC’s",
+    "discipline": "Mechanical, Process, Civil, Structural, Stress Analysis, Electrical, Instrumentation, Controls and Procurement",
+    "location": "Moose Jaw, SK - Brownfield",
+    "description": "Denali was awarded tank cleaning, inspection and repair (CIR) maintenance and modification program for an oil refinery in Moosejaw Saskatchewan to meet regulatory compliance requirements and ensure the integrity of storage tank assets. Tanks were out of service to be cleaned and internally inspected in accordance with API 653. The program consisted of repair and modifications to nine tanks ranging from 25000 bbl to 150000 bbl. Tanks. New nozzles, steam systems, firewater systems, level and temperature measurement were added to each tank while out of service.  "
     }
+
+
   ]

@@ -2,7 +2,6 @@
   {
     "section": "FEED Studies",
     "project": "100 MMSCFD Sour Facility Plant Optimization",
-    "client": "Confidential",
     "design": "Pre-FEED, FEED, Detailed Design, Procurement, Demolition, Construction Support",
     "discipline": "Mechanical, Process, Civil, Structural, Electrical, Instrumentation, Controls and Procurement ",
     "location": "Outside Fort St. John, BC - Brownfield",
@@ -11,7 +10,6 @@
   {
     "section": "FEED Studies",
     "project": "LNG/Diesel Power Plant",
-    "client": "Confidential",
     "design": "FEED, Detailed Design",
     "discipline": "Mechanical, Process",
     "location": "Fort Simpson, NWT - Greenfield",
@@ -20,7 +18,6 @@
   {
     "section": "FEED Studies",
     "project": "Power Generation Addition Evaluation ",
-    "client": "Confidential",
     "design": "FEED",
     "discipline": "Mechanical, Process, Civil, Structural, Electrical, Instrumentation, Procurement",
     "location": "Alberta/Saskatchewan – Brownfield",
@@ -29,7 +26,6 @@
   {
     "section": "FEED Studies",
     "project": "Marine Terminal FEED & Regulatory Support ",
-    "client": "Confidential",
     "design": "FEED as owners engineer",
     "discipline": "Mechanical, Process, Civil, Structural, Electrical, Instrumentation",
     "location": "Prince Rupert, BC – Greenfield",
@@ -38,7 +34,6 @@
   {
     "section": "FEED Studies",
     "project": "Diesel Generator Engine Replacement ",
-    "client": "Confidential",
     "design": "FEED, Detailed Design, Construction Support",
     "discipline": "Mechanical, Process",
     "location": "Ulukhaktok, NWT - Brownfield",
@@ -47,7 +42,6 @@
   {
     "section": "FEED Studies",
     "project": "Diesel Generator Engine Replacement ",
-    "client": "Confidential",
     "design": "FEED",
     "discipline": "Mechanical, Process",
     "location": "Fort Liard, NWT - Brownfield",
@@ -56,7 +50,6 @@
   {
     "section": "FEED Studies",
     "project": "Diesel Genset Replacement ",
-    "client": "Confidential",
     "design": "FEED, Detailed Design, Construction Support",
     "discipline": "Mechanical, Process",
     "location": "Tulita, NWT - Brownfield",
@@ -65,10 +58,75 @@
   {
     "section": "FEED Studies",
     "project": "Diesel Genset Replacement ",
-    "client": "Confidential",
     "design": "FEED",
     "discipline": "Mechanical, Process",
     "location": "Tuktoyyaktuk, NWT - Brownfield",
     "description": "Denali was responsible for reviewing the feasibility of replacing an 800 kW diesel genset at an existing power plant providing power for the local municipality. Reviewed feasibility of integrating the newer model engine and generator within the existing infrastructure on site. "
+  },
+  {
+    "section": "FEED Studies",
+    "project": "Refinery Automation and Plant Mass Balance ",
+    "design": "FEED, Detailed Design, Procurement, Construction Support",
+    "discipline": "Mechanical, Process, Structural, Electrical, Instrumentation, Controls and Procurement ",
+    "location": "Moose Jaw, SK - Brownfield",
+    "description": "Denali was responsible for the design of additional valve automation and truck scale upgrades.  This included a mass balance evaluation of existing metering and modifications to increase the overall mass balance accuracy of the Refinery.  Denali completed the FEED, detailed design and execution of the project throughout construction.  "
+  },
+  {
+    "section": "FEED Studies",
+    "project": "175,000 BBL Tank Addition",
+    "design": "FEED, Detailed Design, Construction Support, Procurement Support, MOC’s",
+    "discipline": "Mechanical, Process, Civil, Structural, Electrical, Instrumentation, Controls and Procurement",
+    "location": "Moose Jaw, SK - Brownfield",
+    "description": "Denali was responsible for the full-service engineering and procurement of a new 175,000 BBL asphalt tank to an existing refinery. This included working with the site’s existing products and utility systems, as well as tying in for tank heating. Denali also re-designed multiple existing tank farms to assist in more efficient rail and truck loading systems. Significant civil and earthwork modifications were required to the facility to accommodate the new 175,000 BBL tank including design for removal of contaminated soil, new fill and containment wall. In addition to tank farm modifications Denali expanded and modified existing MCC, E-Houses and control rooms.  "
+  },
+  {
+    "section": "FEED Studies",
+    "project": "Trucking and Shipping Debottlenecking Project",
+    "design": "FEED, Detailed Design, Construction Support, Procurement",
+    "discipline": "Mechanical, Civil, Structural, Electrical, Instrumentation, Controls and Procurement",
+    "location": "Hardisty, AB",
+    "description": "Denali was responsible for the full-service engineering and procurement of a new trucking system at an existing storage and shipping facility in Hardisty Alberta. Denali completed the FEED, detailed design and execution of the project throughout construction.  The scope included a new scale, building and measurement system to replace aging infrastructure. A large part of the project was related to civil design of the new area including road additions, drainage and accessibility to accommodate additional shipping and trucking volumes."
+  },
+  {
+    "section": "FEED Studies",
+    "project": "Trucking and Shipping Debottlenecking Project",
+    "design": "FEED, Detailed Design, Construction Support, Procurement ",
+    "discipline": "Mechanical, Civil, Structural, Electrical, Instrumentation, Controls and Procurement",
+    "location": "Edmonton, AB",
+    "description": "Denali was responsible for the full-service engineering and procurement of a new trucking system at an existing storage and shipping facility in Edmonton Alberta. Denali completed the FEED, detailed design and execution of the project throughout construction.  The scope included upgrades and replacement to existing building and measurement system due to aging infrastructure. "
+  },
+  {
+    "section": "FEED Studies",
+    "project": "Refinery Electrical Distribution and Power Upgrade FEED Study",
+    "design": "FEED",
+    "discipline": "Civil, Structural, Electrical, Instrumentation",
+    "location": "Moose Jaw, SK - Brownfield",
+    "description": "Denali was responsible for the FEED study to upgrade the electrical distribution system of a 60-year-old refinery. The project consisted of as-building existing infrastructure, designing the facility upgrade to a 60% level, developing a class 3 cost estimate, level 3 schedule, procurement plan and execution strategy for the project. "
+  },
+  {
+    "section": "FEED Studies",
+    "project": "Refinery Control Room FEED Study",
+    "design": "FEED",
+    "discipline": "Civil, Structural, Electrical, Instrumentation",
+    "location": "Moose Jaw, SK - Brownfield",
+    "description": "Due to the age of the existing control room and space constraints Denali preformed a FEED study to install a new control room for a 60-year-old Refinery and expand the existing DeltaV system. The project consisted of as-building existing infrastructure, control room building design to a 60% level, developing a class 3 cost estimate, level 3 schedule, procurement plan and execution strategy for the project. "
+  },
+  {
+    "section": "FEED Studies",
+    "project": "Refinery Laboratory FEED Study",
+    "design": "FEED",
+    "discipline": "Civil, Structural, Electrical, Instrumentation",
+    "location": "Moose Jaw, SK - Brownfield",
+    "description": "Due to the age of the existing laboratory and space constraints Denali preformed a FEED study to install a new laboratory for a 60-year-old Refinery and expand provide automated procedures for lab sampling. The project consisted of as-building existing infrastructure, laboratory building design to a 60% level, developing a class 3 cost estimate, level 3 schedule, procurement plan and execution strategy for the project. "
+  },
+  {
+    "section": "FEED Studies",
+    "project": "Tank CIR Maintenance and Modification Program",
+    "design": "Detailed Design, Construction Support, Procurement Support, MOC’s",
+    "discipline": "Mechanical, Process, Civil, Structural, Stress Analysis, Electrical, Instrumentation, Controls and Procurement",
+    "location": "Moose Jaw, SK - Brownfield",
+    "description": "Denali was awarded tank cleaning, inspection and repair (CIR) maintenance and modification program for an oil refinery in Moosejaw Saskatchewan to meet regulatory compliance requirements and ensure the integrity of storage tank assets. Tanks were out of service to be cleaned and internally inspected in accordance with API 653. The program consisted of repair and modifications to nine tanks ranging from 25000 bbl to 150000 bbl. Tanks. New nozzles, steam systems, firewater systems, level and temperature measurement were added to each tank while out of service.   "
   }
+
+
 ]

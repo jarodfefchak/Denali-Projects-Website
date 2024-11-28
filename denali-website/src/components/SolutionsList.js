@@ -52,7 +52,6 @@ function SolutionsList({ solutionId }) {
         {jsonData.map((project, index) => (
           <div key={index} className="informationSL">
             <p><b>PROJECT:</b> {project.project}</p>
-            <p><b>CLIENT:</b> {project.client}</p>
             <p><b>DESIGN STAGES:</b> {project.design}</p>
             <p><b>DISCIPLINES:</b> {project.discipline}</p>
             <p><b>LOCATION:</b> {project.location}</p> 
