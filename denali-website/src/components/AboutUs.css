@@ -1,19 +1,23 @@
 .contentAU {
-  padding: 200px 100px 150px 100px;
+  padding: 200px 150px 150px 150px;
   background-color: #f6f6f6;
+}
+.ButtonContainerAU{
+  display: flex;
+  justify-content: center;
 }
 
 .buttonAU {
   color: white;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 50px;
+  margin-bottom: 50px;
   background-color: #408697;
   order: 0px;
-  width: 400px;
+  width: 350px;
   height: 90px;
   border: 1px solid  #408697;
-  border-radius: 25px;
-  font-size: 25pt;
+  border-radius: 27px;
+  font-size: 20pt;
   cursor: pointer;
 }
 
@@ -25,15 +29,15 @@
 }
 
 .header-textAU {
-  font-size: 4.5vw;
+  font-size: 3.7vw;
 }
 
 .sub-header-textAU {
-  font-size: 2.7vw;
+  font-size: 2.2vw;
 }
 
 .executive-titleAU {
-  font-size: 3.5vw;
+  font-size: 3vw;
   font-weight: 600;
   margin-top: 75px;
   margin-bottom: 25px;
@@ -41,12 +45,12 @@
 }
 
 .paragraphAU {
-  font-size: 1.5vw;
+  font-size: 1.4vw;
   margin-top: 10px;
 }
 
 #sloganAU {
-  font-size: 1.7vw;
+  font-size: 1.6vw;
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -85,6 +89,9 @@
   text-align: left;
   margin-right: 10px;
   width: 13vw;
+}
+.text-containerAU p {
+  font-size: 1.2vw;
 }
 
 .lineAU {

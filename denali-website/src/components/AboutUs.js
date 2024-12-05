@@ -123,6 +123,7 @@ function AboutUs() {
           <p id="sloganAU">
             <b>{jsonData2[0].aboutTextLine4}</b>
           </p>
+          <div className =  "ButtonContainerAU">
           <Link to="/Contact">
             <button
               onMouseEnter={() => setHover(true)}
@@ -132,6 +133,7 @@ function AboutUs() {
               Contact Us
             </button>
           </Link>
+          </div>
           <p className="executive-titleAU">Executive Team</p>
           <motion.div
             className="teamAU"
@@ -167,7 +169,7 @@ function AboutUs() {
                         <p className="img-textAU">{member.role}</p>
                       </div>
                       <div className="lineAU"></div>
-                      <a href={member.linkedin}>
+                      <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
                         <img
                           src={LinkedInB}
                           alt="LinkedIn"

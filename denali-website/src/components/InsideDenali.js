@@ -106,6 +106,7 @@ function InsideDenali() {
             <b>{data.jsonData[0].inside}</b>
           </p>
           <p>{data.jsonData2[0].insideText}</p>
+          <div className="buttonContainerID">
           <Link to="/AboutUs">
             <button
               onMouseEnter={handleMouseEnter}
@@ -115,6 +116,7 @@ function InsideDenali() {
               Discover Who We Are
             </button>
           </Link>
+          </div>
         </div>
       </div>
     </div>

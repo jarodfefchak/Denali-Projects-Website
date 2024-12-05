@@ -8,7 +8,8 @@ function Footer() {
     const [jsonData, setJsonData] = useState(null);
     const [jsonData2, setJsonData2] = useState(null);
     const [isMobile, setIsMobile] = useState(false);
-    const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
+    const currentYear = new Date().getFullYear();
+
 
     useEffect(() => {
         const fetchData = async () => {
@@ -53,7 +54,7 @@ function Footer() {
             <div className="items">
                 <div id="item1">
                     <h4>Let's Talk</h4>
-                    <a href="https://www.google.ca/maps/place/700+4+Ave+SW,+Calgary,+AB+T2P+3J4/@51.0499468,-114.0790922,17z/data=!3m1!4b1!4m6!3m5!1s0x53716fe521a5d8f7:0xd9dccb4dd492ed30!8m2!3d51.0499468!4d-114.0765173!16s%2Fg%2F11c2g3wjr0?entry=ttu" style={{ color: "white" }}>
+                    <a href="https://www.google.ca/maps/place/700+4+Ave+SW,+Calgary,+AB+T2P+3J4/@51.0499468,-114.0790922,17z/data=!3m1!4b1!4m6!3m5!1s0x53716fe521a5d8f7:0xd9dccb4dd492ed30!8m2!3d51.0499468!4d-114.0765173!16s%2Fg%2F11c2g3wjr0?entry=ttu" target="_blank" rel="noopener noreferrer" style={{ color: "white" }}>
                     <p>{jsonData2[0].contactAddress} {jsonData2[0].contactCity}</p>
                     </a>
                     <p><a href="mailto:info@denaliprojects.com" style={{ color: "white" }}>{jsonData2[0].contactEmail}</a></p>
@@ -64,13 +65,13 @@ function Footer() {
                             jsonData2[0].contactPhone
                         )}
                     </p>
-                    <a href="https://www.linkedin.com/company/denali-projects-ltd">
+                    <a href="https://www.linkedin.com/company/denali-projects-ltd" target="_blank" rel="noopener noreferrer">
                         <img src={LinkedIn} alt="LinkedIn" id='LinkedIn' />
                     </a>
                 </div>
                 <div id="item2">
                     <h4>Company</h4>
-                    <a href="https://denaliprojects.sharepoint.com/" style={{ color: "white" }}>
+                    <a href="https://denaliprojects.sharepoint.com/" target="_blank" rel="noopener noreferrer" style={{ color: "white" }}>
                         <p>SharePoint Login</p>
                     </a>
                     <br />

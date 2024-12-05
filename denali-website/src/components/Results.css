@@ -1,7 +1,7 @@
 .titleR {
-  font-size: 4.5vw;
-  margin-left: 100px;
-  margin-top: 50px;
+  font-size: 3.7vw;
+  margin-left: 150px;
+  margin-top: 75px;
 }
 
 .statsR {
@@ -22,13 +22,13 @@
 }
 
 .countR {
-  font-size: 6vw;
+  font-size: 5.7vw;
   font-weight: 600;
   color: white;
 }
 
 .descriptionR {
-  font-size: 3vw;
+  font-size: 2.7vw;
   padding-left: 25px;
   padding-right: 25px;
   width:20vw;

@@ -1,8 +1,8 @@
 .headingS {
-  margin-left: 100px;
+  margin-left: 150px;
   margin-top: 150px;
   margin-bottom: 25px;
-  font-size: 4.5vw;
+  font-size: 3.7vw;
 }
 
 .solutionsS {
@@ -14,12 +14,12 @@
 
 .imageContainerS {
   position: relative;
-  margin: 30px;
+  margin: 45px;
 }
 
 .imgS {
-  height: 41vh;
-  width: 24vw;
+  height: 38vh;
+  width: 22vw;
   object-fit: cover;
 }
 .imgS:hover {
@@ -52,10 +52,10 @@
   color: white;
   background-color: #408697;
   border: 0px;
-  width: 400px;
+  width: 350px;
   height: 90px;
-  border-radius: 25px;
-  font-size: 25pt;
+  border-radius: 27px;
+  font-size: 20pt;
   cursor: pointer;
 }
 

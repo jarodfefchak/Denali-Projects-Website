@@ -47,7 +47,7 @@ const CareersPage = () => {
         </button>
       </Link>
       </div>
-    </div>
+      </div>
   );
 };
 

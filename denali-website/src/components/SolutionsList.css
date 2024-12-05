@@ -3,13 +3,20 @@
     flex-direction: column;
   }
   .subHeadingSL{
-    font-size: 2.7vw;
+    font-size: 3.3vw;
+    font-weight: 400;
   }
 .textSL{
   margin-bottom: 40px;
   margin-top: 20px;
-  font-size:1.5vw ;
+  font-size:1.3vw ;
 }
+.introSL{
+  font-size: 2.2vw;
+  margin-top: 75px;
+  margin-bottom: 30px;
+}
+
   .informationSL {
     margin-top: 25px;
     margin-bottom: 20px;
@@ -23,7 +30,7 @@
     background: #408697;
   }
   p {
-    font-size:1.5vw;
+    font-size:1.3vw;
     margin: 0;
     padding: 5px 0;
   }

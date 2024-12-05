@@ -42,7 +42,7 @@ function Header({ onLinkClick = () => {} }) {
   return (
     <div className="navbar">
       <Link to="/" onClick={onLinkClick}>
-        <img src={Logo} alt="Logo" height="75px" className="Denali-Logo" />
+        <img src={Logo} alt="Logo" height="65px" className="Denali-Logo" />
       </Link>
       <div className="link-container">
         <Link

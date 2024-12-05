@@ -2,12 +2,9 @@
 .listSD {
     padding: 100px;
     min-height: 85vh;
+    padding-top: 175px;
 }
 
-.projects-titleSD {
-    font-size:  4.5vw;
-    padding-top: 100px;
-}
 @media screen and (max-width: 1650px){
     .projects-titleSD {
         font-size:50pt;

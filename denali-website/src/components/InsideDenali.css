@@ -21,23 +21,28 @@
 }
 
 .textID p {
-  font-size: 1.7vw;
+  font-size: 1.4vw;
+  padding-bottom: 50px;
 }
 
 .textID .headerID {
-  font-size: 4.5vw;
+  font-size: 3.7vw;
+  padding-bottom: 50px;
 }
-
+.buttonContainerID{
+  display:flex;
+  justify-content: center;
+}
 .buttonID {
   color: white;
   background-color: #408697;
   margin-top: 40px;
   margin-bottom: 40px;
   border: 0px;
-  width: 400px;
+  width: 350px;
   height: 90px;
-  border-radius: 25px;
-  font-size: 25pt;
+  border-radius: 27px;
+  font-size: 20pt;
   cursor: pointer;
 }
 
