@@ -109,17 +109,17 @@
 }
 @media screen and (max-width:1200px){
     #item3 h5{
-        font-size: 14pt;
+        font-size: 12pt;
         
     } 
     #item3 ul{
-        font-size: 14pt;
+        font-size: 12pt;
     } 
     #item2 p{
-        font-size: 14pt;
+        font-size: 12pt;
     } 
     #item1 p{
-        font-size: 14pt;
+        font-size: 12pt;
     }
 }
 @media screen and (max-width:900px){

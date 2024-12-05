@@ -43,13 +43,13 @@
 }
 @media screen and (max-width: 1650px) {
   .text p {
-    font-size: 20pt;
+    font-size: 16pt;
   }
   .text .header {
-    font-size: 50pt;
+    font-size: 45pt;
   }
   .text .sub-header {
-    font-size: 35pt;
+    font-size: 27pt;
   }
 }
 @media screen and (max-width: 1200px) {
@@ -60,20 +60,22 @@
     font-size: 18pt;
   }
   .text p {
-    font-size: 18pt;
+    font-size: 16pt;
   }
   .text .header {
-    font-size: 45pt;
+    font-size: 40pt;
   }
   .text .sub-header {
-    font-size: 30pt;
+    font-size: 25pt;
+  }
+  .text {
+    margin-right: 100px;
+    margin-left: 100px;
   }
 }
 
 @media screen and (max-width: 1000px) {
-  .text p {
-    font-size: 16pt;
-  }
+  
   .text {
     margin-right: 50px;
     margin-left: 50px;
@@ -91,10 +93,10 @@
     font-size: 14pt;
   }
   .text .header {
-    font-size: 40pt;
+    font-size: 35pt;
   }
   .text .sub-header {
-    font-size: 25pt;
+    font-size: 20pt;
   }
 }
 @media screen and (max-width: 750px) {
@@ -121,10 +123,10 @@
 }
 @media screen and (max-width: 600px) {
   .text .header {
-    font-size: 35pt;
+    font-size: 32pt;
   }
   .text .sub-header {
-    font-size: 20pt;
+    font-size: 18pt;
   }
   .text {
     margin-right: 20px;

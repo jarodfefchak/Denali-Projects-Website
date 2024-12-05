@@ -171,7 +171,7 @@
 }
 
 .overlay-text p {
-  font-size: 1.6vw;
+  font-size: 1.4vw;
  padding-left: 30px;
  padding-right: 30px;
 }
@@ -179,10 +179,10 @@
 
 @media screen and (max-width: 1650px) {
   .titlePS {
-    font-size: 50pt;
+    font-size: 45pt;
   }
   .subtitlePS {
-    font-size: 35pt;
+    font-size: 27pt;
     margin-right: 100pt;
   }
   .buttonPS {
@@ -194,15 +194,19 @@
     font-size: 20pt;
   }
   .overlay-text p {
-    font-size: 20pt;
+    font-size: 16pt;
   }
 }
   @media screen and (max-width: 1200px){
     .titlePS {
-      font-size: 45pt;
+      font-size: 40pt;
+      margin-left: 100px;
+      margin-right: 100px;
     }
     .subtitlePS {
-      font-size: 30pt;
+      font-size: 25pt;
+      margin-left: 100px;
+      margin-right: 100px;
     }
     .overlay-text p {
       font-size: 16pt;
@@ -210,6 +214,13 @@
     .buttonPS {
       width: 57vw;
     }
+    .carousel-image {
+      height: 50vh;
+    }
+    .carousel-wrapper {
+      width: 82vw;
+    }
+    
   }
 
 @media screen and (max-width: 1000px) {
@@ -228,7 +239,7 @@
     margin-right: 50px;
   }
   .subtitlePS {
-    margin-bottom: 50pt;
+    margin-bottom: 30pt;
     margin-left: 50px;
     margin-right: 50px;
   }
@@ -251,16 +262,22 @@
 }
 @media screen and (max-width: 800px){
   .titlePS {
-    font-size: 40pt;
+    font-size: 35pt;
   }
   .subtitlePS {
-    font-size: 25pt;
+    font-size: 20pt;
   }
   .overlay-text p {
     font-size: 14pt;
   }
   .buttonPS {
     width: 80vw;
+  }
+  .carousel-image {
+    height: 47vh;
+  }
+  .close-button {
+    font-size: 14pt;
   }
 }
 @media screen and (max-width: 750px){
@@ -279,12 +296,12 @@
 .titlePS {
   margin-left: 20px;
   margin-right: 20px;
-  font-size: 35pt;
+  font-size: 32pt;
 }
 .subtitlePS {
   margin-left: 20px;
   margin-right: 20px;
-  font-size: 20pt;
+  font-size: 18pt;
 }
 .overlay-text p {
  padding-left: 5px;
@@ -292,6 +309,10 @@
 }
 .buttonPS {
   height: 55px;
+    font-size: 12pt;
+}
+.close-button {
+  font-size: 12pt;
 }
 }
 
