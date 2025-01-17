@@ -141,7 +141,7 @@ function Contact() {
 
   const closeAlert2 = () => {
     setShow2(false);
-    window.location.href = "/";
+    //window.location.href = "/";
   };
 
   const closeEmailAlert = () => {
@@ -187,9 +187,9 @@ function Contact() {
             <p className="no-marginC">{jsonData2[0].contactPhone}</p>
 
             <form className="formC" ref={form} onSubmit={handleEmailMessage}>
-              <p className="large-textC">
+              {/* <p className="large-textC">
                 Personal Information <span style={{ color: "red" }}>*</span>
-              </p>
+              </p> */}
               <label className="labelC">
                 <input
                   className={`input-shortC ${

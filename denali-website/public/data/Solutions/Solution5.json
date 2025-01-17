@@ -1,6 +1,6 @@
 [
   {
-    "section": "Gas & Liquid Processing",
+    "section": "Gas & Liquids Processing",
     "project": "100 MMSCFD Sour Facility Plant Optimization",
     "design": "Pre-FEED, FEED, Detailed Design, Procurement, Demolition, Construction Support",
     "discipline": "Mechanical, Process, Civil, Structural, Electrical, Instrumentation, Controls and Procurement ",
@@ -8,7 +8,7 @@
     "description": "Denali was responsible for the redevelopment of an existing 100MMSCFD sour gas facility to handle new producer gas volumes. Scope included new refrigeration unit, heat medium, 3.6MW total of generators, bullet storage, truck unloading and upgraded sweetening system packages as well as several utility systems upgrades. From the electrical side, Denali was responsible for the power generation integration plan, medium voltage development plan, and controls system development plan. Denali prepared a total installed cost estimate and evaluation including numerous engineering documents for the proposed brownfield facility improvements. "
   },
   {
-    "section": "Gas & Liquid Processing",
+    "section": "Gas & Liquids Processing",
     "project": "180 MMSCFD Sour Gas Complex Expansion – Deep Cut Relocation",
     "design": "Detailed Design, Construction and Commissioning Support",
     "discipline": "Electrical, Instrumentation and Controls",
@@ -16,7 +16,7 @@
     "description": "The client relocated a 40 mmscf/d decommissioned deep cut facility from central Alberta into it’s existing gas plant complex, which was simultaneously being upgraded. The design required integrating an inlet separator, two gas driven compressors, a cryogenic skid, a mole sieve skid, a turbo expander skid, a low temp separator, de-ethanizer skid, heat medium skid, MCC building and flare stack. Denali completed the electrical and instrumentation design and integration. This included upgrading the control system from a PLC to DCS, redesigning the MCC building, replacing the original VFDs, replacing the MCC, purchasing new instrumentation and a 4160V power integration."
   },
   {
-    "section": "Gas & Liquid Processing",
+    "section": "Gas & Liquids Processing",
     "project": "180 MMSCFD Sour Gas Complex Expansion – Fractionation Plant",
     "design": "Detailed Design, Construction and Commissioning Support",
     "discipline": "Electrical, Instrumentation and Controls",
@@ -24,7 +24,7 @@
     "description": "The client incorporated a new a fractionation train into its existing gas plant complex. The new equipment included an NGL offload compressor and NGL pumps, a de-propanizer skid, de-butanizer skid, an analyzer skid, a transfer pump skid, blending pump skid, two propane bullets and an NGL truck loading package. Denali was responsible for the integration of electrical, instrumentation and controls into the existing Facility. This included upgrading the power system (MCCs, VFDs etc.) integrating the controls into the DCS system, and tying in all communications.    "
   },
   {
-    "section": "Gas & Liquid Processing",
+    "section": "Gas & Liquids Processing",
     "project": "Compressor Station Plant Relocate and Power Generation Addition",
     "design": "Detailed Design, Construction Support",
     "discipline": "Electrical and Controls",

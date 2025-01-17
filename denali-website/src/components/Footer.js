@@ -53,7 +53,7 @@ function Footer() {
         <div className="background">
             <div className="items">
                 <div id="item1">
-                    <h4>Let's Talk</h4>
+                    <h4>Contact Us</h4>
                     <a href="https://www.google.ca/maps/place/700+4+Ave+SW,+Calgary,+AB+T2P+3J4/@51.0499468,-114.0790922,17z/data=!3m1!4b1!4m6!3m5!1s0x53716fe521a5d8f7:0xd9dccb4dd492ed30!8m2!3d51.0499468!4d-114.0765173!16s%2Fg%2F11c2g3wjr0?entry=ttu" target="_blank" rel="noopener noreferrer" style={{ color: "white" }}>
                     <p>{jsonData2[0].contactAddress} {jsonData2[0].contactCity}</p>
                     </a>

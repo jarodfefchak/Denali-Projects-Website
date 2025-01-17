@@ -80,18 +80,18 @@
   display: flex;
   align-items: center;
   width: 19vw;
-  padding-left: 15px;
+  padding-left: 10px;
   padding-top: 5px;
 }
 
 
 .text-containerAU {
   text-align: left;
-  margin-right: 10px;
+  margin-right: 5px;
   width: 13vw;
 }
 .text-containerAU p {
-  font-size: 1.2vw;
+  font-size: 1.1vw;
 }
 
 .lineAU {
@@ -130,14 +130,10 @@
   }
   .img-detailsAU {
     width: 275px;
-    padding-left: 10px;
-  }
-
-  .text-containerAU {
-    width: 200px;
+   
   }
   .text-containerAU p {
-    font-size: 14pt;
+    font-size: 13pt;
   }
 
   .lineAU {
@@ -148,6 +144,11 @@
 
   .linkedinAU {
     height: 70px;
+  }
+}
+@media screen and (max-width: 1450px) {
+  .imgcontainerAU {
+    margin: 0px;
   }
 }
 @media screen and (max-width: 1200px) {
