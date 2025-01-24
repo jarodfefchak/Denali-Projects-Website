@@ -4,9 +4,41 @@
     min-height: 85vh;
     padding-top: 175px;
 }
-.backToTopButton {
+.backToSolutions {
     position: fixed;
     top: 100px;
+    left: 10px;
+}
+
+.solution-button {
+    padding: 2px 15px;
+    color: white;
+    background-color: #222222;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.solution-button p {
+    padding: 0;
+    font-size: 14px;
+
+}
+
+.solution-button p span{
+
+    font-size: 16px;
+
+}
+.solution-button:hover {
+    background-color: #408697;
+
+}
+
+.backToTopButton {
+    position: fixed;
+    top: 150px;
     left: 10px;
     opacity: 0;
     visibility: hidden;

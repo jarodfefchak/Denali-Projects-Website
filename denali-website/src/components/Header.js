@@ -70,8 +70,16 @@ function Header({ onLinkClick = () => {} }) {
           About Us
         </Link>
         <Link
-          to="/Contact"
+          to="/CareerOpportunities"
           id="link4"
+          className={`nav-link ${location.pathname === '/CareerOpportunities' ? 'active' : ''}`}
+          onClick={onLinkClick}
+        >
+          Careers
+        </Link>
+        <Link
+          to="/Contact"
+          id="link5"
           className={`nav-link ${location.pathname === '/Contact' ? 'active' : ''}`}
           onClick={onLinkClick}
         >
@@ -107,6 +115,13 @@ function Header({ onLinkClick = () => {} }) {
           onClick={() => { closeDropdowns(); onLinkClick(); }}
         >
           About Us
+        </Link>
+        <Link
+          to="/CareerOpportunities"
+          className={`nav-link ${location.pathname === '/CareerOpportunities' ? 'active' : ''}`}
+          onClick={() => { closeDropdowns(); onLinkClick(); }}
+        >
+          Careers
         </Link>
         <Link
           to="/Contact"

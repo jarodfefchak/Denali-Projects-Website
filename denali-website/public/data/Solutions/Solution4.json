@@ -1,18 +1,42 @@
 [
     {
       "section": "Well Tie-Ins & Pipelines",
-      "project": "Water Disposal Facility ",
-      "design": "Detailed Design, Procurement, Construction Support",
-      "discipline": "Mechanical, Process, Civil, Structural, Electrical, Instrumentation, Controls and Procurement",
+      "project": "Gas Plant Gathering Lines, Sales Lines and Water Disposal Pipeline",
+      "design": "Detailed Design, Procurement, Construction Support ",
+      "discipline": "Mechanical, Process, Electrical, Instrumentation, Controls and Procurement ",
       "location": "Outside Grande Prairie, AB - Greenfield",
-      "description": "Denali was responsible for the design of site-wide piping, equipment packages and utilities for a greenfield water disposal terminal. Included truck in packages, tank farm, water filtration building, pump packages, multistage high pressure injection pumps, and flare system.  Included a 4km water injection pipeline and disposal well.  Reviewed the feasibility of using natural gas, propane, or diesel for power generation options. Design of the site fuel gas system (including conditioning) and sourcing generators to provide site power before permanent power was installed. Site-wide electrical design, equipment packages and electrical house for a greenfield water disposal terminal. Denali incorporated a 1.5MW utility transformer with a cable bus design to feed multiple 400HP water injection pumps. Oversaw electrical design and power studies including harmonic calculations, breaker settings, coordination curves and arc flash calculations. \n Denali would go on to expand the facility adding increased water handling capabilities, incoming water and fuel gas pipelines, and additional high pressure injection pumps, pipeline and disposal well. "
+      "description": "As part of a 150 MMSCFD sour gas facility scope that Denali was working on for our midstream client, Denali was responsible for the design of the site's new gathering, sales, and water disposal pipelines. This included six sour gas gathering lines, two sales lines, two fuel gas lines, and one water disposal line, totaling over 130 km. Additionally, this project involved managing the tie-ins for numerous producers and sales points along these pipelines."
     },
     {
       "section": "Well Tie-Ins & Pipelines",
-      "project": "Water Disposal Facility Expansion ",
+      "project": "Water Disposal Pipeline and Well",
+      "design": "Detailed Design, Procurement, Construction Support",
+      "discipline": "Mechanical, Process, Civil, Structural, Electrical, Instrumentation, Controls and Procurement  ",
+      "location": "Outside Grande Prairie, AB - Brownfield ",
+      "description": "As part of a conjoining facility scope that Denali was working on for our client, a new 3 km water injection pipeline was required, along with modifications to an existing off-site water injection riser. Denali performed hydraulic calculations to determine pipeline and pump parameters to optimize total installed costs while maintaining a suitable maximum wellhead injection pressure."
+    },
+    {
+      "section": "Well Tie-Ins & Pipelines",
+      "project": "Water Disposal Pipeline and Well ",
+      "design": "Detailed Design, Procurement, Construction Support ",
+      "discipline": "Mechanical, Process, Civil, Structural, Electrical, Instrumentation, Controls and Procurement ",
+      "location": "Outside Grande Prairie, AB - Greenfield  ",
+      "description": "As part of a conjoining facility scope that Denali was working on for our client, the addition of a new 4 km water injection pipeline was necessary. To support this, Denali conducted hydraulic calculations to establish the appropriate pipeline and pump parameters, aiming to optimize total installed costs while ensuring that the maximum wellhead injection pressure remained within acceptable limits."
+    },
+    {
+      "section": "Well Tie-Ins & Pipelines",
+      "project": "Multi-Well Satellite  ",
+      "design": "Detailed Design, Procurement, Construction Support ",
+      "discipline": "Mechanical, Process, Civil, Structural, Electrical, Instrumentation, Controls and Procurement",
+      "location": "Outside Sylvan Lake, AB - Greenfield",
+      "description": "Denali was responsible for the design of a new four-well oil satellite. This scope included all wellhead piping, a test separator package, a pump VFD package, as well as pipeline pigging and tie-in to an existing gathering system. The design was developed to ensure that several different expansion options would be available to our client, allowing them to remain flexible with their future development plans. "
+    },
+    {
+      "section": "Well Tie-Ins & Pipelines",
+      "project": "Water Disposal Pipeline and Well ",
       "design": "Detailed Design, Procurement, Construction Support",
       "discipline": "Mechanical, Process, Civil, Structural, Electrical, Instrumentation, Controls and Procurement ",
-      "location": "Outside Grande Prairie, AB - Brownfield",
-      "description": "Denali was responsible for an expansion to an existing water disposal facility.  Included the addition of truck in packages, tanks to an existing tank farm, water filtration building, pump packages, multistage high pressure injection pumps and integration to an existing flare system.  Included a 3km water injection pipeline and disposal well.  Denali oversaw electrical design and power studies including harmonic calculations, breaker settings, coordination curves and arc flash calculations. "
+      "location": "Outside Grande Prairie, AB - Brownfield  ",
+      "description": "Denali’s client was experiencing increased water disposal volume requirements, and a new 1 km pipeline was tied into their existing water disposal pipeline in order to make use of a second water injection well.  Denali conducted hydraulic calculations to determine pipeline and pump parameters that would optimize total installed costs while maintaining a suitable maximum wellhead injection pressure at both the existing and new disposal wells.  "
     }
   ]

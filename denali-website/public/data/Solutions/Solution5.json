@@ -1,23 +1,23 @@
 [
   {
     "section": "Gas & Liquids Processing",
-    "project": "100 MMSCFD Sour Facility Plant Optimization",
-    "design": "Pre-FEED, FEED, Detailed Design, Procurement, Demolition, Construction Support",
-    "discipline": "Mechanical, Process, Civil, Structural, Electrical, Instrumentation, Controls and Procurement ",
-    "location": "Outside Fort St. John, BC - Brownfield",
-    "description": "Denali was responsible for the redevelopment of an existing 100MMSCFD sour gas facility to handle new producer gas volumes. Scope included new refrigeration unit, heat medium, 3.6MW total of generators, bullet storage, truck unloading and upgraded sweetening system packages as well as several utility systems upgrades. From the electrical side, Denali was responsible for the power generation integration plan, medium voltage development plan, and controls system development plan. Denali prepared a total installed cost estimate and evaluation including numerous engineering documents for the proposed brownfield facility improvements. "
+    "project": "150 MMSCFD Sour Gas Plant Project",
+    "design": "FEED, Detailed Design, Construction Support",
+    "discipline": "Electrical & Controls, Instrumentation, Mechanical Support, Process Support",
+    "location": "Near Grande Prairie, AB – Greenfield",
+    "description": "This project, currently in the final phase of construction, is a greenfield sour gas plant near Grande Prairie. Denali has provided the electrical, controls, and instrumentation design for the facility, along with process and mechanical support. Key equipment for the facility includes over 50 process skids, 5 E-houses, a 25 kV substation, a gas turbine with HRSG, a steam turbine, and a truck loading system."
   },
   {
     "section": "Gas & Liquids Processing",
-    "project": "180 MMSCFD Sour Gas Complex Expansion – Deep Cut Relocation",
+    "project": "180 MMSCFD Sour Gas Complex Expansion – Deep Cut Relocation ",
     "design": "Detailed Design, Construction and Commissioning Support",
     "discipline": "Electrical, Instrumentation and Controls",
     "location": "Brazeau River, Central Alberta – Brownfield",
-    "description": "The client relocated a 40 mmscf/d decommissioned deep cut facility from central Alberta into it’s existing gas plant complex, which was simultaneously being upgraded. The design required integrating an inlet separator, two gas driven compressors, a cryogenic skid, a mole sieve skid, a turbo expander skid, a low temp separator, de-ethanizer skid, heat medium skid, MCC building and flare stack. Denali completed the electrical and instrumentation design and integration. This included upgrading the control system from a PLC to DCS, redesigning the MCC building, replacing the original VFDs, replacing the MCC, purchasing new instrumentation and a 4160V power integration."
+    "description": "The client relocated a decommissioned 40 MMSCFD deep cut facility from central Alberta into its existing gas plant complex, which was simultaneously being upgraded. The design required integrating an inlet separator, two gas-driven compressors, a cryogenic skid, a mole sieve skid, a turbo expander skid, a low-temperature separator, a de-ethanizer skid, a heat medium skid, an MCC building, and a flare stack. Denali completed the electrical and instrumentation design and integration. This included upgrading the control system from a PLC to a DCS control system, redesigning the MCC building, replacing the original VFDs, replacing the MCC, purchasing new instrumentation, and completing a 4160 V power integration."
   },
   {
     "section": "Gas & Liquids Processing",
-    "project": "180 MMSCFD Sour Gas Complex Expansion – Fractionation Plant",
+    "project": "180 MMSCFD Sour Gas Complex Expansion – Fractionation Plant ",
     "design": "Detailed Design, Construction and Commissioning Support",
     "discipline": "Electrical, Instrumentation and Controls",
     "location": "Brazeau River, Central Alberta – Brownfield",
@@ -25,11 +25,27 @@
   },
   {
     "section": "Gas & Liquids Processing",
-    "project": "Compressor Station Plant Relocate and Power Generation Addition",
-    "design": "Detailed Design, Construction Support",
-    "discipline": "Electrical and Controls",
-    "location": "Central Alberta - Brownfield",
-    "description": "Our client was upgrading the capacity of an existing compressor station to increase gas throughput to 25mmscf/d. The upgrade required relocating equipment from an existing facility. The equipment included two gas driven compressor with coolers, condensate pump skid and conditioner vessel, line heater, 36” dehy package, coalescer skid, knockout skid, inlet separator skid and MCC building. To provide power to the relocated compression equipment a 3 x 535 kW generator package was refurbished and integrated. Denali completed the electrical and controls design for the compressor station relocation and the generator integration."
+    "project": "Mobile Gas Processing for Flare Reduction – Units #1, #2 and #3 ",
+    "design": "FEED, Detailed Design, Construction Support, De-bottlenecking",
+    "discipline": "Electrical and Controls, Mechanical, Process",
+    "location": "Portable (Canada and USA) – Greenfield",
+    "description": "Our client constructed a mobile gas processing facility to process liquids-rich flare gas produced from wellheads as an alternative to conventional flaring. The facility is designed to separate the flare gas streams into CNG, NGL, and water. It consists of seven process skids, an electrical and control room skid, and movable pipe racks capable of connecting to four custom NGL tankers and two custom water tankers. \nDenali was tasked with the overall design of the electrical, controls, and communications systems for the facility, as well as developing procedures to set up, purge, and take down the facility. In addition to the typical design required of a gas processing facility, the equipment needed to be portable and fit on a conventional semi-truck trailer. To achieve these requirements, the design utilized specialty cables, quick connects, and remote I/O panels to integrate the process trailers into the electrical trailer, which contained a 480V MCC, a 400 HP VFD, and a PLC cabinet.\nOnce the first facility was commissioned, Denali continued to support the manufacturer and end user by incorporating de-bottlenecking solutions. Two additional facilities were manufactured with minor tweaks made between each iteration based on operational feedback and experience."
+  },
+  {
+    "section": "Gas & Liquids Processing",
+    "project": "Mobile Gas Processing for Flare Reduction – Units #1 through #6 ",
+    "design": "Detailed Design, Construction Support, De-bottlenecking",
+    "discipline": "Electrical and Controls, Mechanical, Process",
+    "location": "Portable (Canada and USA) - Greenfield",
+    "description": "Denali was tasked with improving an existing design for a mobile flare gas processing facility. The main goals were to reduce the footprint, improve economics, and provide multiple installation configurations for various well pad layouts. The facility is capable of processing up to 3 MMSCFD of flare gas, separating the streams into CNG and NGL. It includes one process skid, an electrical and control room skid, two portable CNG filling trailers, and movable pipe racks capable of connecting to two custom NGL tankers.\nDenali designed the electrical and controls system, which included custom quick-connect cabling, a 480V MCC, a 350 HP VFD to drive the refrigeration compressor, PLC panels, and custom integration for a client-supplied generator. The facility was designed to be assembled in 17 different configurations without requiring any on-site manufacturing of equipment."
+  },
+  {
+    "section": "Gas & Liquids Processing",
+    "project": " 100 MMSCFD Sour Facility Plant Optimization  ",
+    "design": " Pre-FEED, FEED, Detailed Design, Procurement, Demolition, Construction Support",
+    "discipline": " Mechanical, Process, Civil, Structural, Electrical, Instrumentation, Controls and Procurement",
+    "location": " Outside Fort St. John, BC – Brownfield ",
+    "description": "The redevelopment of an existing 100 MMSCFD sour gas facility was designed by Denali to accommodate new natural gas volumes. The project scope included the removal and replacement of a refrigeration unit, an upgraded heat medium system, a total of 3.6 MW of generators, bullet storage, truck unloading facilities, and upgraded sweetening system packages, along with several utility system enhancements. From an electrical perspective, Denali managed the power generation integration plan, medium voltage development plan, and controls system development plan. Denali successfully integrated all new equipment within a tight existing facility footprint and provided on-site construction engineering support."
   }
 
 

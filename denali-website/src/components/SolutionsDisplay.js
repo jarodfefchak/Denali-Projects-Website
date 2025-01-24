@@ -17,7 +17,7 @@ function SolutionsDisplay() {
 
     useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY > 100) { // Adjust 100 to your desired scroll threshold
+            if (window.scrollY > 100) { 
                 setShowButton(true);
             } else {
                 setShowButton(false);
@@ -40,6 +40,15 @@ function SolutionsDisplay() {
                 transition={{ duration: 0.4, ease: 'easeInOut' }}
             >
                 <Header />
+                <div className="backToSolutions">
+    <button 
+        onClick={() => window.location.href = "/SolutionsHome"} 
+        className="solution-button"
+    >
+        <p>Solutions Home <span> &#8629;</span>  </p>
+    </button>
+</div>
+
                 <div
                     className={`backToTopButton ${showButton ? "visible" : "hidden"}`}
                 >

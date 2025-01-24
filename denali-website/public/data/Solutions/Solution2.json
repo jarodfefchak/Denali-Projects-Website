@@ -3,65 +3,49 @@
     "section": "Power Generation",
     "project": "100 MMSCFD Sour Facility Plant Optimization",
     "design": "Pre-FEED, FEED, Detailed Design, Procurement, Demolition, Construction Support",
-    "discipline": "Mechanical, Process, Civil, Structural, Electrical, Instrumentation, Controls and Procurement ",
-    "location": "Outside Fort St. John, BC - Brownfield",
-    "description": "Denali was responsible for the redevelopment of an existing 100MMSCFD sour gas facility to handle new producer gas volumes. Scope included new refrigeration unit, heat medium, 3.6MW total of generators, bullet storage, truck unloading and upgraded sweetening system packages as well as several utility systems upgrades. From the electrical side, Denali was responsible for the power generation integration plan, medium voltage development plan, and controls system development plan. Denali prepared a total installed cost estimate and evaluation including numerous engineering documents for the proposed brownfield facility improvements. "
+    "discipline": "Mechanical, Process, Civil, Structural, Electrical, Instrumentation, Controls and Procurement",
+    "location": "Outside Fort St. John, BC – Brownfield",
+    "description": "The redevelopment of an existing 100 MMSCFD sour gas facility was managed by Denali to accommodate new producer gas volumes. A key requirement of the project was upgrading the existing electrical infrastructure to support the new 4160V refrigeration compressor and overheads compressor motors. Three 1.3 MW generators were added to the facility, integrated into a new 5 kV E-house, with a design that allows for a future utility connection. This project focused on providing a reliable and fit-for-service off-grid power generation solution that meets the client's budgetary needs. "
+  },
+  {
+    "section": "Power Generation",
+    "project": "150 MMSCFD Sour Gas Plant Project",
+    "design": "FEED, Detailed Design, Construction Support",
+    "discipline": "Electrical & Controls, Instrumentation, Mechanical Support, Process Support",
+    "location": "Near Grande Prairie, AB - Greenfield",
+    "description": "This project, currently in the final phases of construction, is a greenfield sour gas plant near Grande Prairie. To ensure reliability, the power distribution design of the facility includes a 25 kV substation supplying utility power, along with a 4.6 MW gas turbine generator and a 1.3 MW steam turbine generator. A custom power management system has been developed to parallel the generators with the grid and utilizes a fast-acting load-shedding system to keep the facility online during utility outages."
+  },
+  {
+    "section": "Power Generation",
+    "project": ": Compressor Station Plant Relocate and Power Generation Addition ",
+    "design": "Detailed Design, Construction Support",
+    "discipline": "Electrical and Controls",
+    "location": "Central Alberta - Brownfield",
+    "description": "Our client upgraded the capacity of an existing compressor station to increase gas throughput to 25 MMSCFD. To power the new process equipment, a generator package consisting of three 535 kW generators, along with 600 V switchgear, was retrofitted and installed at the facility. Additional modifications, including a custom feeder breaker and power meter, were made to the generator package to enable the client to sell excess power to a third-party consumer."
   },
   {
     "section": "Power Generation",
     "project": "LNG/Diesel Power Plant ",
-    "design": "FEED, Detailed Design",
+    "design": "FEED, Detailed Design ",
     "discipline": "Mechanical, Process ",
     "location": "Fort Simpson, NWT - Greenfield",
-    "description": "Mechanical design of power plant that produces 1.8MW of local grid power by using a combination of LNG and diesel for fuel. Evaluated numerous options for configurations and fuel usage to aid with end users economic evaluations. Created specifications and equipment RFP packages for 3 genset packages and other associated equipment.  Genset packages include jacket water heat recovery system to optimize energy efficiency within the power plant. "
+    "description": "Denali provided comprehensive mechanical design services for a power plant capable of generating 1.8 MW of local grid power using LNG and diesel fuels. Three separate 1.8 MW gensets were installed: two utilizing LNG and one using diesel. All engines were equipped with a jacket water heat recovery system to optimize energy efficiency."
   },
   {
     "section": "Power Generation",
-    "project": "Power Generation Addition Evaluation ",
-    "design": "FEED",
-    "discipline": "Mechanical, Process, Civil, Structural, Electrical, Instrumentation, Procurement",
-    "location": "Alberta/Saskatchewan – Brownfield",
-    "description": "Denali evaluated the feasibility of installing power generation for the client at 6 of its sites to isolate from the utility grid to reduce operating costs. This included an evaluation of existing and future loads, selection of technology (turbine vs. reciprocating generators) preliminary block flow diagrams and Class 4 estimates for each site to evaluate economics of the proposed facilities. The sites ranged from 1 to 6 MW of required power production. "
-  },
-  {
-    "section": "Power Generation",
-    "project": "Diesel Generator Engine Replacement ",
-    "design": "FEED, Detailed Design, Construction Support",
+    "project": "Diesel Generator Engine and Genset Replacement Program ",
+    "design": "FEED, Detailed Design, Construction Support ",
     "discipline": "Mechanical, Process",
-    "location": "Ulukhaktok, NWT - Brownfield",
-    "description": "Denali was responsible for the mechanical design for the replacement of an 800 kW diesel engine at an existing power plant providing power for the local municipality. Reviewed feasibility of the replacement, as well as created construction drawings to integrate the new engine with the existing on-site utilities and generator.  "
+    "location": "Four separate locations, NWT - Brownfield  ",
+    "description": "Denali was awarded the Generator Engine and Genset Replacement Program for a client in the Northwest Territories. The scope involved reviewing and replacing two diesel genset engines and two diesel genset packages at four of their existing powerhouse locations. We focused on the mechanical design for replacing these items, which varied in size from 600 to 1,100 kW, all utilizing diesel engines at existing power plants that service the local municipality. The scope included conducting a feasibility review of the replacements and creating construction drawings to ensure that the new engines or gensets could be integrated with existing on-site utilities and infrastructure."
   },
   {
     "section": "Power Generation",
-    "project": "Diesel Generator Engine Replacement ",
-    "design": "FEED",
-    "discipline": "Mechanical, Process",
-    "location": "Fort Liard, NWT - Brownfield",
-    "description": "Denali was responsible for reviewing the feasibility of replacing an 800 kW diesel engine at an existing power plant providing power for the local municipality. Reviewed feasibility of integrating the newer model engine within the existing infrastructure on site. "
-  },
-  {
-    "section": "Power Generation",
-    "project": "Diesel Genset Replacement ",
-    "design": "FEED, Detailed Design, Construction Support",
-    "discipline": "Mechanical, Process",
-    "location": "Tulita, NWT - Brownfield",
-    "description": "Denali was responsible for the mechanical design for the replacement of an 800 kW diesel genset at an existing power plant providing power for the local municipality. Reviewed feasibility of the replacement, as well as created construction drawings to integrate the new engine and generator with the existing on-site utilities. "
-  },
-  {
-    "section": "Power Generation",
-    "project": "Diesel Genset Replacement ",
-    "design": "FEED",
-    "discipline": "Mechanical, Process",
-    "location": "Tuktoyyaktuk, NWT - Brownfield",
-    "description": "Denali was responsible for reviewing the feasibility of replacing an 800 kW diesel genset at an existing power plant providing power for the local municipality. Reviewed feasibility of integrating the newer model engine and generator within the existing infrastructure on site. "
-  },
-  {
-    "section": "Power Generation",
-    "project": "Compressor Station Plant Relocate and Power Generation Addition",
-    "design": "Detailed Design, Construction Support",
-    "discipline": "Electrical and Controls",
-    "location": "Central Alberta - Brownfield",
-    "description": "Our client was upgrading the capacity of an existing compressor station to increase gas throughput to 25mmscf/d. The upgrade required relocating equipment from an existing facility. The equipment included two gas driven compressor with coolers, condensate pump skid and conditioner vessel, line heater, 36” dehy package, coalescer skid, knockout skid, inlet separator skid and MCC building. To provide power to the relocated compression equipment a 3 x 535 kW generator package was refurbished and integrated. Denali completed the electrical and controls design for the compressor station relocation and the generator integration."
+    "project": "3.6 MW Power Generation as part of 100 MMSCFD Sour Facility Plant Optimization",
+    "design": " Pre-FEED, FEED, Detailed Design, Procurement, Demolition, Construction Support ",
+    "discipline": " Mechanical, Process, Civil, Structural, Electrical, Instrumentation, Controls and Procurement",
+    "location": " Outside Fort St. John, BC – Brownfield ",
+    "description": "As part of the redevelopment of an existing 100 MMSCFD sour gas facility designed by Denali, an additional 3.6 MW of power generation was required to accommodate the new medium voltage loads. This was achieved by adding three separate 1.2 MW natural gas engine 4160 V gensets and integrating them into the facility's new medium voltage development plan. Denali was also responsible for modifications to the existing two 1.2 MW low voltage natural gas engine gensets and for redeveloping the power distribution plan. Denali performed the detailed integration, design, construction, and commissioning of these gensets."
   }
 
   ]
