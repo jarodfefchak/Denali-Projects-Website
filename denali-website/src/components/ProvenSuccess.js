@@ -131,6 +131,7 @@ function ProvenSuccess() {
                     src={item.img}
                     alt={`Project ${index + 1}`}
                     onDragStart={handleDragStart}
+                    onMouseEnter={() => toggleShowInfo(index)}
                     className="carousel-image"
                     loading="lazy"
                   />
@@ -156,17 +157,13 @@ function ProvenSuccess() {
                     </>
                   )}
 
-                  <button
+                  <div
                     className={`buttonPS ${
                       showInfo && activeIndex === index ? "hide-button" : ""
                     }`}
-                    onClick={() => toggleShowInfo(index)}
-                    onMouseDown={(e) => {
-                      if (showInfo) e.preventDefault();
-                    }}
                   >
                     {showInfo && activeIndex === index ? "" : item.title}
-                  </button>
+                  </div>
                 </div>
               </div>
             ))}
