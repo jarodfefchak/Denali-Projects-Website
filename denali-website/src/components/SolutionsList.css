@@ -38,7 +38,7 @@ p {
 }
 .projectItem {
   display: flex;
-  align-items: center;
+  
   gap: 20px;
   margin-bottom: 75px;
 }
@@ -56,15 +56,15 @@ p {
 }
 
 .imageContainer {
-  width: 500px;
+  width: 450px;
   height: 500px;
   display: flex;
   justify-content: center;
 }
 
 .projectImage {
-  width: 500px;
-  height: 450px;
+  width: 450px;
+  height: 400px;
   object-fit: cover;
 }
 
