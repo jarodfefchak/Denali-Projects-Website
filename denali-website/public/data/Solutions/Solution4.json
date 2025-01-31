@@ -5,7 +5,8 @@
       "design": "Detailed Design, Procurement, Construction Support ",
       "discipline": "Mechanical, Process, Electrical, Instrumentation, Controls and Procurement ",
       "location": "Outside Grande Prairie, AB - Greenfield",
-      "description": "As part of a 150 MMSCFD sour gas facility scope that Denali was working on for our midstream client, Denali was responsible for the design of the site's new gathering, sales, and water disposal pipelines. This included six sour gas gathering lines, two sales lines, two fuel gas lines, and one water disposal line, totaling over 130 km. Additionally, this project involved managing the tie-ins for numerous producers and sales points along these pipelines."
+      "description": "As part of a 150 MMSCFD sour gas facility scope that Denali was working on for our midstream client, Denali was responsible for the design of the site's new gathering, sales, and water disposal pipelines. This included six sour gas gathering lines, two sales lines, two fuel gas lines, and one water disposal line, totaling over 130 km. Additionally, this project involved managing the tie-ins for numerous producers and sales points along these pipelines.",
+      "image":"CSV..png"
     },
     {
       "section": "Well Tie-Ins & Pipelines",
@@ -13,7 +14,8 @@
       "design": "Detailed Design, Procurement, Construction Support",
       "discipline": "Mechanical, Process, Civil, Structural, Electrical, Instrumentation, Controls and Procurement  ",
       "location": "Outside Grande Prairie, AB - Brownfield ",
-      "description": "As part of a conjoining facility scope that Denali was working on for our client, a new 3 km water injection pipeline was required, along with modifications to an existing off-site water injection riser. Denali performed hydraulic calculations to determine pipeline and pump parameters to optimize total installed costs while maintaining a suitable maximum wellhead injection pressure."
+      "description": "As part of a conjoining facility scope that Denali was working on for our client, a new 3 km water injection pipeline was required, along with modifications to an existing off-site water injection riser. Denali performed hydraulic calculations to determine pipeline and pump parameters to optimize total installed costs while maintaining a suitable maximum wellhead injection pressure.",
+       "image":"BMC..png"
     },
     {
       "section": "Well Tie-Ins & Pipelines",
@@ -21,7 +23,8 @@
       "design": "Detailed Design, Procurement, Construction Support ",
       "discipline": "Mechanical, Process, Civil, Structural, Electrical, Instrumentation, Controls and Procurement ",
       "location": "Outside Grande Prairie, AB - Greenfield  ",
-      "description": "As part of a conjoining facility scope that Denali was working on for our client, the addition of a new 4 km water injection pipeline was necessary. To support this, Denali conducted hydraulic calculations to establish the appropriate pipeline and pump parameters, aiming to optimize total installed costs while ensuring that the maximum wellhead injection pressure remained within acceptable limits."
+      "description": "As part of a conjoining facility scope that Denali was working on for our client, the addition of a new 4 km water injection pipeline was necessary. To support this, Denali conducted hydraulic calculations to establish the appropriate pipeline and pump parameters, aiming to optimize total installed costs while ensuring that the maximum wellhead injection pressure remained within acceptable limits.",
+       "image":"Gold Creek..png"
     },
     {
       "section": "Well Tie-Ins & Pipelines",
@@ -29,7 +32,8 @@
       "design": "Detailed Design, Procurement, Construction Support ",
       "discipline": "Mechanical, Process, Civil, Structural, Electrical, Instrumentation, Controls and Procurement",
       "location": "Outside Sylvan Lake, AB - Greenfield",
-      "description": "Denali was responsible for the design of a new four-well oil satellite. This scope included all wellhead piping, a test separator package, a pump VFD package, as well as pipeline pigging and tie-in to an existing gathering system. The design was developed to ensure that several different expansion options would be available to our client, allowing them to remain flexible with their future development plans. "
+      "description": "Denali was responsible for the design of a new four-well oil satellite. This scope included all wellhead piping, a test separator package, a pump VFD package, as well as pipeline pigging and tie-in to an existing gathering system. The design was developed to ensure that several different expansion options would be available to our client, allowing them to remain flexible with their future development plans. ",
+       "image":"Vesta..png"
     },
     {
       "section": "Well Tie-Ins & Pipelines",
@@ -37,6 +41,7 @@
       "design": "Detailed Design, Procurement, Construction Support",
       "discipline": "Mechanical, Process, Civil, Structural, Electrical, Instrumentation, Controls and Procurement ",
       "location": "Outside Grande Prairie, AB - Brownfield  ",
-      "description": "Denali’s client was experiencing increased water disposal volume requirements, and a new 1 km pipeline was tied into their existing water disposal pipeline in order to make use of a second water injection well.  Denali conducted hydraulic calculations to determine pipeline and pump parameters that would optimize total installed costs while maintaining a suitable maximum wellhead injection pressure at both the existing and new disposal wells.  "
+      "description": "Denali’s client was experiencing increased water disposal volume requirements, and a new 1 km pipeline was tied into their existing water disposal pipeline in order to make use of a second water injection well.  Denali conducted hydraulic calculations to determine pipeline and pump parameters that would optimize total installed costs while maintaining a suitable maximum wellhead injection pressure at both the existing and new disposal wells.  ",
+       "image":"Drayton..png"
     }
   ]

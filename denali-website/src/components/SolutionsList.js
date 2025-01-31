@@ -78,7 +78,7 @@ function SolutionsList({ solutionId }) {
             </div>
             <div className="imageContainer">
               <img
-                src={`/ProjectListImages/${project.image}`}
+                src={`/ProjectListImages/Solution${solutionId}/${project.image}`}
                 alt={project.image}
                 className="projectImage"
               />

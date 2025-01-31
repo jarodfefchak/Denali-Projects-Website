@@ -5,7 +5,8 @@
     "design": "FEED, Detailed Design, Construction Support",
     "discipline": "Electrical & Controls, Instrumentation, Mechanical Support, Process Support",
     "location": "Near Grande Prairie, AB – Greenfield",
-    "description": "This project, currently in the final phase of construction, is a greenfield sour gas plant near Grande Prairie. Denali has provided the electrical, controls, and instrumentation design for the facility, along with process and mechanical support. Key equipment for the facility includes over 50 process skids, 5 E-houses, a 25 kV substation, a gas turbine with HRSG, a steam turbine, and a truck loading system."
+    "description": "This project, currently in the final phase of construction, is a greenfield sour gas plant near Grande Prairie. Denali has provided the electrical, controls, and instrumentation design for the facility, along with process and mechanical support. Key equipment for the facility includes over 50 process skids, 5 E-houses, a 25 kV substation, a gas turbine with HRSG, a steam turbine, and a truck loading system.",
+    "image":"need image"
   },
   {
     "section": "Gas & Liquids Processing",
@@ -13,7 +14,8 @@
     "design": "Detailed Design, Construction and Commissioning Support",
     "discipline": "Electrical, Instrumentation and Controls",
     "location": "Brazeau River, Central Alberta – Brownfield",
-    "description": "The client relocated a decommissioned 40 MMSCFD deep cut facility from central Alberta into its existing gas plant complex, which was simultaneously being upgraded. The design required integrating an inlet separator, two gas-driven compressors, a cryogenic skid, a mole sieve skid, a turbo expander skid, a low-temperature separator, a de-ethanizer skid, a heat medium skid, an MCC building, and a flare stack. Denali completed the electrical and instrumentation design and integration. This included upgrading the control system from a PLC to a DCS control system, redesigning the MCC building, replacing the original VFDs, replacing the MCC, purchasing new instrumentation, and completing a 4160 V power integration."
+    "description": "The client relocated a decommissioned 40 MMSCFD deep cut facility from central Alberta into its existing gas plant complex, which was simultaneously being upgraded. The design required integrating an inlet separator, two gas-driven compressors, a cryogenic skid, a mole sieve skid, a turbo expander skid, a low-temperature separator, a de-ethanizer skid, a heat medium skid, an MCC building, and a flare stack. Denali completed the electrical and instrumentation design and integration. This included upgrading the control system from a PLC to a DCS control system, redesigning the MCC building, replacing the original VFDs, replacing the MCC, purchasing new instrumentation, and completing a 4160 V power integration.",
+    "image":"need image"
   },
   {
     "section": "Gas & Liquids Processing",
@@ -21,7 +23,8 @@
     "design": "Detailed Design, Construction and Commissioning Support",
     "discipline": "Electrical, Instrumentation and Controls",
     "location": "Brazeau River, Central Alberta – Brownfield",
-    "description": "The client incorporated a new a fractionation train into its existing gas plant complex. The new equipment included an NGL offload compressor and NGL pumps, a de-propanizer skid, de-butanizer skid, an analyzer skid, a transfer pump skid, blending pump skid, two propane bullets and an NGL truck loading package. Denali was responsible for the integration of electrical, instrumentation and controls into the existing Facility. This included upgrading the power system (MCCs, VFDs etc.) integrating the controls into the DCS system, and tying in all communications.    "
+    "description": "The client incorporated a new a fractionation train into its existing gas plant complex. The new equipment included an NGL offload compressor and NGL pumps, a de-propanizer skid, de-butanizer skid, an analyzer skid, a transfer pump skid, blending pump skid, two propane bullets and an NGL truck loading package. Denali was responsible for the integration of electrical, instrumentation and controls into the existing Facility. This included upgrading the power system (MCCs, VFDs etc.) integrating the controls into the DCS system, and tying in all communications.    ",
+    "image":"Need image"
   },
   {
     "section": "Gas & Liquids Processing",
@@ -29,7 +32,8 @@
     "design": "FEED, Detailed Design, Construction Support, De-bottlenecking",
     "discipline": "Electrical and Controls, Mechanical, Process",
     "location": "Portable (Canada and USA) – Greenfield",
-    "description": "Our client developed a mobile gas processing facility to process liquids-rich flare gas from wellheads, serving as an alternative to conventional flaring. The facility separates flare gas into CNG, NGL, and water and includes seven process skids, an electrical and control room skid, and movable pipe racks for connecting to four custom NGL tankers and two water tankers.\nDenali was responsible for designing the electrical, controls, and communications systems, as well as creating procedures for setup, purging, and takedown. The design prioritized portability, allowing equipment to fit on standard semi-truck trailers, utilizing specialty cables, quick connects, and remote I/O panels. The electrical trailer housed a 480V MCC, a 400 HP VFD, and a PLC cabinet. After commissioning the first facility, Denali provided ongoing support for the manufacturer and end user and implemented de-bottlenecking solutions in two additional facilities, making minor adjustments based on operational feedback."
+    "description": "Our client developed a mobile gas processing facility to process liquids-rich flare gas from wellheads, serving as an alternative to conventional flaring. The facility separates flare gas into CNG, NGL, and water and includes seven process skids, an electrical and control room skid, and movable pipe racks for connecting to four custom NGL tankers and two water tankers.\nDenali was responsible for designing the electrical, controls, and communications systems, as well as creating procedures for setup, purging, and takedown. The design prioritized portability, allowing equipment to fit on standard semi-truck trailers, utilizing specialty cables, quick connects, and remote I/O panels. The electrical trailer housed a 480V MCC, a 400 HP VFD, and a PLC cabinet. After commissioning the first facility, Denali provided ongoing support for the manufacturer and end user and implemented de-bottlenecking solutions in two additional facilities, making minor adjustments based on operational feedback.",
+    "image":"need image"
   },
   {
     "section": "Gas & Liquids Processing",
@@ -37,7 +41,8 @@
     "design": "Detailed Design, Construction Support, De-bottlenecking",
     "discipline": "Electrical and Controls, Mechanical, Process",
     "location": "Portable (Canada and USA) - Greenfield",
-    "description": "Denali was tasked with improving an existing design for a mobile flare gas processing facility. The main goals were to reduce the footprint, improve economics, and provide multiple installation configurations for various well pad layouts. The facility is capable of processing up to 3 MMSCFD of flare gas, separating the streams into CNG and NGL. It includes one process skid, an electrical and control room skid, two portable CNG filling trailers, and movable pipe racks capable of connecting to two custom NGL tankers.\nDenali designed the electrical and controls system, which included custom quick-connect cabling, a 480V MCC, a 350 HP VFD to drive the refrigeration compressor, PLC panels, and custom integration for a client-supplied generator. The facility was designed to be assembled in 17 different configurations without requiring any on-site manufacturing of equipment."
+    "description": "Denali was tasked with improving an existing design for a mobile flare gas processing facility. The main goals were to reduce the footprint, improve economics, and provide multiple installation configurations for various well pad layouts. The facility is capable of processing up to 3 MMSCFD of flare gas, separating the streams into CNG and NGL. It includes one process skid, an electrical and control room skid, two portable CNG filling trailers, and movable pipe racks capable of connecting to two custom NGL tankers.\nDenali designed the electrical and controls system, which included custom quick-connect cabling, a 480V MCC, a 350 HP VFD to drive the refrigeration compressor, PLC panels, and custom integration for a client-supplied generator. The facility was designed to be assembled in 17 different configurations without requiring any on-site manufacturing of equipment.",
+    "image":"Startec - Coffey - Gas & Liquids..png"
   },
   {
     "section": "Gas & Liquids Processing",
@@ -45,7 +50,8 @@
     "design": " Pre-FEED, FEED, Detailed Design, Procurement, Demolition, Construction Support",
     "discipline": " Mechanical, Process, Civil, Structural, Electrical, Instrumentation, Controls and Procurement",
     "location": " Outside Fort St. John, BC – Brownfield ",
-    "description": "The redevelopment of an existing 100 MMSCFD sour gas facility was designed by Denali to accommodate new natural gas volumes. The project scope included the removal and replacement of a refrigeration unit, an upgraded heat medium system, a total of 3.6 MW of generators, bullet storage, truck unloading facilities, and upgraded sweetening system packages, along with several utility system enhancements. From an electrical perspective, Denali managed the power generation integration plan, medium voltage development plan, and controls system development plan. Denali successfully integrated all new equipment within a tight existing facility footprint and provided on-site construction engineering support."
+    "description": "The redevelopment of an existing 100 MMSCFD sour gas facility was designed by Denali to accommodate new natural gas volumes. The project scope included the removal and replacement of a refrigeration unit, an upgraded heat medium system, a total of 3.6 MW of generators, bullet storage, truck unloading facilities, and upgraded sweetening system packages, along with several utility system enhancements. From an electrical perspective, Denali managed the power generation integration plan, medium voltage development plan, and controls system development plan. Denali successfully integrated all new equipment within a tight existing facility footprint and provided on-site construction engineering support.",
+    "image":"Aitken - Gas & Liquids..png"
   }
 
 

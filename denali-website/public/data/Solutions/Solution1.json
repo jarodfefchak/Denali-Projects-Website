@@ -5,7 +5,8 @@
     "design": "FEED",
     "discipline": "Civil, Structural, Electrical & Controls, Instrumentation ",
     "location": "Moose Jaw, SK - Brownfield  ",
-    "description": "As part of an optimization and modernization plan, Denali conducted a comprehensive FEED study to upgrade an aging electrical distribution system. The 60-year-old infrastructure required a plan to replace a 25 kV substation and outdoor equipment with a new utility feeder and a 5 kV E-house. This modernization aims to prevent unplanned outages by replacing equipment before it fails. During the development of the DBM, cost estimates, and schedule, special attention was given to planning strategic outages to minimize facility downtime during construction. A 60% model, integrated with a point cloud model, ensured that the FEED design remained practical as the project progressed into detailed engineering."
+    "description": "As part of an optimization and modernization plan, Denali conducted a comprehensive FEED study to upgrade an aging electrical distribution system. The 60-year-old infrastructure required a plan to replace a 25 kV substation and outdoor equipment with a new utility feeder and a 5 kV E-house. This modernization aims to prevent unplanned outages by replacing equipment before it fails. During the development of the DBM, cost estimates, and schedule, special attention was given to planning strategic outages to minimize facility downtime during construction. A 60% model, integrated with a point cloud model, ensured that the FEED design remained practical as the project progressed into detailed engineering.",
+    "image": "Moss Jaw electrical feed 1.png"
   },
   {
     "section": "FEED Studies",
@@ -13,7 +14,8 @@
     "design": "FEED",
     "discipline": "Electrical & Controls, Instrumentation ",
     "location": "Near Grande Prairie, AB - Greenfield",
-    "description": "Denali provided the electrical, controls, and instrumentation engineering for a greenfield 150 MMSCFD sour gas plant. Deliverables included a budgetary procurement and 30% design of 5 kV switchgear and MCCs, power transformers, 5 kV VFDs, 600 V MCCs, DCS control systems, five electrical buildings, and 45 process skids. The FEED established the foundation for the multi-year detailed design currently under construction."
+    "description": "Denali provided the electrical, controls, and instrumentation engineering for a greenfield 150 MMSCFD sour gas plant. Deliverables included a budgetary procurement and 30% design of 5 kV switchgear and MCCs, power transformers, 5 kV VFDs, 600 V MCCs, DCS control systems, five electrical buildings, and 45 process skids. The FEED established the foundation for the multi-year detailed design currently under construction.",
+    "image":"CSV Albright FEED.png"
   },
   {
     "section": "FEED Studies",
@@ -21,7 +23,8 @@
     "design": "FEED, Detailed Design ",
     "discipline": "Mechanical, Process",
     "location": "Fort Simpson, NWT - Greenfield",
-    "description": "Denali provided comprehensive mechanical design services for a remote power plant capable of generating 1.8 MW of local grid power using LNG and diesel fuels. The scope included evaluating various configurations and fuel options to support economic assessments for the end user. We developed numerous cost estimates for a variety of engine brands, sizes, and fuel types, including dedicated diesel, LNG, and bi-fuel units, for economic evaluation. We also developed specifications and equipment RFP packages for three genset packages, all of which featured a jacket water heat recovery system to optimize energy efficiency."
+    "description": "Denali provided comprehensive mechanical design services for a remote power plant capable of generating 1.8 MW of local grid power using LNG and diesel fuels. The scope included evaluating various configurations and fuel options to support economic assessments for the end user. We developed numerous cost estimates for a variety of engine brands, sizes, and fuel types, including dedicated diesel, LNG, and bi-fuel units, for economic evaluation. We also developed specifications and equipment RFP packages for three genset packages, all of which featured a jacket water heat recovery system to optimize energy efficiency.",
+     "image":"Fort Simpson.png"
   },
   {
     "section": "FEED Studies",
@@ -29,7 +32,8 @@
     "design": "FEED as Owner’s Engineer ",
     "discipline": "Mechanical, Process, Civil, Structural, Electrical, Instrumentation ",
     "location": "Prince Rupert, BC – Greenfield",
-    "description": "Denali coordinated FEED engineering and regulatory support on behalf of its client for a greenfield marine terminal. The terminal products included LPG, methanol, and clean petroleum products, which are brought in by rail, stored, and pumped to ships at a new marine jetty/loading dock. The refrigerated LPG storage tank has a volume of 90,000 m³, while the 18 total methanol and clean petroleum product tanks range from 30,000 m³ to 40,000 m³ in volume. This involved coordination and review of documents and drawings for all aspects of the FEED, including rail, facility, and marine deliverables."
+    "description": "Denali coordinated FEED engineering and regulatory support on behalf of its client for a greenfield marine terminal. The terminal products included LPG, methanol, and clean petroleum products, which are brought in by rail, stored, and pumped to ships at a new marine jetty/loading dock. The refrigerated LPG storage tank has a volume of 90,000 m³, while the 18 total methanol and clean petroleum product tanks range from 30,000 m³ to 40,000 m³ in volume. This involved coordination and review of documents and drawings for all aspects of the FEED, including rail, facility, and marine deliverables.",
+     "image":"Vopak.png"
   },
   {
     "section": "FEED Studies",
@@ -37,7 +41,8 @@
     "design": "FEED as Owner’s Engineer ",
     "discipline": " Mechanical, Process, Civil, Structural, Electrical, Instrumentation",
     "location": " Outside Grande Prairie, AB – Greenfield ",
-    "description": "Denali coordinated FEED engineering and regulatory support on behalf of its client for a greenfield 100 MMSCFD sour gas facility. This included the complete demolition and remediation of an existing smaller facility on the site lease. The project scope included a refrigeration unit, amine sweetening, a heat medium system, liquids tank and bullet storage, and truck out stations. This involved coordination and document and drawing reviews for all aspects of the FEED."
+    "description": "Denali coordinated FEED engineering and regulatory support on behalf of its client for a greenfield 100 MMSCFD sour gas facility. This included the complete demolition and remediation of an existing smaller facility on the site lease. The project scope included a refrigeration unit, amine sweetening, a heat medium system, liquids tank and bullet storage, and truck out stations. This involved coordination and document and drawing reviews for all aspects of the FEED.",
+     "image":"Gord West.png"
   },
   {
     "section": "FEED Studies",
@@ -45,6 +50,7 @@
     "design": "FEED, Detailed Design, Procurement, Construction Support",
     "discipline": "Mechanical, Process, Structural, Electrical, Instrumentation, Controls and Procurement ",
     "location": "Moose Jaw, SK - Brownfield",
-    "description": "Denali implemented a Front-End Engineering Design (FEED) study and provided detailed support for several automation projects at a refinery, significantly improving operational efficiency and minimizing risks. The initiative consisted of four key stages: Tank Farm Valve Automation, Scale and Truck Automation, and Refinery Plant Mass Balance.\nIn the Tank Farm stage, six tank farms were automated to optimize the flow of refined products. The Scale House Automation improved the custody transfer process for trucking by transitioning from manual operations to an automated, integrated plant control system. Finally, the Refinery Plant Mass Balance phase upgraded flow meters and computers, enabling accurate real-time volumetric readings and addressing discrepancies in the refinery's inlet and outlet flows, leading to enhanced operational accuracy."
+    "description": "Denali implemented a Front-End Engineering Design (FEED) study and provided detailed support for several automation projects at a refinery, significantly improving operational efficiency and minimizing risks. The initiative consisted of four key stages: Tank Farm Valve Automation, Scale and Truck Automation, and Refinery Plant Mass Balance.\nIn the Tank Farm stage, six tank farms were automated to optimize the flow of refined products. The Scale House Automation improved the custody transfer process for trucking by transitioning from manual operations to an automated, integrated plant control system. Finally, the Refinery Plant Mass Balance phase upgraded flow meters and computers, enabling accurate real-time volumetric readings and addressing discrepancies in the refinery's inlet and outlet flows, leading to enhanced operational accuracy.",
+     "image":"Moss Jaw electrical feed 1.png"
   }
 ]
