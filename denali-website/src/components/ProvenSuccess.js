@@ -46,7 +46,12 @@ function ProvenSuccess() {
 
   const toggleShowInfo = useCallback((index) => {
     setActiveIndex(index);
-    setShowInfo((prevShowInfo) => !prevShowInfo);
+    setShowInfo(true);
+  }, []);
+
+  const handleCloseInfo = useCallback(() => {
+    setShowInfo(false);
+    setTimeout(() => setActiveIndex(-1), 300); // Ensure fade-out before clearing index
   }, []);
 
   const handleSlideChanged = ({ item }) => {
@@ -83,69 +88,66 @@ function ProvenSuccess() {
     </span>
   );
 
+
   const items = useMemo(
     () => [
       {
         key: "project1",
         img: Project1Img,
-        description: data.jsonData && data.jsonData[0].description,
-        title: data.jsonData && data.jsonData[0].title, 
+        description: data.jsonData?.[0]?.description,
+        title: data.jsonData?.[0]?.title,
       },
       {
         key: "project2",
         img: Project2Img,
-        description: data.jsonData2 && data.jsonData2[0].description,
-        title: data.jsonData2 && data.jsonData2[0].title, 
+        description: data.jsonData2?.[0]?.description,
+        title: data.jsonData2?.[0]?.title,
       },
       {
         key: "project3",
         img: Project3Img,
-        description: data.jsonData3 && data.jsonData3[0].description,
-        title: data.jsonData3 && data.jsonData3[0].title, 
+        description: data.jsonData3?.[0]?.description,
+        title: data.jsonData3?.[0]?.title,
       },
     ],
     [data.jsonData, data.jsonData2, data.jsonData3]
   );
 
   if (loading) {
-    return null; 
+    return null;
   }
 
   return (
     <div className="backgroundPS">
       <div className="layoutPS">
         <h1 className="titlePS">
-          <b>{data.jsonData4[0].projects}</b>
+          <b>{data.jsonData4?.[0]?.projects}</b>
         </h1>
-        <p className="subtitlePS">{data.jsonData4[0].projects_sub}</p>
+        <p className="subtitlePS">{data.jsonData4?.[0]?.projects_sub}</p>
         <div className="carousel-wrapper">
           <AliceCarousel
             items={items.map((item, index) => (
-              <div key={item.key}>
-                <div
-                  className={`image-container ${
-                    showInfo && activeIndex === index ? "blur" : ""
-                  }`}
-                >
-                  <img
-                    src={item.img}
-                    alt={`Project ${index + 1}`}
-                    onDragStart={handleDragStart}
-                    onMouseEnter={() => toggleShowInfo(index)}
-                    className="carousel-image"
-                    loading="lazy"
-                  />
-                  {showInfo && activeIndex === index && (
-                    <>
-                      <div
-                        className={`overlay-text ${showInfo ? "fade-in" : ""}`}
-                        style={{ whiteSpace: "pre-line" }}
-                      >
-                        {item.description.split("\n").map((line, i) => (
-                          <p key={i}>{line}</p>
-                        ))}
-                      </div>
-                      <button
+              <div key={item.key} className={`image-container ${showInfo && activeIndex === index ? "blur" : ""}`}
+                onMouseEnter={() => toggleShowInfo(index)}
+                onMouseLeave={() => setShowInfo(false)}>
+                <img
+                  src={item.img}
+                  alt={`Project ${index + 1}`}
+                  onDragStart={handleDragStart}
+                  className="carousel-image"
+                  loading="lazy"
+                />
+                {showInfo && activeIndex === index && (
+                  <div>
+                 <div
+                 className={`overlay-text ${showInfo ? "fade-in" : ""}`}
+                 style={{ whiteSpace: "pre-line" }}
+                  >
+                    {item.description?.split("\n").map((line, i) => (
+                      <p key={i}>{line}</p>
+                    ))}
+                  </div>
+                    <button
                         className="close-button"
                         onClick={() => {
                           setShowInfo(false);
@@ -153,18 +155,16 @@ function ProvenSuccess() {
                         }}
                       >
                         X
-                      </button>
-                    </>
-                  )}
-
-                  <div
+                      </button> 
+                      </div>  
+                )}
+                 <div
                     className={`buttonPS ${
                       showInfo && activeIndex === index ? "hide-button" : ""
                     }`}
                   >
-                    {showInfo && activeIndex === index ? "" : item.title}
+                    <p>{showInfo && activeIndex === index ? "" : item.title}</p>
                   </div>
-                </div>
               </div>
             ))}
             renderPrevButton={renderPrevButton}
@@ -172,8 +172,6 @@ function ProvenSuccess() {
             activeIndex={activeIndex}
             onSlideChanged={handleSlideChanged}
             renderDotsItem={renderDotsItem}
-            mouseTracking={!showInfo}
-            touchTracking={!showInfo}
             infinite
             animationType="fadeout"
             animationEasingFunction="ease-in-out"
@@ -186,3 +184,4 @@ function ProvenSuccess() {
 }
 
 export default ProvenSuccess;
+
