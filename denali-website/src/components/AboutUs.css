@@ -80,7 +80,6 @@
   display: flex;
   align-items: center;
   width: 19vw;
-  padding-left: 10px;
   padding-top: 5px;
 }
 
@@ -150,6 +149,9 @@
   .imgcontainerAU {
     margin: 0px;
   }
+  .text-containerAU p {
+    font-size: 12pt;
+  }
 }
 @media screen and (max-width: 1200px) {
   .header-textAU {
@@ -173,21 +175,27 @@
   }
   .img-detailsAU {
     width: 250px;
-    padding-left: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
   }
   .lineAU {
-    width: 1.5px;
-    height: 95px;
+    width: 250px;
+    height: 2px;
   }
 
   .linkedinAU {
-    height:65px;
+    height:50px;
   }
   .buttonAU {
     width: 350px;
     height: 80px;
     border-radius: 20px;
     font-size: 18pt;
+  }
+  .text-containerAU p {
+    font-size: 12pt;
+    width: 250px; 
   }
 }
 
@@ -210,18 +218,18 @@
     width: 225px;
     padding-left: 10px;
   }
-  .text-containerAU p {
-    font-size: 13pt;
-  }
-  .lineAU {
-    width: 1.5px;
-    height: 95px;
-  }
   .paragraphAU {
     font-size: 14pt;
   }
   #sloganAU {
     font-size: 16pt;
+  }
+  .text-containerAU p {
+    font-size: 11pt;
+    width: 225px; 
+  }
+  .lineAU {
+    width: 225px;
   }
   
 

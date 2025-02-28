@@ -223,6 +223,9 @@
   .carousel-arrow {
     display: none;
   }
+  .close-button {
+    display:block; 
+  }
   .carousel-image {
     height: 50vh;
   }
@@ -274,7 +277,6 @@
   }
   .close-button {
     font-size: 14pt;
-    display:block; 
   }
 }
 @media screen and (max-width: 750px){
