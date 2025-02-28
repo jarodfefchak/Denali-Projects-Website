@@ -34,6 +34,15 @@
     "location": "Near Prince Rupert, BC",
     "description": "Denali was tasked with decreasing the rail unloading time for a 24-hour LPG rail unloading facility near Prince Rupert, BC. This was achieved by increasing the speed of the depressurizing system for the 28 rail loading stations, automating the depressurizing process that was previously controlled manually.",
     "image":"RIPET Rail Debottle..png"
+  },
+  {
+    "section": "Debottlenecking, MOC & As Building",
+    "project": "Refinery Automation and Plant Mass Balance  ",
+    "design": "FEED, Detailed Design, Procurement, Construction Support",
+    "discipline": "Mechanical, Process, Structural, Electrical, Instrumentation, Controls and Procurement ",
+    "location": "Moose Jaw, SK - Brownfield",
+    "description": "Denali implemented a Front-End Engineering Design (FEED) study and provided detailed support for several automation projects at a refinery, significantly improving operational efficiency and minimizing risks. The initiative consisted of four key stages: Tank Farm Valve Automation, Scale and Truck Automation, and Refinery Plant Mass Balance.\nIn the Tank Farm stage, six tank farms were automated to optimize the flow of refined products. The Scale House Automation improved the custody transfer process for trucking by transitioning from manual operations to an automated, integrated plant control system. Finally, the Refinery Plant Mass Balance phase upgraded flow meters and computers, enabling accurate real-time volumetric readings and addressing discrepancies in the refinery's inlet and outlet flows, leading to enhanced operational accuracy.",
+     "image":"Moss Jaw electrical feed 1.png"
   }
 
   ]
