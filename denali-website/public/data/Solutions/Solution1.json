@@ -11,7 +11,7 @@
   {
     "section": "FEED Studies",
     "project": "150 MMSCFD Sour Gas Plant FEED Project",
-    "design": "FEED",
+    "design": "FEED, Detailed Design, Construction Support",
     "discipline": "Electrical & Controls, Instrumentation ",
     "location": "Near Grande Prairie, AB - Greenfield",
     "description": "Denali provided the electrical, controls, and instrumentation engineering for a greenfield 150 MMSCFD sour gas plant. Deliverables included a budgetary procurement and 30% design of 5 kV switchgear and MCCs, power transformers, 5 kV VFDs, 600 V MCCs, DCS control systems, five electrical buildings, and 45 process skids. The FEED established the foundation for the multi-year detailed design currently under construction.",
@@ -43,14 +43,5 @@
     "location": " Outside Grande Prairie, AB – Greenfield ",
     "description": "Denali coordinated FEED engineering and regulatory support on behalf of its client for a greenfield 100 MMSCFD sour gas facility. This included the complete demolition and remediation of an existing smaller facility on the site lease. The project scope included a refrigeration unit, amine sweetening, a heat medium system, liquids tank and bullet storage, and truck out stations. This involved coordination and document and drawing reviews for all aspects of the FEED.",
      "image":"Gord West.png"
-  },
-  {
-    "section": "FEED Studies",
-    "project": "Refinery Automation and Plant Mass Balance  ",
-    "design": "FEED, Detailed Design, Procurement, Construction Support",
-    "discipline": "Mechanical, Process, Structural, Electrical, Instrumentation, Controls and Procurement ",
-    "location": "Moose Jaw, SK - Brownfield",
-    "description": "Denali implemented a Front-End Engineering Design (FEED) study and provided detailed support for several automation projects at a refinery, significantly improving operational efficiency and minimizing risks. The initiative consisted of four key stages: Tank Farm Valve Automation, Scale and Truck Automation, and Refinery Plant Mass Balance.\nIn the Tank Farm stage, six tank farms were automated to optimize the flow of refined products. The Scale House Automation improved the custody transfer process for trucking by transitioning from manual operations to an automated, integrated plant control system. Finally, the Refinery Plant Mass Balance phase upgraded flow meters and computers, enabling accurate real-time volumetric readings and addressing discrepancies in the refinery's inlet and outlet flows, leading to enhanced operational accuracy.",
-     "image":"Moss Jaw electrical feed 1.png"
   }
 ]
