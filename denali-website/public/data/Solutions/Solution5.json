@@ -15,7 +15,7 @@
     "discipline": "Electrical, Instrumentation and Controls",
     "location": "Brazeau River, Central Alberta – Brownfield",
     "description": "The client relocated a decommissioned 40 MMSCFD deep cut facility from central Alberta into its existing gas plant complex, which was simultaneously being upgraded. The design required integrating an inlet separator, two gas-driven compressors, a cryogenic skid, a mole sieve skid, a turbo expander skid, a low-temperature separator, a de-ethanizer skid, a heat medium skid, an MCC building, and a flare stack. Denali completed the electrical and instrumentation design and integration. This included upgrading the control system from a PLC to a DCS control system, redesigning the MCC building, replacing the original VFDs, replacing the MCC, purchasing new instrumentation, and completing a 4160 V power integration.",
-    "image":"need image"
+    "image":"DSCN3603.jpg"
   },
   {
     "section": "Gas & Liquids Processing",
@@ -24,7 +24,7 @@
     "discipline": "Electrical, Instrumentation and Controls",
     "location": "Brazeau River, Central Alberta – Brownfield",
     "description": "The client incorporated a new a fractionation train into its existing gas plant complex. The new equipment included an NGL offload compressor and NGL pumps, a de-propanizer skid, de-butanizer skid, an analyzer skid, a transfer pump skid, blending pump skid, two propane bullets and an NGL truck loading package. Denali was responsible for the integration of electrical, instrumentation and controls into the existing Facility. This included upgrading the power system (MCCs, VFDs etc.) integrating the controls into the DCS system, and tying in all communications.    ",
-    "image":"Need image"
+    "image":"IMG_3158.JPG"
   },
   {
     "section": "Gas & Liquids Processing",
@@ -33,7 +33,7 @@
     "discipline": "Electrical and Controls, Mechanical, Process",
     "location": "Portable (Canada and USA) – Greenfield",
     "description": "Our client developed a mobile gas processing facility to process liquids-rich flare gas from wellheads, serving as an alternative to conventional flaring. The facility separates flare gas into CNG, NGL, and water and includes seven process skids, an electrical and control room skid, and movable pipe racks for connecting to four custom NGL tankers and two water tankers.\nDenali was responsible for designing the electrical, controls, and communications systems, as well as creating procedures for setup, purging, and takedown. The design prioritized portability, allowing equipment to fit on standard semi-truck trailers, utilizing specialty cables, quick connects, and remote I/O panels. The electrical trailer housed a 480V MCC, a 400 HP VFD, and a PLC cabinet. After commissioning the first facility, Denali provided ongoing support for the manufacturer and end user and implemented de-bottlenecking solutions in two additional facilities, making minor adjustments based on operational feedback.",
-    "image":"need image"
+    "image":"Startec - Coffey - Gas & Liquids..png"
   },
   {
     "section": "Gas & Liquids Processing",
@@ -42,7 +42,7 @@
     "discipline": "Electrical and Controls, Mechanical, Process",
     "location": "Portable (Canada and USA) - Greenfield",
     "description": "Denali was tasked with improving an existing design for a mobile flare gas processing facility. The main goals were to reduce the footprint, improve economics, and provide multiple installation configurations for various well pad layouts. The facility is capable of processing up to 3 MMSCFD of flare gas, separating the streams into CNG and NGL. It includes one process skid, an electrical and control room skid, two portable CNG filling trailers, and movable pipe racks capable of connecting to two custom NGL tankers.\nDenali designed the electrical and controls system, which included custom quick-connect cabling, a 480V MCC, a 350 HP VFD to drive the refrigeration compressor, PLC panels, and custom integration for a client-supplied generator. The facility was designed to be assembled in 17 different configurations without requiring any on-site manufacturing of equipment.",
-    "image":"Startec - Coffey - Gas & Liquids..png"
+    "image":"Image?"
   },
   {
     "section": "Gas & Liquids Processing",
