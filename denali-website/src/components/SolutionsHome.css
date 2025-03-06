@@ -48,10 +48,10 @@
   
   @media screen and (max-width: 1650px) {
     .headingSH {
-      font-size: 50pt;
+      font-size: 45pt;
     }
     .descriptionSH{
-      font-size: 18pt;
+      font-size: 16pt;
     }
   }
   @media screen and (max-width: 1350px) {
@@ -75,7 +75,7 @@
       font-size: 16pt;
     }
     .headingSH {
-      font-size: 45pt;
+      font-size: 40pt;
     }
   }
   @media screen and (max-width: 1075px) {
@@ -121,7 +121,10 @@
       font-size: 20pt;
     }
     .headingSH {
-      font-size: 40pt;
+      font-size: 35pt;
+    }
+    .descriptionSH{
+      font-size: 14pt;
     }
   } 
   @media screen and (max-width: 750px) {
@@ -150,9 +153,9 @@
       font-size: 18pt;
     }
   } 
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 600px) {
     .headingSH {
-      font-size: 30pt;
+      font-size: 32pt;
     }
   }
   @media screen and (max-width: 450px) {

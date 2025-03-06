@@ -109,20 +109,20 @@
 
 @media screen and (max-width: 1650px) {
   .header-textAU {
-    font-size: 50pt;
+    font-size: 45pt;
   }
   .imgAU {
     height: 300px;
     width: 275px;
   }
   .executive-titleAU {
-    font-size: 40pt;
-  }
-  .sub-header-textAU {
     font-size: 35pt;
   }
+  .sub-header-textAU {
+    font-size: 27pt;
+  }
   .paragraphAU {
-    font-size: 18pt;
+    font-size: 16pt;
   }
   #sloganAU {
     font-size: 20pt;
@@ -155,17 +155,17 @@
 }
 @media screen and (max-width: 1200px) {
   .header-textAU {
-    font-size: 45pt;
+    font-size: 40pt;
   }
   .imgAU {
     height: 300px;
     width: 250px;
   }
   .executive-titleAU {
-    font-size: 35pt;
+    font-size: 30pt;
   }
   .sub-header-textAU {
-    font-size: 30pt;
+    font-size: 25pt;
   }
   .paragraphAU {
     font-size: 16pt;
@@ -209,12 +209,6 @@
   .img-detailsAU {
     width: 225px;
     padding-left: 10px;
-  }
-  .paragraphAU {
-    font-size: 14pt;
-  }
-  #sloganAU {
-    font-size: 16pt;
   }
   
 
@@ -268,27 +262,32 @@
 }
 @media screen and (max-width: 800px) {
   .header-textAU {
-    font-size: 40pt;
-  }
-  .sub-header-textAU {
-    font-size: 25pt;
-  }
-  .executive-titleAU {
-    font-size: 30pt;
-  }
-}
-@media screen and (max-width: 750px) {
-  .header-textAU {
     font-size: 35pt;
   }
   .sub-header-textAU {
-    font-size: 18pt;
+    font-size: 20pt;
   }
   .executive-titleAU {
-    font-size: 22pt;
+    font-size: 35pt;
   }
+  .paragraphAU {
+    font-size: 14pt;
+  }
+  #sloganAU {
+    font-size: 16pt;
+  }
+}
+@media screen and (max-width: 750px) {
   .contentAU {
     padding: 125px 50px 150px 50px;
+  }
+  .buttonAU {
+    width: 250px;
+    height: 60px;
+    border-radius: 15px;
+    font-size: 14pt;
+    border-radius: 19px;
+    margin-left: 0px;
   }
 }
 
@@ -297,13 +296,13 @@
     padding: 125px 20px 150px 20px;
   }
   .header-textAU {
-    font-size: 35pt;
+    font-size: 32pt;
   }
   .sub-header-textAU {
-    font-size: 20pt;
+    font-size: 18pt;
   }
   .executive-titleAU {
-    font-size: 25pt;
+    font-size: 22pt;
   }
  
 }

@@ -1,26 +1,20 @@
-.contentNC {
-  position: relative;
-  padding: 250px 100px 150px 100px;
+.noCareersContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
-
+  padding: 150px 100px;
+  background-color: whitesmoke;
 }
 
+.noCareersImage {
+  width: 75vw;
+  height: auto;
+  margin-bottom: 30px;
+  
+}
 
-.contentNC::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("../images/NoCareers.png");
-  background-size: cover;
-  background-position: center;
-  z-index: -1;
-  padding-top: 20px;
+.contentNC {
+  text-align: center;
 }
 
 .textNC {
@@ -31,71 +25,70 @@
 .buttonNC {
   color: white;
   margin-top: 50px;
-  margin-bottom: 20px;
   background-color: #408697;
-  border: 0px;
+  border: none;
   width: 375px;
   height: 70px;
   border-radius: 27px;
   font-size: 20pt;
   cursor: pointer;
-  z-index: 1;
 }
 
 .button-hoverNC {
   background-color: white;
   color: #346c7a;
   border: 2px solid #408697;
-  transition: background-color 0.5s ease-out, color 0.4s ease-out, border 0.2s ease; 
+  transition: background-color 0.5s, color 0.4s, border 0.2s;
 }
 @media screen and (max-width: 1650px){
   .textNC {
-    font-size: 30pt;
-  }
-}
-@media screen and (max-width: 1200px){
-  .textNC {
-    font-size: 35pt;
-  }
-  .buttonNC {
-    width: 350px;
-    height: 75px;
-    border-radius: 23px;
     font-size: 20pt;
   }
 }
-@media screen and (max-width: 1000px) {
-  .contentNC{
-    padding: 175px 50px 150px 50px;
-  }
-}
-@media screen and (max-width: 800px) {
+/* Responsive Styles */
+@media screen and (max-width: 1200px) {
   .textNC {
-    font-size: 25pt;
+    font-size: 18pt;
   }
   .buttonNC {
     width: 300px;
     height: 70px;
-    border-radius: 22px;
     font-size: 18pt;
+    border-radius: 22px;
+  }
+  .noCareersImage {
+    width: 80vw;  
   }
 }
-@media screen and (max-width: 750px) {
-  .contentNC{
-    padding: 125px 50px 150px 50px;
-  }
+
+@media screen and (max-width: 800px) {
   .buttonNC {
-    width: 260px;
-    height: 60px;
+    width: 250px;
+    height: 65px;
+    font-size: 16pt;
     border-radius: 20px;
+  }
+  .noCareersImage {
+    width: 90vw;  
+  }
+  .noCareersContainer {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .noCareersContainer {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  .textNC {
     font-size: 16pt;
   }
-}
-@media screen and (max-width: 600px) {
-  .textNC {
-    font-size: 25pt;
-  }
-  .contentNC{
-    padding: 125px 20px 150px 20px;
+  .buttonNC {
+    width: 200px;
+    height: 50px;
+    font-size: 12pt;
+    border-radius: 17px;
   }
 }

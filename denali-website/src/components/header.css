@@ -140,7 +140,7 @@
   color: #52d6f4;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 800px) {
   .Denali-Logo {
     margin: 15px 0px 15px 20px;
     height: 47px;

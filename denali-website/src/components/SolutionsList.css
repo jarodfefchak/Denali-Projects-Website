@@ -4,18 +4,19 @@
   gap: 40px;
 }
 .subHeadingSL{
-  font-size: 3.3vw;
+  font-size: 3.7vw;
   
 }
 .textSL{
 margin-bottom: 40px;
 margin-top: 20px;
-font-size:1.3vw ;
+font-size:1.4vw ;
 }
 .introSL{
 font-size: 2.2vw;
 margin-top: 75px;
 margin-bottom: 50px;
+font-weight: 600;
 
 }
 
@@ -32,7 +33,7 @@ margin-bottom: 50px;
   background: #408697;
 }
 p {
-  font-size:1.3vw;
+  font-size:1.4vw;
   margin: 0;
   padding: 5px 0;
 }
@@ -71,16 +72,16 @@ p {
 
   @media screen and (max-width: 1650px){
     .textSL{
-      font-size:18pt
+      font-size:16pt
     }
     p {
-      font-size:18pt;
+      font-size:16pt;
     }
     .subHeadingSL{
-      font-size: 35pt;
+      font-size: 45pt;
     }
     .introSL{
-      font-size: 32px;
+      font-size: 27pt;
     }
   }
   @media screen and (max-width: 1550px){
@@ -91,12 +92,8 @@ p {
     
     .projectImage {
       width: 400px;
-   
-
     }
-    p {
-      font-size:16pt;
-    }
+    
   }
   @media screen and (max-width: 1200px){
     .textSL{
@@ -108,10 +105,10 @@ p {
       margin-top: 20px;
     }
     .subHeadingSL{
-      font-size: 30pt;
+      font-size: 40pt;
     }
     .introSL{
-      font-size: 27px;
+      font-size: 25pt;
       margin-top: 50px;
       margin-bottom: 30px;
     }
@@ -145,18 +142,21 @@ p {
       font-size:14pt;
     }
     .introSL{
-      font-size: 25px;
+      font-size: 20pt;
       margin-top: 40px;
       margin-bottom: 25px;
     }
     .subHeadingSL{
-      font-size: 25pt;
+      font-size: 35pt;
     }
    
   }
   
   @media screen and (max-width: 600px){
     .subHeadingSL{
-      font-size: 20pt;
+      font-size: 32pt;
+    }
+    .introSL{
+      font-size: 18pt;
     }
   }

@@ -53,7 +53,7 @@ function SolutionsDisplay() {
                     className={`backToTopButton ${showButton ? "visible" : "hidden"}`}
                 >
                     <button onClick={scrollToTop} className="scroll-button">
-                        <p>Back To Top &#129121;</p>
+                        <p>Back To Top &#8593;</p>
                     </button>
                 </div>
                 <div className="listSD">
