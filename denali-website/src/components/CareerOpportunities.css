@@ -34,25 +34,17 @@
 }
 
 .navBarTextOP {
-  font-size: 1.7vw;
+  font-size: 1.4vw;
   margin-bottom: 0px;
 }
 
 @media screen and (max-width: 1650px) {
   .navBarTextOP {
-    font-size: 20pt;
-  }
-}
-@media screen and (max-width: 1200px) {
-  .navBarTextOP {
-    font-size: 18pt;
+    font-size: 16pt;
   }
 }
 
 @media screen and (max-width: 1000px) {
-  .navBarTextOP {
-    font-size: 16pt;
-  }
   .navBarOP {
     margin-left: 50px;
     margin-right: 50px;

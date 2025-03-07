@@ -17,12 +17,12 @@ body {
   margin-right: 50px;
 }
 .headerAP {
-  font-size: 4.5vw;
+  font-size: 3.7vw;
   font-weight: 550;
 }
 
 .textAP {
-  font-size: 1.5vw;
+  font-size: 1.4vw;
 }
 .formAP {
   margin: 200px 75px 200px 50px;
@@ -156,11 +156,11 @@ select {
 
 @media screen and (max-width: 1650px) {
   .headerAP {
-    font-size: 50pt;
+    font-size: 45pt;
   }
   
   .textAP {
-    font-size: 18pt;
+    font-size: 16pt;
   }
   .custom-alertOP {
     width:600px;
@@ -169,7 +169,7 @@ select {
 
 @media screen and (max-width: 1200px) {
   .headerAP {
-    font-size: 45pt;
+    font-size: 40pt;
   }
   .textAP {
     font-size: 16pt;
@@ -214,9 +214,7 @@ select {
   .inputHeadingAP {
     font-size: 20px;
   }
-  .textAP {
-    font-size: 14pt;
-  }
+  
  
 }
 @media screen and (max-width: 800px){
@@ -234,12 +232,15 @@ select {
 
   }
   .headerAP {
-    font-size: 40pt;
+    font-size: 35pt;
   }
   .custom-alertOP button {
     font-size: 14pt;
   }
   .buttonAP{
+    font-size: 14pt;
+  }
+  .textAP {
     font-size: 14pt;
   }
   
@@ -254,7 +255,7 @@ select {
 }
 @media screen and (max-width: 600px){
   .headerAP {
-    font-size: 35pt;
+    font-size: 32pt;
   }
   .layoutAP {
     margin-left: 20px;
