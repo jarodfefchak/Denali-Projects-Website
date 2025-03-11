@@ -381,7 +381,7 @@ function Apply() {
             />
           </label>
           <p className="inputHeadingAP ">
-            Resume <span style={{ color: "red" }}>*</span>
+            Resume, max file size 450 KB<span style={{ color: "red" }}>*</span>
           </p>
           <label className="resumeButton">
             <input
@@ -393,7 +393,7 @@ function Apply() {
           </label>
           <br></br>
           <div className="submitAP">
-          <button className="buttonAP" type="submit">
+          <button className="buttonAP" type="submit" disabled={legalToWork === "No"}>
             Submit
           </button>
           </div>

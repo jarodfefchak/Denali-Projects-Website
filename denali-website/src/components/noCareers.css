@@ -2,14 +2,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 150px 100px;
+  padding: 100px 100px;
   background-color: whitesmoke;
 }
 
 .noCareersImage {
-  width: 75vw;
+  width: 50vw;
   height: auto;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   
 }
 
@@ -19,6 +19,8 @@
 
 .textNC {
   font-size: 1.7vw;
+  margin-left: 50px;
+  margin-right: 50px;
   color: black;
 }
 
@@ -49,6 +51,8 @@
 @media screen and (max-width: 1200px) {
   .textNC {
     font-size: 18pt;
+    margin-left: 25px;
+  margin-right: 25px;
   }
   .buttonNC {
     width: 300px;
@@ -84,6 +88,8 @@
   }
   .textNC {
     font-size: 16pt;
+    margin-left: 10px;
+    margin-right: 10px;
   }
   .buttonNC {
     width: 200px;

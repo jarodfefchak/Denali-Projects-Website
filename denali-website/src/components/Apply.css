@@ -74,6 +74,19 @@ body {
   transition: background-color 0.5s ease-out, color 0.4s ease-out, border 0.2s ease;
 }
 
+.buttonAP:disabled {
+  background-color: #408697; /* Keep the original background color */
+  color: white; /* Keep text color unchanged */
+  cursor: default; /* Arrow cursor */
+  opacity: 0.5; /* Optional: make the button look visually disabled */
+}
+
+.buttonAP:disabled:hover {
+  background-color: #408697; /* No hover effect */
+  color: white;
+  border: 0; 
+}
+
 .input-fieldAP,
 .input-field-largeAP {
   width: 100%;

@@ -225,7 +225,7 @@ function SendResume() {
               onChange={handleMessageChange}
             ></textarea>
             <p className="inputHeadingSR">
-              Resume <span style={{ color: "red" }}>*</span>
+              Resume, max file size 450 KB <span style={{ color: "red" }}>*</span>
             </p>
             <label className="resumeButton">
               <input type="file" onChange={handleResumeChange} accept=".pdf" />
