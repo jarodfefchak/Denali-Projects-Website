@@ -176,6 +176,7 @@ function ProvenSuccess() {
             animationType="fadeout"
             animationEasingFunction="ease-in-out"
             animationDuration={800}
+            touchTracking={!showInfo}
           />
         </div>
       </div>
